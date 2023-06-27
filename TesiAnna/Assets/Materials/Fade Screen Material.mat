@@ -21,16 +21,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Fade Screen Material
-  m_Shader: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 4800000, guid: 96fbe5d319f081e4a869b42ecd09b318, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - DepthOnly
   - SHADOWCASTER
@@ -104,7 +103,7 @@ Material:
     - _WireThickness: 100
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.764151, g: 0.7605465, b: 0.7605465, a: 1}
-    - _Color: {r: 0.764151, g: 0.76054645, b: 0.76054645, a: 1}
+    - _BaseColor: {r: 0.764151, g: 0.76054645, b: 0.76054645, a: 0.8235294}
+    - _Color: {r: 0.764151, g: 0.76054645, b: 0.76054645, a: 0.6039216}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

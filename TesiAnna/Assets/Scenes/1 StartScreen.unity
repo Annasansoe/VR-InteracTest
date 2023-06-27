@@ -271,6 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 164367178}
   - component: {fileID: 164367177}
+  - component: {fileID: 164367179}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -355,6 +356,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &164367179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164367176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1 &187061300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1411,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 396342312}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2050049391}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: GoToSceneAsync
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &441920444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,6 +1784,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495028634}
   m_CullTransparentMesh: 1
+--- !u!114 &506227765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6708590911764755039, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+  m_PrefabInstance: {fileID: 6708590911259582058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a1ddda23696b145940244640b51df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &511003175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2057,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511559496}
   m_CullTransparentMesh: 1
+--- !u!1 &522558988 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1470082431350528780, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+  m_PrefabInstance: {fileID: 553019683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &522558990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522558988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!4 &522558994 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1470082431350528783, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+  m_PrefabInstance: {fileID: 553019683}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &553019683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2031,6 +2118,10 @@ PrefabInstance:
     - target: {fileID: 865075385244835223, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_Name
       value: Complete XR Origin Hands Set Up (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763085288384086254, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_TrackingStateInput.m_Action.m_Id
+      value: f6b93354-4f7e-4528-bde8-d1ffd3912e91
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_RootOrder
@@ -3447,7 +3538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.047169805, g: 0.041607328, b: 0.041607328, a: 0.7647059}
+  m_Color: {r: 0.047169805, g: 0.041607328, b: 0.041607328, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3870,6 +3961,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!114 &2050049391 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7682119479139823880, guid: cfffaed469fe51c4c9b734768a06892b, type: 3}
+  m_PrefabInstance: {fileID: 7682119479205454023}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02507323cf3e0e48b92f8b191092caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2104486846
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,6 +4048,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104486846}
   m_CullTransparentMesh: 1
+--- !u!1001 &6708590911259582058
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 522558994}
+    m_Modifications:
+    - target: {fileID: 6708590911764755033, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_Name
+      value: Fader Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
 --- !u!1001 &7682119479205454023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3953,6 +4112,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7682119479139823880, guid: cfffaed469fe51c4c9b734768a06892b, type: 3}
+      propertyPath: fadeScreen
+      value: 
+      objectReference: {fileID: 506227765}
     - target: {fileID: 7682119479139823881, guid: cfffaed469fe51c4c9b734768a06892b, type: 3}
       propertyPath: m_Name
       value: Scene Transition Manager
