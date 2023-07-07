@@ -483,10 +483,13 @@ MonoBehaviour:
   mainMenu: {fileID: 1395818994}
   options: {fileID: 971390060}
   about: {fileID: 840491281}
-  sceneOneButton: {fileID: 0}
+  sceneOneButton: {fileID: 396342314}
+  sceneTwoButton: {fileID: 1360321440}
+  sceneThreeButton: {fileID: 1292869921}
   optionButton: {fileID: 391985324}
   aboutButton: {fileID: 367037927}
   quitButton: {fileID: 758300998}
+  returnToMainMenu: {fileID: 0}
   returnButtons:
   - {fileID: 309572442}
   - {fileID: 603173388}
@@ -2194,6 +2197,10 @@ PrefabInstance:
     - target: {fileID: 4763085288384086254, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_TrackingStateInput.m_Action.m_Id
       value: f6b93354-4f7e-4528-bde8-d1ffd3912e91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763085288384086254, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_TrackingStateInput.m_Action.m_Name
+      value: Tracking State Input
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_RootOrder

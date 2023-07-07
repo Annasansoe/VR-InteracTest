@@ -12,9 +12,15 @@ public class AppMenuManager : MonoBehaviour
 
     [Header("Main Menu Buttons")]
     public Button sceneOneButton;
+    public Button sceneTwoButton;
+    public Button sceneThreeButton;
     public Button optionButton;
     public Button aboutButton;
     public Button quitButton;
+
+   
+
+    public Button returnToMainMenu;
 
     public List<Button> returnButtons;
 
@@ -25,8 +31,8 @@ public class AppMenuManager : MonoBehaviour
 
         //Hook events
         sceneOneButton.onClick.AddListener(SceneOne);
-        sceneOneButton.onClick.AddListener(SceneTwo);
-        sceneOneButton.onClick.AddListener(SceneThree);
+        sceneTwoButton.onClick.AddListener(SceneTwo);
+        sceneThreeButton.onClick.AddListener(SceneThree);
         optionButton.onClick.AddListener(EnableOption);
         aboutButton.onClick.AddListener(EnableAbout);
         quitButton.onClick.AddListener(QuitApp);
@@ -51,13 +57,13 @@ public class AppMenuManager : MonoBehaviour
     public void SceneTwo()
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(1);
+        SceneTransitionManager.singleton.GoToSceneAsync(2);
     }
 
     public void SceneThree()
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(1);
+        SceneTransitionManager.singleton.GoToSceneAsync(3);
     }
 
     public void HideAll()
