@@ -9,9 +9,9 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; } 
 
-    [Header("Scores")]
+    /*[Header("Scores")]
     public TMP_Text collectedObjectsText;
-
+    int score = 0;*/
 
     [Header("Return Buttons")]
     public Button returnToMainMenu;
@@ -28,13 +28,23 @@ public class UIManager : MonoBehaviour
     {
 
         returnToMainMenu.onClick.AddListener(ReturnToMenu);
+        
+        //collectedObjectsText.text = "Collected Objects: " + score.ToString();
     }
 
-    public void UpdateCollectedObjectsText(string count)
+    //public void UpdateCollectedObjectsText(int score)
+    //{
+    //    collectedObjectsText.text = "Collected Objects: " + score.ToString();
+    //}
+   /* private void OnTriggerEnter(Collider other)
     {
-        collectedObjectsText.text = "Collected Objects: " + count;
+        if (other.gameObject.CompareTag("Coins"))
+        {
+            other.gameObject.SetActive(false);
+            ScoreManager.instance.AddPoint();
+        }
     }
-
+   */
     public void ReturnToMenu()
     {
         SceneTransitionManager.singleton.GoToSceneAsync(0);

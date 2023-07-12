@@ -1,20 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class CollectibleObject : MonoBehaviour
 {
-    protected void OnTriggerEnter(Collider other)
+
+    public XRGrabInteractable XRGrabInteractable;
+
+    private void Start()
     {
-        if (other.CompareTag("Coins"))
-        {
-            Collect();
-        }
+        XRGrabInteractable = GetComponent<XRGrabInteractable>();
     }
 
-    public void Collect()
-    {
-        GameManager.Instance.CollectObject();
-    }
 }
 

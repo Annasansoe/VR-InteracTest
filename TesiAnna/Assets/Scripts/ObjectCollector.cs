@@ -6,7 +6,7 @@ public class ObjectCollector : MonoBehaviour
 {
     public int collectedObjects = 0;
     public int targetObjects = 10;
-
+/*
     private void OnTriggerEnter(Collider other)
     {
         CollectibleObject collectible = other.GetComponent<CollectibleObject>();
@@ -31,5 +31,5 @@ public class ObjectCollector : MonoBehaviour
     private void LevelCompleted()
     {
         // Handle level completion logic here
-    }
+    }*/
 }
