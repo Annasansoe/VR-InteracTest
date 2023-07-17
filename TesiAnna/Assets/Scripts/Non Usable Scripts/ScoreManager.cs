@@ -30,10 +30,11 @@ public class ScoreManager : MonoBehaviour
 
     public void AddPoint()
     {
-        if (XRGrabInteractable.isSelected && XRGrabInteractable.CompareTag("Coins"))
+        if (!XRGrabInteractable.isSelected | !XRGrabInteractable.CompareTag("Coins"))
         {
-            score += 1;
-            collectedObjectsText.text = "Collected Objects: " + score.ToString();
+            return;
         }
+        score += 1;
+        collectedObjectsText.text = "Collected Objects: " + score.ToString();
     }
 }
