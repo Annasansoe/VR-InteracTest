@@ -16,6 +16,7 @@ public static class MyTools
                 Random.Range(0,11).ToString()
             });
         EditorApplication.Beep();
+        Debug.Log("<color=green>Report updated successfully!</color>");
     }
 
     [MenuItem("MyTools/Reset Report %F12")]
@@ -24,5 +25,7 @@ public static class MyTools
         CSVManager.CreateReport();
 
         EditorApplication.Beep();
+
+        Debug.Log("<color=yellow>The report has been reset successfully!</color>");
     }
 }

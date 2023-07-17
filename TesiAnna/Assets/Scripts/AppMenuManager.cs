@@ -14,6 +14,9 @@ public class AppMenuManager : MonoBehaviour
     public Button sceneOneButton;
     public Button sceneTwoButton;
     public Button sceneThreeButton;
+    public Button sceneOneHand;
+    public Button sceneTwoHand;
+    public Button sceneThreeHand;
     public Button optionButton;
     public Button aboutButton;
     public Button quitButton;
@@ -65,6 +68,24 @@ public class AppMenuManager : MonoBehaviour
     {
         HideAll();
         SceneTransitionManager.singleton.GoToSceneAsync(3);
+    }
+
+    public void SceneOneHand()
+    {
+        HideAll();
+        SceneTransitionManager.singleton.GoToSceneAsync(4);
+    }
+
+    public void SceneTwoHand()
+    {
+        HideAll();
+        SceneTransitionManager.singleton.GoToSceneAsync(5);
+    }
+
+    public void SceneThreeHand()
+    {
+        HideAll();
+        SceneTransitionManager.singleton.GoToSceneAsync(6);
     }
 
     public void HideAll()
