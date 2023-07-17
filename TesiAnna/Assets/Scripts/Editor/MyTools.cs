@@ -3,10 +3,10 @@ using UnityEditor;
 
 public static class MyTools
 {
-    [MenuItem("MyTools/Add to Report %F1")]
-    static void DEV_AppendToReport()
+    [MenuItem("MyTools/1. Add Defaults to Report %F1")]
+    static void DEV_AppendDefaultsToReport()
     {
-        CSVManager.AppendToReport(
+        CSVManager.AppendDefaultsToReport(
             new string[5]
             {
                 "jonny",
@@ -19,7 +19,7 @@ public static class MyTools
         Debug.Log("<color=green>Report updated successfully!</color>");
     }
 
-    [MenuItem("MyTools/Reset Report %F12")]
+    [MenuItem("MyTools/2. Reset Report %F12")]
     static void DEV_ResetToReport()
     {
         CSVManager.CreateReport();
@@ -28,4 +28,13 @@ public static class MyTools
 
         Debug.Log("<color=yellow>The report has been reset successfully!</color>");
     }
+
+    public static void DEV_AppendSpecificsToReport(string[] strings)
+    {
+        CSVManager.AppendSpecificsToReport(strings);
+        EditorApplication.Beep();
+        Debug.Log("<color=green>Report updated successfully!</color>");
+    }
+
+    
 }
