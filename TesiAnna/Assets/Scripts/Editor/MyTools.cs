@@ -6,7 +6,7 @@ public static class MyTools
     [MenuItem("MyTools/1. Add Defaults to Report %F1")]
     static void DEV_AppendDefaultsToReport()
     {
-        CSVManager.AppendDefaultsToReport(
+        CSVManager.AppendToReport(
             new string[5]
             {
                 "jonny",
@@ -29,12 +29,6 @@ public static class MyTools
         Debug.Log("<color=yellow>The report has been reset successfully!</color>");
     }
 
-    public static void DEV_AppendSpecificsToReport(string[] strings)
-    {
-        CSVManager.AppendSpecificsToReport(strings);
-        EditorApplication.Beep();
-        Debug.Log("<color=green>Report updated successfully!</color>");
-    }
 
     
 }

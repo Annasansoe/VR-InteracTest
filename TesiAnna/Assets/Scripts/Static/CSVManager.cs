@@ -20,7 +20,7 @@ public static class CSVManager
     
     #region InteractionsDefaults
 
-    public static void AppendDefaultsToReport(string[] strings)
+    public static void AppendToReport(string[] strings)
     {
         VerifyDirectory();
         VerifyFile();
@@ -66,53 +66,7 @@ public static class CSVManager
 
     #endregion
 
-    #region InteractionsSpecifics
-
-    public static void AppendSpecificsToReport(string[] strings)
-    {
-        VerifyDirectory();
-        VerifyFile();
-        using (StreamWriter sw = File.AppendText(GetFilePath()))
-        {
-            string finalString = "";
-            for (int i = 0; i < strings.Length; i++)
-            {
-                if (finalString != "")
-                {
-                    finalString += reportSeparator;
-                }
-
-                finalString += strings[i];
-            }
-
-            finalString += reportSeparator + GetTimeStamp();
-            sw.WriteLine(finalString);
-        }
-
-    }
-    /*
-    public static void CreateReport()
-    {
-        VerifyDirectory();
-        using (StreamWriter sw = File.CreateText(GetFilePath()))
-        {
-            string finalString = "";
-            for (int i = 0; i < reportHeaders.Length; i++)
-            {
-                if (finalString != "")
-                {
-                    finalString += reportSeparator;
-                }
-
-                finalString += reportHeaders[i];
-            }
-
-            finalString += reportSeparator + timeStampHeader;
-            sw.WriteLine(finalString);
-        }
-    }*/
-
-    #endregion
+    
 
     #region Operations
     static void VerifyDirectory()
