@@ -188,7 +188,7 @@ MonoBehaviour:
     mp: 1
     damage: 2
     armor: 0
-  characters: 
+  characters: 0100000000000000
 --- !u!4 &343386271
 Transform:
   m_ObjectHideFlags: 0
