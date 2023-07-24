@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.165
+      value: 1.334
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.z
@@ -193,6 +193,14 @@ PrefabInstance:
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7648470162670254239, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.143
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978851896269941442, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.141
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
@@ -524,7 +532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.148
       objectReference: {fileID: 0}
     - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
       propertyPath: m_LocalPosition.z
@@ -874,6 +882,7 @@ GameObject:
   - component: {fileID: 719085966}
   - component: {fileID: 719085965}
   - component: {fileID: 719085964}
+  - component: {fileID: 719085969}
   m_Layer: 0
   m_Name: Grabbable cube
   m_TagString: Untagged
@@ -1110,6 +1119,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719085962}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &719085969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719085962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 0
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1 &730213158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1264,7 @@ GameObject:
   - component: {fileID: 793725595}
   - component: {fileID: 793725594}
   - component: {fileID: 793725593}
+  - component: {fileID: 793725598}
   m_Layer: 0
   m_Name: Grabbable cube (2)
   m_TagString: Untagged
@@ -1470,6 +1501,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793725591}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &793725598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793725591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 0
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1 &840928594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1884,7 @@ GameObject:
   - component: {fileID: 1061769439}
   - component: {fileID: 1061769438}
   - component: {fileID: 1061769437}
+  - component: {fileID: 1061769442}
   m_Layer: 0
   m_Name: Grabbable cube (5)
   m_TagString: Untagged
@@ -2068,6 +2121,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061769435}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1061769442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061769435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 0
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1 &1316019204
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2255,7 @@ GameObject:
   - component: {fileID: 1332847982}
   - component: {fileID: 1332847981}
   - component: {fileID: 1332847980}
+  - component: {fileID: 1332847986}
   m_Layer: 0
   m_Name: Grab Interactable
   m_TagString: Untagged
@@ -2438,6 +2513,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332847978}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1332847986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332847978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 0
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1 &1517623341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,6 +2548,7 @@ GameObject:
   - component: {fileID: 1517623345}
   - component: {fileID: 1517623344}
   - component: {fileID: 1517623343}
+  - component: {fileID: 1517623348}
   m_Layer: 0
   m_Name: Grabbable cube (1)
   m_TagString: Untagged
@@ -2688,6 +2785,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517623341}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1517623348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517623341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 0
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1 &1595193754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2838,6 +2956,7 @@ GameObject:
   - component: {fileID: 1828961094}
   - component: {fileID: 1828961093}
   - component: {fileID: 1828961092}
+  - component: {fileID: 1828961097}
   m_Layer: 0
   m_Name: Grabbable cube (4)
   m_TagString: Untagged
@@ -3074,6 +3193,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828961090}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1828961097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828961090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 0
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1 &1842866354
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,6 +3228,7 @@ GameObject:
   - component: {fileID: 1842866358}
   - component: {fileID: 1842866357}
   - component: {fileID: 1842866356}
+  - component: {fileID: 1842866361}
   m_Layer: 0
   m_Name: Grabbable cube (3)
   m_TagString: Untagged
@@ -3324,6 +3465,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842866354}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1842866361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842866354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 0
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1 &1880285816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,6 +3635,7 @@ GameObject:
   - component: {fileID: 2023525919}
   - component: {fileID: 2023525918}
   - component: {fileID: 2023525917}
+  - component: {fileID: 2023525923}
   m_Layer: 0
   m_Name: PickUp Grabbable
   m_TagString: Untagged
@@ -3730,6 +3893,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023525915}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2023525923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023525915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 0
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25
 --- !u!1001 &2103277678
 PrefabInstance:
   m_ObjectHideFlags: 0
