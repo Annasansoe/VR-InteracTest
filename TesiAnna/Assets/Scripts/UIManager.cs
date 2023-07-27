@@ -14,6 +14,9 @@ public class UIManager : MonoBehaviour
 
     [Header("Return Buttons")]
     public Button returnToMainMenu;
+    public Button goToSceneOne;
+    public Button goToSceneTwo;
+    public Button goToSceneThree;
 
     private void Awake()
     {
@@ -27,25 +30,31 @@ public class UIManager : MonoBehaviour
     {
 
         returnToMainMenu.onClick.AddListener(ReturnToMenu);
-        
-        //collectedObjectsText.text = "Collected Objects: " + score.ToString();
+        goToSceneOne.onClick.AddListener(ToSceneOne);
+        goToSceneTwo.onClick.AddListener(ToSceneTwo);
+        goToSceneThree.onClick.AddListener(ToSceneThree);
+
+
     }
 
-    //public void UpdateCollectedObjectsText(int score)
-    //{
-    //    collectedObjectsText.text = "Collected Objects: " + score.ToString();
-    //}
-   /* private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Coins"))
-        {
-            other.gameObject.SetActive(false);
-            ScoreManager.instance.AddPoint();
-        }
-    }
-   */
     public void ReturnToMenu()
     {
         SceneTransitionManager.singleton.GoToSceneAsync(0);
     }
+
+    public void ToSceneOne()
+    {
+        SceneTransitionManager.singleton.GoToSceneAsync(1);
+    }
+
+    public void ToSceneTwo()
+    {
+        SceneTransitionManager.singleton.GoToSceneAsync(2);
+    }
+
+    public void ToSceneThree()
+    {
+        SceneTransitionManager.singleton.GoToSceneAsync(3);
+    }
+
 }

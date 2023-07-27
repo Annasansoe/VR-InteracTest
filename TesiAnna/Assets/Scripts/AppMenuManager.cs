@@ -55,37 +55,37 @@ public class AppMenuManager : MonoBehaviour
     public void SceneOne()
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(1);
+        SceneTransitionManager.singleton.GoToSceneAsync(4);
     }
 
     public void SceneTwo()
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(2);
+        SceneTransitionManager.singleton.GoToSceneAsync(5);
     }
 
     public void SceneThree()
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(3);
+        SceneTransitionManager.singleton.GoToSceneAsync(6);
     }
 
     public void SceneOneHand()
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(4);
+        SceneTransitionManager.singleton.GoToSceneAsync(1);
     }
 
     public void SceneTwoHand()
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(5);
+        SceneTransitionManager.singleton.GoToSceneAsync(2);
     }
 
     public void SceneThreeHand()
     {
         HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(6);
+        SceneTransitionManager.singleton.GoToSceneAsync(3);
     }
 
     public void HideAll()
@@ -103,12 +103,14 @@ public class AppMenuManager : MonoBehaviour
     }
     public void EnableOption()
     {
+        HideAll();
         mainMenu.SetActive(false);
         options.SetActive(true);
         about.SetActive(false);
     }
     public void EnableAbout()
     {
+        HideAll();
         mainMenu.SetActive(false);
         options.SetActive(false);
         about.SetActive(true);
