@@ -67,5 +67,8 @@ MonoBehaviour:
     - stateName: activated
       animationStateStartValue: {r: 0, g: 0, b: 0, a: 0}
       animationStateEndValue: {r: 0, g: 0, b: 0, a: 0}
+    - stateName: sameDimesion
+      animationStateStartValue: {r: 0.54719573, g: 0.9716981, b: 0.45376468, a: 0}
+      animationStateEndValue: {r: 0, g: 1, b: 0.18643212, a: 0}
     m_ColorBlendMode: 0
     m_BlendAmount: 1
