@@ -8,9 +8,6 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; } 
 
-    /*[Header("Scores")]
-    public TMP_Text collectedObjectsText;
-    int score = 0;*/
 
     [Header("Return Buttons")]
     public Button returnToMainMenu;
