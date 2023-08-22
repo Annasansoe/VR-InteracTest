@@ -56,7 +56,7 @@ public class ScaleController : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-        else
+        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             Debug.Log("Cube 2 is larger than Cube 1.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
