@@ -41,17 +41,17 @@ public class UIManager : MonoBehaviour
 
     public void ToSceneOne()
     {
-        SceneTransitionManager.singleton.GoToSceneAsync(1);
+        SceneTransitionManager.singleton.GoToSceneAsync(0);//1
     }
 
     public void ToSceneTwo()
     {
-        SceneTransitionManager.singleton.GoToSceneAsync(2);
+        SceneTransitionManager.singleton.GoToSceneAsync(0);//2
     }
 
     public void ToSceneThree()
     {
-        SceneTransitionManager.singleton.GoToSceneAsync(3);
+        SceneTransitionManager.singleton.GoToSceneAsync(0);//3
     }
 
 }
