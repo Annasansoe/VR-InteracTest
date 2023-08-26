@@ -7,9 +7,6 @@ using TMPro;
 
 public class InputFieldGrabber : MonoBehaviour
 {
-    [Header("The value we got from the input field")]
-    [SerializeField] private string inputText;
-
     [Header("Showing the reaction to the player")]
     [SerializeField] private GameObject reactiongGroup;
     [SerializeField] private TMP_Text reactionTextBox;
@@ -43,7 +40,7 @@ public class InputFieldGrabber : MonoBehaviour
     public void DisplayQuestion(int index)
     {
         questionText.text = questions[index].questionText;
-        inputText = "";
+        inputField.text = "";
     }
    
     public void OnSubmitAnswer()
