@@ -7,25 +7,83 @@ public class ScoreArea : MonoBehaviour
 {
     public XRGrabInteractable[] XRGrabInteractable;
 
-    int score = 0;
+    static int totScore = 0;
+    static int unsortedScore = 0;
+    static int gMScore = 0;
+    static int paperScore = 0;
+    static int organicScore = 0;
+    static int plasticScore = 0;
 
     [Header("CollectedObjects")]
-    public TMP_Text collectedObjectsText;
+    public TMP_Text collectedTotObjectsText;
+    public TMP_Text collectedUnsortedObjectsText;
+    public TMP_Text collectedGMObjectsText;
+    public TMP_Text collectedPaperObjectsText;
+    public TMP_Text collectedOrganicObjectsText;
+    public TMP_Text collectedPlasticObjectsText;
+
 
     private void Start()
     {
-        collectedObjectsText.text = "Collected Objects: " + score.ToString();
-        
+        collectedTotObjectsText.text = "Collected Objects: " + totScore.ToString() + " of 25";
+        collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
+        collectedGMObjectsText.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
+        collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
+        collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
+        collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
+
     }
 
-    void OnTriggerEnter(Collider otherCollider)
+
+   void OnTriggerEnter(Collider otherCollider)
     {
-        if (otherCollider.CompareTag("Coins"))
-        {
-            score += 1;
-            collectedObjectsText.text = "Collected Objects: " + score.ToString();
-            Destroy(otherCollider.gameObject);
-        }
         
+        if (otherCollider.CompareTag("Unsorted Waste"))
+        {
+            unsortedScore += 1;
+            collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
+            //Destroy(otherCollider.gameObject);
+            //totScore += 1;
+            //collectedTotObjectsText.text = "Collected Objects: " + totScore.ToString() + " of 25";
+        }
+        else if (otherCollider.CompareTag("G&M Waste"))
+        {
+            gMScore += 1;
+            collectedGMObjectsText.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
+            //Destroy(otherCollider.gameObject);
+            //totScore += 1;
+            //collectedTotObjectsText.text = "Collected Objects: " + totScore.ToString() + " of 25";
+        }
+        else if (otherCollider.CompareTag("Paper Waste"))
+        {
+            paperScore += 1;
+            collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
+            // Destroy(otherCollider.gameObject);
+            //totScore += 1;
+            //collectedTotObjectsText.text = "Collected Objects: " + totScore.ToString() + " of 25";
+        }
+
+        else if (otherCollider.CompareTag("Organic Waste"))
+        {
+            organicScore += 1;
+            collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
+            //Destroy(otherCollider.gameObject);
+            //totScore += 1;
+            //collectedTotObjectsText.text = "Collected Objects: " + totScore.ToString() + " of 25";
+        }
+        else if (otherCollider.CompareTag("Plastic Waste"))
+        {
+            plasticScore += 1;
+            collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
+            //Destroy(otherCollider.gameObject);
+            //totScore += 1;
+            //collectedTotObjectsText.text = "Collected Objects: " + totScore.ToString() + " of 25";
+        }
+        totScore = unsortedScore + gMScore + paperScore + organicScore + plasticScore;
+        collectedTotObjectsText.text = "Collected Objects: " + totScore.ToString() + " of 25";
+        Destroy(otherCollider.gameObject);
     }
+
+
+
 }

@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Coins
+  - Unsorted Waste
+  - G&M Waste
+  - Paper Waste
+  - Organic Waste
+  - Plastic Waste
   layers:
   - Default
   - TransparentFX
