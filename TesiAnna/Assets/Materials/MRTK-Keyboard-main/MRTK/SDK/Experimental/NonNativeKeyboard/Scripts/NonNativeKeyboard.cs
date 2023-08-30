@@ -1036,6 +1036,7 @@ namespace Microsoft.MixedReality.Toolkit.Experimental.UI
 
         #endregion Keyboard Layout Modes
 
+        
         /// <summary>
         /// Respond to keyboard activity: reset timeout timer, play sound
         /// </summary>
