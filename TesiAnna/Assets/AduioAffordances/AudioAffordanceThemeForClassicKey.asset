@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6af57311f7c9446fae8acabfbbfdb412, type: 3}
-  m_Name: AudioForCubes
+  m_Name: AudioAffordanceThemeForClassicKey
   m_EditorClassIdentifier: 
   m_Comments: 
   m_ReadOnly: 1
@@ -23,13 +23,13 @@ MonoBehaviour:
       stateEntered: {fileID: 0}
       stateExited: {fileID: 0}
     - stateName: hovered
-      stateEntered: {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+      stateEntered: {fileID: 0}
       stateExited: {fileID: 0}
     - stateName: hoveredPriority
       stateEntered: {fileID: 0}
       stateExited: {fileID: 0}
     - stateName: selected
-      stateEntered: {fileID: 0}
+      stateEntered: {fileID: 8300000, guid: 5c09dabb4a1f31a4f8ba75be40045cd1, type: 3}
       stateExited: {fileID: 0}
     - stateName: activated
       stateEntered: {fileID: 0}

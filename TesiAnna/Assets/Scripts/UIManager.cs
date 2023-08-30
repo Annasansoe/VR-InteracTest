@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -17,15 +18,15 @@ public class UIManager : MonoBehaviour
 
     private void Awake()
     {
-       
-         Instance = this;
+        //SceneManager.LoadSceneAsync("SceneTwo", LoadSceneMode.Additive);
+        Instance = this;
         
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        SceneManager.LoadSceneAsync("SceneTwo", LoadSceneMode.Additive);
         returnToMainMenu.onClick.AddListener(ReturnToMenu);
         goToSceneOne.onClick.AddListener(ToSceneOne);
         goToSceneTwo.onClick.AddListener(ToSceneTwo);

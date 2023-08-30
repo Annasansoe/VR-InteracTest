@@ -305,7 +305,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153167196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.019}
+  m_LocalPosition: {x: 0, y: 0, z: 0.086}
   m_LocalScale: {x: 0.01722734, y: 0.02311377, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -675,7 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff28417e506ccb74b91b56f5e1ed349e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputText: 
   reactiongGroup: {fileID: 1713665709}
   reactionTextBox: {fileID: 153167198}
   inputField: {fileID: 1713665711}
@@ -710,7 +709,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398777370}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.019}
+  m_LocalPosition: {x: 0, y: 0, z: 0.087}
   m_LocalScale: {x: 0.024106218, y: 0.02877202, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -996,7 +995,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459388036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.8513584}
+  m_LocalPosition: {x: 0, y: 0, z: 4.961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1653,6 +1652,27 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!1 &1146294650 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 132436, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+  m_PrefabInstance: {fileID: 1146294646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1146294652
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146294650}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1267730049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2046,7 +2066,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346849062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.8890651}
+  m_LocalPosition: {x: 0, y: 0, z: -0.809}
   m_LocalScale: {x: 0.024106218, y: 0.02877202, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2496,7 +2516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff28417e506ccb74b91b56f5e1ed349e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputText: 
   reactiongGroup: {fileID: 1669157718}
   reactionTextBox: {fileID: 153167198}
   inputField: {fileID: 0}
