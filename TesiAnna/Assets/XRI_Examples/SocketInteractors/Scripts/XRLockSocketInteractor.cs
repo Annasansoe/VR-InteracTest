@@ -1,4 +1,7 @@
 using UnityEngine.XR.Interaction.Toolkit;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace UnityEngine.XR.Content.Interaction
 {
@@ -11,7 +14,6 @@ namespace UnityEngine.XR.Content.Interaction
         [SerializeField]
         [Tooltip("The required keys to interact with this socket.")]
         Lock m_Lock;
-
         /// <summary>
         /// The required keys to interact with this socket.
         /// </summary>
