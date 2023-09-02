@@ -3112,7 +3112,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 7
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3619,10 +3619,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSegments:
   - Dialogue: Welcome to the hand grab tutorial
+  - Dialogue: Place the controller on a table and wait to see the virtual hands
   - Dialogue: In these scene you have to pick up the cubes, and put them in the gray
       bin
-  - Dialogue: To do that you have to press the GRIP button on the controller
-  - Dialogue: Keep it pressed and move your hand to the bin
+  - Dialogue: To do that you have to do the pinch gesture with your hand
+  - Dialogue: Keep the hand in that position  and move it to the bin
   - Dialogue: Once in the bin the object will disappear
   - Dialogue: It's not a problem if one object fell off, it will come back soon
   - Dialogue: Once you finshed all the cube you can press the Start test button
@@ -3649,7 +3650,7 @@ MonoBehaviour:
   goToSceneOne: {fileID: 0}
   goToSceneTwo: {fileID: 0}
   goToSceneThree: {fileID: 0}
-  goToSceneOneHand: {fileID: 0}
+  goToSceneOneHand: {fileID: 1107227399}
   goToSceneTwoHand: {fileID: 0}
   goToSceneThreeHand: {fileID: 0}
 --- !u!114 &1442189260
@@ -4510,7 +4511,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799490234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d689ef8cc122a684492b32ed54b23ee7, type: 3}
+  m_Script: {fileID: 11500000, guid: 19b5e62e6063a2c41923dfd0a3360315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   XRGrabInteractable:

@@ -14,6 +14,9 @@ public class UIManager : MonoBehaviour
     public Button goToSceneOne;
     public Button goToSceneTwo;
     public Button goToSceneThree;
+    public Button goToSceneOneHand;
+    public Button goToSceneTwoHand;
+    public Button goToSceneThreeHand;
 
     private void Awake()
     {
@@ -28,6 +31,9 @@ public class UIManager : MonoBehaviour
         goToSceneOne.onClick.AddListener(ToSceneOne);
         goToSceneTwo.onClick.AddListener(ToSceneTwo);
         goToSceneThree.onClick.AddListener(ToSceneThree);
+        goToSceneOneHand.onClick.AddListener(ToSceneOneHand);
+        goToSceneTwoHand.onClick.AddListener(ToSceneTwoHand);
+        goToSceneThreeHand.onClick.AddListener(ToSceneThreeHand);
 
 
     }
@@ -39,17 +45,32 @@ public class UIManager : MonoBehaviour
 
     public void ToSceneOne()
     {
-        SceneTransitionManager.singleton.GoToSceneAsync(0);//1
+        SceneTransitionManager.singleton.GoToSceneAsync(7);//1
     }
 
     public void ToSceneTwo()
     {
-        SceneTransitionManager.singleton.GoToSceneAsync(0);//2
+        SceneTransitionManager.singleton.GoToSceneAsync(8);//2
     }
 
     public void ToSceneThree()
     {
-        SceneTransitionManager.singleton.GoToSceneAsync(0);//3
+        SceneTransitionManager.singleton.GoToSceneAsync(9);//3
+    }
+
+    public void ToSceneOneHand()
+    {
+        SceneTransitionManager.singleton.GoToSceneAsync(10);//4
+    }
+
+    public void ToSceneTwoHand()
+    {
+        SceneTransitionManager.singleton.GoToSceneAsync(11);//5
+    }
+
+    public void ToSceneThreeHand()
+    {
+        SceneTransitionManager.singleton.GoToSceneAsync(12);//6
     }
 
 }

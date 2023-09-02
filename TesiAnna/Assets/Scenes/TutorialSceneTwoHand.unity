@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5372549, g: 0.972549, b: 0.56078434, a: 0.83137256}
+  m_Color: {r: 0.53626734, g: 0.9716981, b: 0.5600338, a: 0.83137256}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1723,7 +1723,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3133,11 +3133,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSegments:
   - Dialogue: Welcome to the keyboard tutorial
-  - Dialogue: The first thing to do here is to press on the input field with the
-      trigger button of your controller
+  - Dialogue: 'The first thing to do here is to press on the input field '
+  - Dialogue: To do that you have to do the pinch gesture in the direction of the
+      Input field
   - Dialogue: Than read the question
-  - Dialogue: To answer you have to point the buttons of the keyboard and press the
-      trigger button
+  - Dialogue: To answer you have to point the buttons of the keyboard and do the
+      pich gesture everytime
   - Dialogue: To submit the answer press "Enter"
   - Dialogue: A the end of the questionnair click on "Start test"
   - Dialogue: Remember, the test scene is more difficult than this one

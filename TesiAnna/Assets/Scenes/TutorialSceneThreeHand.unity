@@ -662,10 +662,10 @@ MonoBehaviour:
   returnToMainMenu: {fileID: 0}
   goToSceneOne: {fileID: 0}
   goToSceneTwo: {fileID: 0}
-  goToSceneThree: {fileID: 1880285817}
+  goToSceneThree: {fileID: 0}
   goToSceneOneHand: {fileID: 0}
   goToSceneTwoHand: {fileID: 0}
-  goToSceneThreeHand: {fileID: 0}
+  goToSceneThreeHand: {fileID: 1880285817}
 --- !u!114 &459388038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,7 +776,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465447386}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.8513584}
+  m_LocalPosition: {x: 0, y: 0, z: -4.987}
   m_LocalScale: {x: 0.00287, y: 0.00399, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -786,7 +786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4104437, y: 2.2339811}
+  m_AnchoredPosition: {x: 0.4104437, y: 2.145}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &563916603
@@ -2729,10 +2729,10 @@ MonoBehaviour:
   returnToMainMenu: {fileID: 0}
   goToSceneOne: {fileID: 0}
   goToSceneTwo: {fileID: 0}
-  goToSceneThree: {fileID: 1880285817}
+  goToSceneThree: {fileID: 0}
   goToSceneOneHand: {fileID: 0}
   goToSceneTwoHand: {fileID: 0}
-  goToSceneThreeHand: {fileID: 0}
+  goToSceneThreeHand: {fileID: 1880285817}
 --- !u!114 &1684765736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2866,7 +2866,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 9
+          m_IntArgument: 12
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2917,7 +2917,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880285816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.218}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

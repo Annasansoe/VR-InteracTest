@@ -757,8 +757,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LeftHand: {fileID: 8438646578537951873}
   m_RightHand: {fileID: 8438646577476631500}
-  m_LeftController: {fileID: 3539684161240364384}
-  m_RightController: {fileID: 6550126104186373189}
+  m_LeftController: {fileID: 0}
+  m_RightController: {fileID: 0}
 --- !u!1 &8438646577071122915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,10 +1369,10 @@ MonoBehaviour:
   m_TrackingStateInput:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Tracking State Input
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 2adf9529-4c03-4bc9-b63d-005292fcc05f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []

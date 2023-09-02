@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AppMenuManager : MonoBehaviour
 {
@@ -11,17 +12,20 @@ public class AppMenuManager : MonoBehaviour
     public GameObject about;
 
     [Header("Main Menu Buttons")]
-    public Button sceneOneButton;
-    public Button sceneTwoButton;
-    public Button sceneThreeButton;
-    public Button sceneOneHand;
-    public Button sceneTwoHand;
-    public Button sceneThreeHand;
+    public Button sceneOneTutorialButton;
+    public Button sceneTwoTutorialButton;
+    public Button sceneThreeTutorialButton;
+    public Button sceneOneTutorialHand;
+    public Button sceneTwoTutorialHand;
+    public Button sceneThreeTutorialHand;
     public Button optionButton;
     public Button aboutButton;
     public Button quitButton;
 
-   
+    [Header("Title scenes")]
+    public TMP_Text titleSceneControllers;
+    public TMP_Text titleSceneHands;
+
 
     public Button returnToMainMenu;
 
@@ -34,9 +38,12 @@ public class AppMenuManager : MonoBehaviour
         EnableMainMenu();
 
         //Hook events
-        sceneOneButton.onClick.AddListener(SceneOne);
-        sceneTwoButton.onClick.AddListener(SceneTwo);
-        sceneThreeButton.onClick.AddListener(SceneThree);
+        sceneOneTutorialButton.onClick.AddListener(SceneOneTutorial);
+        sceneTwoTutorialButton.onClick.AddListener(SceneTwoTutorial);
+        sceneThreeTutorialButton.onClick.AddListener(SceneThreeTutorial);
+        sceneOneTutorialHand.onClick.AddListener(SceneOneHandTutorial);
+        sceneTwoTutorialHand.onClick.AddListener(SceneTwoHandTutorial);
+        sceneThreeTutorialHand.onClick.AddListener(SceneThreeHandTutorial);
         optionButton.onClick.AddListener(EnableOption);
         aboutButton.onClick.AddListener(EnableAbout);
         quitButton.onClick.AddListener(QuitApp);
@@ -52,40 +59,40 @@ public class AppMenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void SceneOne()
-    {
-        HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(4);
-    }
-
-    public void SceneTwo()
-    {
-        HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(5);
-    }
-
-    public void SceneThree()
-    {
-        HideAll();
-        SceneTransitionManager.singleton.GoToSceneAsync(6);
-    }
-
-    public void SceneOneHand()
+    public void SceneOneTutorial()
     {
         HideAll();
         SceneTransitionManager.singleton.GoToSceneAsync(1);
     }
 
-    public void SceneTwoHand()
+    public void SceneTwoTutorial()
     {
         HideAll();
         SceneTransitionManager.singleton.GoToSceneAsync(2);
     }
 
-    public void SceneThreeHand()
+    public void SceneThreeTutorial()
     {
         HideAll();
         SceneTransitionManager.singleton.GoToSceneAsync(3);
+    }
+
+    public void SceneOneHandTutorial()
+    {
+        HideAll();
+        SceneTransitionManager.singleton.GoToSceneAsync(4);
+    }
+
+    public void SceneTwoHandTutorial()
+    {
+        HideAll();
+        SceneTransitionManager.singleton.GoToSceneAsync(5);
+    }
+
+    public void SceneThreeHandTutorial()
+    {
+        HideAll();
+        SceneTransitionManager.singleton.GoToSceneAsync(6);
     }
 
     public void HideAll()
@@ -107,6 +114,8 @@ public class AppMenuManager : MonoBehaviour
         mainMenu.SetActive(false);
         options.SetActive(true);
         about.SetActive(false);
+        titleSceneControllers.gameObject.SetActive(false);
+        titleSceneHands.gameObject.SetActive(false);
     }
     public void EnableAbout()
     {
@@ -114,5 +123,7 @@ public class AppMenuManager : MonoBehaviour
         mainMenu.SetActive(false);
         options.SetActive(false);
         about.SetActive(true);
+        titleSceneControllers.gameObject.SetActive(false);
+        titleSceneHands.gameObject.SetActive(false);
     }
 }

@@ -44,8 +44,17 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
         Vector3 sizeCube2 = cubeManipulable.transform.localScale;
         Vector3 positionToMatch = cubeManipulable.transform.position;
 
+        // Modify the Z-axis scale while keeping X and Y axes locked
+        float newScaleX = sizeCube2.x + Input.GetAxis("Vertical") * Time.deltaTime;
+
+        // Clamp the new Z-axis scale to a desired range if necessary
+        //newScaleZ = Mathf.Clamp(newScaleZ, minScaleZ, maxScaleZ); // Adjust minScaleZ and maxScaleZ as needed
+
+        // Apply the new local scale with Z-axis modification
+        transform.localScale = new Vector3(newScaleX, sizeCube2.y, sizeCube2.z);
+
         // Change the color of the cube based on certain conditions
-        if (sizeCube1.z == sizeCube2.z)
+        if (sizeCube1.x == newScaleX)
         {
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
@@ -59,7 +68,7 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
             missionCompletedTextZ.gameObject.SetActive(true);
             requestTextZ.gameObject.SetActive(false);
         }
-        else if (sizeCube1.z > sizeCube2.z)
+        else if (sizeCube1.x > newScaleX)
         {
             Debug.Log("Cube 1 is larger than Cube 2.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -68,7 +77,7 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-        else if (sizeCube1.z < sizeCube2.z)
+        else if (sizeCube1.x < newScaleX)
         {
             Debug.Log("Cube 2 is larger than Cube 1.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();

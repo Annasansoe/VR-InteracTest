@@ -483,15 +483,17 @@ MonoBehaviour:
   mainMenu: {fileID: 1395818994}
   options: {fileID: 971390060}
   about: {fileID: 840491281}
-  sceneOneButton: {fileID: 396342314}
-  sceneTwoButton: {fileID: 1360321440}
-  sceneThreeButton: {fileID: 1292869921}
-  sceneOneHand: {fileID: 701230046}
-  sceneTwoHand: {fileID: 1928234387}
-  sceneThreeHand: {fileID: 273775438}
+  sceneOneTutorialButton: {fileID: 396342314}
+  sceneTwoTutorialButton: {fileID: 1360321440}
+  sceneThreeTutorialButton: {fileID: 1292869921}
+  sceneOneTutorialHand: {fileID: 701230046}
+  sceneTwoTutorialHand: {fileID: 1928234387}
+  sceneThreeTutorialHand: {fileID: 273775438}
   optionButton: {fileID: 391985324}
   aboutButton: {fileID: 367037927}
   quitButton: {fileID: 758300998}
+  titleSceneControllers: {fileID: 0}
+  titleSceneHands: {fileID: 0}
   returnToMainMenu: {fileID: 0}
   returnButtons:
   - {fileID: 309572442}
@@ -1054,7 +1056,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1767,7 +1769,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2467,6 +2469,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Complete XR Origin Hands Set Up (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3113582725626138475, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113582726685623846, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3113582726751902589, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4763085288384086254, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_TrackingStateInput.m_Action.m_Id
       value: f6b93354-4f7e-4528-bde8-d1ffd3912e91
@@ -2734,7 +2748,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4223,7 +4237,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4357,7 +4371,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4769,7 +4783,7 @@ GameObject:
   - component: {fileID: 1801384378}
   - component: {fileID: 1801384377}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: TitleSceneHands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4904,7 +4918,7 @@ GameObject:
   - component: {fileID: 1830433603}
   - component: {fileID: 1830433602}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TitleSceneControllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5269,7 +5283,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
