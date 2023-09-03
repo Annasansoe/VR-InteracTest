@@ -14,7 +14,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
     public TMP_InputField InputField;
     public TMP_Text ValidationText;
     public TMP_Text QuestionBox;
-    public GameObject Keyboard;
 
     [Space]
     public float TextSpeed;
@@ -32,7 +31,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         InputField.gameObject.SetActive(false);
         ValidationText.gameObject.SetActive(false);
         QuestionBox.gameObject.SetActive(false);
-        Keyboard.gameObject.SetActive(false);
     }
     public void Click()
     {
@@ -56,7 +54,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
                 InputField.gameObject.SetActive(true);
                 ValidationText.gameObject.SetActive(true);
                 QuestionBox.gameObject.SetActive(true);
-                Keyboard.gameObject.SetActive(true);
             }
             StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
         }

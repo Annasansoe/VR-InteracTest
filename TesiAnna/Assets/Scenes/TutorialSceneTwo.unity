@@ -153,7 +153,7 @@ Transform:
   m_Children:
   - {fileID: 1568736204}
   m_Father: {fileID: 192101695}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &73862120
 GameObject:
@@ -461,9 +461,9 @@ RectTransform:
   - {fileID: 940253903}
   - {fileID: 987452695}
   - {fileID: 1830805946}
-  - {fileID: 1684765733}
   - {fileID: 2000110382}
   - {fileID: 11515307}
+  - {fileID: 1684765733}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -929,7 +929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sample text '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1056,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.085
+      value: 0.381
       objectReference: {fileID: 0}
     - target: {fileID: 865075385244835223, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_Name
@@ -1457,7 +1457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5372549, g: 0.972549, b: 0.56078434, a: 0.83137256}
+  m_Color: {r: 0.34118018, g: 0.36871326, b: 0.38679248, a: 0.9098039}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2084,10 +2084,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 14
   m_fontSizeBase: 14
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2511,7 +2511,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568736203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.809}
+  m_LocalPosition: {x: 0, y: 0, z: -0.814}
   m_LocalScale: {x: 0.024106218, y: 0.02877202, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3049,7 +3049,7 @@ RectTransform:
   - {fileID: 1666438862}
   - {fileID: 1000299645}
   m_Father: {fileID: 192101695}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3139,7 +3139,7 @@ MonoBehaviour:
   - Dialogue: To answer you have to point the buttons of the keyboard and press the
       trigger button
   - Dialogue: To submit the answer press "Enter"
-  - Dialogue: A the end of the questionnair click on "Start test"
+  - Dialogue: At the end of the questionnair click on "Start test"
   - Dialogue: Remember, the test scene is more difficult than this one
   - Dialogue: Good luck!
   SkipIndicator: {fileID: 1000299646}
@@ -3148,7 +3148,6 @@ MonoBehaviour:
   InputField: {fileID: 1830805948}
   ValidationText: {fileID: 1568736205}
   QuestionBox: {fileID: 784388759}
-  Keyboard: {fileID: 1990582649}
   TextSpeed: 30
 --- !u!1 &1769283846
 GameObject:
@@ -3215,7 +3214,6 @@ GameObject:
   - component: {fileID: 1830805950}
   - component: {fileID: 1830805949}
   - component: {fileID: 1830805948}
-  - component: {fileID: 1830805951}
   - component: {fileID: 1830805947}
   m_Layer: 0
   m_Name: InputField (TMP)
@@ -3393,24 +3391,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830805945}
   m_CullTransparentMesh: 1
---- !u!114 &1830805951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830805945}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c630da236e5a34b8bcb4d84429ee0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputField: {fileID: 1830805948}
-  resultText: {fileID: 1568736205}
-  questionPanel: {fileID: 1396645890}
-  questionText: {fileID: 784388759}
-  questionsT: []
-  currentQuestionIndex: 0
 --- !u!1001 &1955489454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6366,7 +6346,7 @@ RectTransform:
   m_Children:
   - {fileID: 1396645891}
   m_Father: {fileID: 192101695}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -643,19 +643,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.101
+      value: -0.104
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.032959938
+      value: 0.03295994
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.442
+      value: -0.664
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9990672
+      value: 0.99997216
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalRotation.x
@@ -663,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.0431824
+      value: 0.0074696485
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalRotation.z
@@ -671,7 +671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -4.95
+      value: 0.856
       objectReference: {fileID: 0}
     - target: {fileID: 865075385244835223, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_Name
@@ -3574,10 +3574,9 @@ GameObject:
   - component: {fileID: 1442189262}
   - component: {fileID: 1442189261}
   - component: {fileID: 1442189260}
-  - component: {fileID: 1442189259}
   - component: {fileID: 1442189258}
   m_Layer: 0
-  m_Name: ReturnMenu UI  (1)
+  m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3618,40 +3617,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DialogueSegments:
-  - Dialogue: Welcome to the hand grab tutorial
+  - Dialogue: Welcome to the grab tutorial
   - Dialogue: In these scene you have to pick up the cubes, and put them in the gray
       bin
   - Dialogue: To do that you have to press the GRIP button on the controller
   - Dialogue: Keep it pressed and move your hand to the bin
+  - Dialogue: To release the object open your hand
   - Dialogue: Once in the bin the object will disappear
   - Dialogue: It's not a problem if one object fell off, it will come back soon
-  - Dialogue: Once you finshed all the cube you can press the Start test button
-  - Dialogue: Remember that the test scene is more complecated
+  - Dialogue: Once you finshed all the cubes, you can press the "Start test" button
+  - Dialogue: Remember that the test scene is more complicated
   - Dialogue: Good luck!
+  XRGrabInteractable:
+  - {fileID: 941411129}
+  - {fileID: 1461366492}
+  - {fileID: 1030333096}
+  - {fileID: 597181156}
+  - {fileID: 64849542}
+  - {fileID: 273631953}
+  - {fileID: 666315530}
+  - {fileID: 1818853765}
   SkipIndicator: {fileID: 1182269301}
   DialogueDisplay: {fileID: 488273264}
   GoToSceneOne: {fileID: 1107227399}
   CollectedObjects: {fileID: 529727870}
   TextSpeed: 30
---- !u!114 &1442189259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442189256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ab1db7fae4fdf418b1cca6a9be3f49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  returnToMainMenu: {fileID: 0}
-  goToSceneOne: {fileID: 0}
-  goToSceneTwo: {fileID: 0}
-  goToSceneThree: {fileID: 0}
-  goToSceneOneHand: {fileID: 0}
-  goToSceneTwoHand: {fileID: 0}
-  goToSceneThreeHand: {fileID: 0}
 --- !u!114 &1442189260
 MonoBehaviour:
   m_ObjectHideFlags: 0

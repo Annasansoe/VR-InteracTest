@@ -3681,6 +3681,9 @@ MonoBehaviour:
   goToSceneOne: {fileID: 0}
   goToSceneTwo: {fileID: 0}
   goToSceneThree: {fileID: 0}
+  goToSceneOneHand: {fileID: 0}
+  goToSceneTwoHand: {fileID: 0}
+  goToSceneThreeHand: {fileID: 0}
 --- !u!223 &727484924
 Canvas:
   m_ObjectHideFlags: 0
@@ -9576,7 +9579,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 266185978428555859, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.015
+      value: -0.635
       objectReference: {fileID: 0}
     - target: {fileID: 865075385244835223, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_Name

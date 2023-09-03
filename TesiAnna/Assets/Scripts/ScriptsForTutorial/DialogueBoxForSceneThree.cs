@@ -5,15 +5,14 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class DialogueBox : MonoBehaviour
+public class DialogueBoxForSceneThree : MonoBehaviour
 {
     public DialogueSegment[] DialogueSegments;
     [Space]
     public XRGrabInteractable[] XRGrabInteractable;
     public Button SkipIndicator;
     public TMP_Text DialogueDisplay;
-    public Button GoToSceneOne;
-    public TMP_Text CollectedObjects;
+    public Button GoToSceneThree;
     [Space]
     public float TextSpeed;
 
@@ -26,8 +25,7 @@ public class DialogueBox : MonoBehaviour
     void Start()
     {
         StartCoroutine(PlayDialogue(DialogueSegments[0].Dialogue));
-        GoToSceneOne.gameObject.SetActive(false);
-        CollectedObjects.gameObject.SetActive(false);
+        GoToSceneThree.gameObject.SetActive(false);
         foreach(XRGrabInteractable interactable in XRGrabInteractable)
         {
             GameObject interactableObject = interactable.gameObject;
@@ -53,8 +51,7 @@ public class DialogueBox : MonoBehaviour
                 gameObject.SetActive(false);
                 DialogueDisplay.gameObject.SetActive(false);
 
-                GoToSceneOne.gameObject.SetActive(true);
-                CollectedObjects.gameObject.SetActive(true);
+                GoToSceneThree.gameObject.SetActive(true);
                 foreach (XRGrabInteractable interactable in XRGrabInteractable)
                 {
                     GameObject interactableObject = interactable.gameObject;
@@ -84,8 +81,3 @@ public class DialogueBox : MonoBehaviour
    
 }
 
-[System.Serializable]
-public class DialogueSegment
-{
-    public string Dialogue;
-}
