@@ -25,11 +25,11 @@ using UnityEngine.XR.Interaction.Toolkit;
 
         [SerializeField] private float _time = 3f;
     
-
-        /// <summary>
-        /// See <see cref="MonoBehaviour"/>.
-        /// </summary>
-        protected void Start()
+        public static int objectFell=0;
+    /// <summary>
+    /// See <see cref="MonoBehaviour"/>.
+    /// </summary>
+    protected void Start()
             {
             wrongBin.enabled = false;
             foreach (var currentTransform in m_ObjectsToReset)
@@ -85,7 +85,7 @@ using UnityEngine.XR.Interaction.Toolkit;
         private IEnumerator ShowMessage()
         {
             wrongBin.enabled = true;
-
+            objectFell++;
             yield return new WaitForSeconds(_time);
 
             wrongBin.enabled = false;

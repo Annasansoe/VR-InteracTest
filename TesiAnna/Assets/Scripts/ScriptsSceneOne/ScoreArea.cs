@@ -97,6 +97,7 @@ public class ScoreArea : MonoBehaviour
         CSVManager.AppendToReport(GetReportLine());
         indexText++;
         totScore = 0;
+        ObjectResetPlaneForSceneOne.objectFell = 0;
         // Check if the file exists
         /*if (File.Exists(filePath))
         {
@@ -118,14 +119,16 @@ public class ScoreArea : MonoBehaviour
 
     string[] GetReportLine()
     {
-        string[] returnable = new string[6];
+        string[] returnable = new string[7];
         returnable[0] = "SceneOne.csv";
         returnable[1] = "Controllers";
         returnable[2] = indexText.ToString();
         returnable[3] = totScoreEnd.ToString();
-        returnable[4] = dateTimeStart;
-        returnable[5] = dateTimeEnd;
-        
+        returnable[4] = ObjectResetPlaneForSceneOne.objectFell.ToString();
+        returnable[5] = dateTimeStart;
+        returnable[6] = dateTimeEnd;
+
+
         return returnable;
 
     }

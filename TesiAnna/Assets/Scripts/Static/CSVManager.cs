@@ -13,12 +13,13 @@ public static class CSVManager
 
     private static string[] reportHeadersSceneThree = new string[] { };
 
-    private static string[] reportHeadersSceneOne = new string[6]
+    private static string[] reportHeadersSceneOne = new string[7]
     {
         "Scene number",
         "Interaction method",
         "User Number",
         "Collected objects",
+        "Objects fell",
         "Start time",
         "End time"
     };
