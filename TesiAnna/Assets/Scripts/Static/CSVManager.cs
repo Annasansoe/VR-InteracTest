@@ -4,16 +4,23 @@ using System.IO;
 public static class CSVManager
 {
     private static string reportDirectoryName = "Report";
-    private static string reportFileName = "report.csv";
+    private static string reportFileName = "Anna";
     private static string reportSeparator = ",";
 
-    private static string[] reportHeaders = new string[5]
+    private static string[] reportHeaders = new string[] { };
+
+    private static string[] reportHeadersSceneTwo = new string[] { };
+
+    private static string[] reportHeadersSceneThree = new string[] { };
+
+    private static string[] reportHeadersSceneOne = new string[6]
     {
-        "character name",
-        "hp",
-        "mp",
-        "damage",
-        "armor"
+        "Scene number",
+        "Interaction method",
+        "User Number",
+        "Collected objects",
+        "Start time",
+        "End time"
     };
 
     private static string timeStampHeader = "time stamp";
@@ -22,7 +29,8 @@ public static class CSVManager
 
     public static void AppendToReport(string[] strings)
     {
-        VerifyDirectory();
+        reportFileName = strings[0];
+        //VerifyDirectory();
         VerifyFile();
         using (StreamWriter sw = File.AppendText(GetFilePath()))
         {
@@ -37,7 +45,7 @@ public static class CSVManager
                 finalString += strings[i];
             }
 
-            finalString += reportSeparator + GetTimeStamp();
+            //finalString += reportSeparator + GetTimeStamp();
             sw.WriteLine(finalString);
         }
 
@@ -45,23 +53,39 @@ public static class CSVManager
 
     public static void CreateReport()
     {
-        VerifyDirectory();
-        using (StreamWriter sw = File.CreateText(GetFilePath()))
+        if (reportFileName == "SceneOne.csv")
         {
-            string finalString = "";
-            for (int i = 0; i < reportHeaders.Length; i++)
+            reportHeaders = reportHeadersSceneOne;
+
+        }
+       else if (reportFileName == "SceneTwo.csv")
+        {
+            reportHeaders = reportHeadersSceneTwo;
+
+        }
+        else if (reportFileName == "SceneThree.csv")
+        {
+            reportHeaders = reportHeadersSceneThree;
+
+        }
+        // VerifyDirectory();
+        using (StreamWriter sw = File.CreateText(GetFilePath()))
             {
-                if (finalString != "")
+                string finalString = "";
+                for (int i = 0; i < reportHeaders.Length; i++)
                 {
-                    finalString += reportSeparator;
+                    if (finalString != "")
+                    {
+                        finalString += reportSeparator;
+                    }
+
+                    finalString += reportHeaders[i];
                 }
 
-                finalString += reportHeaders[i];
+               // finalString += reportSeparator + timeStampHeader;
+                sw.WriteLine(finalString);
             }
-
-            finalString += reportSeparator + timeStampHeader;
-            sw.WriteLine(finalString);
-        }
+        
     }
 
     #endregion
@@ -69,14 +93,14 @@ public static class CSVManager
     
 
     #region Operations
-    static void VerifyDirectory()
+   /* static void VerifyDirectory()
     {
         string dir = GetDirectoryPath();
         if (!Directory.Exists(dir))
         {
             Directory.CreateDirectory(dir);
         }
-    }
+    }*/
 
     static void VerifyFile()
     {
@@ -90,19 +114,19 @@ public static class CSVManager
     #endregion
 
     #region Queries
-    static string GetDirectoryPath()
+    /*static string GetDirectoryPath()
     {
-        return Application.dataPath + "/" + reportDirectoryName;
-    }
+        return Application.persistentDataPath + "/" + reportDirectoryName;
+    }*/
 
     static string GetFilePath()
     {
-        return GetDirectoryPath() + "/" + reportFileName;
+        return Path.Combine(Application.persistentDataPath, reportFileName); 
     }
 
-    static string GetTimeStamp()
+    /*static string GetTimeStamp()
     {
         return System.DateTime.UtcNow.ToString();
-    }
+    }*/
     #endregion
 }

@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using System.Collections;
-using UnityEngine.UI;
+using UnityEngine;
 using TMPro;
+using UnityEngine.XR.Interaction.Toolkit;
 
-namespace UnityEngine.XR.Interaction.Toolkit.Samples.Hands
-{
     /// <summary>
     /// Provides the ability to reset specified objects if they fall below a certain position - designated by this transform's height.
     /// </summary>
@@ -92,5 +91,5 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.Hands
             wrongBin.enabled = false;
         }
 }
-}
+
 

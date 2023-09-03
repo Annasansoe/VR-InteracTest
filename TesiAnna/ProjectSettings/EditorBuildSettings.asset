@@ -26,10 +26,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TutorialSceneThreeHand.unity
     guid: 102ab896b9834e94586edb98bba4d16d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneOne.unity
     guid: ab8b3967b859ba74cb3b7b1709231c0c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneTwo.unity
     guid: d48fd02dc2892d94e9f4ff5fde477520
   - enabled: 0
