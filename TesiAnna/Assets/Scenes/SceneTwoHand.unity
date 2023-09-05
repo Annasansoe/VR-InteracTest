@@ -2164,10 +2164,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
@@ -2175,7 +2179,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 202320411}
     - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1146294652}
+    - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
@@ -2183,11 +2195,23 @@ PrefabInstance:
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnClickBackspace
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: InputFieldGrabberHand, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11406838, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 11406970, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
@@ -4813,6 +4837,32 @@ MonoBehaviour:
   questionPanel: {fileID: 1769986663}
   questionText: {fileID: 398777372}
   backToMenu: {fileID: 1880285817}
+  questions: []
+  currentQuestionIndex: 0
+--- !u!1 &1146294651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 164416, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+  m_PrefabInstance: {fileID: 1146294646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1146294652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146294651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6363ef5ab7508234aaeee4ac6ad7f95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reactiongGroup: {fileID: 0}
+  reactionTextBox: {fileID: 0}
+  inputField: {fileID: 0}
+  resultText: {fileID: 0}
+  questionPanel: {fileID: 0}
+  questionText: {fileID: 0}
+  backToMenu: {fileID: 0}
   questions: []
   currentQuestionIndex: 0
 --- !u!1001 &1267730049

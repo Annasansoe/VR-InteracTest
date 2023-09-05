@@ -26,12 +26,14 @@ public class InputFieldGrabber : MonoBehaviour
     private static int indexTextTwo;
     int wrongAnswers = 0;
     int rightAnswers = 0;
+    private static int numCanc = 0;
 
     public List<Question> questions;
     public int currentQuestionIndex = 0;
 
     private void Start()
     {
+        dateTimeStart = System.DateTime.UtcNow.ToString();
         questions = new List<Question>
     {
         new Question("What is the capital of France?", "Paris"),
@@ -48,7 +50,12 @@ public class InputFieldGrabber : MonoBehaviour
         questionText.text = questions[index].questionText;
         inputField.text = "";
     }
-   
+
+    public void OnClickBackspace()
+    {
+        numCanc++;
+    }
+
     public void OnSubmitAnswer()
     {
         string userAnswer = inputField.text.ToString();
@@ -58,7 +65,7 @@ public class InputFieldGrabber : MonoBehaviour
             Debug.Log("Answer is incorrect!");
             resultText.text = "Invalid input";
             resultText.color = Color.red;
-           
+            wrongAnswers++;
         }
         else
         {
@@ -67,6 +74,7 @@ public class InputFieldGrabber : MonoBehaviour
             resultText.color = Color.green;
             // Move to the next question and display it
             currentQuestionIndex++;
+            rightAnswers++;
         }
         reactionTextBox.text = "Welcome to the team, " + userAnswer + "!";
        
@@ -93,21 +101,20 @@ public class InputFieldGrabber : MonoBehaviour
         indexTextTwo++;
         wrongAnswers = 0;
         rightAnswers = 0;
-
+        numCanc = 0;
     }
 
     string[] GetReportLine()
     {
-        string[] returnable = new string[7];
+        string[] returnable = new string[8];
         returnable[0] = "SceneTwo.csv";
         returnable[1] = "Controllers";
         returnable[2] = indexTextTwo.ToString();
         returnable[3] = wrongAnswers.ToString();
         returnable[4] = rightAnswers.ToString();
-        returnable[5] = dateTimeStart;
-        returnable[6] = dateTimeEnd;
-
-
+        returnable[5] = numCanc.ToString();
+        returnable[6] = dateTimeStart;
+        returnable[7] = dateTimeEnd;
         return returnable;
     }
 }

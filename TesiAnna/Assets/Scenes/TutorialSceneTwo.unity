@@ -2756,7 +2756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: fd
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4742,6 +4742,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 11434368, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11434882, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5297,7 +5301,7 @@ PrefabInstance:
     - target: {fileID: 11462718, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1241507793}
     - target: {fileID: 11462718, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -5909,6 +5913,10 @@ PrefabInstance:
     - target: {fileID: 11484980, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486816, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11487054, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -6482,6 +6490,29 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!1 &1990582652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 117084, guid: c4e389e44d96da64ea974ab237ce1a9a, type: 3}
+  m_PrefabInstance: {fileID: 1990582648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990582653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990582652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c630da236e5a34b8bcb4d84429ee0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 1830805948}
+  resultText: {fileID: 1568736205}
+  questionPanel: {fileID: 1396645890}
+  questionText: {fileID: 784388759}
+  questionsT: []
+  currentQuestionIndex: 0
 --- !u!114 &1990582659
 MonoBehaviour:
   m_ObjectHideFlags: 0

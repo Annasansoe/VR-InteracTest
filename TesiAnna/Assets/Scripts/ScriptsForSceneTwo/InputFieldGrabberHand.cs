@@ -26,6 +26,7 @@ public class InputFieldGrabberHand : MonoBehaviour
     private static int indexTextTwoHand;
     int wrongAnswers = 0;
     int rightAnswers = 0;
+    private static int num = 0;
 
 
     //public Button submitButton;
@@ -35,7 +36,7 @@ public class InputFieldGrabberHand : MonoBehaviour
 
     private void Start()
     {
-
+        dateTimeStart = System.DateTime.UtcNow.ToString();
         questions = new List<QuestionHand>
     {
         new QuestionHand("What is the capital of France?", "Paris"),
@@ -53,12 +54,11 @@ public class InputFieldGrabberHand : MonoBehaviour
         inputField.text = "";
     }
 
-    /*public void onClickBackspace(int num)
+   public void OnClickBackspace()
     {
-       
         num++;
     }
-    */
+   
     public void OnSubmitAnswer()
     {
         string userAnswer = inputField.text.ToString();
@@ -109,19 +109,21 @@ public class InputFieldGrabberHand : MonoBehaviour
         indexTextTwoHand++;
         wrongAnswers = 0;
         rightAnswers = 0;
+        num = 0;
 
     }
 
     string[] GetReportLine()
     {
-        string[] returnable = new string[7];
+        string[] returnable = new string[8];
         returnable[0] = "SceneTwo.csv";
         returnable[1] = "Hands";
         returnable[2] = indexTextTwoHand.ToString();
         returnable[3] = wrongAnswers.ToString();
         returnable[4] = rightAnswers.ToString();
-        returnable[5] = dateTimeStart;
-        returnable[6] = dateTimeEnd;
+        returnable[5] = num.ToString();
+        returnable[6] = dateTimeStart;
+        returnable[7] = dateTimeEnd;
 
         return returnable;
     }

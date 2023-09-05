@@ -23,13 +23,14 @@ public static class CSVManager
         "End time"
     };
 
-    private static string[] reportHeadersSceneTwo = new string[7]
+    private static string[] reportHeadersSceneTwo = new string[8]
     {
         "Scene number",
         "Interaction method",
         "User Number",
-        "Collected objects",
-        "Objects fell",
+        "Wrong Answer",
+        "Correct Answer",
+        "Total canc",
         "Start time",
         "End time"
     };
