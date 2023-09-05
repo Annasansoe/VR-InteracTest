@@ -52,6 +52,7 @@ public class ScaleControllerKey : MonoBehaviour
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
+               ScaleController.scaleDone++;
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);

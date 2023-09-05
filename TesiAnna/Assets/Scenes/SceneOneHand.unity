@@ -2815,6 +2815,7 @@ MonoBehaviour:
   collectedPaperObjectsTextH: {fileID: 330324263}
   collectedOrganicObjectsTextH: {fileID: 0}
   collectedPlasticObjectsTextH: {fileID: 0}
+  backToMenu: {fileID: 0}
 --- !u!65 &465791380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2905,6 +2906,7 @@ MonoBehaviour:
   collectedPaperObjectsTextH: {fileID: 0}
   collectedOrganicObjectsTextH: {fileID: 0}
   collectedPlasticObjectsTextH: {fileID: 635979108}
+  backToMenu: {fileID: 0}
 --- !u!65 &489670978
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4499,6 +4501,7 @@ MonoBehaviour:
   collectedPaperObjectsTextH: {fileID: 0}
   collectedOrganicObjectsTextH: {fileID: 0}
   collectedPlasticObjectsTextH: {fileID: 0}
+  backToMenu: {fileID: 0}
 --- !u!1 &902389853
 GameObject:
   m_ObjectHideFlags: 0
@@ -11092,6 +11095,7 @@ MonoBehaviour:
   collectedPaperObjectsTextH: {fileID: 0}
   collectedOrganicObjectsTextH: {fileID: 0}
   collectedPlasticObjectsTextH: {fileID: 0}
+  backToMenu: {fileID: 0}
 --- !u!65 &1821768503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12763,6 +12767,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 840379110}
+        m_TargetAssemblyTypeName: ScoreAreaHands, Assembly-CSharp
+        m_MethodName: BackToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2082836968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12878,6 +12894,7 @@ MonoBehaviour:
   collectedPaperObjectsTextH: {fileID: 0}
   collectedOrganicObjectsTextH: {fileID: 192631164}
   collectedPlasticObjectsTextH: {fileID: 0}
+  backToMenu: {fileID: 0}
 --- !u!65 &2138511890
 BoxCollider:
   m_ObjectHideFlags: 0

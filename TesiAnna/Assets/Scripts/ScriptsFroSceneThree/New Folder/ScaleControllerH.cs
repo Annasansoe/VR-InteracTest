@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.IO;
 
-public class ScaleController : MonoBehaviour
+public class ScaleControllerH : MonoBehaviour
 {
 
     [Header("Target cube")]
@@ -21,7 +21,7 @@ public class ScaleController : MonoBehaviour
     [Header("Mission state")]
     public TMP_Text requestText;
     public TMP_Text missionCompletedText;
-
+    public TMP_Text fellOff;
 
     [Header("Return button")]
     public Button backToMenu;
@@ -33,7 +33,7 @@ public class ScaleController : MonoBehaviour
     int totScaleEnd = 0;
     public static int scaleDone=0;
 
-    private static int indexTextSThree;
+    private static int indexTextSThreeHands;
 
     public Color isSmaller = Color.red;
     public Color isEqual = Color.green;
@@ -103,7 +103,7 @@ public class ScaleController : MonoBehaviour
         totScaleEnd = scaleDone;
         dateTimeEnd = System.DateTime.UtcNow.ToString();
         CSVManager.AppendToReport(GetReportLine());
-        indexTextSThree++;
+        indexTextSThreeHands++;
         scaleDone = 0;
         ObjectResetPlaneForSceneThree.objectFellSceneThree = 0;
     }
@@ -112,8 +112,8 @@ public class ScaleController : MonoBehaviour
     {
         string[] returnable = new string[7];
         returnable[0] = "SceneThree.csv";
-        returnable[1] = "Controllers";
-        returnable[2] = indexTextSThree.ToString();
+        returnable[1] = "Hands";
+        returnable[2] = indexTextSThreeHands.ToString();
         returnable[3] = totScaleEnd.ToString();
         returnable[4] = ObjectResetPlaneForSceneThree.objectFellSceneThree.ToString();
         returnable[5] = dateTimeStart;

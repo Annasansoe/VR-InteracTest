@@ -20,6 +20,7 @@ public class ScaleControllerForDrawers : MonoBehaviour {
 
     private Vector3 originalScale;
     static int cubeDrawersResized;
+    int scaleDoneDrawers = 0;
 
 
     public Color isEqual = Color.green;
@@ -52,6 +53,7 @@ public class ScaleControllerForDrawers : MonoBehaviour {
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
+                ScaleController.scaleDone++;
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);

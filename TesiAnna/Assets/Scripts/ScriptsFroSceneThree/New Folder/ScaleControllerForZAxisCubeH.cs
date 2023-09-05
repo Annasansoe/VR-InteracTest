@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
-using UnityEngine.UI;
-using System.IO;
 
-public class ScaleController : MonoBehaviour
+public class ScaleControllerForZAxisCubeH : MonoBehaviour
 {
 
     [Header("Target cube")]
@@ -19,21 +16,10 @@ public class ScaleController : MonoBehaviour
     public GameObject cubeAfterScale;
 
     [Header("Mission state")]
-    public TMP_Text requestText;
-    public TMP_Text missionCompletedText;
-
-
-    [Header("Return button")]
-    public Button backToMenu;
+    public TMP_Text requestTextZ;
+    public TMP_Text missionCompletedTextZ;
 
     private Vector3 originalScale;
-
-    string dateTimeStart;
-    string dateTimeEnd;
-    int totScaleEnd = 0;
-    public static int scaleDone=0;
-
-    private static int indexTextSThree;
 
     public Color isSmaller = Color.red;
     public Color isEqual = Color.green;
@@ -41,8 +27,6 @@ public class ScaleController : MonoBehaviour
 
     private void Start()
     {
-
-        dateTimeStart = System.DateTime.UtcNow.ToString();
         // Ensure that cube1 and cube2 are assigned in the Inspector
         if (cubeTarget == null || cubeManipulable == null)
         {
@@ -50,35 +34,42 @@ public class ScaleController : MonoBehaviour
             return;
         }
         cubeAfterScale.SetActive(false);
-        originalScale = cubeManipulable.transform.localScale;       
-        missionCompletedText.gameObject.SetActive(false);
-       
+        originalScale = cubeManipulable.transform.localScale;
+        missionCompletedTextZ.gameObject.SetActive(false);
+
     }
     private void Update()
     {
         Vector3 sizeCube1 = cubeTarget.transform.localScale;
-        Vector3 sizeCube2 = cubeManipulable.transform.localScale; 
+        Vector3 sizeCube2 = cubeManipulable.transform.localScale;
         Vector3 positionToMatch = cubeManipulable.transform.position;
-        
+
+        // Modify the Z-axis scale while keeping X and Y axes locked
+        float newScaleX = sizeCube2.x + Input.GetAxis("Vertical") * Time.deltaTime;
+
+        // Clamp the new Z-axis scale to a desired range if necessary
+        //newScaleZ = Mathf.Clamp(newScaleZ, minScaleZ, maxScaleZ); // Adjust minScaleZ and maxScaleZ as needed
+
+        // Apply the new local scale with Z-axis modification
+        transform.localScale = new Vector3(newScaleX, sizeCube2.y, sizeCube2.z);
+
         // Change the color of the cube based on certain conditions
-        if (sizeCube1.x * sizeCube1.y * sizeCube1.z == sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        if (sizeCube1.x == newScaleX)
         {
-            requestText.gameObject.SetActive(false);
-            missionCompletedText.gameObject.SetActive(true);
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                scaleDone++;
-
+                ScaleControllerH.scaleDone++;
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
             Debug.Log("Both cubes have the same size.");
-            
+            missionCompletedTextZ.gameObject.SetActive(true);
+            requestTextZ.gameObject.SetActive(false);
         }
-        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        else if (sizeCube1.x > newScaleX)
         {
             Debug.Log("Cube 1 is larger than Cube 2.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -87,7 +78,7 @@ public class ScaleController : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        else if (sizeCube1.x < newScaleX)
         {
             Debug.Log("Cube 2 is larger than Cube 1.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -98,32 +89,4 @@ public class ScaleController : MonoBehaviour
         }
     }
 
-    public void BackToMenu()
-    {
-        totScaleEnd = scaleDone;
-        dateTimeEnd = System.DateTime.UtcNow.ToString();
-        CSVManager.AppendToReport(GetReportLine());
-        indexTextSThree++;
-        scaleDone = 0;
-        ObjectResetPlaneForSceneThree.objectFellSceneThree = 0;
-    }
-
-    string[] GetReportLine()
-    {
-        string[] returnable = new string[7];
-        returnable[0] = "SceneThree.csv";
-        returnable[1] = "Controllers";
-        returnable[2] = indexTextSThree.ToString();
-        returnable[3] = totScaleEnd.ToString();
-        returnable[4] = ObjectResetPlaneForSceneThree.objectFellSceneThree.ToString();
-        returnable[5] = dateTimeStart;
-        returnable[6] = dateTimeEnd;
-
-
-        return returnable;
-
-    }
-
 }
-
-

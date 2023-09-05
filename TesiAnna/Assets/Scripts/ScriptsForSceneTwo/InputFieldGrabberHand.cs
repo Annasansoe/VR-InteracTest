@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class InputFieldGrabber : MonoBehaviour
+public class InputFieldGrabberHand : MonoBehaviour
 {
     [Header("Showing the reaction to the player")]
     [SerializeField] private GameObject reactiongGroup;
@@ -23,20 +23,24 @@ public class InputFieldGrabber : MonoBehaviour
     public Button backToMenu;
     string dateTimeStart;
     string dateTimeEnd;
-    private static int indexTextTwo;
+    private static int indexTextTwoHand;
     int wrongAnswers = 0;
     int rightAnswers = 0;
 
-    public List<Question> questions;
+
+    //public Button submitButton;
+
+    public List<QuestionHand> questions;
     public int currentQuestionIndex = 0;
 
     private void Start()
     {
-        questions = new List<Question>
+
+        questions = new List<QuestionHand>
     {
-        new Question("What is the capital of France?", "Paris"),
-        new Question("How many planets are there in our solar system?", "eight"),
-        new Question("How many days are there in a week?", "Seven"),
+        new QuestionHand("What is the capital of France?", "Paris"),
+        new QuestionHand("How many planets are there in our solar system?", "eight"),
+        new QuestionHand("How many days are there in a week?", "Seven"),
         // ... Add more questions here with their respective expected answers
     };
 
@@ -48,7 +52,13 @@ public class InputFieldGrabber : MonoBehaviour
         questionText.text = questions[index].questionText;
         inputField.text = "";
     }
-   
+
+    /*public void onClickBackspace(int num)
+    {
+       
+        num++;
+    }
+    */
     public void OnSubmitAnswer()
     {
         string userAnswer = inputField.text.ToString();
@@ -58,13 +68,16 @@ public class InputFieldGrabber : MonoBehaviour
             Debug.Log("Answer is incorrect!");
             resultText.text = "Invalid input";
             resultText.color = Color.red;
-           
+            wrongAnswers++;
+
+
         }
         else
         {
             Debug.Log("Answer is correct.");
             resultText.text = "Valid Input";
             resultText.color = Color.green;
+            rightAnswers++;
             // Move to the next question and display it
             currentQuestionIndex++;
         }
@@ -84,13 +97,16 @@ public class InputFieldGrabber : MonoBehaviour
         }
     }
 
-    
+   
 
     public void BackToMenu()
     {
+        //string filePath = Path.Combine(Application.persistentDataPath, dataFileName);
+        //totScoreEnd = totScore;
+        //verificationText.gameObject.SetActive(true);
         dateTimeEnd = System.DateTime.UtcNow.ToString();
         CSVManager.AppendToReport(GetReportLine());
-        indexTextTwo++;
+        indexTextTwoHand++;
         wrongAnswers = 0;
         rightAnswers = 0;
 
@@ -100,25 +116,24 @@ public class InputFieldGrabber : MonoBehaviour
     {
         string[] returnable = new string[7];
         returnable[0] = "SceneTwo.csv";
-        returnable[1] = "Controllers";
-        returnable[2] = indexTextTwo.ToString();
+        returnable[1] = "Hands";
+        returnable[2] = indexTextTwoHand.ToString();
         returnable[3] = wrongAnswers.ToString();
         returnable[4] = rightAnswers.ToString();
         returnable[5] = dateTimeStart;
         returnable[6] = dateTimeEnd;
-
 
         return returnable;
     }
 }
 
 [System.Serializable]
-public class Question
+public class QuestionHand
 {
     public string questionText;
     public string expectedAnswer;
 
-    public Question(string text, string answer)
+    public QuestionHand(string text, string answer)
     {
         questionText = text;
         expectedAnswer = answer;

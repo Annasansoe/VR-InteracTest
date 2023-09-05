@@ -7,11 +7,10 @@ public static class CSVManager
     private static string reportFileName = "Anna";
     private static string reportSeparator = ",";
 
-    private static string[] reportHeaders = new string[] { };
-
-    private static string[] reportHeadersSceneTwo = new string[] { };
-
-    private static string[] reportHeadersSceneThree = new string[] { };
+    private static string[] reportHeaders = new string[] 
+    {
+        
+    };
 
     private static string[] reportHeadersSceneOne = new string[7]
     {
@@ -23,6 +22,30 @@ public static class CSVManager
         "Start time",
         "End time"
     };
+
+    private static string[] reportHeadersSceneTwo = new string[7]
+    {
+        "Scene number",
+        "Interaction method",
+        "User Number",
+        "Collected objects",
+        "Objects fell",
+        "Start time",
+        "End time"
+    };
+
+    private static string[] reportHeadersSceneThree = new string[7] 
+    {
+        "Scene number",
+        "Interaction method",
+        "User Number",
+        "Scaled Objects",
+        "Objects fell",
+        "Start time",
+        "End time"
+    };
+
+    
 
     private static string timeStampHeader = "time stamp";
     

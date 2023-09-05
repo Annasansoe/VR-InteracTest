@@ -2918,7 +2918,6 @@ MonoBehaviour:
   collectedPlasticObjectsText: {fileID: 0}
   verificationText: {fileID: 0}
   backToMenu: {fileID: 2082836967}
-  dataFileName: sceneOneData.csv
 --- !u!65 &514468269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3011,7 +3010,6 @@ MonoBehaviour:
   collectedPlasticObjectsText: {fileID: 0}
   verificationText: {fileID: 0}
   backToMenu: {fileID: 2082836967}
-  dataFileName: sceneOneData.csv
 --- !u!65 &556188476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4596,7 +4594,6 @@ MonoBehaviour:
   collectedPlasticObjectsText: {fileID: 0}
   verificationText: {fileID: 1992856998}
   backToMenu: {fileID: 2082836967}
-  dataFileName: sceneOneData.csv
 --- !u!65 &840379109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5318,7 +5315,6 @@ MonoBehaviour:
   collectedPlasticObjectsText: {fileID: 635979108}
   verificationText: {fileID: 0}
   backToMenu: {fileID: 2082836967}
-  dataFileName: sceneOneData.csv
 --- !u!65 &985857939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13163,7 +13159,6 @@ MonoBehaviour:
   collectedPlasticObjectsText: {fileID: 0}
   verificationText: {fileID: 0}
   backToMenu: {fileID: 2082836967}
-  dataFileName: sceneOneData.csv
 --- !u!65 &2111444486
 BoxCollider:
   m_ObjectHideFlags: 0

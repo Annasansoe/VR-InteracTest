@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ScaleControllerForZAxisCube : MonoBehaviour
+public class ScaleControllerKeyH : MonoBehaviour
 {
 
     [Header("Target cube")]
@@ -16,12 +16,12 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
     public GameObject cubeAfterScale;
 
     [Header("Mission state")]
-    public TMP_Text requestTextZ;
-    public TMP_Text missionCompletedTextZ;
+    public TMP_Text requestTextK;
+    public TMP_Text missionCompletedTextK;
 
     private Vector3 originalScale;
 
-    public Color isSmaller = Color.red;
+
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
@@ -35,7 +35,8 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
         }
         cubeAfterScale.SetActive(false);
         originalScale = cubeManipulable.transform.localScale;
-        missionCompletedTextZ.gameObject.SetActive(false);
+
+        missionCompletedTextK.gameObject.SetActive(false);
 
     }
     private void Update()
@@ -44,49 +45,33 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
         Vector3 sizeCube2 = cubeManipulable.transform.localScale;
         Vector3 positionToMatch = cubeManipulable.transform.position;
 
-        // Modify the Z-axis scale while keeping X and Y axes locked
-        float newScaleX = sizeCube2.x + Input.GetAxis("Vertical") * Time.deltaTime;
-
-        // Clamp the new Z-axis scale to a desired range if necessary
-        //newScaleZ = Mathf.Clamp(newScaleZ, minScaleZ, maxScaleZ); // Adjust minScaleZ and maxScaleZ as needed
-
-        // Apply the new local scale with Z-axis modification
-        transform.localScale = new Vector3(newScaleX, sizeCube2.y, sizeCube2.z);
-
         // Change the color of the cube based on certain conditions
-        if (sizeCube1.x == newScaleX)
+        if (sizeCube1.x * sizeCube1.y * sizeCube1.z >= sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                ScaleController.scaleDone++;
+               ScaleControllerH.scaleDone++;
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
-            Debug.Log("Both cubes have the same size.");
-            missionCompletedTextZ.gameObject.SetActive(true);
-            requestTextZ.gameObject.SetActive(false);
+            missionCompletedTextK.gameObject.SetActive(true);
+            requestTextK.gameObject.SetActive(false);
+            Debug.Log("The cubes are smaller than the target one.");
         }
-        else if (sizeCube1.x > newScaleX)
+        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
-            Debug.Log("Cube 1 is larger than Cube 2.");
-            Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
-            if (cubeRenderer != null)
-            {
-                cubeRenderer.material.color = isSmaller;
-            }
-        }
-        else if (sizeCube1.x < newScaleX)
-        {
-            Debug.Log("Cube 2 is larger than Cube 1.");
+            Debug.Log("The cubes are bigger than the target one..");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isBigger;
             }
         }
+
+
     }
 
 }

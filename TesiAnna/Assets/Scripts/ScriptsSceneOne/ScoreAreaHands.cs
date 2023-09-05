@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
+using UnityEngine.UI;
 
 public class ScoreAreaHands : MonoBehaviour
 {
@@ -24,8 +25,16 @@ public class ScoreAreaHands : MonoBehaviour
     public TMP_Text collectedPlasticObjectsTextH;
 
 
+    [Header("Return button")]
+    public Button backToMenu;
+    static int indexTextOneHand = 0;
+    int totScoreEnd = 0;
+    string dateTimeStart;
+    string dateTimeEnd;
+
     private void Start()
     {
+        dateTimeStart = System.DateTime.UtcNow.ToString();
         collectedTotObjectsTextH.text = "Total collected objects: " + totScore.ToString() + " of 25";
         collectedUnsortedObjectsTextH.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
         collectedGMObjectsTextH.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
@@ -71,6 +80,31 @@ public class ScoreAreaHands : MonoBehaviour
         }
         collectedTotObjectsTextH.text = "Total collected objects: " + totScore.ToString() + " of 25";
         Destroy(otherCollider.gameObject);
+    }
+
+    public void BackToMenu()
+    {
+        totScoreEnd = totScore;
+        dateTimeEnd = System.DateTime.UtcNow.ToString();
+        CSVManager.AppendToReport(GetReportLine());
+        indexTextOneHand++;
+        totScore = 0;
+        ObjectResetPlaneForSceneOne.objectFell = 0;
+        
+    }
+    string[] GetReportLine()
+    {
+        string[] returnable = new string[7];
+        returnable[0] = "SceneOne.csv";
+        returnable[1] = "Hands";
+        returnable[2] = indexTextOneHand.ToString();
+        returnable[3] = totScoreEnd.ToString();
+        returnable[4] = ObjectResetPlaneForSceneOne.objectFell.ToString();
+        returnable[5] = dateTimeStart;
+        returnable[6] = dateTimeEnd;
+
+
+        return returnable;
     }
 
 

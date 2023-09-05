@@ -575,6 +575,7 @@ MonoBehaviour:
   cubeAfterScale: {fileID: 0}
   requestText: {fileID: 0}
   missionCompletedText: {fileID: 0}
+  backToMenu: {fileID: 0}
   isSmaller: {r: 1, g: 0, b: 0, a: 1}
   isEqual: {r: 0, g: 1, b: 0, a: 1}
   isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -3175,8 +3176,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueBox, Assembly-CSharp
+      - m_Target: {fileID: 1684765739}
+        m_TargetAssemblyTypeName: DialogueBoxForSceneThree, Assembly-CSharp
         m_MethodName: Click
         m_Mode: 1
         m_Arguments:
@@ -4213,6 +4214,7 @@ MonoBehaviour:
   cubeAfterScale: {fileID: 0}
   requestText: {fileID: 0}
   missionCompletedText: {fileID: 0}
+  backToMenu: {fileID: 0}
   isSmaller: {r: 1, g: 0, b: 0, a: 1}
   isEqual: {r: 0, g: 1, b: 0, a: 1}
   isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -4517,8 +4519,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSegments:
   - Dialogue: Welcome to the manipulation tutorial
-  - Dialogue: In these scene you have to select a cube with the ray, and push the
-      GRID button
+  - Dialogue: In these scene you have to select a cube with the ray and push the
+      GRID button, with both hands
   - Dialogue: 'Than you have take your hands away, if you want to make the object
       bigger '
   - Dialogue: Or bring your hands together, if you want to make the object smaller
