@@ -48,6 +48,10 @@ public class DialogueBoxForSceneThree : MonoBehaviour
     public void isSelect()
     {
         IsSelected++;
+        if (IsSelected > 1)
+        {
+            DidIt.Play();
+        }
     }
 
     // Update is called once per frame
@@ -55,7 +59,7 @@ public class DialogueBoxForSceneThree : MonoBehaviour
     {
         Vector3 sizeCube2 = XRGrabInteractable.transform.localScale;
         SkipIndicator.enabled = CanContinue;
-        if (DialogueIndex != 1 && buttonClicked && CanContinue)
+        if (buttonClicked && CanContinue)
         {
             buttonClicked = false;
             DialogueIndex++;
@@ -75,11 +79,12 @@ public class DialogueBoxForSceneThree : MonoBehaviour
             SkipIndicator.enabled = false;
             XRGrabInteractable.gameObject.SetActive(true);
             VerifyIsGrabbed.gameObject.SetActive(true);
+            VerifyIsGrabbed.text = "Selected:" + IsSelected.ToString() ;
             if (IsSelected > 1)
             {
                 VerifyIsGrabbed.text = "Great job!";
                 SkipIndicator.enabled = true;
-                DidIt.gameObject.SetActive(true);
+               // DidIt.gameObject.SetActive(true);
 
                 if (buttonClicked && CanContinue)
                 {
@@ -98,8 +103,7 @@ public class DialogueBoxForSceneThree : MonoBehaviour
             VerifyIsGrabbed.gameObject.SetActive(false);
             if (originalScale.x * originalScale.y * originalScale.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
             {
-                VerifyIsGrabbed.gameObject.SetActive(true);
-                VerifyIsGrabbed.text = "Great job,the object is bigger!";
+                VerifyIsGrabbed.text = "Great job!";
                 SkipIndicator.enabled = true;
                 DidIt.gameObject.SetActive(true);
 

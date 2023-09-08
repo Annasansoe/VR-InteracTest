@@ -2422,7 +2422,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 0
       - m_Target: {fileID: 6684448578276219967, guid: 5ac6eb4a476047842b062e71ac11d9e1, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
