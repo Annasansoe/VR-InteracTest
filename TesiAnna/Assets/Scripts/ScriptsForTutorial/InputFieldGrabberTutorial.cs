@@ -25,8 +25,8 @@ public class InputFieldGrabberTutorial : MonoBehaviour
         questionsT = new List<QuestionTutorial>
     {
         new QuestionTutorial("What is your name?"),
-        new QuestionTutorial("What is your surname?"),
-        new QuestionTutorial("What is your email?"),
+        //new QuestionTutorial("What is your surname?"),
+       // new QuestionTutorial("What is your email?"),
         // ... Add more questions here with their respective expected answers
     };
 
