@@ -15,17 +15,17 @@ public class DialogueBoxSceneTwo : MonoBehaviour
     public TMP_Text ValidationText;
     public TMP_Text QuestionBox;
     public TMP_Text Verify;
-    public AudioSource inputNormal;
 
-    public AudioSource enterNormal;
-    public AudioSource inputFirstTime;
-    public AudioSource enterFirstTime;
+    [Space]
+    public AudioSource audioSource;
+    public AudioClip soundClip;
 
     [Space]
     public float TextSpeed;
 
     private bool buttonClicked = false;
     public bool inputFieldClicked = false;
+    private bool hasBeenPlayed = false;
 
     private bool CanContinue;
     private int DialogueIndex;
@@ -42,10 +42,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         ValidationText.gameObject.SetActive(false);
         QuestionBox.gameObject.SetActive(false);
         Verify.gameObject.SetActive(false);
-        inputNormal.gameObject.SetActive(false);
-        enterNormal.gameObject.SetActive(false);
-        inputFirstTime.gameObject.SetActive(false);
-        enterFirstTime.gameObject.SetActive(false);
     }
     public void Click()
     {
@@ -90,14 +86,19 @@ public class DialogueBoxSceneTwo : MonoBehaviour
                 Verify.gameObject.SetActive(true);
                 Verify.text = "Awesome you did it!";
                 SkipIndicator.enabled = true;
-                inputFirstTime.gameObject.SetActive(false);
-                inputNormal.gameObject.SetActive(true);
+
+                if (!hasBeenPlayed)
+                {
+                    audioSource.clip = soundClip;
+                    audioSource.Play();
+                    hasBeenPlayed = true;
+                }
+
                 if (buttonClicked && CanContinue)
                 {
                     Verify.gameObject.SetActive(false);
-                   
-                    inputFirstTime.gameObject.SetActive(false);
-                    inputNormal.gameObject.SetActive(true);
+
+                    hasBeenPlayed = false;
                     buttonClicked = false;
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
@@ -109,9 +110,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         {
             Verify.gameObject.SetActive(false);
 
-            inputFirstTime.gameObject.SetActive(false);
-            enterFirstTime.gameObject.SetActive(true);
-            inputNormal.gameObject.SetActive(true);
             SkipIndicator.enabled = false;
             ValidationText.gameObject.SetActive(true);
             QuestionBox.gameObject.SetActive(true);
@@ -121,15 +119,23 @@ public class DialogueBoxSceneTwo : MonoBehaviour
                 Verify.gameObject.SetActive(true);
                 Verify.text = "Great job!";
                 SkipIndicator.enabled = true;
-                enterFirstTime.gameObject.SetActive(false);
-                enterNormal.gameObject.SetActive(true);
+
+                if (!hasBeenPlayed)
+                {
+                    audioSource.clip = soundClip;
+                    audioSource.Play();
+                    hasBeenPlayed = true;
+                }
+
                 if (buttonClicked && CanContinue)
                 {
-                    enterNormal.gameObject.SetActive(true);
                     Verify.gameObject.SetActive(false);
                     ValidationText.gameObject.SetActive(false);
                     QuestionBox.gameObject.SetActive(false);
                     InputField.gameObject.SetActive(false);
+
+
+                    hasBeenPlayed = false;
                     buttonClicked = false;
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));

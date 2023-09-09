@@ -24,7 +24,6 @@ public class ScoreArea : MonoBehaviour
     public TMP_Text collectedPaperObjectsText;
     public TMP_Text collectedOrganicObjectsText;
     public TMP_Text collectedPlasticObjectsText;
-    public TMP_Text verificationText;
 
     [Header("Return button")]
     public Button backToMenu;
@@ -39,9 +38,7 @@ public class ScoreArea : MonoBehaviour
     {
         //START csv
         // Construct the full file path using persistentDataPath
-        verificationText.text = "Sono entrato in back menu";
         dateTimeStart = System.DateTime.UtcNow.ToString();
-        verificationText.gameObject.SetActive(false);
         collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
         collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
         collectedGMObjectsText.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
@@ -92,7 +89,6 @@ public class ScoreArea : MonoBehaviour
     {
         //string filePath = Path.Combine(Application.persistentDataPath, dataFileName);
         totScoreEnd = totScore;
-        verificationText.gameObject.SetActive(true);
         dateTimeEnd = System.DateTime.UtcNow.ToString();
         CSVManager.AppendToReport(GetReportLine());
         indexText++;

@@ -9,25 +9,32 @@ public class DialogueBoxForSceneThree : MonoBehaviour
 {
     public DialogueSegment[] DialogueSegments;
     [Space]
+    [Header("Target cube")]
+    public GameObject cubeTarget;
+
     public XRGrabInteractable XRGrabInteractable;
     public Button SkipIndicator;
     public TMP_Text DialogueDisplay;
     public TMP_Text VerifyIsGrabbed;
+    public TMP_Text VerifyScale;
     public Button GoToSceneThree;
-    AudioSource DidIt;
+    public AudioSource audioSource;
+    public AudioClip soundClip;
+
     [Space]
     public float TextSpeed;
 
     private bool buttonClicked = false;
 
     static int IsSelected = 0;
+    private bool hasBeenPlayed = false;
 
     private bool CanContinue;
-    private int DialogueIndex;
+    private static int DialogueIndex;
 
     private Vector3 originalScale;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updates
     void Start()
     {
 
@@ -35,10 +42,12 @@ public class DialogueBoxForSceneThree : MonoBehaviour
         StartCoroutine(PlayDialogue(DialogueSegments[0].Dialogue));
         GoToSceneThree.gameObject.SetActive(false);
         VerifyIsGrabbed.gameObject.SetActive(false);
+        VerifyScale.gameObject.SetActive(false);
         originalScale = XRGrabInteractable.transform.localScale;
-        DidIt.gameObject.SetActive(false);
+       
         XRGrabInteractable.gameObject.SetActive(false);
-        
+        cubeTarget.gameObject.SetActive(false);
+
     }
     public void Click()
     {
@@ -48,72 +57,126 @@ public class DialogueBoxForSceneThree : MonoBehaviour
     public void isSelect()
     {
         IsSelected++;
-        if (IsSelected > 1)
-        {
-            DidIt.Play();
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector3 sizeCube1 = cubeTarget.transform.localScale;
         Vector3 sizeCube2 = XRGrabInteractable.transform.localScale;
+
         SkipIndicator.enabled = CanContinue;
-        if (buttonClicked && CanContinue)
-        {
-            buttonClicked = false;
-            DialogueIndex++;
-            if (DialogueIndex == DialogueSegments.Length)
+
+        if(DialogueIndex == 0 || DialogueIndex == 4) 
+        {            
+            VerifyIsGrabbed.gameObject.SetActive(false);
+            VerifyScale.gameObject.SetActive(false);
+            XRGrabInteractable.gameObject.SetActive(false);
+            if ( buttonClicked && CanContinue)
             {
-                gameObject.SetActive(false);
-                DialogueDisplay.gameObject.SetActive(false);
+                buttonClicked = false;
+                DialogueIndex++;
+                if (DialogueIndex == DialogueSegments.Length)
+                {
+                   
+                    VerifyIsGrabbed.gameObject.SetActive(false);
+                    VerifyScale.gameObject.SetActive(false);
+                    XRGrabInteractable.gameObject.SetActive(false);
+                    DialogueDisplay.gameObject.SetActive(false);
+                    SkipIndicator.gameObject.SetActive(false);
 
-                GoToSceneThree.gameObject.SetActive(true);
-
-               
+                    GoToSceneThree.gameObject.SetActive(true);
+                                  
+                }
+                StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
             }
-            StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
         }
         else if (DialogueIndex == 1)
         {
+
+            VerifyIsGrabbed.gameObject.SetActive(true);
             SkipIndicator.enabled = false;
             XRGrabInteractable.gameObject.SetActive(true);
-            VerifyIsGrabbed.gameObject.SetActive(true);
-            VerifyIsGrabbed.text = "Selected:" + IsSelected.ToString() ;
             if (IsSelected > 1)
             {
-                VerifyIsGrabbed.text = "Great job!";
                 SkipIndicator.enabled = true;
-               // DidIt.gameObject.SetActive(true);
+                VerifyIsGrabbed.text = "Great job!";
+                if (!hasBeenPlayed)
+                {
+                    audioSource.clip = soundClip;
+                    audioSource.Play();
+                    hasBeenPlayed = true;
+                }
 
                 if (buttonClicked && CanContinue)
                 {
-                    DidIt.gameObject.SetActive(false);
                     buttonClicked = false;
+                    hasBeenPlayed = false;
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
                     VerifyIsGrabbed.gameObject.SetActive(false);
+                    
                 }
             }
         }
         else if (DialogueIndex == 2)
         {
-            DidIt.gameObject.SetActive(false);
+           
             SkipIndicator.enabled = false;
-            VerifyIsGrabbed.gameObject.SetActive(false);
-            if (originalScale.x * originalScale.y * originalScale.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
+            if (sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
             {
-                VerifyIsGrabbed.text = "Great job!";
                 SkipIndicator.enabled = true;
-                DidIt.gameObject.SetActive(true);
+                
+                VerifyScale.gameObject.SetActive(true);
+                VerifyScale.text = "Great job! The object is bigger";
+                if (!hasBeenPlayed)
+                {
+                    audioSource.clip = soundClip;
+                    audioSource.Play();
+                    hasBeenPlayed = true;
+                }
+
 
                 if (buttonClicked && CanContinue)
                 {
-                    DidIt.gameObject.SetActive(false);
                     buttonClicked = false;
+                    hasBeenPlayed = false;
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
-                    VerifyIsGrabbed.gameObject.SetActive(false);
+                    //VerifyIsGrabbed.gameObject.SetActive(false);
+                    VerifyScale.gameObject.SetActive(false);
+                  
+                }
+            }
+        }
+        else if (DialogueIndex == 3)
+        {
+           
+            SkipIndicator.enabled = false;
+
+            if (sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
+            {
+                SkipIndicator.enabled = true;
+
+                VerifyScale.gameObject.SetActive(true);
+                VerifyScale.text = "Great job! The object is smaller";
+
+                if (!hasBeenPlayed)
+                {
+                    audioSource.clip = soundClip;
+                    audioSource.Play();
+                    hasBeenPlayed = true;
+                }
+
+                if (buttonClicked && CanContinue)
+                {
+                    
+                    buttonClicked = false;
+                    hasBeenPlayed = false;
+                    DialogueIndex++;
+                    StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
+                    VerifyScale.gameObject.SetActive(false);
+                   
                 }
             }
         }
