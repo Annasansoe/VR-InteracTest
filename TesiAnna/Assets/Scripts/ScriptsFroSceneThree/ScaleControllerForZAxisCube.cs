@@ -19,8 +19,17 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
     public TMP_Text requestTextZ;
     public TMP_Text missionCompletedTextZ;
 
-    private Vector3 originalScale;
+    [Space]
 
+    [Header("Feedback audio")]
+    public AudioSource audioSource;
+    public AudioClip soundClip;
+
+    private bool hasBeenPlayed = false;
+
+    private Vector3 originalScale;
+    [Space]
+    [Header("Feedback color")]
     public Color isSmaller = Color.red;
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
@@ -67,6 +76,12 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
             cubeAfterScale.SetActive(true);
             Debug.Log("Both cubes have the same size.");
             missionCompletedTextZ.gameObject.SetActive(true);
+            if (!hasBeenPlayed)
+            {
+                audioSource.clip = soundClip;
+                audioSource.Play();
+                hasBeenPlayed = true;
+            }
             requestTextZ.gameObject.SetActive(false);
         }
         else if (sizeCube1.x > newScaleX)

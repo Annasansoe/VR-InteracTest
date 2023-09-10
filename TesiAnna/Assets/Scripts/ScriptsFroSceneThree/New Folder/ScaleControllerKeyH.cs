@@ -19,9 +19,18 @@ public class ScaleControllerKeyH : MonoBehaviour
     public TMP_Text requestTextK;
     public TMP_Text missionCompletedTextK;
 
+    [Space]
+
+    [Header("Feedback audio")]
+    public AudioSource audioSource;
+    public AudioClip soundClip;
+
+    private bool hasBeenPlayed = false;
+
     private Vector3 originalScale;
 
-
+    [Space]
+    [Header("Feedback color")]
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
@@ -58,6 +67,12 @@ public class ScaleControllerKeyH : MonoBehaviour
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
             missionCompletedTextK.gameObject.SetActive(true);
+            if (!hasBeenPlayed)
+            {
+                audioSource.clip = soundClip;
+                audioSource.Play();
+                hasBeenPlayed = true;
+            }
             requestTextK.gameObject.SetActive(false);
             Debug.Log("The cubes are smaller than the target one.");
         }

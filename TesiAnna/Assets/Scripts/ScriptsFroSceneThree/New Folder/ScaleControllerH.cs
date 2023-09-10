@@ -26,6 +26,14 @@ public class ScaleControllerH : MonoBehaviour
     [Header("Return button")]
     public Button backToMenu;
 
+    [Space]
+
+    [Header("Feedback audio")]
+    public AudioSource audioSource;
+    public AudioClip soundClip;
+
+    private bool hasBeenPlayed = false;
+
     private Vector3 originalScale;
 
     string dateTimeStart;
@@ -35,6 +43,8 @@ public class ScaleControllerH : MonoBehaviour
 
     private static int indexTextSThreeHands;
 
+    [Space]
+    [Header("Feedback color")]
     public Color isSmaller = Color.red;
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
@@ -71,6 +81,12 @@ public class ScaleControllerH : MonoBehaviour
                 cubeRenderer.material.color = isEqual;
                 scaleDone++;
 
+            }
+            if (!hasBeenPlayed)
+            {
+                audioSource.clip = soundClip;
+                audioSource.Play();
+                hasBeenPlayed = true;
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);

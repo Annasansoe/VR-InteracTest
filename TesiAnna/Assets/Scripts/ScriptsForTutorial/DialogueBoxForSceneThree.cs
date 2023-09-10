@@ -7,21 +7,32 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class DialogueBoxForSceneThree : MonoBehaviour
 {
+    [Header("Dialogue segments")]
     public DialogueSegment[] DialogueSegments;
     [Space]
     [Header("Target cube")]
     public GameObject cubeTarget;
 
+    [Header("Interactable cube")]
     public XRGrabInteractable XRGrabInteractable;
+
+    [Header("Dialogue Box")]
     public Button SkipIndicator;
     public TMP_Text DialogueDisplay;
+
     public TMP_Text VerifyIsGrabbed;
     public TMP_Text VerifyScale;
+
+    [Header("Button start test")]
     public Button GoToSceneThree;
+    [Space]
+
+    [Header("Feedback audio")]
     public AudioSource audioSource;
     public AudioClip soundClip;
 
     [Space]
+    [Header("Text speed")]
     public float TextSpeed;
 
     private bool buttonClicked = false;

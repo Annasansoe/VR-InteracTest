@@ -18,10 +18,19 @@ public class ScaleControllerForDrawersH : MonoBehaviour {
     public TMP_Text requestTextD;
     public TMP_Text missionCompletedTextD;
 
+    [Space]
+
+    [Header("Feedback audio")]
+    public AudioSource audioSource;
+    public AudioClip soundClip;
+
+    private bool hasBeenPlayed = false;
+
     private Vector3 originalScale;
     static int cubeDrawersResized;
 
-
+    [Space]
+    [Header("Feedback color")]
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
@@ -75,6 +84,12 @@ public class ScaleControllerForDrawersH : MonoBehaviour {
         {
             missionCompletedTextD.gameObject.SetActive(true);
             requestTextD.gameObject.SetActive(false);
+            if (!hasBeenPlayed)
+            {
+                audioSource.clip = soundClip;
+                audioSource.Play();
+                hasBeenPlayed = true;
+            }
         }
 
     }  

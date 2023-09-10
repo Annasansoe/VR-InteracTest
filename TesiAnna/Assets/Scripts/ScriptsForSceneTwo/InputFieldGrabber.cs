@@ -36,9 +36,9 @@ public class InputFieldGrabber : MonoBehaviour
         dateTimeStart = System.DateTime.UtcNow.ToString();
         questions = new List<Question>
     {
-        new Question("What is the capital of France?", "Paris"),
-        new Question("How many planets are there in our solar system?", "eight"),
-        new Question("How many days are there in a week?", "Seven"),
+        new Question("The capital of France is PARIS", "Paris"),
+        new Question("In the solar system there are EIGHT planets", "eight"),
+        new Question("In a week there are SEVEN days", "Seven"),
         // ... Add more questions here with their respective expected answers
     };
 
