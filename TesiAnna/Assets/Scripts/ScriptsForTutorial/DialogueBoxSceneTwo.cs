@@ -28,7 +28,7 @@ public class DialogueBoxSceneTwo : MonoBehaviour
     private bool hasBeenPlayed = false;
 
     private bool CanContinue;
-    private int DialogueIndex;
+    private static int DialogueIndex;
 
     static int isClicked = 0;
     static int isEnterClickedO = 0;
@@ -42,6 +42,7 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         ValidationText.gameObject.SetActive(false);
         QuestionBox.gameObject.SetActive(false);
         Verify.gameObject.SetActive(false);
+        
     }
     public void Click()
     {
@@ -55,8 +56,13 @@ public class DialogueBoxSceneTwo : MonoBehaviour
     }
     public void isEnterClicked()
     {
+
+        string userAnswer = InputField.text.ToString();
         //inputFieldClicked = true;
-        isEnterClickedO += 1;
+        if (userAnswer != "") 
+        {
+            isEnterClickedO += 1;
+        }
     }
 
     // Update is called once per frame

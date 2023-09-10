@@ -9,7 +9,7 @@ public class InputFieldGrabberTutorial : MonoBehaviour
 {
     [Header("Grab from input and see the result")]
     [SerializeField] TMP_InputField inputField;
-    [SerializeField] TMP_Text resultText;
+    [SerializeField] public TMP_Text resultText;
 
     [Header("Question for test")]
     [SerializeField] public GameObject questionPanel;

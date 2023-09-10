@@ -32,6 +32,12 @@ public class ScoreAreaHands : MonoBehaviour
     string dateTimeStart;
     string dateTimeEnd;
 
+    [Header("Return button")]
+    public AudioSource audioSource;
+    public AudioClip soundClip;
+
+     private bool hasBeenPlayed = false;
+
     private void Start()
     {
         dateTimeStart = System.DateTime.UtcNow.ToString();
@@ -52,18 +58,21 @@ public class ScoreAreaHands : MonoBehaviour
             unsortedScore += 1;
             collectedUnsortedObjectsTextH.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
         else if (otherCollider.CompareTag("G&M Waste"))
         {
             gMScore += 1;
             collectedGMObjectsTextH.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
         else if (otherCollider.CompareTag("Paper Waste"))
         {
             paperScore += 1;
             collectedPaperObjectsTextH.text = "Paper waste: " + paperScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
 
         else if (otherCollider.CompareTag("Organic Waste"))
@@ -71,15 +80,24 @@ public class ScoreAreaHands : MonoBehaviour
             organicScore += 1;
             collectedOrganicObjectsTextH.text = "Organic waste: " + organicScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
         else if (otherCollider.CompareTag("Plastic Waste"))
         {
             plasticScore += 1;
             collectedPlasticObjectsTextH.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
         collectedTotObjectsTextH.text = "Total collected objects: " + totScore.ToString() + " of 25";
         Destroy(otherCollider.gameObject);
+    }
+    void PlaySound()
+    {
+        if (audioSource != null && soundClip != null)
+        {
+            audioSource.PlayOneShot(soundClip);
+        }
     }
 
     public void BackToMenu()

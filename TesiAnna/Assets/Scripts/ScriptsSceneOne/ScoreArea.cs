@@ -31,6 +31,11 @@ public class ScoreArea : MonoBehaviour
     string dateTimeStart;
     string dateTimeEnd;
 
+    [Header("Return button")]
+    public AudioSource audioSource;
+    public AudioClip soundClip;
+
+    private bool hasBeenPlayed = false;
     //PROVA FILE
     private static int indexText;
 
@@ -55,18 +60,21 @@ public class ScoreArea : MonoBehaviour
             unsortedScore += 1;
             collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
         else if (otherCollider.CompareTag("G&M Waste"))
         {
             gMScore += 1;
             collectedGMObjectsText.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
         else if (otherCollider.CompareTag("Paper Waste"))
         {
             paperScore += 1;
             collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
 
         else if (otherCollider.CompareTag("Organic Waste"))
@@ -74,15 +82,25 @@ public class ScoreArea : MonoBehaviour
             organicScore += 1;
             collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
         else if (otherCollider.CompareTag("Plastic Waste"))
         {
             plasticScore += 1;
             collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
             totScore += 1;
+            PlaySound();
         }
         collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
         Destroy(otherCollider.gameObject);
+    }
+
+    void PlaySound()
+    {
+        if (audioSource != null && soundClip != null)
+        {
+            audioSource.PlayOneShot(soundClip);
+        }
     }
 
     public void BackToMenu()
