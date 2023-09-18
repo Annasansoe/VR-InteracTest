@@ -26,6 +26,10 @@ public class ObjectResetPlaneForSceneThree : MonoBehaviour
     [SerializeField] private float _time = 3f;
 
     public static int objectFellSceneThree = 0;
+
+    [Header("The object fell sound")]
+    public AudioSource audioSource;
+    public AudioClip soundClip;
     /// <summary>
     /// See <see cref="MonoBehaviour"/>.
     /// </summary>
@@ -76,6 +80,7 @@ public class ObjectResetPlaneForSceneThree : MonoBehaviour
                     rigidBody.velocity = Vector3.zero;
                     rigidBody.angularVelocity = Vector3.zero;
                     StartCoroutine(ShowMessage());
+                    PlaySound();
                 }
             }
         }
@@ -89,6 +94,14 @@ public class ObjectResetPlaneForSceneThree : MonoBehaviour
         yield return new WaitForSeconds(_time);
 
         wrongBin.enabled = false;
+    }
+
+    void PlaySound()
+    {
+        if (audioSource != null && soundClip != null)
+        {
+            audioSource.PlayOneShot(soundClip);
+        }
     }
 }
 
