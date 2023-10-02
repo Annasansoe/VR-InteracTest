@@ -24,6 +24,7 @@ public class ScoreArea : MonoBehaviour
     public TMP_Text collectedPaperObjectsText;
     public TMP_Text collectedOrganicObjectsText;
     public TMP_Text collectedPlasticObjectsText;
+    public TMP_Text youDidIt;
 
     [Header("Return button")]
     public Button backToMenu;
@@ -41,6 +42,7 @@ public class ScoreArea : MonoBehaviour
 
     private void Start()
     {
+        youDidIt.gameObject.SetActive(false);
         //START csv
         // Construct the full file path using persistentDataPath
         dateTimeStart = System.DateTime.UtcNow.ToString();
@@ -50,6 +52,7 @@ public class ScoreArea : MonoBehaviour
         collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
         collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
         collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
+        
     }
 
 
@@ -93,6 +96,17 @@ public class ScoreArea : MonoBehaviour
         }
         collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
         Destroy(otherCollider.gameObject);
+
+        if(totScore == 25)
+        {
+            youDidIt.gameObject.SetActive(true);
+            collectedTotObjectsText.gameObject.SetActive(false);
+            collectedUnsortedObjectsText.gameObject.SetActive(false);
+            collectedGMObjectsText.gameObject.SetActive(false);
+            collectedPaperObjectsText.gameObject.SetActive(false);
+            collectedOrganicObjectsText.gameObject.SetActive(false);
+            collectedPlasticObjectsText.gameObject.SetActive(false);
+        }
     }
 
     void PlaySound()
