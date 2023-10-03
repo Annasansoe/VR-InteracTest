@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,11 @@ public class AppMenuManager : MonoBehaviour
     public GameObject mainMenu;
     public GameObject options;
     public GameObject about;
+
+    [Header("Dropdown Menus")]
+    public TMPro.TMP_Dropdown methodDropdown;
+    public TMPro.TMP_Dropdown metaphorDropdown;
+    public TMPro.TMP_Dropdown taskDropdown;
 
     [Header("Main Menu Buttons")]
     public Button sceneOneTutorialButton;
@@ -54,6 +60,43 @@ public class AppMenuManager : MonoBehaviour
         }
     }
 
+    private Dictionary<string, string> sceneMappings = new Dictionary<string, string>
+    {
+        { "Grab_Controllers_Ray-casting", "TutorialSceneOne" },
+        { "Grab_Controllers_Direct Grab", "TutorialSceneOne" },
+        { "Grab_Bare Hands_Ray-casting", "TutorialSceneOneHand" },
+        { "Grab_Bare Hands_Direct Grab", "TutorialSceneOneHand" },
+        { "Type_Controllers_Ray-casting", "TutorialSceneTwo" },
+        { "Type_Controllers_Direct Grab", "TutorialSceneTwo" },
+        { "Type_Bare Hands_Ray-casting", "TutorialSceneTwoHand" },
+        { "Type_Bare Hands_Direct Grab", "TutorialSceneTwoHand" },
+        { "Manipulate_Controllers_Ray-casting", "TutorialSceneThree" },
+        { "Manipulate_Controllers_Direct Grab", "TutorialSceneThree" },
+        { "Manipulate_Bare Hands_Ray-casting", "TutorialSceneThreeHand" },
+        { "Manipulate_Bare Hands_Direct Grab", "TutorialSceneThreeHand" }
+        // Add more mappings as needed
+    };
+
+    public void LoadSelectedScene()
+    {
+        string selectedTask = taskDropdown.options[taskDropdown.value].text;
+        string selectedMethod = methodDropdown.options[methodDropdown.value].text;
+        string selectedMetaphor = metaphorDropdown.options[metaphorDropdown.value].text;
+
+        // Construct the key based on the selected choices
+        string key = $"{selectedTask}_{selectedMethod}_{selectedMetaphor}";
+
+        // Check if the key exists in the dictionary
+        if (sceneMappings.ContainsKey(key))
+        {
+            // Load the scene using the mapped value
+            SceneManager.LoadScene(sceneMappings[key]);
+        }
+        else
+        {
+            Debug.LogWarning("Scene not found for the selected combination.");
+        }
+    }
     public void QuitApp()
     {
         Application.Quit();
