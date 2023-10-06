@@ -33,9 +33,11 @@ public class ScoreAreaHands : MonoBehaviour
     string dateTimeStart;
     string dateTimeEnd;
 
-    [Header("Return button")]
+    [Header("Audios")]
     public AudioSource audioSource;
     public AudioClip soundClip;
+    public AudioSource audioSourceEnd;
+    public AudioClip soundClipEnd;
 
     private bool hasBeenPlayed = false;
 
@@ -97,6 +99,7 @@ public class ScoreAreaHands : MonoBehaviour
         if (totScore == 25)
         {
             youDidItH.gameObject.SetActive(true);
+            PlaySoundEnd();
             collectedTotObjectsTextH.gameObject.SetActive(false);
             collectedUnsortedObjectsTextH.gameObject.SetActive(false);
             collectedGMObjectsTextH.gameObject.SetActive(false);
@@ -110,6 +113,14 @@ public class ScoreAreaHands : MonoBehaviour
         if (audioSource != null && soundClip != null)
         {
             audioSource.PlayOneShot(soundClip);
+        }
+    }
+
+    void PlaySoundEnd()
+    {
+        if (audioSourceEnd != null && soundClipEnd != null)
+        {
+            audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
 

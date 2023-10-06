@@ -32,9 +32,11 @@ public class ScoreArea : MonoBehaviour
     string dateTimeStart;
     string dateTimeEnd;
 
-    [Header("Return button")]
+    [Header("Audios")]
     public AudioSource audioSource;
     public AudioClip soundClip;
+    public AudioSource audioSourceEnd;
+    public AudioClip soundClipEnd;
 
     private bool hasBeenPlayed = false;
     //PROVA FILE
@@ -100,6 +102,7 @@ public class ScoreArea : MonoBehaviour
         if(totScore == 25)
         {
             youDidIt.gameObject.SetActive(true);
+            PlaySoundEnd();
             collectedTotObjectsText.gameObject.SetActive(false);
             collectedUnsortedObjectsText.gameObject.SetActive(false);
             collectedGMObjectsText.gameObject.SetActive(false);
@@ -114,6 +117,14 @@ public class ScoreArea : MonoBehaviour
         if (audioSource != null && soundClip != null)
         {
             audioSource.PlayOneShot(soundClip);
+        }
+    }
+
+    void PlaySoundEnd()
+    {
+        if (audioSourceEnd != null && soundClipEnd != null)
+        {
+            audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
 
