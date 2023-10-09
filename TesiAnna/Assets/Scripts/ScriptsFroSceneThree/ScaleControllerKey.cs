@@ -34,6 +34,7 @@ public class ScaleControllerKey : MonoBehaviour
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
+
     private void Start()
     {
         // Ensure that cube1 and cube2 are assigned in the Inspector
@@ -60,12 +61,13 @@ public class ScaleControllerKey : MonoBehaviour
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
-                cubeRenderer.material.color = isEqual;
+               cubeRenderer.material.color = isEqual;
                ScaleController.scaleDone++;
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
+         
             missionCompletedTextK.gameObject.SetActive(true);
             if (!hasBeenPlayed)
             {

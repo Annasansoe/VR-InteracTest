@@ -30,6 +30,8 @@ public class ScaleController : MonoBehaviour
     [Header("Feedback audio")]
     public AudioSource audioSource;
     public AudioClip soundClip;
+    public AudioSource audioSourceEnd;
+    public AudioClip soundClipEnd;
 
     private bool hasBeenPlayed = false;
 
@@ -39,6 +41,7 @@ public class ScaleController : MonoBehaviour
     string dateTimeEnd;
     int totScaleEnd = 0;
     public static int scaleDone=0;
+
 
     private static int indexTextSThree;
     [Space]
@@ -58,7 +61,8 @@ public class ScaleController : MonoBehaviour
             return;
         }
         cubeAfterScale.SetActive(false);
-        originalScale = cubeManipulable.transform.localScale;       
+        originalScale = cubeManipulable.transform.localScale;
+        
         missionCompletedText.gameObject.SetActive(false);
        
     }
@@ -73,12 +77,12 @@ public class ScaleController : MonoBehaviour
         {
             requestText.gameObject.SetActive(false);
             missionCompletedText.gameObject.SetActive(true);
+            missionCompletedText.text = "You did it " + scaleDone.ToString();
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
                 scaleDone++;
-                
             }
             if (!hasBeenPlayed)
             {
@@ -90,7 +94,7 @@ public class ScaleController : MonoBehaviour
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
             Debug.Log("Both cubes have the same size.");
-            
+           
         }
         else if(sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
@@ -109,6 +113,19 @@ public class ScaleController : MonoBehaviour
             {
                 cubeRenderer.material.color = isBigger;
             }
+        }
+
+        if (scaleDone == 7)
+        {
+            PlaySound();
+        }
+    }
+
+    void PlaySound()
+    {
+        if (audioSourceEnd != null && soundClipEnd != null)
+        {
+            audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
 

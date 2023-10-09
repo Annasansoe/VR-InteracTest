@@ -28,12 +28,12 @@ public class ScaleControllerForDrawers : MonoBehaviour {
 
     private Vector3 originalScale;
     static int cubeDrawersResized;
-    int scaleDoneDrawers = 0;
 
     [Space]
     [Header("Feedback color")]
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
+
 
     private void Start()
     {
@@ -45,8 +45,7 @@ public class ScaleControllerForDrawers : MonoBehaviour {
         }
         cubeAfterScale.SetActive(false);
         originalScale = cubeManipulable.transform.localScale;
-        
-            missionCompletedTextD.gameObject.SetActive(false);
+        missionCompletedTextD.gameObject.SetActive(false);
         
     }
     private void Update()

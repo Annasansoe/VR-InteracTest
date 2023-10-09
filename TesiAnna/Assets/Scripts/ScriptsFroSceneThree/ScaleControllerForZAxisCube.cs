@@ -76,6 +76,7 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
             cubeAfterScale.SetActive(true);
             Debug.Log("Both cubes have the same size.");
             missionCompletedTextZ.gameObject.SetActive(true);
+           
             if (!hasBeenPlayed)
             {
                 audioSource.clip = soundClip;
