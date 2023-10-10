@@ -5,7 +5,6 @@ using TMPro;
 
 public class ScaleControllerKey : MonoBehaviour
 {
-
     [Header("Target cube")]
     public GameObject cubeTarget;
 
@@ -24,6 +23,8 @@ public class ScaleControllerKey : MonoBehaviour
     [Header("Feedback audio")]
     public AudioSource audioSource;
     public AudioClip soundClip;
+    public AudioSource audioSourceEnd;
+    public AudioClip soundClipEnd;
 
     private bool hasBeenPlayed = false;
 
@@ -62,13 +63,14 @@ public class ScaleControllerKey : MonoBehaviour
             if (cubeRenderer != null)
             {
                cubeRenderer.material.color = isEqual;
-               ScaleController.scaleDone++;
+               
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
-         
+            ScaleController.scaleDone += 1; 
             missionCompletedTextK.gameObject.SetActive(true);
+
             if (!hasBeenPlayed)
             {
                 audioSource.clip = soundClip;
@@ -88,7 +90,19 @@ public class ScaleControllerKey : MonoBehaviour
             }
         }
 
+        if (ScaleController.scaleDone == 4)
+        {
+            Invoke("PlaySound", 2f);
+        }
 
+    }
+
+    public void PlaySound()
+    {
+        if (audioSourceEnd != null && soundClipEnd != null)
+        {
+            audioSourceEnd.PlayOneShot(soundClipEnd);
+        }
     }
 
 }

@@ -8,7 +8,7 @@ using System.IO;
 
 public class ScaleController : MonoBehaviour
 {
-
+    
     [Header("Target cube")]
     public GameObject cubeTarget;
 
@@ -40,7 +40,7 @@ public class ScaleController : MonoBehaviour
     string dateTimeStart;
     string dateTimeEnd;
     int totScaleEnd = 0;
-    public static int scaleDone=0;
+    public static int scaleDone = 0;
 
 
     private static int indexTextSThree;
@@ -63,7 +63,7 @@ public class ScaleController : MonoBehaviour
         cubeAfterScale.SetActive(false);
         originalScale = cubeManipulable.transform.localScale;
         
-        missionCompletedText.gameObject.SetActive(false);
+       missionCompletedText.gameObject.SetActive(false);
        
     }
     private void Update()
@@ -76,13 +76,12 @@ public class ScaleController : MonoBehaviour
         if (sizeCube1.x * sizeCube1.y * sizeCube1.z == sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             requestText.gameObject.SetActive(false);
-            missionCompletedText.gameObject.SetActive(true);
-            missionCompletedText.text = "You did it " + scaleDone.ToString();
+            
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                scaleDone++;
+                scaleDone+=1;
             }
             if (!hasBeenPlayed)
             {
@@ -93,6 +92,7 @@ public class ScaleController : MonoBehaviour
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
+            missionCompletedText.gameObject.SetActive(true);
             Debug.Log("Both cubes have the same size.");
            
         }
@@ -115,19 +115,7 @@ public class ScaleController : MonoBehaviour
             }
         }
 
-        if (scaleDone == 7)
-        {
-            PlaySound();
-        }
-    }
-
-    void PlaySound()
-    {
-        if (audioSourceEnd != null && soundClipEnd != null)
-        {
-            audioSourceEnd.PlayOneShot(soundClipEnd);
-        }
-    }
+        \\\\\
 
     public void BackToMenu()
     {

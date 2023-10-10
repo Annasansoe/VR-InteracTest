@@ -5,7 +5,7 @@ using TMPro;
 
 public class ScaleControllerForZAxisCube : MonoBehaviour
 {
-
+    
     [Header("Target cube")]
     public GameObject cubeTarget;
 
@@ -24,6 +24,8 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
     [Header("Feedback audio")]
     public AudioSource audioSource;
     public AudioClip soundClip;
+    public AudioSource audioSourceEnd;
+    public AudioClip soundClipEnd;
 
     private bool hasBeenPlayed = false;
 
@@ -69,14 +71,15 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                ScaleController.scaleDone++;
+                
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
             Debug.Log("Both cubes have the same size.");
-            missionCompletedTextZ.gameObject.SetActive(true);
            
+            ScaleController.scaleDone += 1;
+            missionCompletedTextZ.gameObject.SetActive(true);
             if (!hasBeenPlayed)
             {
                 audioSource.clip = soundClip;
@@ -102,6 +105,19 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
             {
                 cubeRenderer.material.color = isBigger;
             }
+        }
+
+        if (ScaleController.scaleDone == 4)
+        {
+            Invoke("PlaySound", 2f);
+        }
+    }
+
+    public void PlaySound()
+    {
+        if (audioSourceEnd != null && soundClipEnd != null)
+        {
+            audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
 

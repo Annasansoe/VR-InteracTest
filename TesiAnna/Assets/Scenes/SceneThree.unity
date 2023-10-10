@@ -3181,6 +3181,8 @@ MonoBehaviour:
   missionCompletedTextD: {fileID: 905663078}
   audioSource: {fileID: 586232722}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
+  audioSourceEnd: {fileID: 1953765231}
+  soundClipEnd: {fileID: 8300000, guid: febbddbd7226a6e419839376193b93be, type: 3}
   isEqual: {r: 0, g: 1, b: 0, a: 1}
   isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1001 &292421546
@@ -3868,6 +3870,8 @@ MonoBehaviour:
   missionCompletedTextD: {fileID: 905663078}
   audioSource: {fileID: 586232722}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
+  audioSourceEnd: {fileID: 1953765231}
+  soundClipEnd: {fileID: 8300000, guid: febbddbd7226a6e419839376193b93be, type: 3}
   isEqual: {r: 0, g: 1, b: 0, a: 1}
   isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &425941960
@@ -11484,6 +11488,8 @@ MonoBehaviour:
   missionCompletedTextK: {fileID: 706723222}
   audioSource: {fileID: 586232722}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
+  audioSourceEnd: {fileID: 1953765231}
+  soundClipEnd: {fileID: 8300000, guid: febbddbd7226a6e419839376193b93be, type: 3}
   isEqual: {r: 0, g: 1, b: 0, a: 1}
   isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1001 &1129181789
@@ -12433,6 +12439,8 @@ MonoBehaviour:
   missionCompletedTextD: {fileID: 905663078}
   audioSource: {fileID: 586232722}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
+  audioSourceEnd: {fileID: 1953765231}
+  soundClipEnd: {fileID: 8300000, guid: febbddbd7226a6e419839376193b93be, type: 3}
   isEqual: {r: 0, g: 1, b: 0, a: 1}
   isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!65 &1293095109
@@ -16875,6 +16883,8 @@ MonoBehaviour:
   missionCompletedTextD: {fileID: 905663078}
   audioSource: {fileID: 586232722}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
+  audioSourceEnd: {fileID: 1953765231}
+  soundClipEnd: {fileID: 8300000, guid: febbddbd7226a6e419839376193b93be, type: 3}
   isEqual: {r: 0, g: 1, b: 0, a: 1}
   isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &1895273556
@@ -18772,6 +18782,8 @@ MonoBehaviour:
   missionCompletedTextZ: {fileID: 1851472479}
   audioSource: {fileID: 586232722}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
+  audioSourceEnd: {fileID: 1953765231}
+  soundClipEnd: {fileID: 8300000, guid: febbddbd7226a6e419839376193b93be, type: 3}
   isSmaller: {r: 1, g: 0, b: 0, a: 1}
   isEqual: {r: 0, g: 1, b: 0, a: 1}
   isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}

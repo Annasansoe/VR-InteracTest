@@ -31,6 +31,8 @@ public class ScaleControllerH : MonoBehaviour
     [Header("Feedback audio")]
     public AudioSource audioSource;
     public AudioClip soundClip;
+    public AudioSource audioSourceEnd;
+    public AudioClip soundClipEnd;
 
     private bool hasBeenPlayed = false;
 
@@ -39,7 +41,7 @@ public class ScaleControllerH : MonoBehaviour
     string dateTimeStart;
     string dateTimeEnd;
     int totScaleEnd = 0;
-    public static int scaleDone=0;
+    public static int scaleDone = 0;
 
     private static int indexTextSThreeHands;
 
@@ -74,13 +76,11 @@ public class ScaleControllerH : MonoBehaviour
         if (sizeCube1.x * sizeCube1.y * sizeCube1.z == sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             requestText.gameObject.SetActive(false);
-            missionCompletedText.gameObject.SetActive(true);
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                scaleDone++;
-
+                scaleDone += 1;
             }
             if (!hasBeenPlayed)
             {
@@ -88,6 +88,8 @@ public class ScaleControllerH : MonoBehaviour
                 audioSource.Play();
                 hasBeenPlayed = true;
             }
+
+            missionCompletedText.gameObject.SetActive(true);
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
@@ -111,6 +113,19 @@ public class ScaleControllerH : MonoBehaviour
             {
                 cubeRenderer.material.color = isBigger;
             }
+        }
+        if (scaleDone == 4)
+        {
+            Invoke("PlaySound", 2f);
+        }
+    }
+
+    private void PlaySound()
+    {
+        if (audioSourceEnd != null && soundClipEnd != null)
+        {
+
+            audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
 
