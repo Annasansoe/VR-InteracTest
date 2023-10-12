@@ -69,19 +69,19 @@ public class ScaleController : MonoBehaviour
     private void Update()
     {
         Vector3 sizeCube1 = cubeTarget.transform.localScale;
-        Vector3 sizeCube2 = cubeManipulable.transform.localScale; 
+        Vector3 sizeCube2 = cubeManipulable.transform.localScale;
         Vector3 positionToMatch = cubeManipulable.transform.position;
-        
+
         // Change the color of the cube based on certain conditions
         if (sizeCube1.x * sizeCube1.y * sizeCube1.z == sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             requestText.gameObject.SetActive(false);
-            
+
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                scaleDone+=1;
+                scaleDone += 1;
             }
             if (!hasBeenPlayed)
             {
@@ -94,9 +94,9 @@ public class ScaleController : MonoBehaviour
             cubeAfterScale.SetActive(true);
             missionCompletedText.gameObject.SetActive(true);
             Debug.Log("Both cubes have the same size.");
-           
+
         }
-        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             Debug.Log("Cube 1 is larger than Cube 2.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -105,7 +105,7 @@ public class ScaleController : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             Debug.Log("Cube 2 is larger than Cube 1.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -115,8 +115,7 @@ public class ScaleController : MonoBehaviour
             }
         }
 
-        \\\\\
-
+    }
     public void BackToMenu()
     {
         totScaleEnd = scaleDone;

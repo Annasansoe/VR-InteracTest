@@ -19,6 +19,8 @@ public class DialogueBoxSceneTwo : MonoBehaviour
     [Space]
     public AudioSource audioSource;
     public AudioClip soundClip;
+    public AudioSource letterSound;
+    public AudioClip soundClipLetter;
 
     [Space]
     public float TextSpeed;
@@ -160,12 +162,20 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         for(int i = 0; i < Dialogue.Length; i++)
         {
             DialogueDisplay.text += Dialogue[i];
+            PlayLetterSound();
             yield return new WaitForSeconds(1f / TextSpeed);
         }
         CanContinue = true;
     }
 
-   
+    void PlayLetterSound()
+    {
+        if (letterSound != null && soundClipLetter != null)
+        {
+            letterSound.PlayOneShot(soundClipLetter);
+        }
+    }
+
 }
 
 

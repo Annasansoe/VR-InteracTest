@@ -15,6 +15,10 @@ public class InputFieldGrabberHand : MonoBehaviour
     [SerializeField] TMP_InputField inputField;
     [SerializeField] TMP_Text resultText;
 
+    [Header("Audio sounds")]
+    public AudioSource endSound;
+    public AudioClip soundClipEnd;
+
     [Header("Question for test")]
     [SerializeField] public GameObject questionPanel;
     [SerializeField] public TMP_Text questionText;
@@ -93,11 +97,18 @@ public class InputFieldGrabberHand : MonoBehaviour
             // No more questions
             //questionPanel.SetActive(false);
             questionText.text = "Questionnaire completed!";
+            PlayEndSound();
             Debug.Log("Questionnaire completed!");
         }
     }
 
-   
+    void PlayEndSound()
+    {
+        if (endSound != null && soundClipEnd != null)
+        {
+            endSound.PlayOneShot(soundClipEnd);
+        }
+    }
 
     public void BackToMenu()
     {

@@ -15,9 +15,13 @@ public class DialogueBox : MonoBehaviour
     public TMP_Text DialogueDisplay;
     public Button GoToSceneOne;
     public TMP_Text VerifyIsGrabbed;
-
+    [Space]
     public AudioSource audioSource;
     public AudioClip soundClip;
+    public AudioSource letterSound;
+    public AudioClip soundClipLetter;
+    [Space]
+    public Image imageGrip; 
 
     [Space]
     public float TextSpeed;
@@ -27,7 +31,7 @@ public class DialogueBox : MonoBehaviour
     private bool CanContinue;
     public bool cubeIsGrabbed = false;
     public bool cubeIsInTheBin = false;
-    private static int DialogueIndex;
+    private static int DialogueIndex = 0;
 
     private bool hasBeenPlayed = false;
 
@@ -42,7 +46,7 @@ public class DialogueBox : MonoBehaviour
         GoToSceneOne.gameObject.SetActive(false);
         VerifyIsGrabbed.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
-
+        imageGrip.gameObject.SetActive(false);
         XRGrabInteractable.gameObject.SetActive(false);
         
     }
@@ -77,24 +81,28 @@ public class DialogueBox : MonoBehaviour
 
             VerifyIsGrabbed.gameObject.SetActive(false);
 
-            if (DialogueIndex == DialogueSegments.Length)
+            if (DialogueIndex < DialogueSegments.Length)
             {
-                gameObject.SetActive(false);
-                DialogueDisplay.gameObject.SetActive(false);
-
-                GoToSceneOne.gameObject.SetActive(true);               
+                StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
             }
-            StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
+            else
+            {
+                // Last sentence of the dialogue
+                SkipIndicator.gameObject.SetActive(false);
+                DialogueDisplay.gameObject.SetActive(false);
+                GoToSceneOne.gameObject.SetActive(true);
+            }
         }
         
         else if (DialogueIndex == 1)
         {
             SkipIndicator.enabled = false;
             XRGrabInteractable.gameObject.SetActive(true);
-
+            imageGrip.gameObject.SetActive(true);
             if (totGrab > 0)
             {
                 VerifyIsGrabbed.text = "Great job!";
+                VerifyIsGrabbed.gameObject.SetActive(true);
                 SkipIndicator.enabled = true;
                 if (!hasBeenPlayed)
                 {
@@ -110,6 +118,7 @@ public class DialogueBox : MonoBehaviour
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
                     VerifyIsGrabbed.gameObject.SetActive(false);
+                    imageGrip.gameObject.SetActive(false);
                 }
             }
         }
@@ -121,8 +130,8 @@ public class DialogueBox : MonoBehaviour
 
             if (totScore == 2)
             {
-                VerifyIsGrabbed.gameObject.SetActive(true);
                 VerifyIsGrabbed.text = "Awesome you did it!";
+                VerifyIsGrabbed.gameObject.SetActive(true);
                 SkipIndicator.enabled = true;
                 if (!hasBeenPlayed)
                 {
@@ -148,15 +157,24 @@ public class DialogueBox : MonoBehaviour
         CanContinue = false;
         DialogueDisplay.SetText(string.Empty);
 
-        for(int i = 0; i < Dialogue.Length; i++)
+        for (int i = 0; i < Dialogue.Length; i++)
         {
             DialogueDisplay.text += Dialogue[i];
+            PlayLetterSound(); // Play the sound effect
             yield return new WaitForSeconds(1f / TextSpeed);
         }
         CanContinue = true;
     }
 
    
+    void PlayLetterSound()
+    {
+        if (letterSound != null && soundClipLetter != null)
+        {
+            letterSound.PlayOneShot(soundClipLetter);
+        }
+    }
+
 }
 
 [System.Serializable]
