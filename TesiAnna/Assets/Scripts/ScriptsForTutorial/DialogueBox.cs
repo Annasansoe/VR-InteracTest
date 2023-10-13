@@ -7,23 +7,37 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class DialogueBox : MonoBehaviour
 {
+    [Header("Dialogue segments")]
     public DialogueSegment[] DialogueSegments;
+
     [Space]
+    [Header("Target cube")]
     public XRGrabInteractable XRGrabInteractable;
     public GameObject Bin;
+
+    [Space]
+    [Header("Dialogue Box")]
     public Button SkipIndicator;
     public TMP_Text DialogueDisplay;
+
+    [Space]
+    [Header("Button start test")]
     public Button GoToSceneOne;
     public TMP_Text VerifyIsGrabbed;
+
     [Space]
+    [Header("Feedback audio")]
     public AudioSource audioSource;
     public AudioClip soundClip;
     public AudioSource letterSound;
     public AudioClip soundClipLetter;
-    [Space]
-    public Image imageGrip; 
 
     [Space]
+    [Header("Instructions Image")]
+    public Image imageInstruction; 
+
+    [Space]
+    [Header("Text speed")]
     public float TextSpeed;
 
     private bool buttonClicked = false;
@@ -46,7 +60,7 @@ public class DialogueBox : MonoBehaviour
         GoToSceneOne.gameObject.SetActive(false);
         VerifyIsGrabbed.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
-        imageGrip.gameObject.SetActive(false);
+        imageInstruction.gameObject.SetActive(false);
         XRGrabInteractable.gameObject.SetActive(false);
         
     }
@@ -91,6 +105,9 @@ public class DialogueBox : MonoBehaviour
                 SkipIndicator.gameObject.SetActive(false);
                 DialogueDisplay.gameObject.SetActive(false);
                 GoToSceneOne.gameObject.SetActive(true);
+                DialogueIndex = 0;
+                totGrab = 0;
+                totScore = 0;
             }
         }
         
@@ -98,7 +115,7 @@ public class DialogueBox : MonoBehaviour
         {
             SkipIndicator.enabled = false;
             XRGrabInteractable.gameObject.SetActive(true);
-            imageGrip.gameObject.SetActive(true);
+            imageInstruction.gameObject.SetActive(true);
             if (totGrab > 0)
             {
                 VerifyIsGrabbed.text = "Great job!";
@@ -118,7 +135,7 @@ public class DialogueBox : MonoBehaviour
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
                     VerifyIsGrabbed.gameObject.SetActive(false);
-                    imageGrip.gameObject.SetActive(false);
+                    imageInstruction.gameObject.SetActive(false);
                 }
             }
         }

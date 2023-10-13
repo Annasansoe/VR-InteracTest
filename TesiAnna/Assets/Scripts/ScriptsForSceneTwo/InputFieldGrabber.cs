@@ -22,6 +22,12 @@ public class InputFieldGrabber : MonoBehaviour
     [Header("Audio sounds")]
     public AudioSource endSound;
     public AudioClip soundClipEnd;
+    [Space]
+    public AudioSource validSource;
+    public AudioClip validClip;
+    [Space]
+    public AudioSource invalidSource;
+    public AudioClip invalidClip;
 
     [Header("Return button")]
     public Button backToMenu;
@@ -34,6 +40,9 @@ public class InputFieldGrabber : MonoBehaviour
 
     public List<Question> questions;
     public int currentQuestionIndex = 0;
+
+
+    [SerializeField] private float _time = 1f;
 
     private void Start()
     {
@@ -67,7 +76,12 @@ public class InputFieldGrabber : MonoBehaviour
         if (userAnswer.ToLower() != questions[currentQuestionIndex].expectedAnswer.ToLower())
         {
             Debug.Log("Answer is incorrect!");
+            ShowMessage();
             resultText.text = "Invalid input";
+            if (invalidSource != null && invalidClip != null)
+            {
+                invalidSource.PlayOneShot(invalidClip);
+            }
             resultText.color = Color.red;
             wrongAnswers++;
         }
@@ -75,6 +89,11 @@ public class InputFieldGrabber : MonoBehaviour
         {
             Debug.Log("Answer is correct.");
             resultText.text = "Valid Input";
+            ShowMessage();
+            if (validSource != null && validClip != null)
+            {
+                validSource.PlayOneShot(validClip);
+            }
             resultText.color = Color.green;
             // Move to the next question and display it
             currentQuestionIndex++;
@@ -95,6 +114,14 @@ public class InputFieldGrabber : MonoBehaviour
             PlayEndSound();
             Debug.Log("Questionnaire completed!");
         }
+    }
+    private IEnumerator ShowMessage()
+    {
+        resultText.enabled = true;
+
+        yield return new WaitForSeconds(_time);
+
+        resultText.enabled = false;
     }
 
     void PlayEndSound()

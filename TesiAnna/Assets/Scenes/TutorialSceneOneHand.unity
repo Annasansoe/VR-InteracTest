@@ -4638,7 +4638,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh80570
+  m_Name: pb_Mesh53020
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5692,7 +5692,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh80484
+  m_Name: pb_Mesh52924
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6702,7 +6702,7 @@ MonoBehaviour:
   soundClip: {fileID: 0}
   letterSound: {fileID: 0}
   soundClipLetter: {fileID: 0}
-  imageGrip: {fileID: 0}
+  imageInstruction: {fileID: 0}
   TextSpeed: 0
   cubeIsGrabbed: 1
   cubeIsInTheBin: 1
@@ -9623,7 +9623,7 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 1480721972}
   soundClipLetter: {fileID: 8300000, guid: d42304a24cb833347b6c24944b744880, type: 3}
-  imageGrip: {fileID: 1734720573}
+  imageInstruction: {fileID: 1734720573}
   TextSpeed: 10
   cubeIsGrabbed: 1
   cubeIsInTheBin: 1
@@ -11064,7 +11064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51.5, y: -2}
+  m_AnchoredPosition: {x: -50.1, y: -80.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784453125
@@ -11233,7 +11233,7 @@ MonoBehaviour:
   soundClip: {fileID: 0}
   letterSound: {fileID: 0}
   soundClipLetter: {fileID: 0}
-  imageGrip: {fileID: 0}
+  imageInstruction: {fileID: 0}
   TextSpeed: 30
   cubeIsGrabbed: 0
   cubeIsInTheBin: 1
@@ -11772,7 +11772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 79.3, y: -17.2}
+  m_AnchoredPosition: {x: 79.3, y: -2.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954230428
@@ -11795,7 +11795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: xngfxgnxghngm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8749326886c61c4784986b7d9885690, type: 2}
   m_sharedMaterial: {fileID: 796418007836555269, guid: e8749326886c61c4784986b7d9885690, type: 2}

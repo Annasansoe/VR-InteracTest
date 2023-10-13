@@ -6,23 +6,37 @@ using TMPro;
 
 public class DialogueBoxSceneTwo : MonoBehaviour
 {
+    [Header("Dialogue segments")]
     public DialogueSegment[] DialogueSegments;
+
     [Space]
+    [Header("Dialogue Box")]
     public Button SkipIndicator;
     public TMP_Text DialogueDisplay;
+
+    [Space]
+    [Header("Button start test")]
     public Button GoToSceneTwo;
+    [Space]
+    [Header("Interactable keyboard")]
     public TMP_InputField InputField;
     public TMP_Text ValidationText;
     public TMP_Text QuestionBox;
     public TMP_Text Verify;
 
     [Space]
+    [Header("Feedback audio")]
     public AudioSource audioSource;
     public AudioClip soundClip;
     public AudioSource letterSound;
     public AudioClip soundClipLetter;
 
     [Space]
+    [Header("Instructions Image")]
+    public Image imageTrigger;
+
+    [Space]
+    [Header("Text speed")]
     public float TextSpeed;
 
     private bool buttonClicked = false;
@@ -43,6 +57,7 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         InputField.gameObject.SetActive(false);
         ValidationText.gameObject.SetActive(false);
         QuestionBox.gameObject.SetActive(false);
+        imageTrigger.gameObject.SetActive(false);
         Verify.gameObject.SetActive(false);
         
     }
@@ -79,7 +94,8 @@ public class DialogueBoxSceneTwo : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 DialogueDisplay.gameObject.SetActive(false);
-
+                DialogueIndex = 0;
+                isEnterClickedO = 0;
                 SkipIndicator.gameObject.SetActive(false);
                 GoToSceneTwo.gameObject.SetActive(true);
             }
@@ -89,6 +105,8 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         {
             SkipIndicator.enabled = false;
             InputField.gameObject.SetActive(true);
+
+            imageTrigger.gameObject.SetActive(true);
             if (isClicked > 0)
             {
                 Verify.gameObject.SetActive(true);
@@ -108,6 +126,7 @@ public class DialogueBoxSceneTwo : MonoBehaviour
 
                     hasBeenPlayed = false;
                     buttonClicked = false;
+                    imageTrigger.gameObject.SetActive(false);
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
                 }
@@ -121,7 +140,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
             SkipIndicator.enabled = false;
             ValidationText.gameObject.SetActive(true);
             QuestionBox.gameObject.SetActive(true);
-
             if (isEnterClickedO > 0)
             {
                 Verify.gameObject.SetActive(true);
@@ -141,7 +159,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
                     ValidationText.gameObject.SetActive(false);
                     QuestionBox.gameObject.SetActive(false);
                     InputField.gameObject.SetActive(false);
-
 
                     hasBeenPlayed = false;
                     buttonClicked = false;

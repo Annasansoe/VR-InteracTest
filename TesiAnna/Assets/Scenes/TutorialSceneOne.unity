@@ -2325,7 +2325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.7, y: -22.1}
+  m_AnchoredPosition: {x: 52.3, y: -13.7}
   m_SizeDelta: {x: 398.87, y: 64.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &488273264
@@ -2348,7 +2348,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Don't worry if the object fell off, it will come back soon!
+  m_text: To grab an object you have to point it with the ray that comes out of the
+    vitual controller and press the GRIP button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 495103ca87410e942941f1e1d2b530f8, type: 2}
   m_sharedMaterial: {fileID: 3702262351396013791, guid: 495103ca87410e942941f1e1d2b530f8, type: 2}
@@ -2375,10 +2376,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.65
-  m_fontSizeBase: 14
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -7059,7 +7060,7 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 0}
   soundClipLetter: {fileID: 0}
-  imageGrip: {fileID: 0}
+  imageInstruction: {fileID: 0}
   TextSpeed: 0
   cubeIsGrabbed: 1
   cubeIsInTheBin: 1
@@ -8967,7 +8968,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357638764}
   m_LocalRotation: {x: -0, y: -0.010044011, z: -0, w: 0.9999496}
-  m_LocalPosition: {x: 0, y: 0, z: 0.656}
+  m_LocalPosition: {x: 0, y: 0, z: 0.655}
   m_LocalScale: {x: 0.074155055, y: 0.06418927, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8977,7 +8978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -1.151, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.067, y: 1.153}
+  m_AnchoredPosition: {x: -0.116, y: 1.13}
   m_SizeDelta: {x: 5, y: 3.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357638768
@@ -9428,7 +9429,7 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 1191919813}
   soundClipLetter: {fileID: 8300000, guid: d42304a24cb833347b6c24944b744880, type: 3}
-  imageGrip: {fileID: 1357638768}
+  imageInstruction: {fileID: 1357638768}
   TextSpeed: 10
   cubeIsGrabbed: 1
   cubeIsInTheBin: 1
@@ -11510,7 +11511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 67.4, y: -4.8}
+  m_AnchoredPosition: {x: 203.9, y: -85.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784453125
@@ -11786,7 +11787,7 @@ MonoBehaviour:
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 0}
   soundClipLetter: {fileID: 0}
-  imageGrip: {fileID: 0}
+  imageInstruction: {fileID: 0}
   TextSpeed: 30
   cubeIsGrabbed: 0
   cubeIsInTheBin: 0
@@ -12589,7 +12590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.1, y: -18.8}
+  m_AnchoredPosition: {x: 86.1, y: -6.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954230428

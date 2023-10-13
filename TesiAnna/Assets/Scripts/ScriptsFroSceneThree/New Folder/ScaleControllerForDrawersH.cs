@@ -63,7 +63,7 @@ public class ScaleControllerForDrawersH : MonoBehaviour {
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                ScaleControllerH.scaleDone += 1; 
+                
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
@@ -86,6 +86,7 @@ public class ScaleControllerForDrawersH : MonoBehaviour {
         {
             missionCompletedTextD.gameObject.SetActive(true);
             requestTextD.gameObject.SetActive(false);
+            ScaleControllerH.scaleDone += 1;
             if (!hasBeenPlayed)
             {
                 audioSource.clip = soundClip;

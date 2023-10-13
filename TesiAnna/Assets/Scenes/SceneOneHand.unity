@@ -4057,7 +4057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465791377}
   m_LocalRotation: {x: -0.71563387, y: 0, z: -0, w: -0.6984756}
-  m_LocalPosition: {x: 0.38, y: 1.64, z: 11.89}
+  m_LocalPosition: {x: -1.89, y: 1.54, z: 17.04}
   m_LocalScale: {x: 29.7939, y: 29.789516, z: -23.842329}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4071,7 +4071,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465791377}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
   m_Name: 
@@ -4103,11 +4103,11 @@ MonoBehaviour:
   - {fileID: 4117017045226704243}
   - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
-  collectedUnsortedObjectsTextH: {fileID: 1159307646}
-  collectedGMObjectsTextH: {fileID: 104589858}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
   collectedPaperObjectsTextH: {fileID: 330324263}
-  collectedOrganicObjectsTextH: {fileID: 192631164}
-  collectedPlasticObjectsTextH: {fileID: 635979108}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
   youDidItH: {fileID: 1425092776}
   backToMenu: {fileID: 72224331}
   audioSource: {fileID: 1213129588}
@@ -4328,7 +4328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489670975}
   m_LocalRotation: {x: -0.71563387, y: 0, z: -0, w: -0.6984756}
-  m_LocalPosition: {x: 0.01, y: -0.9, z: 14.19}
+  m_LocalPosition: {x: -1.97, y: 1.84, z: 14.27}
   m_LocalScale: {x: 29.7939, y: 29.789516, z: -23.842329}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4342,7 +4342,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489670975}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
   m_Name: 
@@ -4374,10 +4374,10 @@ MonoBehaviour:
   - {fileID: 4117017045226704243}
   - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
-  collectedUnsortedObjectsTextH: {fileID: 1159307646}
-  collectedGMObjectsTextH: {fileID: 104589858}
-  collectedPaperObjectsTextH: {fileID: 330324263}
-  collectedOrganicObjectsTextH: {fileID: 192631164}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
   collectedPlasticObjectsTextH: {fileID: 635979108}
   youDidItH: {fileID: 1425092776}
   backToMenu: {fileID: 72224331}
@@ -7575,7 +7575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840379106}
   m_LocalRotation: {x: -0.71563387, y: 0, z: -0, w: -0.6984756}
-  m_LocalPosition: {x: -0.65, y: 1.05, z: 12.48}
+  m_LocalPosition: {x: -1.39, y: 1.05, z: 12.48}
   m_LocalScale: {x: 29.7939, y: 29.789516, z: -23.84233}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7635,10 +7635,10 @@ MonoBehaviour:
   - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
   collectedUnsortedObjectsTextH: {fileID: 1159307646}
-  collectedGMObjectsTextH: {fileID: 104589858}
-  collectedPaperObjectsTextH: {fileID: 330324263}
-  collectedOrganicObjectsTextH: {fileID: 192631164}
-  collectedPlasticObjectsTextH: {fileID: 635979108}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
   youDidItH: {fileID: 1425092776}
   backToMenu: {fileID: 72224331}
   audioSource: {fileID: 1213129588}
@@ -15861,7 +15861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 246.24
+      value: 246.455
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18219,7 +18219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821768500}
   m_LocalRotation: {x: -0.71563387, y: 0, z: -0, w: -0.6984756}
-  m_LocalPosition: {x: 0.13, y: 0.45, z: 14.14}
+  m_LocalPosition: {x: -1.73, y: 0.41, z: 16.11}
   m_LocalScale: {x: 29.7939, y: 29.789516, z: -23.842329}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18233,7 +18233,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821768500}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
   m_Name: 
@@ -18265,11 +18265,11 @@ MonoBehaviour:
   - {fileID: 4117017045226704243}
   - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
-  collectedUnsortedObjectsTextH: {fileID: 1159307646}
+  collectedUnsortedObjectsTextH: {fileID: 0}
   collectedGMObjectsTextH: {fileID: 104589858}
-  collectedPaperObjectsTextH: {fileID: 330324263}
-  collectedOrganicObjectsTextH: {fileID: 192631164}
-  collectedPlasticObjectsTextH: {fileID: 635979108}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
   youDidItH: {fileID: 1425092776}
   backToMenu: {fileID: 72224331}
   audioSource: {fileID: 1213129588}
@@ -22290,7 +22290,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138511887}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
   m_Name: 
@@ -22322,11 +22322,11 @@ MonoBehaviour:
   - {fileID: 4117017045226704243}
   - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
-  collectedUnsortedObjectsTextH: {fileID: 1159307646}
-  collectedGMObjectsTextH: {fileID: 104589858}
-  collectedPaperObjectsTextH: {fileID: 330324263}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
   collectedOrganicObjectsTextH: {fileID: 192631164}
-  collectedPlasticObjectsTextH: {fileID: 635979108}
+  collectedPlasticObjectsTextH: {fileID: 0}
   youDidItH: {fileID: 1425092776}
   backToMenu: {fileID: 72224331}
   audioSource: {fileID: 1213129588}

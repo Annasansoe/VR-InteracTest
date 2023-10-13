@@ -4934,10 +4934,10 @@ MonoBehaviour:
   - {fileID: 8707810586377786482}
   collectedTotObjectsText: {fileID: 1141778381}
   collectedUnsortedObjectsText: {fileID: 1159307646}
-  collectedGMObjectsText: {fileID: 104589858}
-  collectedPaperObjectsText: {fileID: 330324263}
-  collectedOrganicObjectsText: {fileID: 192631164}
-  collectedPlasticObjectsText: {fileID: 635979108}
+  collectedGMObjectsText: {fileID: 0}
+  collectedPaperObjectsText: {fileID: 0}
+  collectedOrganicObjectsText: {fileID: 0}
+  collectedPlasticObjectsText: {fileID: 0}
   youDidIt: {fileID: 984628200}
   backToMenu: {fileID: 2082836967}
   audioSource: {fileID: 761178748}
@@ -11138,7 +11138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -159.16559
+      value: -159.034
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16712,11 +16712,11 @@ MonoBehaviour:
   - {fileID: 320686776}
   - {fileID: 8707810586377786482}
   collectedTotObjectsText: {fileID: 1141778381}
-  collectedUnsortedObjectsText: {fileID: 1159307646}
+  collectedUnsortedObjectsText: {fileID: 0}
   collectedGMObjectsText: {fileID: 104589858}
-  collectedPaperObjectsText: {fileID: 330324263}
-  collectedOrganicObjectsText: {fileID: 192631164}
-  collectedPlasticObjectsText: {fileID: 635979108}
+  collectedPaperObjectsText: {fileID: 0}
+  collectedOrganicObjectsText: {fileID: 0}
+  collectedPlasticObjectsText: {fileID: 0}
   youDidIt: {fileID: 984628200}
   backToMenu: {fileID: 2082836967}
   audioSource: {fileID: 761178748}

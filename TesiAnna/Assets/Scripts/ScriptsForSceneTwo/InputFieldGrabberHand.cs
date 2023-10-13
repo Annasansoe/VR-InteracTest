@@ -18,6 +18,12 @@ public class InputFieldGrabberHand : MonoBehaviour
     [Header("Audio sounds")]
     public AudioSource endSound;
     public AudioClip soundClipEnd;
+    [Space]
+    public AudioSource validSource;
+    public AudioClip validClip;
+    [Space]
+    public AudioSource invalidSource;
+    public AudioClip invalidClip;
 
     [Header("Question for test")]
     [SerializeField] public GameObject questionPanel;
@@ -31,6 +37,8 @@ public class InputFieldGrabberHand : MonoBehaviour
     int wrongAnswers = 0;
     int rightAnswers = 0;
     private static int num = 0;
+
+    [SerializeField] private float _time = 1f;
 
 
     //public Button submitButton;
@@ -70,7 +78,13 @@ public class InputFieldGrabberHand : MonoBehaviour
         if (userAnswer.ToLower() != questions[currentQuestionIndex].expectedAnswer.ToLower())
         {
             Debug.Log("Answer is incorrect!");
+            ShowMessage();
             resultText.text = "Invalid input";
+            if (invalidSource != null && invalidClip != null)
+            {
+                invalidSource.PlayOneShot(invalidClip);
+            }
+           
             resultText.color = Color.red;
             wrongAnswers++;
 
@@ -80,6 +94,11 @@ public class InputFieldGrabberHand : MonoBehaviour
         {
             Debug.Log("Answer is correct.");
             resultText.text = "Valid Input";
+            ShowMessage();
+            if (validSource != null && validClip != null)
+            {
+                validSource.PlayOneShot(validClip);
+            }
             resultText.color = Color.green;
             rightAnswers++;
             // Move to the next question and display it
@@ -100,6 +119,14 @@ public class InputFieldGrabberHand : MonoBehaviour
             PlayEndSound();
             Debug.Log("Questionnaire completed!");
         }
+    }
+    private IEnumerator ShowMessage()
+    {
+        resultText.enabled = true;
+
+        yield return new WaitForSeconds(_time);
+
+        resultText.enabled = false;
     }
 
     void PlayEndSound()

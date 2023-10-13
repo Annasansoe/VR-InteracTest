@@ -9,24 +9,27 @@ public class DialogueBoxForSceneThree : MonoBehaviour
 {
     [Header("Dialogue segments")]
     public DialogueSegment[] DialogueSegments;
+
     [Space]
     [Header("Target cube")]
     public GameObject cubeTarget;
 
+    [Space]
     [Header("Interactable cube")]
     public XRGrabInteractable XRGrabInteractable;
 
+    [Space]
     [Header("Dialogue Box")]
     public Button SkipIndicator;
     public TMP_Text DialogueDisplay;
-
     public TMP_Text VerifyIsGrabbed;
     public TMP_Text VerifyScale;
 
+    [Space]
     [Header("Button start test")]
     public Button GoToSceneThree;
-    [Space]
 
+    [Space]
     [Header("Feedback audio")]
     public AudioSource audioSource;
     public AudioClip soundClip;
@@ -34,8 +37,15 @@ public class DialogueBoxForSceneThree : MonoBehaviour
     public AudioClip soundClipLetter;
 
     [Space]
+    [Header("Instructions Image")]
+    public Image imageInstruction;
+
+    [Space]
     [Header("Text speed")]
     public float TextSpeed;
+
+
+    
 
     private bool buttonClicked = false;
 
@@ -43,7 +53,7 @@ public class DialogueBoxForSceneThree : MonoBehaviour
     private bool hasBeenPlayed = false;
 
     private bool CanContinue;
-    private static int DialogueIndex;
+    private static int DialogueIndex = 0;
 
     private Vector3 originalScale;
 
@@ -56,6 +66,7 @@ public class DialogueBoxForSceneThree : MonoBehaviour
         GoToSceneThree.gameObject.SetActive(false);
         VerifyIsGrabbed.gameObject.SetActive(false);
         VerifyScale.gameObject.SetActive(false);
+        imageInstruction.gameObject.SetActive(false);
         originalScale = XRGrabInteractable.transform.localScale;
        
         XRGrabInteractable.gameObject.SetActive(false);
@@ -97,7 +108,8 @@ public class DialogueBoxForSceneThree : MonoBehaviour
                     XRGrabInteractable.gameObject.SetActive(false);
                     DialogueDisplay.gameObject.SetActive(false);
                     SkipIndicator.gameObject.SetActive(false);
-
+                    DialogueIndex = 0;
+                    IsSelected = 0;
                     GoToSceneThree.gameObject.SetActive(true);
                                   
                 }
@@ -110,6 +122,7 @@ public class DialogueBoxForSceneThree : MonoBehaviour
             VerifyIsGrabbed.gameObject.SetActive(true);
             SkipIndicator.enabled = false;
             XRGrabInteractable.gameObject.SetActive(true);
+            imageInstruction.gameObject.SetActive(true);
             if (IsSelected > 1)
             {
                 SkipIndicator.enabled = true;
@@ -128,7 +141,8 @@ public class DialogueBoxForSceneThree : MonoBehaviour
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
                     VerifyIsGrabbed.gameObject.SetActive(false);
-                    
+                    imageInstruction.gameObject.SetActive(false);
+
                 }
             }
         }
@@ -141,15 +155,13 @@ public class DialogueBoxForSceneThree : MonoBehaviour
                 SkipIndicator.enabled = true;
                 
                 VerifyScale.gameObject.SetActive(true);
-                VerifyScale.text = "Great job! The object is bigger";
+                VerifyScale.text = "Great job! The object is bigger!";
                 if (!hasBeenPlayed)
                 {
                     audioSource.clip = soundClip;
                     audioSource.Play();
                     hasBeenPlayed = true;
                 }
-
-
                 if (buttonClicked && CanContinue)
                 {
                     buttonClicked = false;
@@ -172,7 +184,7 @@ public class DialogueBoxForSceneThree : MonoBehaviour
                 SkipIndicator.enabled = true;
 
                 VerifyScale.gameObject.SetActive(true);
-                VerifyScale.text = "Great job! The object is smaller";
+                VerifyScale.text = "Great job! The object is smaller!";
 
                 if (!hasBeenPlayed)
                 {
@@ -183,7 +195,6 @@ public class DialogueBoxForSceneThree : MonoBehaviour
 
                 if (buttonClicked && CanContinue)
                 {
-                    
                     buttonClicked = false;
                     hasBeenPlayed = false;
                     DialogueIndex++;

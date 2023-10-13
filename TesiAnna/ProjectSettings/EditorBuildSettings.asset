@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StartScreen.unity
     guid: 9c3c3cee913200548810a6b9363b1b9c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TutorialSceneOne.unity
     guid: 804fc11158d2fb64a994ee0318edf9ef
   - enabled: 0
@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TutorialSceneOneHand.unity
     guid: 06eb0f21dfd2d6546a82c583a0129d6e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneTwoHand.unity
     guid: 434097d357f83f5468ad3800d08c04a1
   - enabled: 0

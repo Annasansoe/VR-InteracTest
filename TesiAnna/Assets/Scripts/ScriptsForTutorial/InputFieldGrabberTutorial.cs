@@ -14,11 +14,20 @@ public class InputFieldGrabberTutorial : MonoBehaviour
     [Header("Question for test")]
     [SerializeField] public GameObject questionPanel;
     [SerializeField] public TMP_Text questionText;
-    
+
+    [Space]
+    public AudioSource validSource;
+    public AudioClip validClip;
+    [Space]
+    public AudioSource invalidSource;
+    public AudioClip invalidClip;
+
     //public Button submitButton;
 
     public List<QuestionTutorial> questionsT;
     public int currentQuestionIndex = 0;
+
+    [SerializeField] private float _time = 1f;
 
     private void Start()
     {
@@ -46,14 +55,24 @@ public class InputFieldGrabberTutorial : MonoBehaviour
         if (userAnswer == "")
         {
             Debug.Log("Answer is incorrect!");
+            ShowMessage();
             resultText.text = "Invalid input";
+            if (invalidSource != null && invalidClip != null)
+            {
+                invalidSource.PlayOneShot(invalidClip);
+            }
             resultText.color = Color.red;
            
         }
         else
         {
             Debug.Log("Answer is correct.");
+            ShowMessage();
             resultText.text = "Valid Input";
+            if (validSource != null && validClip != null)
+            {
+                validSource.PlayOneShot(validClip);
+            }
             resultText.color = Color.green;
             // Move to the next question and display it
             currentQuestionIndex++;
@@ -71,6 +90,15 @@ public class InputFieldGrabberTutorial : MonoBehaviour
             questionText.text = "Questionnaire completed!";
             Debug.Log("Questionnaire completed!");
         }
+    }
+
+    private IEnumerator ShowMessage()
+    {
+        resultText.enabled = true;
+        
+        yield return new WaitForSeconds(_time);
+
+        resultText.enabled = false;
     }
 }
 

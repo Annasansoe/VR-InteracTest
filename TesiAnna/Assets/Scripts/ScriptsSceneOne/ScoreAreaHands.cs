@@ -64,13 +64,7 @@ public class ScoreAreaHands : MonoBehaviour
             totScore += 1;
             PlaySound();
         }
-        else if (otherCollider.CompareTag("G&M Waste"))
-        {
-            gMScore += 1;
-            collectedGMObjectsTextH.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
-            totScore += 1;
-            PlaySound();
-        }
+        
         else if (otherCollider.CompareTag("Paper Waste"))
         {
             paperScore += 1;
@@ -78,7 +72,13 @@ public class ScoreAreaHands : MonoBehaviour
             totScore += 1;
             PlaySound();
         }
-
+        else if (otherCollider.CompareTag("G&M Waste"))
+        {
+            gMScore += 1;
+            collectedGMObjectsTextH.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
+            totScore += 1;
+            PlaySound();
+        }
         else if (otherCollider.CompareTag("Organic Waste"))
         {
             organicScore += 1;

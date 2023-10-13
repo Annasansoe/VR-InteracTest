@@ -115,7 +115,21 @@ public class ScaleController : MonoBehaviour
             }
         }
 
+        if (scaleDone == 4)
+        {
+            Invoke("PlaySound", 2f);
+        }
+
     }
+    private void PlaySound()
+    {
+        if (audioSourceEnd != null && soundClipEnd != null)
+        {
+
+            audioSourceEnd.PlayOneShot(soundClipEnd);
+        }
+    }
+
     public void BackToMenu()
     {
         totScaleEnd = scaleDone;
