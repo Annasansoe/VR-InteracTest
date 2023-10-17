@@ -17,6 +17,11 @@ public class DialogueBoxSceneTwo : MonoBehaviour
     [Space]
     [Header("Button start test")]
     public Button GoToSceneTwo;
+
+    [Space]
+    [Header("Button start test")]
+    public GameObject Keyboard;
+
     [Space]
     [Header("Interactable keyboard")]
     public TMP_InputField InputField;
@@ -34,6 +39,7 @@ public class DialogueBoxSceneTwo : MonoBehaviour
     [Space]
     [Header("Instructions Image")]
     public Image imageTrigger;
+    public Image imagePinch;
 
     [Space]
     [Header("Text speed")]
@@ -58,6 +64,7 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         ValidationText.gameObject.SetActive(false);
         QuestionBox.gameObject.SetActive(false);
         imageTrigger.gameObject.SetActive(false);
+        imagePinch.gameObject.SetActive(true);
         Verify.gameObject.SetActive(false);
         
     }
@@ -94,8 +101,10 @@ public class DialogueBoxSceneTwo : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 DialogueDisplay.gameObject.SetActive(false);
+                Keyboard.gameObject.SetActive(false);
                 DialogueIndex = 0;
                 isEnterClickedO = 0;
+                isClicked = 0;
                 SkipIndicator.gameObject.SetActive(false);
                 GoToSceneTwo.gameObject.SetActive(true);
             }
@@ -137,6 +146,7 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         {
             Verify.gameObject.SetActive(false);
 
+            imagePinch.gameObject.SetActive(false);
             SkipIndicator.enabled = false;
             ValidationText.gameObject.SetActive(true);
             QuestionBox.gameObject.SetActive(true);
@@ -159,7 +169,7 @@ public class DialogueBoxSceneTwo : MonoBehaviour
                     ValidationText.gameObject.SetActive(false);
                     QuestionBox.gameObject.SetActive(false);
                     InputField.gameObject.SetActive(false);
-
+                    Keyboard.gameObject.SetActive(false);
                     hasBeenPlayed = false;
                     buttonClicked = false;
                     DialogueIndex++;

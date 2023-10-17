@@ -76,8 +76,7 @@ public class InputFieldGrabber : MonoBehaviour
         if (userAnswer.ToLower() != questions[currentQuestionIndex].expectedAnswer.ToLower())
         {
             Debug.Log("Answer is incorrect!");
-            ShowMessage();
-            resultText.text = "Invalid input";
+            ShowMessageIn();
             if (invalidSource != null && invalidClip != null)
             {
                 invalidSource.PlayOneShot(invalidClip);
@@ -88,7 +87,6 @@ public class InputFieldGrabber : MonoBehaviour
         else
         {
             Debug.Log("Answer is correct.");
-            resultText.text = "Valid Input";
             ShowMessage();
             if (validSource != null && validClip != null)
             {
@@ -117,6 +115,17 @@ public class InputFieldGrabber : MonoBehaviour
     }
     private IEnumerator ShowMessage()
     {
+        resultText.text = "Valid Input";
+        resultText.enabled = true;
+
+        yield return new WaitForSeconds(_time);
+
+        resultText.enabled = false;
+    }
+
+    private IEnumerator ShowMessageIn()
+    {
+        resultText.text = "Invalid Input";
         resultText.enabled = true;
 
         yield return new WaitForSeconds(_time);
