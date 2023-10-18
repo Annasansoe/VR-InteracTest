@@ -8,6 +8,7 @@ using System.IO;
 
 public class ScaleControllerH : MonoBehaviour
 {
+    public List<GameObject> objectsToDeactivate = new List<GameObject>();
 
     [Header("Target cube")]
     public GameObject cubeTarget;
@@ -117,9 +118,17 @@ public class ScaleControllerH : MonoBehaviour
         if (scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
+            DeactivateObjectsInList();
         }
     }
 
+    public void DeactivateObjectsInList()
+    {
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
+        }
+    }
     private void PlaySound()
     {
         if (audioSourceEnd != null && soundClipEnd != null)

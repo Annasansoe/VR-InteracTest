@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ScaleControllerForDrawersH : MonoBehaviour {
+public class ScaleControllerForDrawersH : MonoBehaviour 
+{
+    public List<GameObject> objectsToDeactivate = new List<GameObject>();
 
     [Header("Target cube")]
     public GameObject cubeTarget;
@@ -98,6 +100,8 @@ public class ScaleControllerForDrawersH : MonoBehaviour {
         if (ScaleControllerH.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
+
+            DeactivateObjectsInList();
         }
     }
 
@@ -107,6 +111,13 @@ public class ScaleControllerForDrawersH : MonoBehaviour {
         {
 
             audioSourceEnd.PlayOneShot(soundClipEnd);
+        }
+    }
+    public void DeactivateObjectsInList()
+    {
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
         }
     }
 

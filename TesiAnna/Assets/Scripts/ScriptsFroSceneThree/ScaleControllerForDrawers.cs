@@ -5,6 +5,7 @@ using TMPro;
 
 public class ScaleControllerForDrawers : MonoBehaviour 
 {
+    public List<GameObject> objectsToDeactivate = new List<GameObject>();
 
     [Header("Target cube")]
     public GameObject cubeTarget;
@@ -64,7 +65,6 @@ public class ScaleControllerForDrawers : MonoBehaviour
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
@@ -101,6 +101,8 @@ public class ScaleControllerForDrawers : MonoBehaviour
         if (ScaleController.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
+
+            DeactivateObjectsInList();
         }
 
     }
@@ -110,6 +112,13 @@ public class ScaleControllerForDrawers : MonoBehaviour
         if (audioSourceEnd != null && soundClipEnd != null)
         {
             audioSourceEnd.PlayOneShot(soundClipEnd);
+        }
+    }
+    public void DeactivateObjectsInList()
+    {
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
         }
     }
 

@@ -5,7 +5,8 @@ using TMPro;
 
 public class ScaleControllerForZAxisCube : MonoBehaviour
 {
-    
+    public List<GameObject> objectsToDeactivate = new List<GameObject>();
+
     [Header("Target cube")]
     public GameObject cubeTarget;
 
@@ -110,6 +111,8 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
         if (ScaleController.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
+
+            DeactivateObjectsInList(); ;
         }
     }
 
@@ -118,6 +121,14 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
         if (audioSourceEnd != null && soundClipEnd != null)
         {
             audioSourceEnd.PlayOneShot(soundClipEnd);
+        }
+    }
+
+    public void DeactivateObjectsInList()
+    {
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
         }
     }
 

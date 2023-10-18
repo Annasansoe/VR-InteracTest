@@ -13,7 +13,9 @@ public class InputFieldGrabberHand : MonoBehaviour
 
     [Header("Grab from input and see the result")]
     [SerializeField] TMP_InputField inputField;
-    [SerializeField] TMP_Text resultText;
+
+    [SerializeField] TMP_Text validText;
+    [SerializeField] TMP_Text invalidText;
 
     [Header("Audio sounds")]
     public AudioSource endSound;
@@ -48,6 +50,8 @@ public class InputFieldGrabberHand : MonoBehaviour
 
     private void Start()
     {
+        validText.gameObject.SetActive(false);
+        invalidText.gameObject.SetActive(false);
         dateTimeStart = System.DateTime.UtcNow.ToString();
         questions = new List<QuestionHand>
     {
@@ -58,6 +62,16 @@ public class InputFieldGrabberHand : MonoBehaviour
     };
 
         DisplayQuestion(currentQuestionIndex);
+    }
+
+    private void HideValidText()
+    {
+        validText.gameObject.SetActive(false);
+    }
+
+    private void HideInvalidText()
+    {
+        invalidText.gameObject.SetActive(false);
     }
 
     public void DisplayQuestion(int index)
@@ -78,13 +92,14 @@ public class InputFieldGrabberHand : MonoBehaviour
         if (userAnswer.ToLower() != questions[currentQuestionIndex].expectedAnswer.ToLower())
         {
             Debug.Log("Answer is incorrect!");
-            ShowMessageIn();
+            invalidText.text = "Invalid text";
+            invalidText.gameObject.SetActive(true);
+            Invoke("HideInvalidText", _time);
             if (invalidSource != null && invalidClip != null)
             {
                 invalidSource.PlayOneShot(invalidClip);
             }
            
-            resultText.color = Color.red;
             wrongAnswers++;
 
 
@@ -92,12 +107,14 @@ public class InputFieldGrabberHand : MonoBehaviour
         else
         {
             Debug.Log("Answer is correct.");
-            ShowMessage();
+            validText.text = "Valid text";
+            validText.gameObject.SetActive(true);
+            Invoke("HideValidText", _time);
             if (validSource != null && validClip != null)
             {
                 validSource.PlayOneShot(validClip);
             }
-            resultText.color = Color.green;
+            
             rightAnswers++;
             // Move to the next question and display it
             currentQuestionIndex++;
@@ -117,25 +134,6 @@ public class InputFieldGrabberHand : MonoBehaviour
             PlayEndSound();
             Debug.Log("Questionnaire completed!");
         }
-    }
-    private IEnumerator ShowMessage()
-    {
-        resultText.text = "Valid Input";
-        resultText.enabled = true;
-
-        yield return new WaitForSeconds(_time);
-
-        resultText.enabled = false;
-    }
-
-    private IEnumerator ShowMessageIn()
-    {
-        resultText.text = "Invalid Input";
-        resultText.enabled = true;
-
-        yield return new WaitForSeconds(_time);
-
-        resultText.enabled = false;
     }
 
     void PlayEndSound()

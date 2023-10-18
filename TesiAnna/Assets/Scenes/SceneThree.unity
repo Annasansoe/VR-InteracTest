@@ -3040,6 +3040,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d6b00506eaea0499a1dfdcc48b934e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToDeactivate:
+  - {fileID: 1019555619}
+  - {fileID: 679693215}
+  - {fileID: 549482842}
+  - {fileID: 2040902330}
+  - {fileID: 1720605583}
+  - {fileID: 8101629673556019309}
+  - {fileID: 2132788333}
+  - {fileID: 573383384}
+  - {fileID: 784072565945419590}
+  - {fileID: 1517623341}
+  - {fileID: 1751718975}
+  - {fileID: 1681047014}
   cubeTarget: {fileID: 1517623341}
   cubeManipulable: {fileID: 719085962}
   cubeAfterScale: {fileID: 1019555619}
@@ -3174,6 +3187,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be8a85c1ae5b3344a82ce0e54eb300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToDeactivate:
+  - {fileID: 1019555619}
+  - {fileID: 679693215}
+  - {fileID: 549482842}
+  - {fileID: 2040902330}
+  - {fileID: 1720605583}
+  - {fileID: 8101629673556019309}
+  - {fileID: 2132788333}
+  - {fileID: 573383384}
+  - {fileID: 784072565945419590}
+  - {fileID: 1517623341}
+  - {fileID: 1751718975}
+  - {fileID: 1681047014}
   cubeTarget: {fileID: 1751718975}
   cubeManipulable: {fileID: 889798602}
   cubeAfterScale: {fileID: 2040902330}
@@ -3863,6 +3889,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be8a85c1ae5b3344a82ce0e54eb300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToDeactivate:
+  - {fileID: 1019555619}
+  - {fileID: 679693215}
+  - {fileID: 549482842}
+  - {fileID: 2040902330}
+  - {fileID: 1720605583}
+  - {fileID: 8101629673556019309}
+  - {fileID: 2132788333}
+  - {fileID: 573383384}
+  - {fileID: 784072565945419590}
+  - {fileID: 1517623341}
+  - {fileID: 1751718975}
+  - {fileID: 1681047014}
   cubeTarget: {fileID: 1751718975}
   cubeManipulable: {fileID: 672255678}
   cubeAfterScale: {fileID: 549482842}
@@ -11481,6 +11520,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc578db09d1340e459178c82f97a1f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToDeactivate:
+  - {fileID: 1019555619}
+  - {fileID: 679693215}
+  - {fileID: 549482842}
+  - {fileID: 2040902330}
+  - {fileID: 1720605583}
+  - {fileID: 8101629673556019309}
+  - {fileID: 2132788333}
+  - {fileID: 573383384}
+  - {fileID: 784072565945419590}
+  - {fileID: 1517623341}
+  - {fileID: 1751718975}
+  - {fileID: 1681047014}
   cubeTarget: {fileID: 784072565945419590}
   cubeManipulable: {fileID: 1193996405}
   cubeAfterScale: {fileID: 8101629673556019309}
@@ -12432,6 +12484,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be8a85c1ae5b3344a82ce0e54eb300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToDeactivate:
+  - {fileID: 1019555619}
+  - {fileID: 679693215}
+  - {fileID: 549482842}
+  - {fileID: 2040902330}
+  - {fileID: 1720605583}
+  - {fileID: 8101629673556019309}
+  - {fileID: 2132788333}
+  - {fileID: 573383384}
+  - {fileID: 784072565945419590}
+  - {fileID: 1517623341}
+  - {fileID: 1751718975}
+  - {fileID: 1681047014}
   cubeTarget: {fileID: 1751718975}
   cubeManipulable: {fileID: 456140647}
   cubeAfterScale: {fileID: 679693215}
@@ -16876,6 +16941,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be8a85c1ae5b3344a82ce0e54eb300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToDeactivate:
+  - {fileID: 1019555619}
+  - {fileID: 679693215}
+  - {fileID: 549482842}
+  - {fileID: 2040902330}
+  - {fileID: 1720605583}
+  - {fileID: 8101629673556019309}
+  - {fileID: 2132788333}
+  - {fileID: 573383384}
+  - {fileID: 784072565945419590}
+  - {fileID: 1517623341}
+  - {fileID: 1751718975}
+  - {fileID: 1681047014}
   cubeTarget: {fileID: 1751718975}
   cubeManipulable: {fileID: 1418512002}
   cubeAfterScale: {fileID: 1720605583}
@@ -18775,6 +18853,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc0550ca1a0ccc94ea623432eeb2a881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToDeactivate:
+  - {fileID: 1019555619}
+  - {fileID: 679693215}
+  - {fileID: 549482842}
+  - {fileID: 2040902330}
+  - {fileID: 1720605583}
+  - {fileID: 8101629673556019309}
+  - {fileID: 2132788333}
+  - {fileID: 573383384}
+  - {fileID: 784072565945419590}
+  - {fileID: 1517623341}
+  - {fileID: 1751718975}
+  - {fileID: 1681047014}
   cubeTarget: {fileID: 1681047014}
   cubeManipulable: {fileID: 685294367}
   cubeAfterScale: {fileID: 2132788333}

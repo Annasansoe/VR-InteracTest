@@ -5,6 +5,8 @@ using TMPro;
 
 public class ScaleControllerKey : MonoBehaviour
 {
+    public List<GameObject> objectsToDeactivate = new List<GameObject>();
+    
     [Header("Target cube")]
     public GameObject cubeTarget;
 
@@ -93,6 +95,7 @@ public class ScaleControllerKey : MonoBehaviour
         if (ScaleController.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
+            DeactivateObjectsInList();
         }
 
     }
@@ -104,5 +107,11 @@ public class ScaleControllerKey : MonoBehaviour
             audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
-
+    public void DeactivateObjectsInList()
+    {
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
+        }
+    }
 }

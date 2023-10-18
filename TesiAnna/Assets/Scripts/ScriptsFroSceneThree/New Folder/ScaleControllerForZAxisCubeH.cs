@@ -5,6 +5,7 @@ using TMPro;
 
 public class ScaleControllerForZAxisCubeH : MonoBehaviour
 {
+    public List<GameObject> objectsToDeactivate = new List<GameObject>();
 
     [Header("Target cube")]
     public GameObject cubeTarget;
@@ -72,11 +73,12 @@ public class ScaleControllerForZAxisCubeH : MonoBehaviour
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                ScaleControllerH.scaleDone += 1; 
             }
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
+
+            ScaleControllerH.scaleDone += 1;
             Debug.Log("Both cubes have the same size.");
             missionCompletedTextZ.gameObject.SetActive(true);
             if (!hasBeenPlayed)
@@ -108,6 +110,8 @@ public class ScaleControllerForZAxisCubeH : MonoBehaviour
         if (ScaleControllerH.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
+
+            DeactivateObjectsInList();
         }
     }
 
@@ -117,6 +121,13 @@ public class ScaleControllerForZAxisCubeH : MonoBehaviour
         {
 
             audioSourceEnd.PlayOneShot(soundClipEnd);
+        }
+    }
+    public void DeactivateObjectsInList()
+    {
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
         }
     }
 
