@@ -24,6 +24,8 @@ public class DialogueBox : MonoBehaviour
     [Header("Button start test")]
     public Button GoToSceneOne;
     public TMP_Text VerifyIsGrabbed;
+    public TMP_Text TypeOfMetaphor;
+    public static string StringMetaphor; 
 
     [Space]
     [Header("Feedback audio")]
@@ -39,7 +41,7 @@ public class DialogueBox : MonoBehaviour
     [Space]
     [Header("Text speed")]
     public float TextSpeed;
-
+    [Space]
     private bool buttonClicked = false;
 
     private bool CanContinue;
@@ -52,9 +54,32 @@ public class DialogueBox : MonoBehaviour
     static int totScore = 0;
     static int totGrab = 0;
 
+    public ActionBasedController leftController;
+    public ActionBasedController rightController;
+
+    public XRDirectInteractor directInteractorLeft;
+    public XRRayInteractor rayInteractorLeft;
+    public XRDirectInteractor directInteractorRight;
+    public XRRayInteractor rayInteractorRight;
+
     // Start is called before the first frame update
     void Start()
     {
+        StringMetaphor = TypeOfMetaphor.text;
+        if (StringMetaphor.Equals("DG"))
+        {
+            rayInteractorLeft.enabled = true;
+            rayInteractorRight.enabled = true;
+            directInteractorLeft.enabled = true;
+            directInteractorRight.enabled = true;
+        }
+        else if (StringMetaphor.Equals("RC"))
+        {
+            directInteractorRight.enabled = false;
+            rayInteractorRight.enabled = true;
+            directInteractorLeft.enabled = false;
+            rayInteractorLeft.enabled = true;
+        }
         StartCoroutine(PlayDialogue(DialogueSegments[0].Dialogue));
        
         GoToSceneOne.gameObject.SetActive(false);

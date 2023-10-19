@@ -8,6 +8,8 @@ using System.IO;
 
 public class ScaleControllerH : MonoBehaviour
 {
+   
+
     public List<GameObject> objectsToDeactivate = new List<GameObject>();
 
     [Header("Target cube")]
@@ -52,9 +54,11 @@ public class ScaleControllerH : MonoBehaviour
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
+   
+
     private void Start()
     {
-
+        
         dateTimeStart = System.DateTime.UtcNow.ToString();
         // Ensure that cube1 and cube2 are assigned in the Inspector
         if (cubeTarget == null || cubeManipulable == null)

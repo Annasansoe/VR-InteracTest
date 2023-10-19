@@ -24,21 +24,20 @@ public class AppMenuManager : MonoBehaviour
     public Button sceneOneTutorialHand;
     public Button sceneTwoTutorialHand;
     public Button sceneThreeTutorialHand;
+    public Button LoadSceneButton;
     public Button optionButton;
     public Button aboutButton;
     public Button quitButton;
 
-    [Header("Title scenes")]
-    public TMP_Text titleSceneControllers;
-    public TMP_Text titleSceneHands;
-
+    public string tipeOfMetaphore;
 
     public Button returnToMainMenu;
 
     public List<Button> returnButtons;
 
+    public static AppMenuManager Instance { get; private set; }
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         EnableMainMenu();
@@ -63,26 +62,26 @@ public class AppMenuManager : MonoBehaviour
     private Dictionary<string, string> sceneMappings = new Dictionary<string, string>
     {
         { "Grab_Controllers_Ray-casting", "TutorialSceneOne" },
-        { "Grab_Controllers_Direct Grab", "TutorialSceneOne" },
+        { "Grab_Controllers_Direct Grab", "TutorialSceneOneDG" },
         { "Grab_Bare Hands_Ray-casting", "TutorialSceneOneHand" },
-        { "Grab_Bare Hands_Direct Grab", "TutorialSceneOneHand" },
+        { "Grab_Bare Hands_Direct Grab", "TutorialSceneOneHandDG" },
         { "Type_Controllers_Ray-casting", "TutorialSceneTwo" },
-        { "Type_Controllers_Direct Grab", "TutorialSceneTwo" },
+        { "Type_Controllers_Direct Grab", "TutorialSceneTwoDG" },
         { "Type_Bare Hands_Ray-casting", "TutorialSceneTwoHand" },
-        { "Type_Bare Hands_Direct Grab", "TutorialSceneTwoHand" },
+        { "Type_Bare Hands_Direct Grab", "TutorialSceneTwoHandDG" },
         { "Manipulate_Controllers_Ray-casting", "TutorialSceneThree" },
-        { "Manipulate_Controllers_Direct Grab", "TutorialSceneThree" },
+        { "Manipulate_Controllers_Direct Grab", "TutorialSceneThreeDG" },
         { "Manipulate_Bare Hands_Ray-casting", "TutorialSceneThreeHand" },
-        { "Manipulate_Bare Hands_Direct Grab", "TutorialSceneThreeHand" }
+        { "Manipulate_Bare Hands_Direct Grab", "TutorialSceneThreeHandDG" }
         // Add more mappings as needed
     };
-
+   
     public void LoadSelectedScene()
     {
         string selectedTask = taskDropdown.options[taskDropdown.value].text;
         string selectedMethod = methodDropdown.options[methodDropdown.value].text;
         string selectedMetaphor = metaphorDropdown.options[metaphorDropdown.value].text;
-
+        tipeOfMetaphore = selectedMetaphor;
         // Construct the key based on the selected choices
         string key = $"{selectedTask}_{selectedMethod}_{selectedMetaphor}";
 
@@ -157,8 +156,6 @@ public class AppMenuManager : MonoBehaviour
         mainMenu.SetActive(false);
         options.SetActive(true);
         about.SetActive(false);
-        titleSceneControllers.gameObject.SetActive(false);
-        titleSceneHands.gameObject.SetActive(false);
     }
     public void EnableAbout()
     {
@@ -166,7 +163,8 @@ public class AppMenuManager : MonoBehaviour
         mainMenu.SetActive(false);
         options.SetActive(false);
         about.SetActive(true);
-        titleSceneControllers.gameObject.SetActive(false);
-        titleSceneHands.gameObject.SetActive(false);
+
     }
+
+   
 }

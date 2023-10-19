@@ -8,6 +8,8 @@ using System.IO;
 
 public class ScoreArea : MonoBehaviour
 {
+    
+
     public XRGrabInteractable[] XRGrabInteractable;
 
     static int totScore = 0;
@@ -42,8 +44,11 @@ public class ScoreArea : MonoBehaviour
     //PROVA FILE
     private static int indexText;
 
+    
+
     private void Start()
     {
+              
         youDidIt.gameObject.SetActive(false);
         //START csv
         // Construct the full file path using persistentDataPath
@@ -54,7 +59,7 @@ public class ScoreArea : MonoBehaviour
         collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
         collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
         collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
-        
+      
     }
 
 
