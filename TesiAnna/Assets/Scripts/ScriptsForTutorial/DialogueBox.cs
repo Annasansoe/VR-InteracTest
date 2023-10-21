@@ -45,8 +45,6 @@ public class DialogueBox : MonoBehaviour
     private bool buttonClicked = false;
 
     private bool CanContinue;
-    public bool cubeIsGrabbed = false;
-    public bool cubeIsInTheBin = false;
     private static int DialogueIndex = 0;
 
     private bool hasBeenPlayed = false;
@@ -54,32 +52,16 @@ public class DialogueBox : MonoBehaviour
     static int totScore = 0;
     static int totGrab = 0;
 
-    public ActionBasedController leftController;
-    public ActionBasedController rightController;
-
     public XRDirectInteractor directInteractorLeft;
     public XRRayInteractor rayInteractorLeft;
     public XRDirectInteractor directInteractorRight;
     public XRRayInteractor rayInteractorRight;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        StringMetaphor = TypeOfMetaphor.text;
-        if (StringMetaphor.Equals("DG"))
-        {
-            rayInteractorLeft.enabled = true;
-            rayInteractorRight.enabled = true;
-            directInteractorLeft.enabled = true;
-            directInteractorRight.enabled = true;
-        }
-        else if (StringMetaphor.Equals("RC"))
-        {
-            directInteractorRight.enabled = false;
-            rayInteractorRight.enabled = true;
-            directInteractorLeft.enabled = false;
-            rayInteractorLeft.enabled = true;
-        }
+        
         StartCoroutine(PlayDialogue(DialogueSegments[0].Dialogue));
        
         GoToSceneOne.gameObject.SetActive(false);
@@ -138,6 +120,8 @@ public class DialogueBox : MonoBehaviour
         
         else if (DialogueIndex == 1)
         {
+            directInteractorLeft.enabled = true;
+            directInteractorRight.enabled = true;
             SkipIndicator.enabled = false;
             XRGrabInteractable.gameObject.SetActive(true);
             imageInstruction.gameObject.SetActive(true);
@@ -166,6 +150,8 @@ public class DialogueBox : MonoBehaviour
         }
         else if (DialogueIndex == 2)
         {
+            directInteractorLeft.enabled = true;
+            directInteractorRight.enabled = true;
             SkipIndicator.enabled = false;
             Bin.gameObject.SetActive(true);
             VerifyIsGrabbed.gameObject.SetActive(false);

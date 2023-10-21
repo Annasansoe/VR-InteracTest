@@ -7265,6 +7265,7 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 488273264}
   GoToSceneOne: {fileID: 1107227399}
   VerifyIsGrabbed: {fileID: 1954230428}
+  TypeOfMetaphor: {fileID: 0}
   audioSource: {fileID: 1303329941}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 0}
@@ -9639,6 +9640,7 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 488273264}
   GoToSceneOne: {fileID: 1107227399}
   VerifyIsGrabbed: {fileID: 1954230428}
+  TypeOfMetaphor: {fileID: 422810120}
   audioSource: {fileID: 1303329941}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 1191919813}
@@ -12004,6 +12006,7 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 488273264}
   GoToSceneOne: {fileID: 1107227399}
   VerifyIsGrabbed: {fileID: 1954230428}
+  TypeOfMetaphor: {fileID: 0}
   audioSource: {fileID: 1303329941}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 0}

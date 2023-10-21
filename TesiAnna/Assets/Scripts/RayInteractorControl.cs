@@ -19,14 +19,14 @@ public class RayInteractorControl : MonoBehaviour
     private void Start()
     {
         // Subscribe to the dropdown's OnValueChanged event to detect changes in the selection
-        if (DialogueBox.StringMetaphor.Equals("DG"))
+        //if (DialogueBox.StringMetaphor.Equals("DG"))
         {
             rayInteractorLeft.enabled = false;
             rayInteractorRight.enabled = false;
             directInteractorLeft.enabled = true;
             directInteractorRight.enabled = true;
         }
-        else if (DialogueBox.StringMetaphor.Equals("RC"))
+       // else if (DialogueBox.StringMetaphor.Equals("RC"))
         {
             directInteractorRight.enabled = false;
             rayInteractorRight.enabled = true;
