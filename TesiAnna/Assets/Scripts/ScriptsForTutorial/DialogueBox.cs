@@ -25,7 +25,7 @@ public class DialogueBox : MonoBehaviour
     public Button GoToSceneOne;
     public TMP_Text VerifyIsGrabbed;
     public TMP_Text TypeOfMetaphor;
-    public static string StringMetaphor; 
+    public static string StringMetaphor;
 
     [Space]
     [Header("Feedback audio")]
@@ -45,17 +45,14 @@ public class DialogueBox : MonoBehaviour
     private bool buttonClicked = false;
 
     private bool CanContinue;
-    private static int DialogueIndex = 0;
+    public static int DialogueIndex = 0;
 
     private bool hasBeenPlayed = false;
 
-    static int totScore = 0;
-    static int totGrab = 0;
 
-    public XRDirectInteractor directInteractorLeft;
-    public XRRayInteractor rayInteractorLeft;
-    public XRDirectInteractor directInteractorRight;
-    public XRRayInteractor rayInteractorRight;
+
+   
+
 
 
     // Start is called before the first frame update
@@ -63,36 +60,30 @@ public class DialogueBox : MonoBehaviour
     {
         
         StartCoroutine(PlayDialogue(DialogueSegments[0].Dialogue));
+
        
         GoToSceneOne.gameObject.SetActive(false);
-        VerifyIsGrabbed.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
         imageInstruction.gameObject.SetActive(false);
+        VerifyIsGrabbed.gameObject.SetActive(false);
         XRGrabInteractable.gameObject.SetActive(false);
-        
+
+
     }
     public void Click()
     {
         buttonClicked = true;
     }
 
-    public void isGrabbed()
-    {
-        totGrab += 1;
-    }
+   
 
-    void OnTriggerEnter(Collider otherCollider)
-    {
-        if (otherCollider.CompareTag("Unsorted Waste"))
-        {
-            totScore++;
-        }
-        Destroy(otherCollider.gameObject);
-    }
+   
 
     // Update is called once per frame
     void Update()
     {
+      
+
         SkipIndicator.enabled = CanContinue;
         
         if (DialogueIndex != 1 && buttonClicked && CanContinue)
@@ -102,6 +93,7 @@ public class DialogueBox : MonoBehaviour
 
             VerifyIsGrabbed.gameObject.SetActive(false);
 
+            //ScoreAreaForTutorial.VerifyIsGrabbedT.gameObject.SetActive(false);
             if (DialogueIndex < DialogueSegments.Length)
             {
                 StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
@@ -113,19 +105,20 @@ public class DialogueBox : MonoBehaviour
                 DialogueDisplay.gameObject.SetActive(false);
                 GoToSceneOne.gameObject.SetActive(true);
                 DialogueIndex = 0;
-                totGrab = 0;
-                totScore = 0;
+                MaterialChangeCounter.materialChangeCount = 0;
+                ScoreAreaForTutorial.totScore = 0;
             }
         }
         
         else if (DialogueIndex == 1)
         {
-            directInteractorLeft.enabled = true;
-            directInteractorRight.enabled = true;
-            SkipIndicator.enabled = false;
+
             XRGrabInteractable.gameObject.SetActive(true);
+            
+            SkipIndicator.enabled = false;
             imageInstruction.gameObject.SetActive(true);
-            if (totGrab > 0)
+
+            if (MaterialChangeCounter.materialChangeCount > 0)
             {
                 VerifyIsGrabbed.text = "Great job!";
                 VerifyIsGrabbed.gameObject.SetActive(true);
@@ -150,23 +143,16 @@ public class DialogueBox : MonoBehaviour
         }
         else if (DialogueIndex == 2)
         {
-            directInteractorLeft.enabled = true;
-            directInteractorRight.enabled = true;
+           
+            XRGrabInteractable.gameObject.SetActive(true);
             SkipIndicator.enabled = false;
             Bin.gameObject.SetActive(true);
             VerifyIsGrabbed.gameObject.SetActive(false);
 
-            if (totScore == 2)
+            if (ScoreAreaForTutorial.totScore == 1)
             {
-                VerifyIsGrabbed.text = "Awesome you did it!";
-                VerifyIsGrabbed.gameObject.SetActive(true);
+
                 SkipIndicator.enabled = true;
-                if (!hasBeenPlayed)
-                {
-                    audioSource.clip = soundClip;
-                    audioSource.Play();
-                    hasBeenPlayed = true;
-                }
 
                 if (buttonClicked && CanContinue)
                 {
@@ -174,7 +160,7 @@ public class DialogueBox : MonoBehaviour
                     hasBeenPlayed = false;
                     DialogueIndex++;
                     StartCoroutine(PlayDialogue(DialogueSegments[DialogueIndex].Dialogue));
-                    VerifyIsGrabbed.gameObject.SetActive(false);
+                    //ScoreAreaForTutorial.VerifyIsGrabbedT.gameObject.SetActive(false);
                 }
             }
         }
