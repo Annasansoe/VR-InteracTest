@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TutorialSceneThree.unity
     guid: 3d4ee12fb98572d449a3b53850a021f1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneThreeDG.unity
     guid: 3236dd8f51837264c8cdf72c74c49898
   - enabled: 0
@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TutorialSceneTwoHand.unity
     guid: 434097d357f83f5468ad3800d08c04a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TutorialSceneTwoHandDG.unity
     guid: 89e087742621f1a49a53e661d33f3696
   - enabled: 0
