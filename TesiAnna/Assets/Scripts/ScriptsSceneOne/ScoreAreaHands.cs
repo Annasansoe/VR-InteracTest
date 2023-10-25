@@ -39,6 +39,9 @@ public class ScoreAreaHands : MonoBehaviour
     public AudioSource audioSourceEnd;
     public AudioClip soundClipEnd;
 
+    [Header("Text to disable at the end")]
+    public TMP_Text[] textElements;
+
     private bool hasBeenPlayed = false;
 
     private void Start()
@@ -100,12 +103,10 @@ public class ScoreAreaHands : MonoBehaviour
         {
             youDidItH.gameObject.SetActive(true);
             PlaySoundEnd();
-            collectedTotObjectsTextH.gameObject.SetActive(false);
-            collectedUnsortedObjectsTextH.gameObject.SetActive(false);
-            collectedGMObjectsTextH.gameObject.SetActive(false);
-            collectedPaperObjectsTextH.gameObject.SetActive(false);
-            collectedOrganicObjectsTextH.gameObject.SetActive(false);
-            collectedPlasticObjectsTextH.gameObject.SetActive(false);
+            foreach (TMP_Text textElement in textElements)
+            {
+                textElement.gameObject.SetActive(false);
+            }
         }
    }
     void PlaySound()

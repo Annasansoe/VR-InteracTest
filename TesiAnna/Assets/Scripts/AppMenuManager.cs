@@ -29,7 +29,10 @@ public class AppMenuManager : MonoBehaviour
     public Button aboutButton;
     public Button quitButton;
 
-    public string tipeOfMetaphore;
+    [Header("Not loadable sound and text")]
+    public TMP_Text notLoadable;
+    public AudioSource notLoadbleSource;
+    public AudioClip notLoadbleClip;
 
     public Button returnToMainMenu;
 
@@ -37,12 +40,14 @@ public class AppMenuManager : MonoBehaviour
 
     public static AppMenuManager Instance { get; private set; }
 
-    
+    [SerializeField] private float _time = 3f;
+
     void Start()
     {
         EnableMainMenu();
 
         //Hook events
+        notLoadable.gameObject.SetActive(false);
         sceneOneTutorialButton.onClick.AddListener(SceneOneTutorial);
         sceneTwoTutorialButton.onClick.AddListener(SceneTwoTutorial);
         sceneThreeTutorialButton.onClick.AddListener(SceneThreeTutorial);
@@ -66,7 +71,7 @@ public class AppMenuManager : MonoBehaviour
         { "Grab_Bare Hands_Ray-casting", "TutorialSceneOneHand" },
         { "Grab_Bare Hands_Direct Grab", "TutorialSceneOneHandDG" },
         { "Type_Controllers_Ray-casting", "TutorialSceneTwo" },
-        { "Type_Controllers_Direct Grab", "TutorialSceneTwoDG" },
+        { "Type_Controllers_Direct Grab", "" },
         { "Type_Bare Hands_Ray-casting", "TutorialSceneTwoHand" },
         { "Type_Bare Hands_Direct Grab", "TutorialSceneTwoHandDG" },
         { "Manipulate_Controllers_Ray-casting", "TutorialSceneThree" },
@@ -81,21 +86,52 @@ public class AppMenuManager : MonoBehaviour
         string selectedTask = taskDropdown.options[taskDropdown.value].text;
         string selectedMethod = methodDropdown.options[methodDropdown.value].text;
         string selectedMetaphor = metaphorDropdown.options[metaphorDropdown.value].text;
-        tipeOfMetaphore = selectedMetaphor;
+        
         // Construct the key based on the selected choices
         string key = $"{selectedTask}_{selectedMethod}_{selectedMetaphor}";
-
-        // Check if the key exists in the dictionary
         if (sceneMappings.ContainsKey(key))
         {
-            // Load the scene using the mapped value
-            SceneManager.LoadScene(sceneMappings[key]);
+            string sceneToLoad = sceneMappings[key];
+            if (string.IsNullOrEmpty(sceneToLoad))
+            {
+                // Do something different here since the mapped value is an empty string
+                ShowMessage();
+                PlaySound();
+                Debug.LogWarning("No scene specified for the selected combination.");
+                // You can perform other actions or show a message to the user.
+            }
+            else
+            {
+                // Load the scene using the mapped value
+                SceneManager.LoadScene(sceneToLoad);
+            }
         }
         else
         {
             Debug.LogWarning("Scene not found for the selected combination.");
         }
+        
     }
+
+    private IEnumerator ShowMessage()
+    {
+
+        notLoadable.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(_time);
+
+
+        notLoadable.gameObject.SetActive(false);
+    }
+
+    void PlaySound()
+    {
+        if (notLoadbleSource != null && notLoadbleClip != null)
+        {
+            notLoadbleSource.PlayOneShot(notLoadbleClip);
+        }
+    }
+
     public void QuitApp()
     {
         Application.Quit();

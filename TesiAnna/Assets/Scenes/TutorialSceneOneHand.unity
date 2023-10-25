@@ -7371,7 +7371,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 16
+          m_IntArgument: 14
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9485,6 +9485,7 @@ MonoBehaviour:
   soundClipLetter: {fileID: 8300000, guid: d42304a24cb833347b6c24944b744880, type: 3}
   imageInstruction: {fileID: 1734720573}
   TextSpeed: 10
+  flag: 0
 --- !u!114 &1442189260
 MonoBehaviour:
   m_ObjectHideFlags: 0

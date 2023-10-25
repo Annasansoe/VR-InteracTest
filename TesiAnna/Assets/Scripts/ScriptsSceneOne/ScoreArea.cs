@@ -40,15 +40,16 @@ public class ScoreArea : MonoBehaviour
     public AudioSource audioSourceEnd;
     public AudioClip soundClipEnd;
 
+    [Header("Text to disable at the end")]
+    public TMP_Text[] textElements;
+
     private bool hasBeenPlayed = false;
     //PROVA FILE
     private static int indexText;
 
-    
 
-    private void Start()
+private void Start()
     {
-              
         youDidIt.gameObject.SetActive(false);
         //START csv
         // Construct the full file path using persistentDataPath
@@ -59,7 +60,7 @@ public class ScoreArea : MonoBehaviour
         collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
         collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
         collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
-      
+       
     }
 
 
@@ -108,12 +109,11 @@ public class ScoreArea : MonoBehaviour
         {
             youDidIt.gameObject.SetActive(true);
             PlaySoundEnd();
-            collectedTotObjectsText.gameObject.SetActive(false);
-            collectedUnsortedObjectsText.gameObject.SetActive(false);
-            collectedGMObjectsText.gameObject.SetActive(false);
-            collectedPaperObjectsText.gameObject.SetActive(false);
-            collectedOrganicObjectsText.gameObject.SetActive(false);
-            collectedPlasticObjectsText.gameObject.SetActive(false);
+            foreach (TMP_Text textElement in textElements)
+            {
+                textElement.gameObject.SetActive(false);
+            }
+
         }
     }
 

@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: 9c3c3cee913200548810a6b9363b1b9c
   - enabled: 0
@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TutorialSceneThree.unity
     guid: 3d4ee12fb98572d449a3b53850a021f1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/TutorialSceneThreeDG.unity
     guid: 3236dd8f51837264c8cdf72c74c49898
   - enabled: 0
@@ -45,20 +45,35 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneOne.unity
     guid: ab8b3967b859ba74cb3b7b1709231c0c
   - enabled: 0
-    path: Assets/Scenes/SceneTwo.unity
-    guid: d48fd02dc2892d94e9f4ff5fde477520
-  - enabled: 0
-    path: Assets/Scenes/SceneThree.unity
-    guid: ca01e58996b36814abc8d2922a84e0b3
+    path: Assets/Scenes/SceneOneDG.unity
+    guid: 1baf0724dccf4e64fa66cddcfe5e4a4d
   - enabled: 0
     path: Assets/Scenes/SceneOneHand.unity
     guid: e6214d39ff735674c8284aefcf94f642
   - enabled: 0
+    path: Assets/Scenes/SceneOneHandDG.unity
+    guid: 0f9c5f8d4f17e964ea5d16804c239924
+  - enabled: 0
+    path: Assets/Scenes/SceneTwo.unity
+    guid: 19bfcf04fe8cecd49a7730c3af403da6
+  - enabled: 0
     path: Assets/Scenes/SceneTwoHand.unity
     guid: a422d912fbf180546b34cca2e7491fde
   - enabled: 0
+    path: Assets/Scenes/SceneTwoHandDG.unity
+    guid: e50b036210bfe9b41804ec04cc5d032b
+  - enabled: 0
+    path: Assets/Scenes/SceneThree.unity
+    guid: ca01e58996b36814abc8d2922a84e0b3
+  - enabled: 0
     path: Assets/Scenes/SceneThreeHand.unity
     guid: 7e27cb2340d15174faa5117473a4565e
+  - enabled: 0
+    path: Assets/Scenes/SceneThreeDG.unity
+    guid: 9e5f65de69ee646429ed7e67f4d91d57
+  - enabled: 0
+    path: Assets/Scenes/SceneThreeHandDG.unity
+    guid: 271de4f47ec77e1498fb8e5508ac49ef
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4c863cc06099a034bbfe542e24c1f0b4, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f2818aa839b72194db146685ff503d4a, type: 2}

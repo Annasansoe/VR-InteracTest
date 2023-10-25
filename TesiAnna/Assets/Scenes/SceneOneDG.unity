@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 19035126}
   - component: {fileID: 19035128}
   - component: {fileID: 19035127}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,6 +540,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -636,6 +644,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -830,6 +846,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -1241,7 +1265,7 @@ GameObject:
   - component: {fileID: 141962910}
   - component: {fileID: 141962912}
   - component: {fileID: 141962911}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1511,6 +1535,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -1983,6 +2015,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2077,7 +2117,7 @@ GameObject:
   - component: {fileID: 320686778}
   - component: {fileID: 320686777}
   - component: {fileID: 320686776}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BottleOrigin
   m_TagString: Plastic Waste
   m_Icon: {fileID: 0}
@@ -2280,6 +2320,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2373,7 +2421,7 @@ GameObject:
   - component: {fileID: 328470950}
   - component: {fileID: 328470952}
   - component: {fileID: 328470951}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2677,6 +2725,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -3096,6 +3152,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3189,7 +3253,7 @@ GameObject:
   - component: {fileID: 585547716}
   - component: {fileID: 585547718}
   - component: {fileID: 585547717}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3358,6 +3422,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -3590,6 +3662,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -4264,7 +4344,7 @@ GameObject:
   - component: {fileID: 773101423}
   - component: {fileID: 773101425}
   - component: {fileID: 773101424}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4565,7 +4645,7 @@ GameObject:
   - component: {fileID: 810147250}
   - component: {fileID: 810147252}
   - component: {fileID: 810147251}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4731,7 +4811,7 @@ GameObject:
   - component: {fileID: 833446606}
   - component: {fileID: 833446608}
   - component: {fileID: 833446607}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5035,7 +5115,7 @@ GameObject:
   - component: {fileID: 902389854}
   - component: {fileID: 902389856}
   - component: {fileID: 902389855}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5202,7 +5282,7 @@ GameObject:
   - component: {fileID: 960162433}
   - component: {fileID: 960162432}
   - component: {fileID: 960162431}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GlassesOrigin
   m_TagString: Unsorted Waste
   m_Icon: {fileID: 0}
@@ -5404,6 +5484,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -5613,7 +5701,7 @@ GameObject:
   - component: {fileID: 977731329}
   - component: {fileID: 977731331}
   - component: {fileID: 977731330}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6157,6 +6245,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6250,7 +6346,7 @@ GameObject:
   - component: {fileID: 997976713}
   - component: {fileID: 997976715}
   - component: {fileID: 997976714}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6561,6 +6657,7 @@ MonoBehaviour:
   - {fileID: 2459644072853826727}
   - {fileID: 4916893603463184750}
   newLayer:
+    serializedVersion: 2
     m_Bits: 4
 --- !u!4 &1033749367
 Transform:
@@ -6624,6 +6721,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -6815,7 +6920,7 @@ GameObject:
   - component: {fileID: 1071698014}
   - component: {fileID: 1071698016}
   - component: {fileID: 1071698015}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7381,7 +7486,7 @@ GameObject:
   - component: {fileID: 1151075960}
   - component: {fileID: 1151075962}
   - component: {fileID: 1151075961}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7817,7 +7922,7 @@ GameObject:
   - component: {fileID: 1171177011}
   - component: {fileID: 1171177013}
   - component: {fileID: 1171177012}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8139,6 +8244,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8400,6 +8513,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8621,6 +8742,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -8819,6 +8948,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8903,6 +9040,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -9001,6 +9146,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9094,7 +9247,7 @@ GameObject:
   - component: {fileID: 1366316334}
   - component: {fileID: 1366316336}
   - component: {fileID: 1366316335}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9758,7 +9911,7 @@ GameObject:
   - component: {fileID: 1402188642}
   - component: {fileID: 1402188644}
   - component: {fileID: 1402188643}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10278,6 +10431,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10372,7 +10533,7 @@ GameObject:
   - component: {fileID: 1516755229}
   - component: {fileID: 1516755228}
   - component: {fileID: 1516755227}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PaperBoxOtigin
   m_TagString: Paper Waste
   m_Icon: {fileID: 0}
@@ -10575,6 +10736,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -10669,7 +10838,7 @@ GameObject:
   - component: {fileID: 1558169337}
   - component: {fileID: 1558169336}
   - component: {fileID: 1558169335}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MilkBottleOrigin
   m_TagString: Plastic Waste
   m_Icon: {fileID: 0}
@@ -10894,7 +11063,7 @@ GameObject:
   - component: {fileID: 1565700110}
   - component: {fileID: 1565700112}
   - component: {fileID: 1565700111}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11437,7 +11606,7 @@ GameObject:
   - component: {fileID: 1701444219}
   - component: {fileID: 1701444221}
   - component: {fileID: 1701444220}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12830,7 +12999,7 @@ GameObject:
   - component: {fileID: 1715700469}
   - component: {fileID: 1715700471}
   - component: {fileID: 1715700470}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12999,6 +13168,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -13319,7 +13496,7 @@ GameObject:
   - component: {fileID: 1781033600}
   - component: {fileID: 1781033602}
   - component: {fileID: 1781033601}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13486,7 +13663,7 @@ GameObject:
   - component: {fileID: 1793511921}
   - component: {fileID: 1793511920}
   - component: {fileID: 1793511919}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BeerOrigin
   m_TagString: G&M Waste
   m_Icon: {fileID: 0}
@@ -13849,7 +14026,7 @@ GameObject:
   - component: {fileID: 1818674870}
   - component: {fileID: 1818674872}
   - component: {fileID: 1818674871}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14015,7 +14192,7 @@ GameObject:
   - component: {fileID: 1823595202}
   - component: {fileID: 1823595204}
   - component: {fileID: 1823595203}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14185,6 +14362,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interaction Affordance (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -14295,6 +14480,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -14907,7 +15100,7 @@ GameObject:
   - component: {fileID: 1961555131}
   - component: {fileID: 1961555133}
   - component: {fileID: 1961555132}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15174,7 +15367,7 @@ GameObject:
   - component: {fileID: 1981033419}
   - component: {fileID: 1981033421}
   - component: {fileID: 1981033420}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15340,7 +15533,7 @@ GameObject:
   - component: {fileID: 1992735519}
   - component: {fileID: 1992735521}
   - component: {fileID: 1992735520}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15606,7 +15799,7 @@ GameObject:
   - component: {fileID: 2035919471}
   - component: {fileID: 2035919473}
   - component: {fileID: 2035919472}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AudioAffordanceReceiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16598,6 +16791,14 @@ PrefabInstance:
     - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_Name
       value: Interaction Affordance (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774509235512974894, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896237787779704601, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5258331117553129771, guid: eb9104ef66b7305468adb3697fdeed5e, type: 3}
       propertyPath: m_RootOrder
@@ -17983,7 +18184,7 @@ GameObject:
   - component: {fileID: 8487216525686128719}
   - component: {fileID: 8824123573784288621}
   - component: {fileID: 115471545544085057}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BottlePlastic4.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18106,7 +18307,7 @@ GameObject:
   - component: {fileID: 8261410473529645444}
   - component: {fileID: 8064433707615426098}
   - component: {fileID: 7975243877568836115}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: defaultMaterial.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18241,7 +18442,7 @@ GameObject:
   - component: {fileID: 1227923884}
   - component: {fileID: 1227923883}
   - component: {fileID: 1227923882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mushroom
   m_TagString: Organic Waste
   m_Icon: {fileID: 0}
@@ -18299,7 +18500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3436245869568568826}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18568,7 +18769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 542197960393191949}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Collada visual scene group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18781,7 +18982,7 @@ GameObject:
   - component: {fileID: 679979059759045314}
   - component: {fileID: 8424447015885741274}
   - component: {fileID: 8267842952184035646}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19789,7 +19990,7 @@ GameObject:
   - component: {fileID: 2677030237576779871}
   - component: {fileID: 2677030237576779870}
   - component: {fileID: 2677030237576779869}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Apple
   m_TagString: Organic Waste
   m_Icon: {fileID: 0}
@@ -20775,7 +20976,7 @@ GameObject:
   - component: {fileID: 4117017045226704245}
   - component: {fileID: 4117017045226704244}
   - component: {fileID: 4117017045226704243}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DetergentBottle
   m_TagString: Plastic Waste
   m_Icon: {fileID: 0}
@@ -21319,7 +21520,7 @@ GameObject:
   - component: {fileID: 3687224118389892772}
   - component: {fileID: 3687224118389892771}
   - component: {fileID: 3687224118389892770}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pear
   m_TagString: Organic Waste
   m_Icon: {fileID: 0}
@@ -21443,7 +21644,7 @@ GameObject:
   - component: {fileID: 4628338862656207684}
   - component: {fileID: 1263878129890570367}
   - component: {fileID: 5152895320839879812}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21464,7 +21665,7 @@ GameObject:
   - component: {fileID: 3659585960610580130}
   - component: {fileID: 3659585960610580129}
   - component: {fileID: 3659585960610580128}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GreenApple
   m_TagString: Organic Waste
   m_Icon: {fileID: 0}
@@ -22381,7 +22582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6108844734902060737}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22397,7 +22598,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2970694603777262842}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22418,7 +22619,7 @@ GameObject:
   - component: {fileID: 3992372960541673323}
   - component: {fileID: 3992372960541673322}
   - component: {fileID: 3992372960541673321}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: OldPapers
   m_TagString: Paper Waste
   m_Icon: {fileID: 0}
@@ -22831,7 +23032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2684696430520080497}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22922,7 +23123,7 @@ GameObject:
   - component: {fileID: 1261651075919650958}
   - component: {fileID: 834971963534842593}
   - component: {fileID: 6809438517882610528}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23034,7 +23235,7 @@ GameObject:
   - component: {fileID: 7875031622701904046}
   - component: {fileID: 7562399374942756364}
   - component: {fileID: 4684057602297864104}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23277,7 +23478,7 @@ GameObject:
   - component: {fileID: 7165741264263663952}
   - component: {fileID: 7243620591281911215}
   - component: {fileID: 8044429038735054926}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BottlePlastic4.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23670,7 +23871,7 @@ GameObject:
   - component: {fileID: 4587564328051989657}
   - component: {fileID: 4587564328051989656}
   - component: {fileID: 4587564328051989655}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlasticBottle
   m_TagString: Plastic Waste
   m_Icon: {fileID: 0}
@@ -23706,7 +23907,7 @@ GameObject:
   - component: {fileID: 4490071517261000443}
   - component: {fileID: 4490071517261000442}
   - component: {fileID: 4490071517261000441}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: can
   m_TagString: G&M Waste
   m_Icon: {fileID: 0}
@@ -24277,7 +24478,7 @@ GameObject:
   - component: {fileID: 6584832488685100764}
   - component: {fileID: 6728524555255473210}
   - component: {fileID: 3423442127695670220}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24790,7 +24991,7 @@ GameObject:
   - component: {fileID: 7879981444285744712}
   - component: {fileID: 4037207289546874137}
   - component: {fileID: 9082240671927166984}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25688,7 +25889,7 @@ GameObject:
   - component: {fileID: 8980360985108062504}
   - component: {fileID: 8980360985108062503}
   - component: {fileID: 8980360985108062502}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SecondBeer
   m_TagString: G&M Waste
   m_Icon: {fileID: 0}
@@ -26464,7 +26665,7 @@ GameObject:
   - component: {fileID: 8707810586377786484}
   - component: {fileID: 8707810586377786483}
   - component: {fileID: 8707810586377786482}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlasticFork
   m_TagString: Plastic Waste
   m_Icon: {fileID: 0}
@@ -26528,7 +26729,7 @@ GameObject:
   - component: {fileID: 6339198565150730313}
   - component: {fileID: 4588283763828595093}
   - component: {fileID: 9151144116917305442}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26805,7 +27006,7 @@ GameObject:
   - component: {fileID: 8797685688894457482}
   - component: {fileID: 8797685688894457481}
   - component: {fileID: 8797685688894457480}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Rabbit
   m_TagString: Unsorted Waste
   m_Icon: {fileID: 0}
@@ -27097,7 +27298,7 @@ GameObject:
   - component: {fileID: 8873438572767287273}
   - component: {fileID: 8873438572767287272}
   - component: {fileID: 8873438572767287271}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StandingCan
   m_TagString: G&M Waste
   m_Icon: {fileID: 0}
@@ -27221,7 +27422,7 @@ GameObject:
   - component: {fileID: 8368741618619726902}
   - component: {fileID: 8368741618619726901}
   - component: {fileID: 8368741618619726900}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pizza
   m_TagString: Paper Waste
   m_Icon: {fileID: 0}
@@ -27334,7 +27535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 903926233604965342}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: group3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28154,7 +28355,7 @@ GameObject:
   - component: {fileID: 3059006650316612932}
   - component: {fileID: 8403646317594361844}
   - component: {fileID: 2480783496841398651}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28170,7 +28371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2292419410251654403}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28296,7 +28497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6566053027290900167}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlasticBottle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28447,7 +28648,7 @@ GameObject:
   - component: {fileID: 1479750549256614535}
   - component: {fileID: 5425145469352279459}
   - component: {fileID: 3311634928637559511}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28545,7 +28746,7 @@ GameObject:
   - component: {fileID: 4491006457682012548}
   - component: {fileID: 362676079050203278}
   - component: {fileID: 921360967166280088}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28713,7 +28914,7 @@ GameObject:
   - component: {fileID: 6387052302084737138}
   - component: {fileID: 6387052302084737137}
   - component: {fileID: 6387052302084737136}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 'Lighter_ '
   m_TagString: Unsorted Waste
   m_Icon: {fileID: 0}
@@ -28793,7 +28994,7 @@ GameObject:
   - component: {fileID: 6773709348269662327}
   - component: {fileID: 7615260785326174162}
   - component: {fileID: 5641356804362656536}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PaperBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29081,7 +29282,7 @@ GameObject:
   - component: {fileID: 6678824367931706625}
   - component: {fileID: 7710207595491213988}
   - component: {fileID: 5540799443404928622}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MilkBottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29361,7 +29562,7 @@ GameObject:
   - component: {fileID: 7338280667295718857}
   - component: {fileID: 7338280667295718856}
   - component: {fileID: 7338280667295718855}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: mug
   m_TagString: Unsorted Waste
   m_Icon: {fileID: 0}
@@ -30179,7 +30380,7 @@ GameObject:
   - component: {fileID: 7116011830538784725}
   - component: {fileID: 7116011830538784724}
   - component: {fileID: 7116011830538784723}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TunaCan
   m_TagString: G&M Waste
   m_Icon: {fileID: 0}
@@ -30527,7 +30728,7 @@ GameObject:
   - component: {fileID: 7173029146163877357}
   - component: {fileID: 6372764301429771649}
   - component: {fileID: 435346167224697152}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30805,7 +31006,7 @@ GameObject:
   - component: {fileID: 8717556717497837691}
   - component: {fileID: 8717556717497837690}
   - component: {fileID: 8717556717497837689}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PaperBag
   m_TagString: Paper Waste
   m_Icon: {fileID: 0}
@@ -30843,7 +31044,7 @@ GameObject:
   - component: {fileID: 391213948978689529}
   - component: {fileID: 5913998891183470228}
   - component: {fileID: 6603629591143912306}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30899,7 +31100,7 @@ GameObject:
   - component: {fileID: 4969480075513197547}
   - component: {fileID: 398602348226178124}
   - component: {fileID: 958892832878089074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31654,7 +31855,7 @@ GameObject:
   - component: {fileID: 7063143950448291844}
   - component: {fileID: 6172904111355494305}
   - component: {fileID: 8236653657478957931}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Beer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31685,7 +31886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8842419833412198580}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCube6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31724,7 +31925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7015008469861375384}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glassess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31745,7 +31946,7 @@ GameObject:
   - component: {fileID: 8164128926800413579}
   - component: {fileID: 8164128926800413578}
   - component: {fileID: 8164128926800413577}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Scatolone
   m_TagString: Paper Waste
   m_Icon: {fileID: 0}
@@ -31946,7 +32147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4748570881808759362}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: g
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31982,7 +32183,7 @@ GameObject:
   - component: {fileID: 5136049635393892867}
   - component: {fileID: 1060652645407713545}
   - component: {fileID: 705544241280219467}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BottlePlastic4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33057,7 +33258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5364898531540907588}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33429,7 +33630,7 @@ GameObject:
   - component: {fileID: 5062601787575016674}
   - component: {fileID: 6637736098582725020}
   - component: {fileID: 827381792523557046}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33642,7 +33843,7 @@ GameObject:
   - component: {fileID: 8666395710933306630}
   - component: {fileID: 8666395710933306629}
   - component: {fileID: 8666395710933306628}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: rot-pumpkin
   m_TagString: Organic Waste
   m_Icon: {fileID: 0}
@@ -34784,7 +34985,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5773952363132642960}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35289,7 +35490,7 @@ GameObject:
   - component: {fileID: 9145916970068631867}
   - component: {fileID: 9145916970068631866}
   - component: {fileID: 9145916970068631865}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cigarette
   m_TagString: Unsorted Waste
   m_Icon: {fileID: 0}
@@ -35513,7 +35714,7 @@ GameObject:
   - component: {fileID: 8607739315557052111}
   - component: {fileID: 3234931888007821081}
   - component: {fileID: 245818491604512724}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pCylinder10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35570,7 +35771,7 @@ GameObject:
   - component: {fileID: 6722467360135071202}
   - component: {fileID: 4860195987304937872}
   - component: {fileID: 6371691172266855366}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: defaultMaterial
   m_TagString: Untagged
   m_Icon: {fileID: 0}

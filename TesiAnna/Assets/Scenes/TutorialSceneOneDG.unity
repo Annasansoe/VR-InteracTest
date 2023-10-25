@@ -9493,6 +9493,7 @@ MonoBehaviour:
   soundClipLetter: {fileID: 8300000, guid: d42304a24cb833347b6c24944b744880, type: 3}
   imageInstruction: {fileID: 1357638768}
   TextSpeed: 10
+  flag: 0
 --- !u!114 &1442189260
 MonoBehaviour:
   m_ObjectHideFlags: 0

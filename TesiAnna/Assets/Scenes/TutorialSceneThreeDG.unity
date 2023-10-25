@@ -2479,7 +2479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465447387}
   m_Layer: 5
-  m_Name: StartTest
+  m_Name: GoToSceneThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11582,7 +11582,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 15
+          m_IntArgument: 20
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

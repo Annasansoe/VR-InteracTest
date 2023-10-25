@@ -24,9 +24,6 @@ public class DialogueBox : MonoBehaviour
     [Header("Button start test")]
     public Button GoToSceneOne;
     public TMP_Text VerifyIsGrabbed;
-    public TMP_Text TypeOfMetaphor;
-    public static string StringMetaphor;
-
     [Space]
     [Header("Feedback audio")]
     public AudioSource audioSource;
@@ -49,16 +46,10 @@ public class DialogueBox : MonoBehaviour
 
     private bool hasBeenPlayed = false;
 
-
-
-   
-
-
-
     // Start is called before the first frame update
     void Start()
     {
-        
+       
         StartCoroutine(PlayDialogue(DialogueSegments[0].Dialogue));
 
        
@@ -67,17 +58,12 @@ public class DialogueBox : MonoBehaviour
         imageInstruction.gameObject.SetActive(false);
         VerifyIsGrabbed.gameObject.SetActive(false);
         XRGrabInteractable.gameObject.SetActive(false);
-
-
+    
     }
     public void Click()
     {
         buttonClicked = true;
     }
-
-   
-
-   
 
     // Update is called once per frame
     void Update()
@@ -105,6 +91,7 @@ public class DialogueBox : MonoBehaviour
                 DialogueDisplay.gameObject.SetActive(false);
                 GoToSceneOne.gameObject.SetActive(true);
                 DialogueIndex = 0;
+                
                 MaterialChangeCounter.materialChangeCount = 0;
                 ScoreAreaForTutorial.totScore = 0;
             }
