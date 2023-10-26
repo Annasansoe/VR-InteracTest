@@ -36,6 +36,11 @@ public class ScaleController : MonoBehaviour
     public AudioSource audioSourceEnd;
     public AudioClip soundClipEnd;
 
+    [Space]
+
+    [Header("End Menu")]
+    public GameObject endMenu;
+
     private bool hasBeenPlayed = false;
 
     private Vector3 originalScale;
@@ -55,7 +60,7 @@ public class ScaleController : MonoBehaviour
 
     private void Start()
     {
-
+        endMenu.SetActive(false);
         dateTimeStart = System.DateTime.UtcNow.ToString();
         // Ensure that cube1 and cube2 are assigned in the Inspector
         if (cubeTarget == null || cubeManipulable == null)
@@ -123,6 +128,7 @@ public class ScaleController : MonoBehaviour
             Invoke("PlaySound", 2f);
 
             DeactivateObjectsInList();
+            activateEndMenu();
         }
 
     }
@@ -132,6 +138,10 @@ public class ScaleController : MonoBehaviour
         {
             obj.SetActive(false);
         }
+    }
+    public void activateEndMenu()
+    {
+        endMenu.SetActive(true);
     }
 
     private void PlaySound()

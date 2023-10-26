@@ -26,7 +26,7 @@ public class ScoreArea : MonoBehaviour
     public TMP_Text collectedPaperObjectsText;
     public TMP_Text collectedOrganicObjectsText;
     public TMP_Text collectedPlasticObjectsText;
-    public TMP_Text youDidIt;
+    public GameObject menuAtTheEnd;
 
     [Header("Return button")]
     public Button backToMenu;
@@ -50,7 +50,7 @@ public class ScoreArea : MonoBehaviour
 
 private void Start()
     {
-        youDidIt.gameObject.SetActive(false);
+        menuAtTheEnd.SetActive(false);
         //START csv
         // Construct the full file path using persistentDataPath
         dateTimeStart = System.DateTime.UtcNow.ToString();
@@ -107,12 +107,13 @@ private void Start()
 
         if(totScore == 25)
         {
-            youDidIt.gameObject.SetActive(true);
+           
             PlaySoundEnd();
             foreach (TMP_Text textElement in textElements)
             {
                 textElement.gameObject.SetActive(false);
             }
+            menuAtTheEnd.SetActive(true);
 
         }
     }

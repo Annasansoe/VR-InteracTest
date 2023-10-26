@@ -37,8 +37,14 @@ public class ScaleControllerKeyH : MonoBehaviour
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
+    [Space]
+
+    [Header("End Menu")]
+    public GameObject endMenu;
+
     private void Start()
     {
+        endMenu.SetActive(false);
         // Ensure that cube1 and cube2 are assigned in the Inspector
         if (cubeTarget == null || cubeManipulable == null)
         {
@@ -96,7 +102,13 @@ public class ScaleControllerKeyH : MonoBehaviour
             Invoke("PlaySound", 2f);
 
             DeactivateObjectsInList();
+            activateEndMenu();
         }
+    }
+
+    public void activateEndMenu()
+    {
+        endMenu.SetActive(true);
     }
 
     private void PlaySound()

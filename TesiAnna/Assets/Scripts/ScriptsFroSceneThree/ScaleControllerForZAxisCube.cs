@@ -37,6 +37,11 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
+    [Space]
+
+    [Header("End Menu")]
+    public GameObject endMenu;
+
     private void Start()
     {
         // Ensure that cube1 and cube2 are assigned in the Inspector
@@ -112,8 +117,14 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
         {
             Invoke("PlaySound", 2f);
 
-            DeactivateObjectsInList(); ;
+            DeactivateObjectsInList();
+            activateEndMenu();
         }
+    }
+
+    public void activateEndMenu()
+    {
+        endMenu.SetActive(true);
     }
 
     public void PlaySound()

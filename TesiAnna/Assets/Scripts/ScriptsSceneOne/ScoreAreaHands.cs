@@ -23,7 +23,9 @@ public class ScoreAreaHands : MonoBehaviour
     public TMP_Text collectedPaperObjectsTextH;
     public TMP_Text collectedOrganicObjectsTextH;
     public TMP_Text collectedPlasticObjectsTextH;
-    public TMP_Text youDidItH;
+    
+
+    public GameObject menuAtTheEnd;
 
 
     [Header("Return button")]
@@ -46,7 +48,7 @@ public class ScoreAreaHands : MonoBehaviour
 
     private void Start()
     {
-        youDidItH.gameObject.SetActive(false);
+        menuAtTheEnd.gameObject.SetActive(false);
         dateTimeStart = System.DateTime.UtcNow.ToString();
         collectedTotObjectsTextH.text = "Total collected objects: " + totScore.ToString() + " of 25";
         collectedUnsortedObjectsTextH.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
@@ -101,7 +103,7 @@ public class ScoreAreaHands : MonoBehaviour
 
         if (totScore == 25)
         {
-            youDidItH.gameObject.SetActive(true);
+            menuAtTheEnd.SetActive(true);
             PlaySoundEnd();
             foreach (TMP_Text textElement in textElements)
             {

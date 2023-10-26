@@ -54,11 +54,15 @@ public class ScaleControllerH : MonoBehaviour
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
-   
+    [Space]
+
+    [Header("End Menu")]
+    public GameObject endMenu;
+
 
     private void Start()
     {
-        
+        endMenu.SetActive(false);
         dateTimeStart = System.DateTime.UtcNow.ToString();
         // Ensure that cube1 and cube2 are assigned in the Inspector
         if (cubeTarget == null || cubeManipulable == null)
@@ -123,9 +127,13 @@ public class ScaleControllerH : MonoBehaviour
         {
             Invoke("PlaySound", 2f);
             DeactivateObjectsInList();
+            activateEndMenu();
         }
     }
-
+    public void activateEndMenu()
+    {
+        endMenu.SetActive(true);
+    }
     public void DeactivateObjectsInList()
     {
         foreach (GameObject obj in objectsToDeactivate)

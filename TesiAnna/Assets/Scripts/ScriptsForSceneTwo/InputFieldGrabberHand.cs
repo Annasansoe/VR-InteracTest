@@ -11,6 +11,12 @@ public class InputFieldGrabberHand : MonoBehaviour
     [SerializeField] private GameObject reactiongGroup;
     [SerializeField] private TMP_Text reactionTextBox;
 
+    [Header("KeyBoard")]
+    public GameObject keyBoard;
+
+    [Header("End Menu")]
+    public GameObject endMenu;
+
     [Header("Grab from input and see the result")]
     [SerializeField] TMP_InputField inputField;
 
@@ -52,6 +58,7 @@ public class InputFieldGrabberHand : MonoBehaviour
     {
         validText.gameObject.SetActive(false);
         invalidText.gameObject.SetActive(false);
+        
         dateTimeStart = System.DateTime.UtcNow.ToString();
         questions = new List<QuestionHand>
     {
@@ -130,7 +137,12 @@ public class InputFieldGrabberHand : MonoBehaviour
         {
             // No more questions
             //questionPanel.SetActive(false);
-            questionText.text = "Questionnaire completed!";
+            endMenu.SetActive(true);
+            questionText.gameObject.SetActive(false); ;
+            inputField.gameObject.SetActive(false);
+            keyBoard.SetActive(false);
+            validText.gameObject.SetActive(false);
+            invalidText.gameObject.SetActive(false);
             PlayEndSound();
             Debug.Log("Questionnaire completed!");
         }

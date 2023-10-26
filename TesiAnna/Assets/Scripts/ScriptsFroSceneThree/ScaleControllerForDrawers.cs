@@ -38,6 +38,11 @@ public class ScaleControllerForDrawers : MonoBehaviour
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
 
+    [Space]
+
+    [Header("End Menu")]
+    public GameObject endMenu;
+
 
     private void Start()
     {
@@ -103,8 +108,14 @@ public class ScaleControllerForDrawers : MonoBehaviour
             Invoke("PlaySound", 2f);
 
             DeactivateObjectsInList();
+            activateEndMenu();
         }
 
+    }
+
+    public void activateEndMenu()
+    {
+        endMenu.SetActive(true);
     }
 
     public void PlaySound()
