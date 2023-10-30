@@ -12,15 +12,19 @@ public static class CSVManager
         
     };
 
-    private static string[] reportHeadersSceneOne = new string[7]
+    private static string[] reportHeadersSceneOne = new string[]
     {
         "Scene number",
         "Interaction method",
+        "Interaction metaphor",
         "User Number",
         "Collected objects",
         "Objects fell",
         "Start time",
-        "End time"
+        "End time",
+        "Timestamp",
+        "Object Name",
+        "Interaction Type"    
     };
 
     private static string[] reportHeadersSceneTwo = new string[8]
@@ -75,6 +79,7 @@ public static class CSVManager
         }
 
     }
+
 
     public static void CreateReport()
     {

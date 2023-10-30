@@ -10173,7 +10173,7 @@ MonoBehaviour:
   DialogueSegments:
   - Dialogue: Welcome to the hand manipulation tutorial! Put down your controllers
       and wait to see the virtual hands
-  - Dialogue: In these scene you have to select a cube with the ray and do the PINCH,
+  - Dialogue: In these scene you have to select  the pyramid doing the PINCH on it,
       with both hands
   - Dialogue: 'Than you have take your hands away, if you want to make the object
       bigger '

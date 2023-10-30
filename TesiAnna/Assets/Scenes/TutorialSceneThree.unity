@@ -10693,8 +10693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSegments:
   - Dialogue: Welcome to the manipulation tutorial!
-  - Dialogue: In these scene you have to select a cube with the ray and push the
-      GRID button, with both hands
+  - Dialogue: In these scene you have to select the pyramid with the ray and push
+      the GRIP button, with both hands
   - Dialogue: 'Than you have take your hands away, if you want to make the object
       bigger '
   - Dialogue: Or bring your hands together, if you want to make the object smaller

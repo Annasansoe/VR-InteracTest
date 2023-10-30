@@ -5,12 +5,15 @@ using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 using UnityEngine.UI;
 using System.IO;
+using System;
+using System.Linq;
 
 public class ScoreArea : MonoBehaviour
 {
     
 
     public XRGrabInteractable[] XRGrabInteractable;
+    public GameObject[] Bins;
 
     static int totScore = 0;
     int unsortedScore = 0;
@@ -31,8 +34,8 @@ public class ScoreArea : MonoBehaviour
     [Header("Return button")]
     public Button backToMenu;
     int totScoreEnd = 0;
-    string dateTimeStart;
-    string dateTimeEnd;
+    DateTime dateTimeStart;
+    DateTime dateTimeEnd;
 
     [Header("Audios")]
     public AudioSource audioSource;
@@ -47,38 +50,84 @@ public class ScoreArea : MonoBehaviour
     //PROVA FILE
     private static int indexText;
 
+    private List<InteractionData> interactionDataList = new List<InteractionData>();
+    private List<InteractionData> interactionDataListStart = new List<InteractionData>();
 
-private void Start()
+
+    private Dictionary<string, bool> hasBeenGrabbed = new Dictionary<string, bool>();
+    public class InteractionData
+    {
+        public DateTime Timestamp { get; set; }
+        public string ObjectName { get; set; }
+        public string InteractionType { get; set; }
+    }
+
+    
+
+    private void Start()
     {
         menuAtTheEnd.SetActive(false);
         //START csv
         // Construct the full file path using persistentDataPath
-        dateTimeStart = System.DateTime.UtcNow.ToString();
+        dateTimeStart = DateTime.Now;
         collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
         collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
         collectedGMObjectsText.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
         collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
         collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
         collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
-       
+        foreach (var interactable in XRGrabInteractable)
+        {
+            hasBeenGrabbed[interactable.gameObject.name] = false;
+        }
     }
-
-
-   void OnTriggerEnter(Collider otherCollider)
+    public void OnSelect(XRGrabInteractable interactable)
     {
+        string objectName = interactable.gameObject.name;
+        InteractionData startGrabbingData = new InteractionData
+        {
+            Timestamp = DateTime.Now,
+            ObjectName = objectName,
+            InteractionType = "Start Grabbing"
+        };
+        /*
+        // Check if this object has been grabbed before
+        if (!hasBeenGrabbed[objectName])
+        {
+            // If it hasn't been grabbed before, record the interaction
+            hasBeenGrabbed[objectName] = true;
+
+            
+
+            interactionDataListStart.Add(startGrabbingData);
+        }*/
+
+        interactionDataListStart.Add(startGrabbingData);
+    }
+    
+    
+     void OnTriggerEnter(Collider otherCollider)
+    {
+        string objectName = otherCollider.gameObject.name;
+        string interactionType = "";
+
         if (otherCollider.CompareTag("Unsorted Waste"))
         {
             unsortedScore += 1;
             collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
+           
+             interactionType = "Unsorted Waste";
         }
+
         else if (otherCollider.CompareTag("G&M Waste"))
         {
             gMScore += 1;
             collectedGMObjectsText.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
+            interactionType = "G&M Waste";
         }
         else if (otherCollider.CompareTag("Paper Waste"))
         {
@@ -86,6 +135,7 @@ private void Start()
             collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
+            interactionType = "Paper Waste";
         }
 
         else if (otherCollider.CompareTag("Organic Waste"))
@@ -94,6 +144,7 @@ private void Start()
             collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
+            interactionType = "Organic Waste";
         }
         else if (otherCollider.CompareTag("Plastic Waste"))
         {
@@ -101,8 +152,19 @@ private void Start()
             collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
+            interactionType = "Plastic waste";
+
         }
         collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
+
+        InteractionData trashDisposalData = new InteractionData
+        {
+            Timestamp = DateTime.Now,
+            ObjectName = objectName,
+            InteractionType = interactionType 
+        };
+
+        interactionDataList.Add(trashDisposalData);
         Destroy(otherCollider.gameObject);
 
         if(totScore == 25)
@@ -114,9 +176,10 @@ private void Start()
                 textElement.gameObject.SetActive(false);
             }
             menuAtTheEnd.SetActive(true);
-
+            BackToMenu();
         }
     }
+    
 
     void PlaySound()
     {
@@ -133,48 +196,80 @@ private void Start()
             audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
+    
+
+   
 
     public void BackToMenu()
     {
         //string filePath = Path.Combine(Application.persistentDataPath, dataFileName);
         totScoreEnd = totScore;
-        dateTimeEnd = System.DateTime.UtcNow.ToString();
+        dateTimeEnd = DateTime.Now;
         CSVManager.AppendToReport(GetReportLine());
         indexText++;
         totScore = 0;
         ObjectResetPlaneForSceneOne.objectFell = 0;
-        // Check if the file exists
-        /*if (File.Exists(filePath))
-        {
-            // Load and display the data
-            //string savedData = File.ReadAllText(filePath);
-           
-        }
-        else
-        {
-            // If the file doesn't exist, create and save some sample data
-            //string sampleData = "This is sample data saved on Oculus Quest.";
-            //File.WriteAllText(filePath, sampleData);
-            CSVManager.AppendToReport(GetReportLine());
-            //Debug.Log("Saved sample data: " + sampleData);
-
-            Debug.Log("Loaded data: " + filePath);
-        }*/
     }
 
     string[] GetReportLine()
     {
-        string[] returnable = new string[7];
-        returnable[0] = "SceneOne.csv";
-        returnable[1] = "Controllers";
-        returnable[2] = indexText.ToString();
-        returnable[3] = totScoreEnd.ToString();
-        returnable[4] = ObjectResetPlaneForSceneOne.objectFell.ToString();
-        returnable[5] = dateTimeStart;
-        returnable[6] = dateTimeEnd;
+        /*List<string> reportLines = new List<string>();
 
+        reportLines.Add("SceneOne.csv");
+        reportLines.Add("Controllers");
+        reportLines.Add("Ray-casting");
+        reportLines.Add(indexText.ToString());
+        reportLines.Add(totScoreEnd.ToString());
+        reportLines.Add(ObjectResetPlaneForSceneOne.objectFell.ToString());
+        reportLines.Add(dateTimeStart.ToString());
+        reportLines.Add(dateTimeEnd.ToString());
+
+        // Add a header line for the interaction data
+        foreach (InteractionData interaction in interactionDataListStart)
+        {
+            string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
+            reportLines.Add(interactionLine);
+        }
+        // Add each interaction as a separate line
+        foreach (InteractionData interaction in interactionDataList)
+        {
+            string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
+            reportLines.Add(interactionLine);
+        }*/
+
+        int i = 0;
+        int j = 0;
+            string[] returnable = new string[60];
+            returnable[0] = "SceneOne.csv";
+            returnable[1] = "Controllers";
+            returnable[2] = "Raycasting";
+            returnable[3] = indexText.ToString();
+            returnable[4] = totScoreEnd.ToString();
+            returnable[5] = ObjectResetPlaneForSceneOne.objectFell.ToString();
+            returnable[6] = dateTimeStart.ToString();
+            returnable[7] = dateTimeEnd.ToString();
+            foreach (InteractionData interaction in interactionDataListStart)
+            {
+                i++;
+                string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
+                returnable[6+i] = interactionLine;
+            }
+            foreach (InteractionData interaction in interactionDataList)
+            {
+                 j++;
+                string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
+                returnable[6 + i +j] = interactionLine;
+        }
 
         return returnable;
+        
+
+       // return reportLines.ToArray();
     }
 
+  
+
 }
+
+
+

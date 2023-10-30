@@ -11193,8 +11193,7 @@ MonoBehaviour:
   - Dialogue: The first thing to do here is to press on the input field doing the
       PINCH gesture with one of your hand
   - Dialogue: Now read the question. To answer you have to point the buttons of the
-      keyboard and do the PINCH every time you want to press a button. To submit
-      the answer press "Enter".
+      keyboard, as if it is a touche screen. To submit the answer press "Enter".
   - Dialogue: In the test scene you have to write the word written in capital letters.
       Now press on "Start scene" and good luck!
   SkipIndicator: {fileID: 1000299646}
@@ -11611,7 +11610,7 @@ GameObject:
   - component: {fileID: 1830805950}
   - component: {fileID: 1830805949}
   - component: {fileID: 1830805948}
-  - component: {fileID: 1830805947}
+  - component: {fileID: 1830805954}
   - component: {fileID: 1830805951}
   - component: {fileID: 1830805953}
   m_Layer: 0
@@ -11642,18 +11641,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.393, y: 1.855}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1830805947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830805945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31f604d045aba3c459a4f05359b11fa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1830805948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11873,6 +11860,18 @@ MonoBehaviour:
   imagePinch: {fileID: 0}
   TextSpeed: 10
   inputFieldClicked: 0
+--- !u!114 &1830805954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830805945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060d16f6b9f48f14a9e06a845822006e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1836793878
 GameObject:
   m_ObjectHideFlags: 0

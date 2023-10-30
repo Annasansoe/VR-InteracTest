@@ -9300,8 +9300,7 @@ MonoBehaviour:
   DialogueSegments:
   - Dialogue: 'Welcome to the hand grab tutorial! Leave the controllers and wait
       to see your virtual hands. '
-  - Dialogue: To grab an object you have to point it with the vitual hand and select
-      the cube with the PINCH gesture
+  - Dialogue: To grab an object you have to do the PINCH gesture on the object
   - Dialogue: Now take the object again and keep it until you reach the bin, than
       let it fell inside opening your hand
   - Dialogue: In the test scene you will have to take all the objects on the table,
@@ -9313,7 +9312,6 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 488273264}
   GoToSceneOne: {fileID: 1107227399}
   VerifyIsGrabbed: {fileID: 1954230428}
-  TypeOfMetaphor: {fileID: 145155812}
   audioSource: {fileID: 1218601790}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 1480721972}

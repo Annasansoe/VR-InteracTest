@@ -114,7 +114,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
         {
             SkipIndicator.enabled = false;
             InputField.gameObject.SetActive(true);
-
             imageTrigger.gameObject.SetActive(true);
             if (isClicked > 0)
             {
@@ -169,7 +168,6 @@ public class DialogueBoxSceneTwo : MonoBehaviour
                     ValidationText.gameObject.SetActive(false);
                     QuestionBox.gameObject.SetActive(false);
                     InputField.gameObject.SetActive(false);
-                    Keyboard.gameObject.SetActive(false);
                     hasBeenPlayed = false;
                     buttonClicked = false;
                     DialogueIndex++;

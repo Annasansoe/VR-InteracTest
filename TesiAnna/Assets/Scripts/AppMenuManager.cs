@@ -18,12 +18,12 @@ public class AppMenuManager : MonoBehaviour
     public TMPro.TMP_Dropdown taskDropdown;
 
     [Header("Main Menu Buttons")]
-    public Button sceneOneTutorialButton;
+    /*public Button sceneOneTutorialButton;
     public Button sceneTwoTutorialButton;
     public Button sceneThreeTutorialButton;
     public Button sceneOneTutorialHand;
     public Button sceneTwoTutorialHand;
-    public Button sceneThreeTutorialHand;
+    public Button sceneThreeTutorialHand;*/
     public Button LoadSceneButton;
     public Button optionButton;
     public Button aboutButton;
@@ -48,12 +48,12 @@ public class AppMenuManager : MonoBehaviour
 
         //Hook events
         notLoadable.gameObject.SetActive(false);
-        sceneOneTutorialButton.onClick.AddListener(SceneOneTutorial);
+        /*sceneOneTutorialButton.onClick.AddListener(SceneOneTutorial);
         sceneTwoTutorialButton.onClick.AddListener(SceneTwoTutorial);
         sceneThreeTutorialButton.onClick.AddListener(SceneThreeTutorial);
         sceneOneTutorialHand.onClick.AddListener(SceneOneHandTutorial);
         sceneTwoTutorialHand.onClick.AddListener(SceneTwoHandTutorial);
-        sceneThreeTutorialHand.onClick.AddListener(SceneThreeHandTutorial);
+        sceneThreeTutorialHand.onClick.AddListener(SceneThreeHandTutorial);*/
         optionButton.onClick.AddListener(EnableOption);
         aboutButton.onClick.AddListener(EnableAbout);
         quitButton.onClick.AddListener(QuitApp);
