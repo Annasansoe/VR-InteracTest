@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18269855, g: 0.22840612, b: 0.30710322, a: 1}
+  m_IndirectSpecularColor: {r: 0.18269882, g: 0.22840708, b: 0.3071041, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3682,7 +3682,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh151390
+  m_Name: pb_Mesh122902
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5645,7 +5645,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh151998
+  m_Name: pb_Mesh123532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16425,7 +16425,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh151500
+  m_Name: pb_Mesh123012
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17369,8 +17369,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329622407}
   m_LocalRotation: {x: -0, y: 0.6947363, z: -0, w: 0.7192646}
-  m_LocalPosition: {x: -0.29, y: -0.18026865, z: -0.448}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalPosition: {x: -0.30072, y: -0.17671, z: -0.44837}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1522115202}
@@ -17396,7 +17396,7 @@ MonoBehaviour:
   m_AllowTwoHandedScaling: 1
   m_ThresholdMoveRatioForScale: 0.1
   m_ClampScaling: 1
-  m_MinimumScaleRatio: 0.1
+  m_MinimumScaleRatio: 1
   m_MaximumScaleRatio: 8
   m_ScaleMultiplier: 0.1
 --- !u!114 &1329622410
@@ -24649,7 +24649,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh150778
+  m_Name: pb_Mesh122286
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

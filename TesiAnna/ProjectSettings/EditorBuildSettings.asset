@@ -5,73 +5,73 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: 9c3c3cee913200548810a6b9363b1b9c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneOne.unity
     guid: 804fc11158d2fb64a994ee0318edf9ef
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneOneDG.unity
     guid: 72a120d9dc4c1904091f29391fb6f49e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneOneHand.unity
     guid: 06eb0f21dfd2d6546a82c583a0129d6e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneOneHandDG.unity
     guid: 254836f92aee66f47916ecf76baa22c7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneTwo.unity
     guid: 1ae4a353170c89f4b9501dfac5bad093
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneTwoHand.unity
     guid: 434097d357f83f5468ad3800d08c04a1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneTwoHandDG.unity
     guid: 89e087742621f1a49a53e661d33f3696
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneThree.unity
     guid: 3d4ee12fb98572d449a3b53850a021f1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneThreeDG.unity
     guid: 3236dd8f51837264c8cdf72c74c49898
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneThreeHand.unity
     guid: bd7df01fb7dcf07439f84e4a4b01fe91
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TutorialSceneThreeHandDG.unity
     guid: 5b191bd398c7938458d50e1385de5dbb
   - enabled: 1
     path: Assets/Scenes/SceneOne.unity
     guid: ab8b3967b859ba74cb3b7b1709231c0c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneOneDG.unity
     guid: 1baf0724dccf4e64fa66cddcfe5e4a4d
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneOneHand.unity
     guid: e6214d39ff735674c8284aefcf94f642
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneOneHandDG.unity
     guid: 0f9c5f8d4f17e964ea5d16804c239924
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneTwo.unity
     guid: 19bfcf04fe8cecd49a7730c3af403da6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneTwoHand.unity
     guid: a422d912fbf180546b34cca2e7491fde
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneTwoHandDG.unity
     guid: e50b036210bfe9b41804ec04cc5d032b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneThree.unity
     guid: ca01e58996b36814abc8d2922a84e0b3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneThreeHand.unity
     guid: 7e27cb2340d15174faa5117473a4565e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneThreeDG.unity
     guid: 9e5f65de69ee646429ed7e67f4d91d57
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneThreeHandDG.unity
     guid: 271de4f47ec77e1498fb8e5508ac49ef
   m_configObjects:

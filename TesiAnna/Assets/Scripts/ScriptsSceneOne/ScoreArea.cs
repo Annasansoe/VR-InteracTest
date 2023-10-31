@@ -13,7 +13,6 @@ public class ScoreArea : MonoBehaviour
     
 
     public XRGrabInteractable[] XRGrabInteractable;
-    public GameObject[] Bins;
 
     static int totScore = 0;
     int unsortedScore = 0;
@@ -248,6 +247,7 @@ public class ScoreArea : MonoBehaviour
             returnable[5] = ObjectResetPlaneForSceneOne.objectFell.ToString();
             returnable[6] = dateTimeStart.ToString();
             returnable[7] = dateTimeEnd.ToString();
+
             foreach (InteractionData interaction in interactionDataListStart)
             {
                 i++;
