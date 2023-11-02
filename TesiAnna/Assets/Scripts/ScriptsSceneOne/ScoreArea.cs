@@ -1,20 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 using UnityEngine.UI;
-using System.IO;
 using System;
-using System.Linq;
 
 public class ScoreArea : MonoBehaviour
 {
-    
-
     public XRGrabInteractable[] XRGrabInteractable;
 
-    static int totScore = 0;
+    public static int totScore = 0;
     int unsortedScore = 0;
     int gMScore = 0;
     int paperScore = 0;
@@ -32,9 +27,7 @@ public class ScoreArea : MonoBehaviour
 
     [Header("Return button")]
     public Button backToMenu;
-    int totScoreEnd = 0;
-    DateTime dateTimeStart;
-    DateTime dateTimeEnd;
+    
 
     [Header("Audios")]
     public AudioSource audioSource;
@@ -45,12 +38,15 @@ public class ScoreArea : MonoBehaviour
     [Header("Text to disable at the end")]
     public TMP_Text[] textElements;
 
-    private bool hasBeenPlayed = false;
+    private bool theTimerIsFinished = false;
     //PROVA FILE
-    private static int indexText;
+    public static int indexText;
+    public static int totScoreEnd = 0;
+    public static DateTime dateTimeStart;
+    public static DateTime dateTimeEnd;
 
-    private List<InteractionData> interactionDataList = new List<InteractionData>();
-    private List<InteractionData> interactionDataListStart = new List<InteractionData>();
+    public static List<InteractionData> interactionDataList = new List<InteractionData>();
+    public static List<InteractionData> interactionDataListStart = new List<InteractionData>();
 
 
     private Dictionary<string, bool> hasBeenGrabbed = new Dictionary<string, bool>();
@@ -66,8 +62,7 @@ public class ScoreArea : MonoBehaviour
     private void Start()
     {
         menuAtTheEnd.SetActive(false);
-        //START csv
-        // Construct the full file path using persistentDataPath
+        XRGrabInteractable = GetComponentsInChildren<XRGrabInteractable>();
         dateTimeStart = DateTime.Now;
         collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
         collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
@@ -80,32 +75,40 @@ public class ScoreArea : MonoBehaviour
             hasBeenGrabbed[interactable.gameObject.name] = false;
         }
     }
-    public void OnSelect(XRGrabInteractable interactable)
+
+    private void Update()
     {
-        string objectName = interactable.gameObject.name;
-        InteractionData startGrabbingData = new InteractionData
+        
+        if (totScore == 25 || Timer.timeIsUp == 1)
+        {
+            PlaySoundEnd();
+            foreach (TMP_Text textElement in textElements)
+            {
+                textElement.gameObject.SetActive(false);
+            }
+            menuAtTheEnd.SetActive(true);
+            ScoreManager instanceScoreManager = new ScoreManager();
+            instanceScoreManager.BackToMenu();
+        }
+    }
+
+    public void SelecetedXRGrab(XRGrabInteractable XRGrabInteractable)
+    {
+        // The object was just grabbed.
+        var interactionData = new InteractionData
         {
             Timestamp = DateTime.Now,
-            ObjectName = objectName,
+            ObjectName = XRGrabInteractable.name,
             InteractionType = "Start Grabbing"
         };
-        /*
-        // Check if this object has been grabbed before
-        if (!hasBeenGrabbed[objectName])
-        {
-            // If it hasn't been grabbed before, record the interaction
-            hasBeenGrabbed[objectName] = true;
-
+        interactionDataListStart.Add(interactionData);
             
-
-            interactionDataListStart.Add(startGrabbingData);
-        }*/
-
-        interactionDataListStart.Add(startGrabbingData);
     }
+
+
     
     
-     void OnTriggerEnter(Collider otherCollider)
+    void OnTriggerEnter(Collider otherCollider)
     {
         string objectName = otherCollider.gameObject.name;
         string interactionType = "";
@@ -116,8 +119,7 @@ public class ScoreArea : MonoBehaviour
             collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
-           
-             interactionType = "Unsorted Waste";
+            interactionType = "Unsorted Waste";
         }
 
         else if (otherCollider.CompareTag("G&M Waste"))
@@ -166,17 +168,7 @@ public class ScoreArea : MonoBehaviour
         interactionDataList.Add(trashDisposalData);
         Destroy(otherCollider.gameObject);
 
-        if(totScore == 25)
-        {
-           
-            PlaySoundEnd();
-            foreach (TMP_Text textElement in textElements)
-            {
-                textElement.gameObject.SetActive(false);
-            }
-            menuAtTheEnd.SetActive(true);
-            BackToMenu();
-        }
+        
     }
     
 
@@ -195,80 +187,7 @@ public class ScoreArea : MonoBehaviour
             audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
-    
-
-   
-
-    public void BackToMenu()
-    {
-        //string filePath = Path.Combine(Application.persistentDataPath, dataFileName);
-        totScoreEnd = totScore;
-        dateTimeEnd = DateTime.Now;
-        CSVManager.AppendToReport(GetReportLine());
-        indexText++;
-        totScore = 0;
-        ObjectResetPlaneForSceneOne.objectFell = 0;
-    }
-
-    string[] GetReportLine()
-    {
-        /*List<string> reportLines = new List<string>();
-
-        reportLines.Add("SceneOne.csv");
-        reportLines.Add("Controllers");
-        reportLines.Add("Ray-casting");
-        reportLines.Add(indexText.ToString());
-        reportLines.Add(totScoreEnd.ToString());
-        reportLines.Add(ObjectResetPlaneForSceneOne.objectFell.ToString());
-        reportLines.Add(dateTimeStart.ToString());
-        reportLines.Add(dateTimeEnd.ToString());
-
-        // Add a header line for the interaction data
-        foreach (InteractionData interaction in interactionDataListStart)
-        {
-            string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-            reportLines.Add(interactionLine);
-        }
-        // Add each interaction as a separate line
-        foreach (InteractionData interaction in interactionDataList)
-        {
-            string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-            reportLines.Add(interactionLine);
-        }*/
-
-        int i = 0;
-        int j = 0;
-            string[] returnable = new string[60];
-            returnable[0] = "SceneOne.csv";
-            returnable[1] = "Controllers";
-            returnable[2] = "Raycasting";
-            returnable[3] = indexText.ToString();
-            returnable[4] = totScoreEnd.ToString();
-            returnable[5] = ObjectResetPlaneForSceneOne.objectFell.ToString();
-            returnable[6] = dateTimeStart.ToString();
-            returnable[7] = dateTimeEnd.ToString();
-
-            foreach (InteractionData interaction in interactionDataListStart)
-            {
-                i++;
-                string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-                returnable[6+i] = interactionLine;
-            }
-            foreach (InteractionData interaction in interactionDataList)
-            {
-                 j++;
-                string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-                returnable[6 + i +j] = interactionLine;
-        }
-
-        return returnable;
-        
-
-       // return reportLines.ToArray();
-    }
-
   
-
 }
 
 

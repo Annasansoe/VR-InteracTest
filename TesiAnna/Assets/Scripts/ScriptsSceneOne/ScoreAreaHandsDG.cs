@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
-using UnityEngine.UI;
 using System;
+using UnityEngine.UI;
 
-public class ScoreAreaHands : MonoBehaviour
+public class ScoreAreaHandsDG : MonoBehaviour
 {
     public XRGrabInteractable[] XRGrabInteractable;
 
@@ -31,11 +31,7 @@ public class ScoreAreaHands : MonoBehaviour
 
     [Header("Return button")]
     public Button backToMenu;
-    public static int indexTextOneHand = 0;
-    public static int totScoreEnd = 0;
-    public static DateTime dateTimeStart;
-    public static DateTime dateTimeEnd;
-
+    
     [Header("Audios")]
     public AudioSource audioSource;
     public AudioClip soundClip;
@@ -46,9 +42,15 @@ public class ScoreAreaHands : MonoBehaviour
     public TMP_Text[] textElements;
 
     private bool hasBeenPlayed = false;
+
+    public static int indexTextOneHand = 0;
+    public static int totScoreEnd = 0;
+    public static DateTime dateTimeStart;
+    public static DateTime dateTimeEnd;
+
+
     public static List<InteractionData> interactionDataList = new List<InteractionData>();
     public static List<InteractionData> interactionDataListStart = new List<InteractionData>();
-
 
     private Dictionary<string, bool> hasBeenGrabbed = new Dictionary<string, bool>();
     public class InteractionData
@@ -57,6 +59,7 @@ public class ScoreAreaHands : MonoBehaviour
         public string ObjectName { get; set; }
         public string InteractionType { get; set; }
     }
+
 
     private void Start()
     {
@@ -85,8 +88,8 @@ public class ScoreAreaHands : MonoBehaviour
                 textElement.gameObject.SetActive(false);
             }
             menuAtTheEnd.SetActive(true);
-            ScoreManagerHands instanceScoreManager = new ScoreManagerHands();
-            instanceScoreManager.BackToMenuHands();
+            ScoreManagerHandsDG instanceScoreManager = new ScoreManagerHandsDG();
+            instanceScoreManager.BackToMenuHDG();
         }
     }
     public void SelecetedXRGrab(XRGrabInteractable XRGrabInteractable)
@@ -167,8 +170,9 @@ public class ScoreAreaHands : MonoBehaviour
             {
                 textElement.gameObject.SetActive(false);
             }
-            ScoreManagerHands instanceScoreManager = new ScoreManagerHands();
-            instanceScoreManager.BackToMenuHands();
+
+            ScoreManagerHandsDG instanceScoreManager = new ScoreManagerHandsDG();
+            instanceScoreManager.BackToMenuHDG();
         }
    }
     void PlaySound()
@@ -186,4 +190,5 @@ public class ScoreAreaHands : MonoBehaviour
             audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
+
 }

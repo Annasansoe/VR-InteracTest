@@ -7740,6 +7740,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755036, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9423,7 +9427,6 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 488273264}
   GoToSceneOne: {fileID: 1107227399}
   VerifyIsGrabbed: {fileID: 1954230428}
-  TypeOfMetaphor: {fileID: 422810120}
   audioSource: {fileID: 1303329941}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 1191919813}

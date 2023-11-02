@@ -7618,6 +7618,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755036, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9478,14 +9482,12 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 488273264}
   GoToSceneOne: {fileID: 1107227399}
   VerifyIsGrabbed: {fileID: 1954230428}
-  TypeOfMetaphor: {fileID: 181949406}
   audioSource: {fileID: 1218601790}
   soundClip: {fileID: 8300000, guid: 80d85c1f88001324ca20d5bb5750ee32, type: 3}
   letterSound: {fileID: 1480721972}
   soundClipLetter: {fileID: 8300000, guid: d42304a24cb833347b6c24944b744880, type: 3}
   imageInstruction: {fileID: 1734720573}
   TextSpeed: 10
-  flag: 0
 --- !u!114 &1442189260
 MonoBehaviour:
   m_ObjectHideFlags: 0

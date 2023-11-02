@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
@@ -6,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 
-public class ScoreAreaHands : MonoBehaviour
+public class ScoreAreaDG : MonoBehaviour
 {
     public XRGrabInteractable[] XRGrabInteractable;
 
@@ -18,23 +17,17 @@ public class ScoreAreaHands : MonoBehaviour
     int plasticScore = 0;
 
     [Header("CollectedObjects")]
-    public TMP_Text collectedTotObjectsTextH;
-    public TMP_Text collectedUnsortedObjectsTextH;
-    public TMP_Text collectedGMObjectsTextH;
-    public TMP_Text collectedPaperObjectsTextH;
-    public TMP_Text collectedOrganicObjectsTextH;
-    public TMP_Text collectedPlasticObjectsTextH;
-    
-
+    public TMP_Text collectedTotObjectsText;
+    public TMP_Text collectedUnsortedObjectsText;
+    public TMP_Text collectedGMObjectsText;
+    public TMP_Text collectedPaperObjectsText;
+    public TMP_Text collectedOrganicObjectsText;
+    public TMP_Text collectedPlasticObjectsText;
     public GameObject menuAtTheEnd;
-
 
     [Header("Return button")]
     public Button backToMenu;
-    public static int indexTextOneHand = 0;
-    public static int totScoreEnd = 0;
-    public static DateTime dateTimeStart;
-    public static DateTime dateTimeEnd;
+    
 
     [Header("Audios")]
     public AudioSource audioSource;
@@ -46,6 +39,12 @@ public class ScoreAreaHands : MonoBehaviour
     public TMP_Text[] textElements;
 
     private bool hasBeenPlayed = false;
+
+    public static int indexText;
+    public static int totScoreEnd = 0;
+    public static DateTime dateTimeStart;
+    public static DateTime dateTimeEnd;
+
     public static List<InteractionData> interactionDataList = new List<InteractionData>();
     public static List<InteractionData> interactionDataListStart = new List<InteractionData>();
 
@@ -58,17 +57,20 @@ public class ScoreAreaHands : MonoBehaviour
         public string InteractionType { get; set; }
     }
 
+    
+
     private void Start()
     {
-        menuAtTheEnd.gameObject.SetActive(false);
+        menuAtTheEnd.SetActive(false);
         XRGrabInteractable = GetComponentsInChildren<XRGrabInteractable>();
+        
         dateTimeStart = DateTime.Now;
-        collectedTotObjectsTextH.text = "Total collected objects: " + totScore.ToString() + " of 25";
-        collectedUnsortedObjectsTextH.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
-        collectedGMObjectsTextH.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
-        collectedPaperObjectsTextH.text = "Paper waste: " + paperScore.ToString() + " of 5";
-        collectedOrganicObjectsTextH.text = "Organic waste: " + organicScore.ToString() + " of 5";
-        collectedPlasticObjectsTextH.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
+        collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
+        collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
+        collectedGMObjectsText.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
+        collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
+        collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
+        collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
         foreach (var interactable in XRGrabInteractable)
         {
             hasBeenGrabbed[interactable.gameObject.name] = false;
@@ -85,12 +87,15 @@ public class ScoreAreaHands : MonoBehaviour
                 textElement.gameObject.SetActive(false);
             }
             menuAtTheEnd.SetActive(true);
-            ScoreManagerHands instanceScoreManager = new ScoreManagerHands();
-            instanceScoreManager.BackToMenuHands();
+            ScoreManagerDG instanceScoreManager = new ScoreManagerDG();
+            instanceScoreManager.BackToMenuDG();
         }
     }
+
+
     public void SelecetedXRGrab(XRGrabInteractable XRGrabInteractable)
     {
+        
         // The object was just grabbed.
         var interactionData = new InteractionData
         {
@@ -99,9 +104,12 @@ public class ScoreAreaHands : MonoBehaviour
             InteractionType = "Start Grabbing"
         };
         interactionDataListStart.Add(interactionData);
-
+            
     }
 
+
+    
+    
     void OnTriggerEnter(Collider otherCollider)
     {
         string objectName = otherCollider.gameObject.name;
@@ -110,32 +118,34 @@ public class ScoreAreaHands : MonoBehaviour
         if (otherCollider.CompareTag("Unsorted Waste"))
         {
             unsortedScore += 1;
-            collectedUnsortedObjectsTextH.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
+            collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
-            interactionType = "Unsorted Waste";
+           
+                interactionType = "Unsorted Waste";
         }
-        
-        else if (otherCollider.CompareTag("Paper Waste"))
-        {
-            paperScore += 1;
-            collectedPaperObjectsTextH.text = "Paper waste: " + paperScore.ToString() + " of 5";
-            totScore += 1;
-            PlaySound();
-            interactionType = "Paper Waste";
-        }
+
         else if (otherCollider.CompareTag("G&M Waste"))
         {
             gMScore += 1;
-            collectedGMObjectsTextH.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
+            collectedGMObjectsText.text = "Glass & Metal waste:  " + gMScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
             interactionType = "G&M Waste";
         }
+        else if (otherCollider.CompareTag("Paper Waste"))
+        {
+            paperScore += 1;
+            collectedPaperObjectsText.text = "Paper waste: " + paperScore.ToString() + " of 5";
+            totScore += 1;
+            PlaySound();
+            interactionType = "Paper Waste";
+        }
+
         else if (otherCollider.CompareTag("Organic Waste"))
         {
             organicScore += 1;
-            collectedOrganicObjectsTextH.text = "Organic waste: " + organicScore.ToString() + " of 5";
+            collectedOrganicObjectsText.text = "Organic waste: " + organicScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
             interactionType = "Organic Waste";
@@ -143,34 +153,40 @@ public class ScoreAreaHands : MonoBehaviour
         else if (otherCollider.CompareTag("Plastic Waste"))
         {
             plasticScore += 1;
-            collectedPlasticObjectsTextH.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
+            collectedPlasticObjectsText.text = "Plastic waste: " + plasticScore.ToString() + " of 5";
             totScore += 1;
             PlaySound();
             interactionType = "Plastic waste";
+
         }
-        collectedTotObjectsTextH.text = "Total collected objects: " + totScore.ToString() + " of 25";
+        collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
+
         InteractionData trashDisposalData = new InteractionData
         {
             Timestamp = DateTime.Now,
             ObjectName = objectName,
-            InteractionType = interactionType
+            InteractionType = interactionType 
         };
 
         interactionDataList.Add(trashDisposalData);
         Destroy(otherCollider.gameObject);
 
-        if (totScore == 25)
+        if(totScore == 25)
         {
-            menuAtTheEnd.SetActive(true);
+           
             PlaySoundEnd();
             foreach (TMP_Text textElement in textElements)
             {
                 textElement.gameObject.SetActive(false);
             }
-            ScoreManagerHands instanceScoreManager = new ScoreManagerHands();
-            instanceScoreManager.BackToMenuHands();
+            menuAtTheEnd.SetActive(true);
+            ScoreManagerDG instanceScoreManagerDG = new ScoreManagerDG();
+            instanceScoreManagerDG.BackToMenuDG();
+      
         }
-   }
+    }
+    
+
     void PlaySound()
     {
         if (audioSource != null && soundClip != null)
@@ -186,4 +202,8 @@ public class ScoreAreaHands : MonoBehaviour
             audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
+  
 }
+
+
+

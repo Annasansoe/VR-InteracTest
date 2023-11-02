@@ -975,7 +975,7 @@ Transform:
   - {fileID: 1499267144}
   - {fileID: 215719205}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &72224327
 GameObject:
@@ -1135,7 +1135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 840379110}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ScoreAreaHands, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -1825,6 +1825,141 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &164156913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 164156914}
+  - component: {fileID: 164156916}
+  - component: {fileID: 164156915}
+  m_Layer: 0
+  m_Name: Second 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &164156914
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164156913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.65768, y: 5.7228446, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449097190}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1900, y: -0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &164156915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164156913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_sharedMaterial: {fileID: -8987765134378216413, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294901502
+  m_fontColor: {r: 0.9960785, g: 0.9960785, b: 0.9960785, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 72
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &164156916
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164156913}
+  m_CullTransparentMesh: 1
 --- !u!1 &164570763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,6 +2312,141 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e0a5b5ff5540f5b14dd29d46faec22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &188213246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 188213247}
+  - component: {fileID: 188213249}
+  - component: {fileID: 188213248}
+  m_Layer: 0
+  m_Name: Minute 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &188213247
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188213246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.65768, y: 5.7228446, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449097190}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 789, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &188213248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188213246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_sharedMaterial: {fileID: -8987765134378216413, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &188213249
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188213246}
+  m_CullTransparentMesh: 1
 --- !u!1 &192631162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3467,6 +3737,7 @@ GameObject:
   - component: {fileID: 320686778}
   - component: {fileID: 320686777}
   - component: {fileID: 320686776}
+  - component: {fileID: 320686779}
   m_Layer: 2
   m_Name: BottleOrigin
   m_TagString: Plastic Waste
@@ -3481,15 +3752,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320686774}
-  m_LocalRotation: {x: -0, y: 0.37976962, z: -0, w: 0.92508113}
-  m_LocalPosition: {x: -0.128, y: 1.017, z: -0.393}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
+  m_LocalRotation: {x: 0.69726396, y: -0.11757146, z: -0.11757146, w: 0.69726396}
+  m_LocalPosition: {x: 0.03672268, y: -0.015301667, z: -0.001820004}
+  m_LocalScale: {x: 0.0052953735, y: 0.007999999, z: 0.0050338283}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6566053027290900167}
   - {fileID: 620514852}
-  m_Father: {fileID: 1419608311}
-  m_RootOrder: 10
+  m_Father: {fileID: 6991834969587972327}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &320686776
 MonoBehaviour:
@@ -3534,7 +3805,19 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 320686774}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3655,6 +3938,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.47546723, y: 1.7655678, z: 0.8269245}
   m_Center: {x: 0.04084615, y: 0.5263653, z: -0.10573128}
+--- !u!114 &320686779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320686774}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1001 &326321055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5538,6 +5847,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420982658}
   m_CullTransparentMesh: 1
+--- !u!1 &449097189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449097190}
+  - component: {fileID: 449097192}
+  - component: {fileID: 449097191}
+  m_Layer: 0
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &449097190
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449097189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000000056811}
+  m_LocalScale: {x: 0.72489, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 779663300}
+  - {fileID: 1564206953}
+  - {fileID: 1151327285}
+  - {fileID: 188213247}
+  - {fileID: 699093864}
+  - {fileID: 1166776018}
+  - {fileID: 164156914}
+  m_Father: {fileID: 545307894}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 76.76294, y: -0.000061035156}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &449097191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449097189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8679245, g: 0.13510147, b: 0.13510147, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &449097192
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449097189}
+  m_CullTransparentMesh: 1
 --- !u!1 &461567480
 GameObject:
   m_ObjectHideFlags: 0
@@ -5648,7 +6040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465791378}
   - component: {fileID: 465791380}
-  - component: {fileID: 465791379}
+  - component: {fileID: 465791381}
   m_Layer: 0
   m_Name: ScoreArea (2)
   m_TagString: Paper Waste
@@ -5671,44 +6063,37 @@ Transform:
   m_Father: {fileID: 211984454}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &465791379
+--- !u!65 &465791380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465791377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4186325, y: 0.6162454, z: 0.48394725}
+  m_Center: {x: 0.060097456, y: -0.3134433, z: -0.021371277}
+--- !u!114 &465791381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465791377}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   XRGrabInteractable:
-  - {fileID: 7338280667295718855}
-  - {fileID: 8873438572767287271}
-  - {fileID: 7116011830538784723}
-  - {fileID: 9145916970068631865}
-  - {fileID: 6387052302084737136}
   - {fileID: 1516755227}
-  - {fileID: 1793511919}
-  - {fileID: 1558169335}
-  - {fileID: 960162431}
-  - {fileID: 320686776}
   - {fileID: 8164128926800413577}
-  - {fileID: 8797685688894457480}
-  - {fileID: 1227923882}
-  - {fileID: 2677030237576779869}
-  - {fileID: 4490071517261000441}
-  - {fileID: 3687224118389892770}
-  - {fileID: 8666395710933306628}
-  - {fileID: 3659585960610580128}
-  - {fileID: 8980360985108062502}
   - {fileID: 8717556717497837689}
   - {fileID: 8368741618619726900}
   - {fileID: 3992372960541673321}
-  - {fileID: 4587564328051989655}
-  - {fileID: 4117017045226704243}
-  - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
   collectedUnsortedObjectsTextH: {fileID: 0}
   collectedGMObjectsTextH: {fileID: 0}
@@ -5729,19 +6114,6 @@ MonoBehaviour:
   - {fileID: 192631164}
   - {fileID: 635979108}
   - {fileID: 1163579445}
---- !u!65 &465791380
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465791377}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4186325, y: 0.6162454, z: 0.48394725}
-  m_Center: {x: 0.060097456, y: -0.3134433, z: -0.021371277}
 --- !u!1 &470445620
 GameObject:
   m_ObjectHideFlags: 0
@@ -5927,7 +6299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489670976}
   - component: {fileID: 489670978}
-  - component: {fileID: 489670977}
+  - component: {fileID: 489670979}
   m_Layer: 0
   m_Name: ScoreArea (4)
   m_TagString: Plastic Waste
@@ -5950,41 +6322,34 @@ Transform:
   m_Father: {fileID: 1672275910}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &489670977
+--- !u!65 &489670978
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489670975}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4186325, y: 0.6162454, z: 0.48394725}
+  m_Center: {x: 0.060097456, y: -0.3134433, z: -0.021371277}
+--- !u!114 &489670979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489670975}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   XRGrabInteractable:
-  - {fileID: 7338280667295718855}
-  - {fileID: 8873438572767287271}
-  - {fileID: 7116011830538784723}
-  - {fileID: 9145916970068631865}
-  - {fileID: 6387052302084737136}
-  - {fileID: 1516755227}
-  - {fileID: 1793511919}
   - {fileID: 1558169335}
-  - {fileID: 960162431}
   - {fileID: 320686776}
-  - {fileID: 8164128926800413577}
-  - {fileID: 8797685688894457480}
-  - {fileID: 1227923882}
-  - {fileID: 2677030237576779869}
-  - {fileID: 4490071517261000441}
-  - {fileID: 3687224118389892770}
-  - {fileID: 8666395710933306628}
-  - {fileID: 3659585960610580128}
-  - {fileID: 8980360985108062502}
-  - {fileID: 8717556717497837689}
-  - {fileID: 8368741618619726900}
-  - {fileID: 3992372960541673321}
   - {fileID: 4587564328051989655}
   - {fileID: 4117017045226704243}
   - {fileID: 8707810586377786482}
@@ -6008,19 +6373,6 @@ MonoBehaviour:
   - {fileID: 192631164}
   - {fileID: 635979108}
   - {fileID: 1163579445}
---- !u!65 &489670978
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489670975}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4186325, y: 0.6162454, z: 0.48394725}
-  m_Center: {x: 0.060097456, y: -0.3134433, z: -0.021371277}
 --- !u!1 &514787409
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,6 +6554,129 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 516035708}
   m_Mesh: {fileID: 5902407038767376259, guid: 42324ce4420b0544ab69afb9e3185de8, type: 3}
+--- !u!1 &545307893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545307894}
+  - component: {fileID: 545307898}
+  - component: {fileID: 545307897}
+  - component: {fileID: 545307896}
+  - component: {fileID: 545307895}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &545307894
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545307893}
+  m_LocalRotation: {x: 0.0005689894, y: -0.7122589, z: 0.0061622746, w: 0.70188963}
+  m_LocalPosition: {x: 0, y: 0, z: -0.297}
+  m_LocalScale: {x: 0.00017117741, y: 0.00034785277, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 449097190}
+  m_Father: {fileID: 1743093061}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0.549, y: -90.838, z: 0.449}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -2.927, y: 2.37}
+  m_SizeDelta: {x: 2560, y: 369}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &545307895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545307893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08f15c34447afb7498c2f32e1156f1ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prova: {fileID: 0}
+  firstMinute: {fileID: 1151327286}
+  secondMinute: {fileID: 188213248}
+  separator: {fileID: 699093865}
+  firstSecond: {fileID: 1166776019}
+  secondSecond: {fileID: 164156915}
+  tickingAudioSource: {fileID: 973281189}
+  audioSourceEnd: {fileID: 1237623064}
+  soundClipEnd: {fileID: 8300000, guid: 5a5b4ef63174cb940b6f4d403c0094e3, type: 3}
+--- !u!114 &545307896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545307893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &545307897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545307893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &545307898
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545307893}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &555124804
 GameObject:
   m_ObjectHideFlags: 0
@@ -8069,6 +8544,141 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.034228325, y: 0.10605222, z: 0.028106213}
   m_Center: {x: 0.38646173, y: 0.060489565, z: 0.26554894}
+--- !u!1 &699093863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 699093864}
+  - component: {fileID: 699093866}
+  - component: {fileID: 699093865}
+  m_Layer: 0
+  m_Name: ':'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &699093864
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699093863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.65768, y: 5.7228446, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449097190}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1268, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &699093865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699093863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: ':'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_sharedMaterial: {fileID: -8987765134378216413, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &699093866
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699093863}
+  m_CullTransparentMesh: 1
 --- !u!1 &701764198
 GameObject:
   m_ObjectHideFlags: 0
@@ -8400,7 +9010,7 @@ RectTransform:
   - {fileID: 1163579444}
   - {fileID: 1608985772}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -1.056, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8938,6 +9548,141 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &779663299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779663300}
+  - component: {fileID: 779663302}
+  - component: {fileID: 779663301}
+  m_Layer: 0
+  m_Name: Digilta Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &779663300
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779663299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.65768, y: 5.7228446, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449097190}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 360, y: -0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &779663301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779663299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 88 88
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_sharedMaterial: {fileID: -8987765134378216413, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 620756991
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.14117648}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &779663302
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779663299}
+  m_CullTransparentMesh: 1
 --- !u!1 &791074661
 GameObject:
   m_ObjectHideFlags: 0
@@ -9691,41 +10436,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 840379106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   XRGrabInteractable:
   - {fileID: 7338280667295718855}
-  - {fileID: 8873438572767287271}
-  - {fileID: 7116011830538784723}
+  - {fileID: 960162431}
   - {fileID: 9145916970068631865}
   - {fileID: 6387052302084737136}
-  - {fileID: 1516755227}
-  - {fileID: 1793511919}
-  - {fileID: 1558169335}
-  - {fileID: 960162431}
-  - {fileID: 320686776}
-  - {fileID: 8164128926800413577}
   - {fileID: 8797685688894457480}
-  - {fileID: 1227923882}
-  - {fileID: 2677030237576779869}
-  - {fileID: 4490071517261000441}
-  - {fileID: 3687224118389892770}
-  - {fileID: 8666395710933306628}
-  - {fileID: 3659585960610580128}
-  - {fileID: 8980360985108062502}
-  - {fileID: 8717556717497837689}
-  - {fileID: 8368741618619726900}
-  - {fileID: 3992372960541673321}
-  - {fileID: 4587564328051989655}
-  - {fileID: 4117017045226704243}
-  - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
   collectedUnsortedObjectsTextH: {fileID: 1159307646}
   collectedGMObjectsTextH: {fileID: 0}
   collectedPaperObjectsTextH: {fileID: 0}
   collectedOrganicObjectsTextH: {fileID: 0}
-  collectedPlasticObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 635979108}
   menuAtTheEnd: {fileID: 1608985771}
   backToMenu: {fileID: 72224331}
   audioSource: {fileID: 1213129588}
@@ -9740,6 +10465,50 @@ MonoBehaviour:
   - {fileID: 192631164}
   - {fileID: 635979108}
   - {fileID: 1163579445}
+--- !u!1 &846148154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846148155}
+  - component: {fileID: 846148156}
+  m_Layer: 0
+  m_Name: ScoreManager (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &846148155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846148154}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -274.4, y: 0, z: 171.30002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1141403700}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &846148156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846148154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5851aeeaa776e4b8b41ca6dad2b61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &867968233
 GameObject:
   m_ObjectHideFlags: 0
@@ -10426,6 +11195,7 @@ GameObject:
   - component: {fileID: 960162433}
   - component: {fileID: 960162432}
   - component: {fileID: 960162431}
+  - component: {fileID: 960162434}
   m_Layer: 2
   m_Name: GlassesOrigin
   m_TagString: Unsorted Waste
@@ -10493,7 +11263,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960162434}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 960162431}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -10614,6 +11397,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.13937464, y: 0.03747785, z: 0.10089512}
   m_Center: {x: -0.05020754, y: -0.0027609468, z: 0.027373612}
+--- !u!114 &960162434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960162429}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1 &964020525
 GameObject:
   m_ObjectHideFlags: 0
@@ -10885,6 +11694,134 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970758951}
   m_Mesh: {fileID: 3859192021068367919, guid: 6c60321f3de9e344e927b5167d419689, type: 3}
+--- !u!1 &973281187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973281188}
+  - component: {fileID: 973281189}
+  m_Layer: 0
+  m_Name: Audio Source Tick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973281188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973281187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1743093061}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &973281189
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973281187}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 29cf75098385c9e499dbde2c5c25f557, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &973936601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12066,7 +13003,7 @@ Transform:
   - {fileID: 1099236180}
   - {fileID: 1912997347}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020036648
 GameObject:
@@ -13116,7 +14053,7 @@ Transform:
   - {fileID: 1222218089}
   - {fileID: 7682119479205454025}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1139547848
 GameObject:
@@ -13248,8 +14185,9 @@ Transform:
   - {fileID: 211984454}
   - {fileID: 1381552111}
   - {fileID: 1672275910}
+  - {fileID: 846148155}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1141778379
 GameObject:
@@ -13642,6 +14580,141 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1151327284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151327285}
+  - component: {fileID: 1151327287}
+  - component: {fileID: 1151327286}
+  m_Layer: 0
+  m_Name: Minute 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1151327285
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151327284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.65768, y: 5.7228446, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449097190}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 360, y: -0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1151327286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151327284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_sharedMaterial: {fileID: -8987765134378216413, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1151327287
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151327284}
+  m_CullTransparentMesh: 1
 --- !u!1 &1153519591
 GameObject:
   m_ObjectHideFlags: 0
@@ -14018,6 +15091,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163579443}
+  m_CullTransparentMesh: 1
+--- !u!1 &1166776017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166776018}
+  - component: {fileID: 1166776020}
+  - component: {fileID: 1166776019}
+  m_Layer: 0
+  m_Name: Second 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1166776018
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166776017}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.65768, y: 5.7228446, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449097190}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1472, y: -0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1166776019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166776017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_sharedMaterial: {fileID: -8987765134378216413, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1166776020
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166776017}
   m_CullTransparentMesh: 1
 --- !u!1 &1171177010
 GameObject:
@@ -14864,7 +16072,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3469287838435166698}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1227923882}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -14985,6 +16206,134 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.008168, y: 0.013013579, z: 0.00854347}
   m_Center: {x: 0.0010467198, y: 0.00453378, z: -0.00061743485}
+--- !u!1 &1237623062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1237623063}
+  - component: {fileID: 1237623064}
+  m_Layer: 0
+  m_Name: Audio Source End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1237623063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237623062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1743093061}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1237623064
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237623062}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5a5b4ef63174cb940b6f4d403c0094e3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1239235651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17767,7 +19116,6 @@ Transform:
   - {fileID: 1793511918}
   - {fileID: 1558169334}
   - {fileID: 960162430}
-  - {fileID: 320686775}
   - {fileID: 6991834969587972327}
   - {fileID: 5600352652850923810}
   - {fileID: 543450652505654860}
@@ -17784,7 +19132,7 @@ Transform:
   - {fileID: 2984120652428523037}
   - {fileID: 5726186201101114324}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430831598
 GameObject:
@@ -18919,6 +20267,7 @@ GameObject:
   - component: {fileID: 1516755229}
   - component: {fileID: 1516755228}
   - component: {fileID: 1516755227}
+  - component: {fileID: 1516755230}
   m_Layer: 2
   m_Name: PaperBoxOtigin
   m_TagString: Paper Waste
@@ -18986,7 +20335,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1516755230}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1516755227}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -19107,6 +20469,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.46182957, y: 0.33381766, z: 0.31332555}
   m_Center: {x: 0.040852536, y: 0.020510716, z: 0.009210294}
+--- !u!114 &1516755230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516755225}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1001 &1529600899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19524,6 +20912,7 @@ GameObject:
   - component: {fileID: 1558169337}
   - component: {fileID: 1558169336}
   - component: {fileID: 1558169335}
+  - component: {fileID: 1558169338}
   m_Layer: 2
   m_Name: MilkBottleOrigin
   m_TagString: Plastic Waste
@@ -19591,7 +20980,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1558169338}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1558169335}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -19712,6 +21114,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.28173697, y: 0.3741157, z: 0.2335887}
   m_Center: {x: -0.076376736, y: -0.02823335, z: 0.083681285}
+--- !u!114 &1558169338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558169333}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!65 &1560856285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19738,6 +21166,141 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7903268, y: 2.031074, z: 0.041064605}
   m_Center: {x: 0.3951634, y: -0.017151594, z: 0.020532303}
+--- !u!1 &1564206952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564206953}
+  - component: {fileID: 1564206955}
+  - component: {fileID: 1564206954}
+  m_Layer: 0
+  m_Name: ': Background'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1564206953
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564206952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 12.65768, y: 5.7228446, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 449097190}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 771, y: -0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1564206954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564206952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '  :'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_sharedMaterial: {fileID: -8987765134378216413, guid: b3805d30a4cac734397b7387207eea2f, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 620756991
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.14117648}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 72
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1564206955
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564206952}
+  m_CullTransparentMesh: 1
 --- !u!1 &1565700109
 GameObject:
   m_ObjectHideFlags: 0
@@ -20237,6 +21800,10 @@ PrefabInstance:
     - target: {fileID: 6708590911764755033, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
       propertyPath: m_Name
       value: Fader Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6708590911764755036, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6708590911764755038, guid: e6b53d3343b122d4db968e98348e0943, type: 3}
       propertyPath: m_RootOrder
@@ -21779,6 +23346,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7915192, y: 0.01732564, z: 0.54525614}
   m_Center: {x: 0.023794323, y: -0.10939872, z: -0.28035176}
+--- !u!1 &1743093060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1743093061}
+  m_Layer: 0
+  m_Name: '-- Timer -- '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1743093061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743093060}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.169, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 545307894}
+  - {fileID: 973281188}
+  - {fileID: 1237623063}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1761535434
 GameObject:
   m_ObjectHideFlags: 0
@@ -22221,7 +23822,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh430834
+  m_Name: pb_Mesh79784
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22436,6 +24037,7 @@ GameObject:
   - component: {fileID: 1793511921}
   - component: {fileID: 1793511920}
   - component: {fileID: 1793511919}
+  - component: {fileID: 1793511922}
   m_Layer: 2
   m_Name: BeerOrigin
   m_TagString: G&M Waste
@@ -22503,7 +24105,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1793511922}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1793511919}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -22624,6 +24239,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09142336, y: 0.23793083, z: 0.09389377}
   m_Center: {x: 0.002991613, y: -0.021704048, z: 0.010475157}
+--- !u!114 &1793511922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793511917}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1 &1798431938
 GameObject:
   m_ObjectHideFlags: 0
@@ -23033,7 +24674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821768501}
   - component: {fileID: 1821768503}
-  - component: {fileID: 1821768502}
+  - component: {fileID: 1821768504}
   m_Layer: 0
   m_Name: ScoreArea (1)
   m_TagString: G&M Waste
@@ -23056,44 +24697,37 @@ Transform:
   m_Father: {fileID: 998032080}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1821768502
+--- !u!65 &1821768503
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821768500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4186325, y: 0.6162454, z: 0.48394725}
+  m_Center: {x: 0.060097456, y: -0.3134433, z: -0.021371277}
+--- !u!114 &1821768504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821768500}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   XRGrabInteractable:
-  - {fileID: 7338280667295718855}
   - {fileID: 8873438572767287271}
   - {fileID: 7116011830538784723}
-  - {fileID: 9145916970068631865}
-  - {fileID: 6387052302084737136}
-  - {fileID: 1516755227}
   - {fileID: 1793511919}
-  - {fileID: 1558169335}
-  - {fileID: 960162431}
-  - {fileID: 320686776}
-  - {fileID: 8164128926800413577}
-  - {fileID: 8797685688894457480}
-  - {fileID: 1227923882}
-  - {fileID: 2677030237576779869}
   - {fileID: 4490071517261000441}
-  - {fileID: 3687224118389892770}
-  - {fileID: 8666395710933306628}
-  - {fileID: 3659585960610580128}
   - {fileID: 8980360985108062502}
-  - {fileID: 8717556717497837689}
-  - {fileID: 8368741618619726900}
-  - {fileID: 3992372960541673321}
-  - {fileID: 4587564328051989655}
-  - {fileID: 4117017045226704243}
-  - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
   collectedUnsortedObjectsTextH: {fileID: 0}
   collectedGMObjectsTextH: {fileID: 104589858}
@@ -23114,19 +24748,6 @@ MonoBehaviour:
   - {fileID: 192631164}
   - {fileID: 635979108}
   - {fileID: 1163579445}
---- !u!65 &1821768503
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821768500}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4186325, y: 0.6162454, z: 0.48394725}
-  m_Center: {x: 0.060097456, y: -0.3134433, z: -0.021371277}
 --- !u!1 &1823595201
 GameObject:
   m_ObjectHideFlags: 0
@@ -23591,7 +25212,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh431822
+  m_Name: pb_Mesh80620
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27611,7 +29232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2138511888}
   - component: {fileID: 2138511890}
-  - component: {fileID: 2138511889}
+  - component: {fileID: 2138511891}
   m_Layer: 0
   m_Name: ScoreArea (3)
   m_TagString: Organic Waste
@@ -27634,44 +29255,37 @@ Transform:
   m_Father: {fileID: 1381552111}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2138511889
+--- !u!65 &2138511890
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138511887}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4186325, y: 0.6162454, z: 0.48394725}
+  m_Center: {x: 0.060097456, y: -0.3134433, z: -0.021371277}
+--- !u!114 &2138511891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138511887}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb8a30c1b7692ff48be70d4f899df6f3, type: 3}
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   XRGrabInteractable:
-  - {fileID: 7338280667295718855}
-  - {fileID: 8873438572767287271}
-  - {fileID: 7116011830538784723}
-  - {fileID: 9145916970068631865}
-  - {fileID: 6387052302084737136}
-  - {fileID: 1516755227}
-  - {fileID: 1793511919}
-  - {fileID: 1558169335}
-  - {fileID: 960162431}
-  - {fileID: 320686776}
-  - {fileID: 8164128926800413577}
-  - {fileID: 8797685688894457480}
   - {fileID: 1227923882}
   - {fileID: 2677030237576779869}
-  - {fileID: 4490071517261000441}
   - {fileID: 3687224118389892770}
   - {fileID: 8666395710933306628}
   - {fileID: 3659585960610580128}
-  - {fileID: 8980360985108062502}
-  - {fileID: 8717556717497837689}
-  - {fileID: 8368741618619726900}
-  - {fileID: 3992372960541673321}
-  - {fileID: 4587564328051989655}
-  - {fileID: 4117017045226704243}
-  - {fileID: 8707810586377786482}
   collectedTotObjectsTextH: {fileID: 1141778381}
   collectedUnsortedObjectsTextH: {fileID: 0}
   collectedGMObjectsTextH: {fileID: 0}
@@ -27692,19 +29306,6 @@ MonoBehaviour:
   - {fileID: 192631164}
   - {fileID: 635979108}
   - {fileID: 1163579445}
---- !u!65 &2138511890
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138511887}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4186325, y: 0.6162454, z: 0.48394725}
-  m_Center: {x: 0.060097456, y: -0.3134433, z: -0.021371277}
 --- !u!1001 &2145083975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28124,7 +29725,7 @@ Transform:
   m_Children:
   - {fileID: 35885526}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 14.389, y: 0, z: 9.43}
 --- !u!33 &578034041971135283
 MeshFilter:
@@ -28329,6 +29930,7 @@ GameObject:
   - component: {fileID: 1227923884}
   - component: {fileID: 1227923883}
   - component: {fileID: 1227923882}
+  - component: {fileID: 3469287838435166698}
   m_Layer: 2
   m_Name: Mushroom
   m_TagString: Organic Waste
@@ -28560,7 +30162,7 @@ Transform:
   m_Children:
   - {fileID: 643509876}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1479750549256614535
 Transform:
@@ -28667,6 +30269,7 @@ GameObject:
   - component: {fileID: 2677030237576779871}
   - component: {fileID: 2677030237576779870}
   - component: {fileID: 2677030237576779869}
+  - component: {fileID: 2677030237576779872}
   m_Layer: 2
   m_Name: Apple
   m_TagString: Organic Waste
@@ -28712,6 +30315,7 @@ GameObject:
   - component: {fileID: 4117017045226704245}
   - component: {fileID: 4117017045226704244}
   - component: {fileID: 4117017045226704243}
+  - component: {fileID: 4117017045226704246}
   m_Layer: 2
   m_Name: DetergentBottle
   m_TagString: Plastic Waste
@@ -28775,7 +30379,7 @@ Transform:
   m_Children:
   - {fileID: 2145083976}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2549189192227626446
 Transform:
@@ -28791,7 +30395,7 @@ Transform:
   m_Children:
   - {fileID: 1356319525}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2567373131293024784
 MeshFilter:
@@ -28930,7 +30534,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2677030237576779872}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2677030237576779869}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -29051,6 +30668,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00090507744, y: 0.0011272794, z: 0.0008119459}
   m_Center: {x: -0.000015317797, y: 0.0005636397, z: -0.000017844344}
+--- !u!114 &2677030237576779872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856243807977278787}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!4 &2684696430520080497
 Transform:
   m_ObjectHideFlags: 0
@@ -29123,7 +30766,7 @@ Transform:
   m_Children:
   - {fileID: 295338287}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2894506953064466292
 GameObject:
@@ -29139,6 +30782,7 @@ GameObject:
   - component: {fileID: 3687224118389892772}
   - component: {fileID: 3687224118389892771}
   - component: {fileID: 3687224118389892770}
+  - component: {fileID: 3687224118389892773}
   m_Layer: 2
   m_Name: Pear
   m_TagString: Organic Waste
@@ -29176,7 +30820,7 @@ Transform:
   m_Children:
   - {fileID: 1059850146}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3007011602950431854
 GameObject:
@@ -29210,6 +30854,7 @@ GameObject:
   - component: {fileID: 3659585960610580130}
   - component: {fileID: 3659585960610580129}
   - component: {fileID: 3659585960610580128}
+  - component: {fileID: 3659585960610580131}
   m_Layer: 2
   m_Name: GreenApple
   m_TagString: Organic Waste
@@ -29278,6 +30923,7 @@ GameObject:
   - component: {fileID: 3992372960541673323}
   - component: {fileID: 3992372960541673322}
   - component: {fileID: 3992372960541673321}
+  - component: {fileID: 3992372960541673324}
   m_Layer: 2
   m_Name: OldPapers
   m_TagString: Paper Waste
@@ -29519,6 +31165,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148235869430}
   m_Mesh: {fileID: -2766783700122002673, guid: cab6140a5af5b2442bc1e6d3c7e343ae, type: 3}
+--- !u!114 &3469287838435166698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148235869430}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1 &3550190736482946133
 GameObject:
   m_ObjectHideFlags: 0
@@ -29682,7 +31354,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3659585960610580131}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3659585960610580128}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -29803,6 +31488,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1002343, y: 1.1002219, z: 1.1002508}
   m_Center: {x: 0.0050548017, y: 0.5563276, z: 0.106237516}
+--- !u!114 &3659585960610580131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011090084639074122}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1 &3670890658209901271
 GameObject:
   m_ObjectHideFlags: 0
@@ -29906,7 +31617,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3687224118389892773}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3687224118389892770}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -30027,6 +31751,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.060099058, y: 0.11228602, z: 0.06009905}
   m_Center: {x: 0, y: 0.05604475, z: 0.000000004656613}
+--- !u!114 &3687224118389892773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894506953064466292}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1 &3810500344450549292
 GameObject:
   m_ObjectHideFlags: 0
@@ -30041,6 +31791,7 @@ GameObject:
   - component: {fileID: 4587564328051989657}
   - component: {fileID: 4587564328051989656}
   - component: {fileID: 4587564328051989655}
+  - component: {fileID: 4587564328051989658}
   m_Layer: 2
   m_Name: PlasticBottle
   m_TagString: Plastic Waste
@@ -30062,6 +31813,7 @@ GameObject:
   - component: {fileID: 4490071517261000443}
   - component: {fileID: 4490071517261000442}
   - component: {fileID: 4490071517261000441}
+  - component: {fileID: 4490071517261000444}
   m_Layer: 2
   m_Name: can
   m_TagString: G&M Waste
@@ -30196,7 +31948,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3992372960541673324}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3992372960541673321}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -30317,6 +32082,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3487874, y: 0.09144297, z: 0.2594657}
   m_Center: {x: 0.0037180122, y: 0.04988484, z: 0.005300084}
+--- !u!114 &3992372960541673324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3199594771917678269}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!33 &4037207289546874137
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30447,7 +32238,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4117017045226704246}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4117017045226704243}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -30568,6 +32372,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.21108374, y: 0.3820344, z: 0.15877372}
   m_Center: {x: 0.009705465, y: -0.10623835, z: -0.00051217154}
+--- !u!114 &4117017045226704246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2459644072853826727}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!23 &4126049506102593995
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30642,7 +32472,7 @@ Transform:
   m_Children:
   - {fileID: 45530425}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -87.488, y: 253.534, z: -148.613}
 --- !u!114 &4490071517261000441
 MonoBehaviour:
@@ -30687,7 +32517,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4490071517261000444}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4490071517261000441}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -30808,6 +32651,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.003692777, y: 0.0037584747, z: 0.0057251975}
   m_Center: {x: -0.000025917245, y: 0.000035216974, z: 0.00008509088}
+--- !u!114 &4490071517261000444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820214590235522114}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!4 &4491006457682012548
 Transform:
   m_ObjectHideFlags: 0
@@ -30837,7 +32706,7 @@ Transform:
   m_Children:
   - {fileID: 570132257}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4587564328051989655
 MonoBehaviour:
@@ -30882,7 +32751,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4587564328051989658}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4587564328051989655}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -31003,6 +32885,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.017505292, y: 0.047426708, z: 0.016212348}
   m_Center: {x: 0.00046767714, y: 0.023115393, z: -0.0005748528}
+--- !u!114 &4587564328051989658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3810500344450549292}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!33 &4588283763828595093
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31040,6 +32948,7 @@ GameObject:
   - component: {fileID: 8980360985108062504}
   - component: {fileID: 8980360985108062503}
   - component: {fileID: 8980360985108062502}
+  - component: {fileID: 8980360985108062505}
   m_Layer: 2
   m_Name: SecondBeer
   m_TagString: G&M Waste
@@ -31178,7 +33087,7 @@ Transform:
   m_Children:
   - {fileID: 419186490}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: -95.516, z: 0}
 --- !u!1 &4916893603463184750
 GameObject:
@@ -31194,6 +33103,7 @@ GameObject:
   - component: {fileID: 8707810586377786484}
   - component: {fileID: 8707810586377786483}
   - component: {fileID: 8707810586377786482}
+  - component: {fileID: 8707810586377786485}
   m_Layer: 2
   m_Name: PlasticFork
   m_TagString: Plastic Waste
@@ -31328,6 +33238,7 @@ GameObject:
   - component: {fileID: 8797685688894457482}
   - component: {fileID: 8797685688894457481}
   - component: {fileID: 8797685688894457480}
+  - component: {fileID: 8797685688894457483}
   m_Layer: 2
   m_Name: Rabbit
   m_TagString: Unsorted Waste
@@ -31406,6 +33317,7 @@ GameObject:
   - component: {fileID: 8873438572767287273}
   - component: {fileID: 8873438572767287272}
   - component: {fileID: 8873438572767287271}
+  - component: {fileID: 8873438572767287274}
   m_Layer: 2
   m_Name: StandingCan
   m_TagString: G&M Waste
@@ -31427,6 +33339,7 @@ GameObject:
   - component: {fileID: 8368741618619726902}
   - component: {fileID: 8368741618619726901}
   - component: {fileID: 8368741618619726900}
+  - component: {fileID: 8368741618619726903}
   m_Layer: 2
   m_Name: Pizza
   m_TagString: Paper Waste
@@ -31465,7 +33378,7 @@ Transform:
   m_Children:
   - {fileID: 973936602}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5409921358459753878
 GameObject:
@@ -31628,7 +33541,7 @@ Transform:
   m_Children:
   - {fileID: 1824777311}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 125.24, z: 0}
 --- !u!4 &5602780331309547097
 Transform:
@@ -31735,7 +33648,7 @@ Transform:
   m_Children:
   - {fileID: 326321056}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 81.219, z: 0}
 --- !u!4 &5773952363132642960
 Transform:
@@ -31953,6 +33866,7 @@ GameObject:
   - component: {fileID: 6387052302084737138}
   - component: {fileID: 6387052302084737137}
   - component: {fileID: 6387052302084737136}
+  - component: {fileID: 6387052302084737139}
   m_Layer: 2
   m_Name: 'Lighter_ '
   m_TagString: Unsorted Waste
@@ -32192,7 +34106,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6387052302084737139}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6387052302084737136}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -32313,6 +34240,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.019592887, z: 0.004748357}
   m_Center: {x: -1.9828025e-15, y: -0.00014289096, z: 0.0001840652}
+--- !u!114 &6387052302084737139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6046239274929115861}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1 &6427415512408934617
 GameObject:
   m_ObjectHideFlags: 0
@@ -32327,6 +34280,7 @@ GameObject:
   - component: {fileID: 7338280667295718857}
   - component: {fileID: 7338280667295718856}
   - component: {fileID: 7338280667295718855}
+  - component: {fileID: 7338280667295718858}
   m_Layer: 2
   m_Name: mug
   m_TagString: Unsorted Waste
@@ -32681,6 +34635,7 @@ GameObject:
   - component: {fileID: 7116011830538784725}
   - component: {fileID: 7116011830538784724}
   - component: {fileID: 7116011830538784723}
+  - component: {fileID: 7116011830538784726}
   m_Layer: 2
   m_Name: TunaCan
   m_TagString: G&M Waste
@@ -32793,8 +34748,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1529600900}
+  - {fileID: 320686775}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 63.781}
 --- !u!4 &7015008469861375384
 Transform:
@@ -32903,7 +34859,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7116011830538784726}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7116011830538784723}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -33024,6 +34993,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.001063746, y: 0.00063027855, z: 0.00050616026}
   m_Center: {x: -1.4551914e-10, y: 0, z: 0.00025308013}
+--- !u!114 &7116011830538784726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6783877028908276429}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!23 &7153339687640870102
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33110,6 +35105,7 @@ GameObject:
   - component: {fileID: 8717556717497837691}
   - component: {fileID: 8717556717497837690}
   - component: {fileID: 8717556717497837689}
+  - component: {fileID: 8717556717497837692}
   m_Layer: 2
   m_Name: PaperBag
   m_TagString: Paper Waste
@@ -33212,7 +35208,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7338280667295718858}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7338280667295718855}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -33333,6 +35342,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0045712604, y: 0.004420921, z: 0.0026567692}
   m_Center: {x: -0.0005823381, y: -0.00050716836, z: 0.0013007278}
+--- !u!114 &7338280667295718858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427415512408934617}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!23 &7344297279484313837
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -33458,7 +35493,7 @@ Transform:
   m_Children:
   - {fileID: 1202866825}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7562399374942756364
 MeshFilter:
@@ -33582,6 +35617,7 @@ GameObject:
   - component: {fileID: 8164128926800413579}
   - component: {fileID: 8164128926800413578}
   - component: {fileID: 8164128926800413577}
+  - component: {fileID: 8164128926800413580}
   m_Layer: 2
   m_Name: Scatolone
   m_TagString: Paper Waste
@@ -33948,7 +35984,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8164128926800413580}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8164128926800413577}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -34069,6 +36118,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.011299317, y: 0.015708465, z: 0.010524901}
   m_Center: {x: 0.00033493992, y: -0.0006535432, z: 0.0007556473}
+--- !u!114 &8164128926800413580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659545929300681309}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!23 &8236653657478957931
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34198,7 +36273,7 @@ Transform:
   m_Children:
   - {fileID: 90453771}
   m_Father: {fileID: 1419608311}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8368741618619726899
 MeshFilter:
@@ -34251,7 +36326,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8368741618619726903}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8368741618619726900}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -34372,6 +36460,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.39408755, y: 0.32891497, z: 0.61090624}
   m_Center: {x: -0.0009580394, y: 0.16445632, z: -0.12519267}
+--- !u!114 &8368741618619726903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5244359373540845868}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!33 &8403646317594361844
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34508,6 +36622,7 @@ GameObject:
   - component: {fileID: 8666395710933306630}
   - component: {fileID: 8666395710933306629}
   - component: {fileID: 8666395710933306628}
+  - component: {fileID: 8666395710933306631}
   m_Layer: 2
   m_Name: rot-pumpkin
   m_TagString: Organic Waste
@@ -34558,7 +36673,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8666395710933306631}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8666395710933306628}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -34679,6 +36807,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.028559174, y: 0.027353382, z: 0.020329557}
   m_Center: {x: -0.0006069201, y: -0.00052893755, z: -0.0003861761}
+--- !u!114 &8666395710933306631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666395710933306627}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!33 &8707810586377786481
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34730,7 +36884,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8707810586377786485}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8707810586377786482}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -34851,6 +37018,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00739615, y: 0.0103023285, z: 0.009378965}
   m_Center: {x: 0.0000045209704, y: -0.0011243402, z: 0.00030154802}
+--- !u!114 &8707810586377786485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4916893603463184750}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!23 &8717556717497837688
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34936,7 +37129,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8717556717497837692}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8717556717497837689}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -35057,6 +37263,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09767598, y: 0.07671117, z: 0.07479834}
   m_Center: {x: -0.0066167098, y: 0.0018129942, z: 0.004946438}
+--- !u!114 &8717556717497837692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7204079168184175021}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!33 &8797685688894457479
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -35108,7 +37340,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8797685688894457483}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8797685688894457480}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -35229,6 +37474,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.072871864, y: 0.13000035, z: 0.06262963}
   m_Center: {x: 0, y: 0.098441646, z: 0.009509654}
+--- !u!114 &8797685688894457483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5112610030929630104}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1 &8802411341442357329
 GameObject:
   m_ObjectHideFlags: 0
@@ -35321,7 +37592,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8873438572767287274}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8873438572767287271}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -35442,6 +37726,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0007720661, y: 0.00080877054, z: 0.0016631403}
   m_Center: {x: 0.0000014305115, y: 0.000014124508, z: 0.0008315701}
+--- !u!114 &8873438572767287274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5170346122252927737}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!1 &8939734562992899573
 GameObject:
   m_ObjectHideFlags: 0
@@ -35509,7 +37819,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8980360985108062505}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8980360985108062502}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -35630,6 +37953,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06588418, y: 0.23652595, z: 0.06588835}
   m_Center: {x: -0.0013845152, y: -0.031954005, z: 0.00000076182175}
+--- !u!114 &8980360985108062505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4631017106616087610}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!23 &9082240671927166984
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -35701,6 +38050,7 @@ GameObject:
   - component: {fileID: 9145916970068631867}
   - component: {fileID: 9145916970068631866}
   - component: {fileID: 9145916970068631865}
+  - component: {fileID: 9145916970068631868}
   m_Layer: 2
   m_Name: Cigarette
   m_TagString: Unsorted Waste
@@ -35751,7 +38101,20 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9145916970068631868}
+        m_TargetAssemblyTypeName: ScoreAreaHandsDG, Assembly-CSharp
+        m_MethodName: SelecetedXRGrab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 9145916970068631865}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+            Unity.XR.Interaction.Toolkit
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -35872,6 +38235,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08452275, y: 0.085332446, z: 0.86077243}
   m_Center: {x: -0.00035964392, y: 0.14700934, z: 0.43038628}
+--- !u!114 &9145916970068631868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9145916970068631864}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22bdcac65bcf8c469b8715cc11eb8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XRGrabInteractable: []
+  collectedTotObjectsTextH: {fileID: 0}
+  collectedUnsortedObjectsTextH: {fileID: 0}
+  collectedGMObjectsTextH: {fileID: 0}
+  collectedPaperObjectsTextH: {fileID: 0}
+  collectedOrganicObjectsTextH: {fileID: 0}
+  collectedPlasticObjectsTextH: {fileID: 0}
+  menuAtTheEnd: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  textElements: []
 --- !u!23 &9151144116917305442
 MeshRenderer:
   m_ObjectHideFlags: 0
