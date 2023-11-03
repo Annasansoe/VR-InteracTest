@@ -41,7 +41,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TutorialSceneThreeHandDG.unity
     guid: 5b191bd398c7938458d50e1385de5dbb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneOne.unity
     guid: ab8b3967b859ba74cb3b7b1709231c0c
   - enabled: 0
@@ -62,7 +62,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SceneTwoHandDG.unity
     guid: e50b036210bfe9b41804ec04cc5d032b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneThree.unity
     guid: ca01e58996b36814abc8d2922a84e0b3
   - enabled: 0

@@ -6518,8 +6518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: In these scene you have to select a cube with the ray and push the GRID
-    button, with both hands
+  m_text: 'Than you have take your hands away, if you want to make the object bigger '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 495103ca87410e942941f1e1d2b530f8, type: 2}
   m_sharedMaterial: {fileID: 3702262351396013791, guid: 495103ca87410e942941f1e1d2b530f8, type: 2}
