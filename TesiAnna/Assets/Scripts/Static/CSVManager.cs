@@ -31,6 +31,7 @@ public static class CSVManager
     {
         "Scene number",
         "Interaction method",
+
         "User Number",
         "Wrong Answer",
         "Correct Answer",
@@ -39,10 +40,11 @@ public static class CSVManager
         "End time"
     };
 
-    private static string[] reportHeadersSceneThree = new string[7] 
+    private static string[] reportHeadersSceneThree = new string[8] 
     {
         "Scene number",
         "Interaction method",
+        "Interaction metaphor",
         "User Number",
         "Scaled Objects",
         "Objects fell",

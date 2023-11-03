@@ -6,11 +6,11 @@ using TMPro;
 using UnityEngine.UI;
 using System.IO;
 
-public class ScaleController : MonoBehaviour
+public class ScaleControllerH : MonoBehaviour
 {
-    public List<GameObject> objectsToDeactivate = new List<GameObject>();
+   
 
-    
+    public List<GameObject> objectsToDeactivate = new List<GameObject>();
 
     [Header("Target cube")]
     public GameObject cubeTarget;
@@ -24,6 +24,7 @@ public class ScaleController : MonoBehaviour
     [Header("Mission state")]
     public TMP_Text requestText;
     public TMP_Text missionCompletedText;
+    public TMP_Text fellOff;
 
     [Header("Return button")]
     public Button backToMenu;
@@ -36,11 +37,6 @@ public class ScaleController : MonoBehaviour
     public AudioSource audioSourceEnd;
     public AudioClip soundClipEnd;
 
-    [Space]
-
-    [Header("End Menu")]
-    public GameObject endMenu;
-
     private bool hasBeenPlayed = false;
 
     private Vector3 originalScale;
@@ -50,13 +46,19 @@ public class ScaleController : MonoBehaviour
     int totScaleEnd = 0;
     public static int scaleDone = 0;
 
+    private static int indexTextSThreeHands;
 
-    private static int indexTextSThree;
     [Space]
     [Header("Feedback color")]
     public Color isSmaller = Color.red;
     public Color isEqual = Color.green;
     public Color isBigger = Color.gray;
+
+    [Space]
+
+    [Header("End Menu")]
+    public GameObject endMenu;
+
 
     private void Start()
     {
@@ -69,22 +71,20 @@ public class ScaleController : MonoBehaviour
             return;
         }
         cubeAfterScale.SetActive(false);
-        originalScale = cubeManipulable.transform.localScale;
-        
-       missionCompletedText.gameObject.SetActive(false);
+        originalScale = cubeManipulable.transform.localScale;       
+        missionCompletedText.gameObject.SetActive(false);
        
     }
     private void Update()
     {
         Vector3 sizeCube1 = cubeTarget.transform.localScale;
-        Vector3 sizeCube2 = cubeManipulable.transform.localScale;
+        Vector3 sizeCube2 = cubeManipulable.transform.localScale; 
         Vector3 positionToMatch = cubeManipulable.transform.position;
-
+        
         // Change the color of the cube based on certain conditions
         if (sizeCube1.x * sizeCube1.y * sizeCube1.z == sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             requestText.gameObject.SetActive(false);
-
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
@@ -97,14 +97,15 @@ public class ScaleController : MonoBehaviour
                 audioSource.Play();
                 hasBeenPlayed = true;
             }
+
+            missionCompletedText.gameObject.SetActive(true);
             cubeAfterScale.transform.position = positionToMatch;
             cubeManipulable.SetActive(false);
             cubeAfterScale.SetActive(true);
-            missionCompletedText.gameObject.SetActive(true);
             Debug.Log("Both cubes have the same size.");
-
+            
         }
-        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             Debug.Log("Cube 1 is larger than Cube 2.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -113,7 +114,7 @@ public class ScaleController : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             Debug.Log("Cube 2 is larger than Cube 1.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -122,15 +123,16 @@ public class ScaleController : MonoBehaviour
                 cubeRenderer.material.color = isBigger;
             }
         }
-
         if (scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-
             DeactivateObjectsInList();
             activateEndMenu();
         }
-
+    }
+    public void activateEndMenu()
+    {
+        endMenu.SetActive(true);
     }
     public void DeactivateObjectsInList()
     {
@@ -139,11 +141,6 @@ public class ScaleController : MonoBehaviour
             obj.SetActive(false);
         }
     }
-    public void activateEndMenu()
-    {
-        endMenu.SetActive(true);
-    }
-
     private void PlaySound()
     {
         if (audioSourceEnd != null && soundClipEnd != null)
@@ -158,7 +155,7 @@ public class ScaleController : MonoBehaviour
         totScaleEnd = scaleDone;
         dateTimeEnd = System.DateTime.UtcNow.ToString();
         CSVManager.AppendToReport(GetReportLine());
-        indexTextSThree++;
+        indexTextSThreeHands++;
         scaleDone = 0;
         ObjectResetPlaneForSceneThree.objectFellSceneThree = 0;
     }
@@ -167,9 +164,9 @@ public class ScaleController : MonoBehaviour
     {
         string[] returnable = new string[8];
         returnable[0] = "SceneThree.csv";
-        returnable[1] = "Controllers";
+        returnable[1] = "Hands";
         returnable[2] = "Ray-casting";
-        returnable[3] = indexTextSThree.ToString();
+        returnable[3] = indexTextSThreeHands.ToString();
         returnable[4] = totScaleEnd.ToString();
         returnable[5] = ObjectResetPlaneForSceneThree.objectFellSceneThree.ToString();
         returnable[6] = dateTimeStart;

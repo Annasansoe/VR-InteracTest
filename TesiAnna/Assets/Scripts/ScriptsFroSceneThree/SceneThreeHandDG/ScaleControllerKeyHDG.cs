@@ -1,16 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
-using UnityEngine.UI;
-using System.IO;
 
-public class ScaleController : MonoBehaviour
+public class ScaleControllerKeyHDG : MonoBehaviour
 {
     public List<GameObject> objectsToDeactivate = new List<GameObject>();
-
-    
 
     [Header("Target cube")]
     public GameObject cubeTarget;
@@ -22,11 +17,8 @@ public class ScaleController : MonoBehaviour
     public GameObject cubeAfterScale;
 
     [Header("Mission state")]
-    public TMP_Text requestText;
-    public TMP_Text missionCompletedText;
-
-    [Header("Return button")]
-    public Button backToMenu;
+    public TMP_Text requestTextK;
+    public TMP_Text missionCompletedTextK;
 
     [Space]
 
@@ -36,32 +28,23 @@ public class ScaleController : MonoBehaviour
     public AudioSource audioSourceEnd;
     public AudioClip soundClipEnd;
 
+    private bool hasBeenPlayed = false;
+
+    private Vector3 originalScale;
+
+    [Space]
+    [Header("Feedback color")]
+    public Color isEqual = Color.green;
+    public Color isBigger = Color.gray;
+
     [Space]
 
     [Header("End Menu")]
     public GameObject endMenu;
 
-    private bool hasBeenPlayed = false;
-
-    private Vector3 originalScale;
-
-    string dateTimeStart;
-    string dateTimeEnd;
-    int totScaleEnd = 0;
-    public static int scaleDone = 0;
-
-
-    private static int indexTextSThree;
-    [Space]
-    [Header("Feedback color")]
-    public Color isSmaller = Color.red;
-    public Color isEqual = Color.green;
-    public Color isBigger = Color.gray;
-
     private void Start()
     {
         endMenu.SetActive(false);
-        dateTimeStart = System.DateTime.UtcNow.ToString();
         // Ensure that cube1 and cube2 are assigned in the Inspector
         if (cubeTarget == null || cubeManipulable == null)
         {
@@ -70,9 +53,9 @@ public class ScaleController : MonoBehaviour
         }
         cubeAfterScale.SetActive(false);
         originalScale = cubeManipulable.transform.localScale;
-        
-       missionCompletedText.gameObject.SetActive(false);
-       
+
+        missionCompletedTextK.gameObject.SetActive(false);
+
     }
     private void Update()
     {
@@ -81,41 +64,31 @@ public class ScaleController : MonoBehaviour
         Vector3 positionToMatch = cubeManipulable.transform.position;
 
         // Change the color of the cube based on certain conditions
-        if (sizeCube1.x * sizeCube1.y * sizeCube1.z == sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        if (sizeCube1.x * sizeCube1.y * sizeCube1.z >= sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
-            requestText.gameObject.SetActive(false);
-
             Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-                scaleDone += 1;
+               
             }
+            cubeAfterScale.transform.position = positionToMatch;
+            ScaleControllerH.scaleDone += 1;
+            cubeManipulable.SetActive(false);
+            cubeAfterScale.SetActive(true);
+            missionCompletedTextK.gameObject.SetActive(true);
             if (!hasBeenPlayed)
             {
                 audioSource.clip = soundClip;
                 audioSource.Play();
                 hasBeenPlayed = true;
             }
-            cubeAfterScale.transform.position = positionToMatch;
-            cubeManipulable.SetActive(false);
-            cubeAfterScale.SetActive(true);
-            missionCompletedText.gameObject.SetActive(true);
-            Debug.Log("Both cubes have the same size.");
-
-        }
-        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
-        {
-            Debug.Log("Cube 1 is larger than Cube 2.");
-            Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
-            if (cubeRenderer != null)
-            {
-                cubeRenderer.material.color = isSmaller;
-            }
+            requestTextK.gameObject.SetActive(false);
+            Debug.Log("The cubes are smaller than the target one.");
         }
         else if (sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
-            Debug.Log("Cube 2 is larger than Cube 1.");
+            Debug.Log("The cubes are bigger than the target one..");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
@@ -123,22 +96,16 @@ public class ScaleController : MonoBehaviour
             }
         }
 
-        if (scaleDone == 4)
+
+        if (ScaleControllerH.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
 
             DeactivateObjectsInList();
             activateEndMenu();
         }
+    }
 
-    }
-    public void DeactivateObjectsInList()
-    {
-        foreach (GameObject obj in objectsToDeactivate)
-        {
-            obj.SetActive(false);
-        }
-    }
     public void activateEndMenu()
     {
         endMenu.SetActive(true);
@@ -152,34 +119,12 @@ public class ScaleController : MonoBehaviour
             audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
-
-    public void BackToMenu()
+    public void DeactivateObjectsInList()
     {
-        totScaleEnd = scaleDone;
-        dateTimeEnd = System.DateTime.UtcNow.ToString();
-        CSVManager.AppendToReport(GetReportLine());
-        indexTextSThree++;
-        scaleDone = 0;
-        ObjectResetPlaneForSceneThree.objectFellSceneThree = 0;
-    }
-
-    string[] GetReportLine()
-    {
-        string[] returnable = new string[8];
-        returnable[0] = "SceneThree.csv";
-        returnable[1] = "Controllers";
-        returnable[2] = "Ray-casting";
-        returnable[3] = indexTextSThree.ToString();
-        returnable[4] = totScaleEnd.ToString();
-        returnable[5] = ObjectResetPlaneForSceneThree.objectFellSceneThree.ToString();
-        returnable[6] = dateTimeStart;
-        returnable[7] = dateTimeEnd;
-
-
-        return returnable;
-
+        foreach (GameObject obj in objectsToDeactivate)
+        {
+            obj.SetActive(false);
+        }
     }
 
 }
-
-
