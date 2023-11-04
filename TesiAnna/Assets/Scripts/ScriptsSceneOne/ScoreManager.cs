@@ -32,13 +32,13 @@ public class ScoreManager : MonoBehaviour
         {
             i++;
             string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-            returnable[6 + i] = interactionLine;
+            returnable[7 + i] = interactionLine;
         }
         foreach (ScoreArea.InteractionData interaction in ScoreArea.interactionDataList)
         {
             j++;
             string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-            returnable[6 + i + j] = interactionLine;
+            returnable[7 + i + j] = interactionLine;
         }
 
         return returnable;

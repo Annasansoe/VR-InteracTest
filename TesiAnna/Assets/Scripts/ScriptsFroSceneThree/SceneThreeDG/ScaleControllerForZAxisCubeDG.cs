@@ -1,5 +1,6 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using UnityEngine.XR.Interaction.Toolkit.Transformers;
 using UnityEngine;
 using TMPro;
 
@@ -11,10 +12,8 @@ public class ScaleControllerForZAxisCubeDG : MonoBehaviour
     public GameObject cubeTarget;
 
     [Header("Manipulable cube")]
-    public GameObject cubeManipulable;
+    public XRGeneralGrabTransformer cubeManipulable;
 
-    [Header("Cube after scale")]
-    public GameObject cubeAfterScale;
 
     [Header("Mission state")]
     public TMP_Text requestTextZ;
@@ -28,9 +27,6 @@ public class ScaleControllerForZAxisCubeDG : MonoBehaviour
     public AudioSource audioSourceEnd;
     public AudioClip soundClipEnd;
 
-    private bool hasBeenPlayed = false;
-
-    private Vector3 originalScale;
     [Space]
     [Header("Feedback color")]
     public Color isSmaller = Color.red;
@@ -42,6 +38,10 @@ public class ScaleControllerForZAxisCubeDG : MonoBehaviour
     [Header("End Menu")]
     public GameObject endMenu;
 
+    private bool hasBeenPlayed = false;   
+    private bool sizesEqualized = false;
+    public static string finishScaleCap;
+
     private void Start()
     {
         // Ensure that cube1 and cube2 are assigned in the Inspector
@@ -50,8 +50,7 @@ public class ScaleControllerForZAxisCubeDG : MonoBehaviour
             Debug.LogError("Assign both cube1 and cube2 in the Inspector!");
             return;
         }
-        cubeAfterScale.SetActive(false);
-        originalScale = cubeManipulable.transform.localScale;
+        
         missionCompletedTextZ.gameObject.SetActive(false);
 
     }
@@ -59,29 +58,32 @@ public class ScaleControllerForZAxisCubeDG : MonoBehaviour
     {
         Vector3 sizeCube1 = cubeTarget.transform.localScale;
         Vector3 sizeCube2 = cubeManipulable.transform.localScale;
-        Vector3 positionToMatch = cubeManipulable.transform.position;
+        XRGeneralGrabTransformer grabTransformer = cubeManipulable.GetComponent<XRGeneralGrabTransformer>();
 
         // Modify the Z-axis scale while keeping X and Y axes locked
-        if (sizeCube1.x * sizeCube1.y * sizeCube1.z == sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        if (sizeCube2.x * sizeCube2.y * sizeCube2.z >= sizeCube1.x * sizeCube1.y * sizeCube1.z && !sizesEqualized)
         {
             requestTextZ.gameObject.SetActive(false);
+            if (grabTransformer != null)
+            {
+                grabTransformer.allowTwoHandedScaling = false;
 
-            Renderer cubeRenderer = cubeAfterScale.GetComponent<Renderer>();
+            }
+            Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
             if (cubeRenderer != null)
             {
                 cubeRenderer.material.color = isEqual;
-
             }
+            ScaleControllerDG.scaleDone += 1;
+            sizesEqualized = true;
             if (!hasBeenPlayed)
             {
                 audioSource.clip = soundClip;
                 audioSource.Play();
+                finishScaleCap = DateTime.Now.ToString();
                 hasBeenPlayed = true;
             }
-            cubeAfterScale.transform.position = positionToMatch;
-            cubeManipulable.SetActive(false);
-            cubeAfterScale.SetActive(true);
-            ScaleController.scaleDone += 1;
+
             missionCompletedTextZ.gameObject.SetActive(true);
             Debug.Log("Both cubes have the same size.");
 
@@ -95,20 +97,12 @@ public class ScaleControllerForZAxisCubeDG : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
-        {
-            Debug.Log("Cube 2 is larger than Cube 1.");
-            Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
-            if (cubeRenderer != null)
-            {
-                cubeRenderer.material.color = isBigger;
-            }
-        }
+        
 
-        if (ScaleController.scaleDone == 4)
+        if (ScaleControllerDG.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-
+            //ScaleControllerDG.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
         }

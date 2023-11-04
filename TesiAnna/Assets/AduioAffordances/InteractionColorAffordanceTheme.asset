@@ -61,9 +61,6 @@ MonoBehaviour:
     - stateName: hoveredPriority
       animationStateStartValue: {r: 0.2509804, g: 0.7019608, b: 0.90196085, a: 1}
       animationStateEndValue: {r: 0, g: 0.627451, b: 1, a: 1}
-    - stateName: selected
-      animationStateStartValue: {r: 0.070588216, g: 0.34776726, b: 0.78431374, a: 1}
-      animationStateEndValue: {r: 0, g: 0.19505477, b: 0.5, a: 1}
     - stateName: activated
       animationStateStartValue: {r: 0, g: 0, b: 0, a: 0}
       animationStateEndValue: {r: 0, g: 0, b: 0, a: 0}

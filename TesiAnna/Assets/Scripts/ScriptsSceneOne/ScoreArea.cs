@@ -38,7 +38,6 @@ public class ScoreArea : MonoBehaviour
     [Header("Text to disable at the end")]
     public TMP_Text[] textElements;
 
-    private bool theTimerIsFinished = false;
     //PROVA FILE
     public static int indexText;
     public static int totScoreEnd = 0;

@@ -14,42 +14,49 @@ public static class CSVManager
 
     private static string[] reportHeadersSceneOne = new string[]
     {
-        "Scene number",
-        "Interaction method",
-        "Interaction metaphor",
-        "User Number",
-        "Collected objects",
-        "Objects fell",
-        "Start time",
-        "End time",
+        "SceneNumber",
+        "InteractionMethod",
+        "InteractionMetaphor",
+        "UserNumber",
+        "CollectedObjects",
+        "ObjectsFell",
+        "StartTime",
+        "EndTime",
         "Timestamp",
-        "Object Name",
-        "Interaction Type"    
+        "ObjectName",
+        "InteractionType"    
     };
 
-    private static string[] reportHeadersSceneTwo = new string[8]
+    private static string[] reportHeadersSceneTwo = new string[]
     {
-        "Scene number",
-        "Interaction method",
-
-        "User Number",
-        "Wrong Answer",
-        "Correct Answer",
-        "Total canc",
-        "Start time",
-        "End time"
+        "SceneNumber",
+        "InteractionMethod",
+        "UserNumber",
+        "WrongAnswer",
+        "CorrectAnswer",
+        "TotalCanc",
+        "StartTime",
+        "EndTime"
     };
 
-    private static string[] reportHeadersSceneThree = new string[8] 
+    private static string[] reportHeadersSceneThree = new string[] 
     {
-        "Scene number",
-        "Interaction method",
-        "Interaction metaphor",
-        "User Number",
-        "Scaled Objects",
-        "Objects fell",
-        "Start time",
-        "End time"
+        "SceneNumber",
+        "InteractionMethod",
+        "InteractionMetaphor",
+        "UserNumber",
+        "ScaledObjects",
+        "ObjectsFell",
+        "StartTime",
+        "EndTime",
+        "FinishScaleCap",
+        "FinishScaleCube",
+        "FinishScaleKey",
+        "FinishScaleBook1",
+        "TimesCapFall",
+        "TimesSCubeFall",
+        "TimesKeyFall",
+        "TimesBook1Fall"
     };
 
     

@@ -62,7 +62,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SceneTwoHandDG.unity
     guid: e50b036210bfe9b41804ec04cc5d032b
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SceneThree.unity
     guid: ca01e58996b36814abc8d2922a84e0b3
   - enabled: 0
@@ -71,7 +71,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SceneThreeDG.unity
     guid: 9e5f65de69ee646429ed7e67f4d91d57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SceneThreeHandDG.unity
     guid: 271de4f47ec77e1498fb8e5508ac49ef
   m_configObjects:

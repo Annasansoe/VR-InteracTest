@@ -7,7 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 /// <summary>
 /// Provides the ability to reset specified objects if they fall below a certain position - designated by this transform's height.
 /// </summary>
-public class ObjectResetPlaneForSceneThree : MonoBehaviour
+public class ObjectResetPlaneAll : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("Which objects to reset if falling out of range.")]
