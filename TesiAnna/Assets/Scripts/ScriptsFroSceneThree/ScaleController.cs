@@ -180,6 +180,7 @@ public class ScaleController : MonoBehaviour
         ObjectResetPlaneCap.objectFellCap = 0;
         ObjectResetPlaneKey.objectFellKey = 0;
         ObjectResetPlaneDrawers.objectFellDrawers = 0;
+        scaleDone = 0;
     }
 
     

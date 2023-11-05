@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class InputFieldGrabberHand : MonoBehaviour
+public class InputFieldGrabberHandD : MonoBehaviour
 {
     [Header("Showing the reaction to the player")]
     [SerializeField] private GameObject reactiongGroup;
@@ -54,7 +54,7 @@ public class InputFieldGrabberHand : MonoBehaviour
 
     //public Button submitButton;
 
-    public List<QuestionHand> questions;
+    public List<QuestionHandD> questions;
     public int currentQuestionIndex = 0;
 
     private void Start()
@@ -63,11 +63,11 @@ public class InputFieldGrabberHand : MonoBehaviour
         invalidText.gameObject.SetActive(false);
         
         dateTimeStart = DateTime.Now;
-        questions = new List<QuestionHand>
+        questions = new List<QuestionHandD>
     {
-        new QuestionHand("The capital of France is PARIS", "Paris"),
-        new QuestionHand("In the solar system there are EIGHT planets", "eight"),
-        new QuestionHand("In a week there are SEVEN days", "Seven"),
+        new QuestionHandD("The capital of France is PARIS", "Paris"),
+        new QuestionHandD("In the solar system there are EIGHT planets", "eight"),
+        new QuestionHandD("In a week there are SEVEN days", "Seven"),
         // ... Add more questions here with their respective expected answers
     };
 
@@ -198,14 +198,14 @@ public class InputFieldGrabberHand : MonoBehaviour
         string[] returnable = new string[11];
         returnable[0] = "SceneTwo.csv";
         returnable[1] = "Hand";
-        returnable[2] = "RayCasting";
+        returnable[2] = "Direct";
         returnable[3] = indexTextTwoHand.ToString();
         returnable[4] = wrongAnswers.ToString();
         returnable[5] = rightAnswers.ToString();
         returnable[6] = num.ToString();
         returnable[7] = generalClick.ToString();
         returnable[8] = dateTimeStart.ToString();
-        returnable[9] = dateTimeEnd.ToString();
+        returnable[9] = dateTimeEnd.ToString();    
         returnable[10] = onStartQuestion.ToString();
         returnable[11] = onEndQuestion.ToString();
         return returnable;
@@ -213,12 +213,13 @@ public class InputFieldGrabberHand : MonoBehaviour
 }
 
 [System.Serializable]
-public class QuestionHand
+
+public class QuestionHandD
 {
     public string questionText;
     public string expectedAnswer;
 
-    public QuestionHand(string text, string answer)
+    public QuestionHandD(string text, string answer)
     {
         questionText = text;
         expectedAnswer = answer;

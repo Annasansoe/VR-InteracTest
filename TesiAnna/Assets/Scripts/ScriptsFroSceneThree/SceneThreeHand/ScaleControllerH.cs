@@ -49,7 +49,6 @@ public class ScaleControllerH : MonoBehaviour
     static string dateTimeStart;
     static string finishScaleCube;
     public static string dateTimeEnd;
-    static int totScaleEnd = 0;
     static int totalFellObjects = 0;
     public static int scaleDone = 0;
 
@@ -176,6 +175,7 @@ public class ScaleControllerH : MonoBehaviour
         ObjectResetPlaneCap.objectFellCap = 0;
         ObjectResetPlaneKey.objectFellKey = 0;
         ObjectResetPlaneDrawers.objectFellDrawers = 0;
+        scaleDone = 0;
     }
 
 
@@ -185,7 +185,7 @@ public class ScaleControllerH : MonoBehaviour
         int i = 0;
         string[] returnable = new string[60];
         returnable[0] = "SceneThree.csv";
-        returnable[1] = "Controllers";
+        returnable[1] = "Hands";
         returnable[2] = "Raycasting";
         returnable[3] = indexTextSThreeHands.ToString();
         returnable[4] = scaleDone.ToString();

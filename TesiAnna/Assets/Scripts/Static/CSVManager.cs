@@ -31,10 +31,12 @@ public static class CSVManager
     {
         "SceneNumber",
         "InteractionMethod",
+        "InteractionMetaphor",
         "UserNumber",
         "WrongAnswer",
         "CorrectAnswer",
         "TotalCanc",
+        "TotalClick",
         "StartTime",
         "EndTime"
     };

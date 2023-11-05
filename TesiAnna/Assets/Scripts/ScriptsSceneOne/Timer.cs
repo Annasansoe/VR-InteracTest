@@ -3,6 +3,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     private float timeDuration = 3f*60;
+    //private float timeDuration = 10f;
 
     public static float timer;
     public static int timeIsUp = 0;

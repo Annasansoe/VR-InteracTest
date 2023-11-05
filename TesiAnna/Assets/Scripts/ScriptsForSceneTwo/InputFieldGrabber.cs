@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -38,12 +38,15 @@ public class InputFieldGrabber : MonoBehaviour
 
     [Header("Return button")]
     public Button backToMenu;
-    string dateTimeStart;
-    string dateTimeEnd;
+    DateTime dateTimeStart;
+    DateTime dateTimeEnd;
     private static int indexTextTwo;
     int wrongAnswers = 0;
     int rightAnswers = 0;
     private static int numCanc = 0;
+    private static int generalClick = 0;
+    DateTime onStartQuestion;
+    DateTime onEndQuestion;
 
     public List<Question> questions;
     public int currentQuestionIndex = 0;
@@ -53,11 +56,9 @@ public class InputFieldGrabber : MonoBehaviour
 
    void Start()
     {
-
-        
         validText.gameObject.SetActive(false);
         invalidText.gameObject.SetActive(false);
-        dateTimeStart = System.DateTime.UtcNow.ToString();
+        dateTimeStart = DateTime.Now;
         questions = new List<Question>
         {
             new Question("The capital of France is PARIS", "Paris"),
@@ -68,6 +69,20 @@ public class InputFieldGrabber : MonoBehaviour
 
         DisplayQuestion(currentQuestionIndex);
        
+    }
+    void Update()
+    {
+        if(Timer.timeIsUp == 1)
+        {
+            endMenu.SetActive(true);
+            questionText.gameObject.SetActive(false); ;
+            inputField.gameObject.SetActive(false);
+            keyBoard.SetActive(false);
+            validText.gameObject.SetActive(false);
+            invalidText.gameObject.SetActive(false);
+            PlayEndSound();
+            Debug.Log("Questionnaire completed!");
+        }
     }
     private void HideValidText()
     {
@@ -83,11 +98,16 @@ public class InputFieldGrabber : MonoBehaviour
     {
         questionText.text = questions[index].questionText;
         inputField.text = "";
+        onStartQuestion = DateTime.Now;
     }
 
     public void OnClickBackspace()
     {
         numCanc++;
+    }
+    public void OnClickGeneral()
+    {
+        generalClick++;
     }
 
     public void OnSubmitAnswer()
@@ -111,8 +131,10 @@ public class InputFieldGrabber : MonoBehaviour
         else
         {
             Debug.Log("Answer is correct.");
+            onEndQuestion = DateTime.Now;
             validText.text = "Valid text";
             validText.gameObject.SetActive(true);
+
             Invoke("HideValidText", _time);
             if (validSource != null && validClip != null)
             {
@@ -153,25 +175,30 @@ public class InputFieldGrabber : MonoBehaviour
 
     public void BackToMenu()
     {
-        dateTimeEnd = System.DateTime.UtcNow.ToString();
+        dateTimeEnd = DateTime.Now;
         CSVManager.AppendToReport(GetReportLine());
         indexTextTwo++;
         wrongAnswers = 0;
         rightAnswers = 0;
         numCanc = 0;
+        generalClick = 0;
     }
 
     string[] GetReportLine()
     {
-        string[] returnable = new string[8];
+        string[] returnable = new string[11];
         returnable[0] = "SceneTwo.csv";
         returnable[1] = "Controllers";
-        returnable[2] = indexTextTwo.ToString();
-        returnable[3] = wrongAnswers.ToString();
-        returnable[4] = rightAnswers.ToString();
-        returnable[5] = numCanc.ToString();
-        returnable[6] = dateTimeStart;
-        returnable[7] = dateTimeEnd;
+        returnable[2] = "RayCasting";
+        returnable[3] = indexTextTwo.ToString();
+        returnable[4] = wrongAnswers.ToString();
+        returnable[5] = rightAnswers.ToString();
+        returnable[6] = numCanc.ToString();
+        returnable[7] = generalClick.ToString();
+        returnable[8] = dateTimeStart.ToString();
+        returnable[9] = dateTimeEnd.ToString();
+        returnable[10] = onStartQuestion.ToString();
+        returnable[11] = onEndQuestion.ToString();
         return returnable;
     }
 }

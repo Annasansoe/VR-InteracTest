@@ -48,7 +48,6 @@ public class ScaleControllerDG : MonoBehaviour
     static string dateTimeStart;
     static string finishScaleCube;
     public static string dateTimeEnd;
-    static int totScaleEnd = 0;
     static int totalFellObjects = 0;
     public static int scaleDone = 0;
     //FOR CSV
@@ -166,6 +165,7 @@ public class ScaleControllerDG : MonoBehaviour
         ObjectResetPlaneKey.objectFellKey = 0;
         ObjectResetPlaneDrawers.objectFellDrawers = 0;
         ScaleControllerForDrawersDG.cubeDrawersResized = 0;
+        scaleDone = 0;
     }
 
 
@@ -176,7 +176,7 @@ public class ScaleControllerDG : MonoBehaviour
         string[] returnable = new string[60];
         returnable[0] = "SceneThree.csv";
         returnable[1] = "Controllers";
-        returnable[2] = "Raycasting";
+        returnable[2] = "Direct";
         returnable[3] = indexTextSThree.ToString();
         returnable[4] = scaleDone.ToString();
         returnable[5] = totalFellObjects.ToString();
