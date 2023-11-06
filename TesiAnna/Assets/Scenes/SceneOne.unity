@@ -5852,7 +5852,7 @@ GameObject:
   - component: {fileID: 680179694}
   - component: {fileID: 680179693}
   - component: {fileID: 680179696}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: LoadScene (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22347,7 +22347,7 @@ GameObject:
   - component: {fileID: 2016723550}
   - component: {fileID: 2016723552}
   - component: {fileID: 2016723551}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
