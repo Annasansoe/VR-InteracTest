@@ -25,7 +25,7 @@ public class ObjectResetPlaneAll : MonoBehaviour
 
     [SerializeField] private float _time = 3f;
 
-    public static int objectFellSceneThree = 0;
+    public static int objectFellCube = 0;
 
     [Header("The object fell sound")]
     public AudioSource audioSource;
@@ -90,7 +90,7 @@ public class ObjectResetPlaneAll : MonoBehaviour
     private IEnumerator ShowMessage()
     {
         wrongBin.enabled = true;
-        objectFellSceneThree++;
+        objectFellCube++;
         yield return new WaitForSeconds(_time);
 
         wrongBin.enabled = false;

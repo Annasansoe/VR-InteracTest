@@ -57,8 +57,8 @@ public class ScaleControllerForDrawersDG : MonoBehaviour
     {
         Vector3 sizeCube1 = cubeTargetD.transform.localScale;
         Vector3 sizeCube2 = cubeManipulableD.transform.localScale;
-        XRGeneralGrabTransformer grabTransformer = cubeManipulableD.GetComponent<XRGeneralGrabTransformer>();
 
+        XRGeneralGrabTransformer grabTransformer = cubeManipulableD.GetComponent<XRGeneralGrabTransformer>();
         // Change the color of the cube based on certain conditions
         if (sizeCube1.x * sizeCube1.y * sizeCube1.z >= sizeCube2.x * sizeCube2.y * sizeCube2.z && !sizesEqualized)
         {
@@ -88,11 +88,10 @@ public class ScaleControllerForDrawersDG : MonoBehaviour
                 cubeRenderer.material.color = isBigger;
             }
         }
-  
+
 
         if (cubeDrawersResized == 4)
         {
-
             ScaleControllerDG.scaleDone += 1;
             cubeDrawersResized = 5;
             missionCompletedTextD.gameObject.SetActive(true);
@@ -110,9 +109,11 @@ public class ScaleControllerForDrawersDG : MonoBehaviour
         if (ScaleControllerDG.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-            //ScaleControllerDG.scaleDone = 4;
+            // ScaleController.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
+            ScaleControllerDG.dateTimeEnd = DateTime.UtcNow.ToString();
+            //ScaleController.scaleDone = 0;
         }
 
     }

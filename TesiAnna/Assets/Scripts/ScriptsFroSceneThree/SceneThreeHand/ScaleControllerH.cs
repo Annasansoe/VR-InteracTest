@@ -52,6 +52,7 @@ public class ScaleControllerH : MonoBehaviour
     static int totalFellObjects = 0;
     public static int scaleDone = 0;
 
+    private bool timeIsFinished = false;
     //FOR CSV
 
     public static DateTime dateTimeGrab;
@@ -92,7 +93,6 @@ public class ScaleControllerH : MonoBehaviour
             if (grabTransformer != null)
             {
                 grabTransformer.allowTwoHandedScaling = false;
-
             }
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
             if (cubeRenderer != null)
@@ -113,7 +113,7 @@ public class ScaleControllerH : MonoBehaviour
             Debug.Log("Both cubes have the same size.");
 
         }
-        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             Debug.Log("Cube 1 is larger than Cube 2.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -122,16 +122,32 @@ public class ScaleControllerH : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-       
+
         if (scaleDone == 4 || Timer.timeIsUp == 1)
         {
-            dateTimeEnd = DateTime.Now.ToString();
-            Invoke("PlaySound", 2f);
-            //scaleDone = 0;
-            DeactivateObjectsInList();
-            activateEndMenu();
+            if (!timeIsFinished)
+            {
+                dateTimeEnd = DateTime.Now.ToString();
+                Invoke("PlaySound", 2f);
+                DeactivateObjectsInList();
+                activateEndMenu();
+                timeIsFinished = true;
+            }
+
+            Timer myTimer = new Timer();
+            myTimer.stopTimer();
         }
     }
+
+
+    public void IsTimerFinished()
+    {
+        if (Timer.timeIsUp == 1)
+        {
+            timeIsFinished = true;
+        }
+    }
+
     public void activateEndMenu()
     {
         endMenu.SetActive(true);
@@ -168,10 +184,10 @@ public class ScaleControllerH : MonoBehaviour
     public void BackToMenu()
     {
         //totScaleEnd = scaleDone;
-        totalFellObjects = ObjectResetPlaneAll.objectFellSceneThree + ObjectResetPlaneCap.objectFellCap + ObjectResetPlaneKey.objectFellKey + ObjectResetPlaneDrawers.objectFellDrawers;
+        totalFellObjects = ObjectResetPlaneAll.objectFellCube + ObjectResetPlaneCap.objectFellCap + ObjectResetPlaneKey.objectFellKey + ObjectResetPlaneDrawers.objectFellDrawers;
         CSVManager.AppendToReport(GetReportLine());
         indexTextSThreeHands++;
-        ObjectResetPlaneAll.objectFellSceneThree = 0;
+        ObjectResetPlaneAll.objectFellCube = 0;
         ObjectResetPlaneCap.objectFellCap = 0;
         ObjectResetPlaneKey.objectFellKey = 0;
         ObjectResetPlaneDrawers.objectFellDrawers = 0;
@@ -196,7 +212,7 @@ public class ScaleControllerH : MonoBehaviour
         returnable[9] = finishScaleCube;
         returnable[10] = ScaleControllerKeyH.finishScaleKey;
         returnable[11] = ScaleControllerForDrawersH.finishScaleBook1;
-        returnable[12] = ObjectResetPlaneAll.objectFellSceneThree.ToString();
+        returnable[12] = ObjectResetPlaneAll.objectFellCube.ToString();
         returnable[13] = ObjectResetPlaneCap.objectFellCap.ToString();
         returnable[14] = ObjectResetPlaneKey.objectFellKey.ToString();
         returnable[15] = ObjectResetPlaneDrawers.objectFellDrawers.ToString();

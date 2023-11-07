@@ -5,12 +5,12 @@ public class ScoreManager : MonoBehaviour
 {
     public void BackToMenu()
     {
-        ScoreArea.totScoreEnd = ScoreArea.totScore;
-        ScoreArea.dateTimeEnd = DateTime.Now;
         CSVManager.AppendToReport(GetReportLine());
         ScoreArea.indexText++;
         ScoreArea.totScore = 0;
         ObjectResetPlaneForSceneOne.objectFell = 0;
+        ScoreArea.interactionDataListStart.Clear();
+        ScoreArea.interactionDataList.Clear();
     }
 
     public static string[] GetReportLine()

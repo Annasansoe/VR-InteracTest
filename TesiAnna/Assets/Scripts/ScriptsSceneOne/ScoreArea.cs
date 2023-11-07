@@ -15,6 +15,7 @@ public class ScoreArea : MonoBehaviour
     int paperScore = 0;
     int organicScore = 0;
     int plasticScore = 0;
+    private bool timeIsFinished = false;
 
     [Header("CollectedObjects")]
     public TMP_Text collectedTotObjectsText;
@@ -60,8 +61,10 @@ public class ScoreArea : MonoBehaviour
 
     private void Start()
     {
+        timeIsFinished = false;
         menuAtTheEnd.SetActive(false);
         XRGrabInteractable = GetComponentsInChildren<XRGrabInteractable>();
+        
         dateTimeStart = DateTime.Now;
         collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
         collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
@@ -80,14 +83,18 @@ public class ScoreArea : MonoBehaviour
         
         if (totScore == 25 || Timer.timeIsUp == 1)
         {
-            PlaySoundEnd();
-            foreach (TMP_Text textElement in textElements)
+            if (!timeIsFinished)
             {
-                textElement.gameObject.SetActive(false);
+                PlaySoundEnd();
+                foreach (TMP_Text textElement in textElements)
+                {
+                    textElement.gameObject.SetActive(false);
+                }
+                menuAtTheEnd.SetActive(true);
+                totScoreEnd = totScore;
+                dateTimeEnd = DateTime.Now;
+                timeIsFinished = true;
             }
-            menuAtTheEnd.SetActive(true);
-            ScoreManager instanceScoreManager = new ScoreManager();
-            instanceScoreManager.BackToMenu();
         }
     }
 
@@ -105,8 +112,15 @@ public class ScoreArea : MonoBehaviour
     }
 
 
-    
-    
+    /*public void IsTimerFinished()
+    {
+        if (Timer.timeIsUp == 1)
+        {
+            timeIsFinished = true;
+        }
+    }
+    */
+
     void OnTriggerEnter(Collider otherCollider)
     {
         string objectName = otherCollider.gameObject.name;

@@ -40,6 +40,7 @@ public class ScaleControllerForZAxisCubeH : MonoBehaviour
     private bool hasBeenPlayed = false;
     private bool sizesEqualized = false;
     public static string finishScaleCap;
+    public static DateTime dateTimeEnd;
 
     private void Start()
     {
@@ -96,13 +97,16 @@ public class ScaleControllerForZAxisCubeH : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-       
+
         if (ScaleControllerH.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-            //ScaleControllerH.scaleDone = 4;
             DeactivateObjectsInList();
             activateEndMenu();
+            ScaleControllerH.dateTimeEnd = DateTime.Now.ToString();
+            /* ScaleController instanceScoreManager = new ScaleController();
+             instanceScoreManager.BackToMenu();*/
+            //ScaleController.scaleDone =0;
         }
     }
     public void activateEndMenu()

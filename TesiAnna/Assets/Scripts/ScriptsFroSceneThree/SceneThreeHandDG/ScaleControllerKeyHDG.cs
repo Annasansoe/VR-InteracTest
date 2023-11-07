@@ -96,14 +96,13 @@ public class ScaleControllerKeyHDG : MonoBehaviour
             }
         }
 
-
         if (ScaleControllerHDG.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-            //ScaleControllerHDG.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
             ScaleControllerHDG.dateTimeEnd = DateTime.Now.ToString();
+            //ScaleController.scaleDone = 0;
         }
     }
 

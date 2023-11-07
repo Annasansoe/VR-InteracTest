@@ -2316,6 +2316,7 @@ MonoBehaviour:
   - {fileID: 1517623341}
   - {fileID: 719085962}
   - {fileID: 446989636}
+  - {fileID: 659776707}
   cubeTarget: {fileID: 1517623341}
   cubeManipulable: {fileID: 719085969}
   requestText: {fileID: 659776709}
@@ -3728,6 +3729,7 @@ MonoBehaviour:
   - {fileID: 1517623341}
   - {fileID: 719085962}
   - {fileID: 446989636}
+  - {fileID: 659776707}
   cubeTargetD: {fileID: 1751718975}
   cubeManipulableD: {fileID: 889798605}
   requestTextD: {fileID: 1548945499}
@@ -4589,6 +4591,7 @@ MonoBehaviour:
   - {fileID: 1517623341}
   - {fileID: 719085962}
   - {fileID: 446989636}
+  - {fileID: 659776707}
   cubeTargetD: {fileID: 1751718975}
   cubeManipulableD: {fileID: 672255681}
   requestTextD: {fileID: 1548945499}
@@ -4613,6 +4616,7 @@ GameObject:
   - component: {fileID: 385751865}
   - component: {fileID: 385751864}
   - component: {fileID: 385751863}
+  - component: {fileID: 385751867}
   m_Layer: 5
   m_Name: LoadScene (1)
   m_TagString: Untagged
@@ -4729,7 +4733,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 719085971}
+      - m_Target: {fileID: 385751867}
         m_TargetAssemblyTypeName: ScaleController, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -4779,6 +4783,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385751861}
   m_CullTransparentMesh: 1
+--- !u!114 &385751867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385751861}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d6b00506eaea0499a1dfdcc48b934e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDeactivate: []
+  cubeTarget: {fileID: 0}
+  cubeManipulable: {fileID: 0}
+  requestText: {fileID: 0}
+  missionCompletedText: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  endMenu: {fileID: 0}
+  isSmaller: {r: 1, g: 0, b: 0, a: 1}
+  isEqual: {r: 0, g: 1, b: 0, a: 1}
+  isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &389568581
 GameObject:
   m_ObjectHideFlags: 0
@@ -6299,6 +6329,7 @@ GameObject:
   - component: {fileID: 524409390}
   - component: {fileID: 524409389}
   - component: {fileID: 524409388}
+  - component: {fileID: 524409393}
   m_Layer: 5
   m_Name: Button
   m_TagString: Button
@@ -6443,7 +6474,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 719085971}
+      - m_Target: {fileID: 524409393}
         m_TargetAssemblyTypeName: ScaleController, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
@@ -6505,6 +6536,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524409386}
   m_CullTransparentMesh: 1
+--- !u!114 &524409393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524409386}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d6b00506eaea0499a1dfdcc48b934e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDeactivate: []
+  cubeTarget: {fileID: 0}
+  cubeManipulable: {fileID: 0}
+  requestText: {fileID: 0}
+  missionCompletedText: {fileID: 0}
+  backToMenu: {fileID: 0}
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 0}
+  audioSourceEnd: {fileID: 0}
+  soundClipEnd: {fileID: 0}
+  endMenu: {fileID: 0}
+  isSmaller: {r: 1, g: 0, b: 0, a: 1}
+  isEqual: {r: 0, g: 1, b: 0, a: 1}
+  isBigger: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &527518526
 GameObject:
   m_ObjectHideFlags: 0
@@ -14397,6 +14454,7 @@ MonoBehaviour:
   - {fileID: 1517623341}
   - {fileID: 719085962}
   - {fileID: 446989636}
+  - {fileID: 659776707}
   cubeTarget: {fileID: 784072565945419590}
   cubeManipulable: {fileID: 1193996408}
   requestTextK: {fileID: 1895273558}
@@ -16035,6 +16093,7 @@ MonoBehaviour:
   - {fileID: 1517623341}
   - {fileID: 719085962}
   - {fileID: 446989636}
+  - {fileID: 659776707}
   cubeTargetD: {fileID: 1751718975}
   cubeManipulableD: {fileID: 456140650}
   requestTextD: {fileID: 1548945499}
@@ -18877,6 +18936,7 @@ MonoBehaviour:
   - {fileID: 1517623341}
   - {fileID: 719085962}
   - {fileID: 446989636}
+  - {fileID: 659776707}
   cubeTarget: {fileID: 1681047014}
   cubeManipulable: {fileID: 1329622409}
   requestTextZ: {fileID: 425941962}
@@ -20298,7 +20358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f15c34447afb7498c2f32e1156f1ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prova: {fileID: 0}
   firstMinute: {fileID: 1495059395}
   secondMinute: {fileID: 31197960}
   separator: {fileID: 754251136}
@@ -22531,6 +22590,7 @@ MonoBehaviour:
   - {fileID: 1517623341}
   - {fileID: 719085962}
   - {fileID: 446989636}
+  - {fileID: 659776707}
   cubeTargetD: {fileID: 1751718975}
   cubeManipulableD: {fileID: 1418512005}
   requestTextD: {fileID: 1548945499}

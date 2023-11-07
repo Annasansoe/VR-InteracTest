@@ -94,13 +94,16 @@ public class ScaleControllerForZAxisCubeHDG : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-       
+
         if (ScaleControllerHDG.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-            //ScaleControllerHDG.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
+            ScaleControllerHDG.dateTimeEnd = DateTime.Now.ToString();
+            /* ScaleController instanceScoreManager = new ScaleController();
+             instanceScoreManager.BackToMenu();*/
+            //ScaleController.scaleDone =0;
         }
     }
     public void activateEndMenu()

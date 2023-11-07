@@ -38,15 +38,16 @@ public class InputFieldGrabber : MonoBehaviour
 
     [Header("Return button")]
     public Button backToMenu;
-    DateTime dateTimeStart;
-    DateTime dateTimeEnd;
+    public static DateTime dateTimeStart;
+    public static DateTime dateTimeEnd;
     private static int indexTextTwo;
-    int wrongAnswers = 0;
-    int rightAnswers = 0;
+    public static int wrongAnswers = 0;
+    public static int rightAnswers = 0;
     private static int numCanc = 0;
     private static int generalClick = 0;
-    DateTime onStartQuestion;
-    DateTime onEndQuestion;
+    public static DateTime onStartQuestion;
+    public static DateTime onEndQuestion;
+    private bool timeIsFinished = false;
 
     public List<Question> questions;
     public int currentQuestionIndex = 0;
@@ -74,14 +75,19 @@ public class InputFieldGrabber : MonoBehaviour
     {
         if(Timer.timeIsUp == 1)
         {
-            endMenu.SetActive(true);
-            questionText.gameObject.SetActive(false); ;
-            inputField.gameObject.SetActive(false);
-            keyBoard.SetActive(false);
-            validText.gameObject.SetActive(false);
-            invalidText.gameObject.SetActive(false);
-            PlayEndSound();
-            Debug.Log("Questionnaire completed!");
+            if (!timeIsFinished)
+            {
+                dateTimeEnd = DateTime.Now;
+                endMenu.SetActive(true);
+                questionText.gameObject.SetActive(false); ;
+                inputField.gameObject.SetActive(false);
+                keyBoard.SetActive(false);
+                validText.gameObject.SetActive(false);
+                invalidText.gameObject.SetActive(false);
+                PlayEndSound();
+                Debug.Log("Questionnaire completed!");
+                timeIsFinished = true;
+            }
         }
     }
     private void HideValidText()
@@ -109,7 +115,6 @@ public class InputFieldGrabber : MonoBehaviour
     {
         generalClick++;
     }
-
     public void OnSubmitAnswer()
     {
         string userAnswer = inputField.text.ToString();
@@ -126,12 +131,12 @@ public class InputFieldGrabber : MonoBehaviour
                 invalidSource.PlayOneShot(invalidClip);
             }
            
-            wrongAnswers++;
+           
         }
         else
         {
             Debug.Log("Answer is correct.");
-            onEndQuestion = DateTime.Now;
+          
             validText.text = "Valid text";
             validText.gameObject.SetActive(true);
 
@@ -141,7 +146,7 @@ public class InputFieldGrabber : MonoBehaviour
                 validSource.PlayOneShot(validClip);
             }
             currentQuestionIndex++;
-            rightAnswers++;
+           
         }
         reactionTextBox.text = "Welcome to the team, " + userAnswer + "!";
        
@@ -161,10 +166,23 @@ public class InputFieldGrabber : MonoBehaviour
             validText.gameObject.SetActive(false);
             invalidText.gameObject.SetActive(false);
             PlayEndSound();
+            dateTimeEnd = DateTime.Now;
             Debug.Log("Questionnaire completed!");
         }
     }
-    
+    public void OnCorrectAnswer()
+    {
+        string userAnswerC = inputField.text.ToString();
+        if (userAnswerC.ToLower() == questions[currentQuestionIndex].expectedAnswer.ToLower())
+        {
+            onEndQuestion = DateTime.Now;
+            rightAnswers += 1;
+        }
+        else
+        {
+            wrongAnswers += 1;
+        }
+    }
     void PlayEndSound()
     {
         if (endSound != null && soundClipEnd != null)
@@ -175,7 +193,7 @@ public class InputFieldGrabber : MonoBehaviour
 
     public void BackToMenu()
     {
-        dateTimeEnd = DateTime.Now;
+        //dateTimeEnd = DateTime.Now;
         CSVManager.AppendToReport(GetReportLine());
         indexTextTwo++;
         wrongAnswers = 0;
@@ -186,7 +204,7 @@ public class InputFieldGrabber : MonoBehaviour
 
     string[] GetReportLine()
     {
-        string[] returnable = new string[11];
+        string[] returnable = new string[20];
         returnable[0] = "SceneTwo.csv";
         returnable[1] = "Controllers";
         returnable[2] = "RayCasting";

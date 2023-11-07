@@ -100,9 +100,10 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
         {
             Invoke("PlaySound", 2f);
             DeactivateObjectsInList();
-            activateEndMenu(); 
-           /* ScaleController instanceScoreManager = new ScaleController();
-            instanceScoreManager.BackToMenu();*/
+            activateEndMenu();
+            ScaleController.dateTimeEnd = DateTime.Now.ToString();
+            /* ScaleController instanceScoreManager = new ScaleController();
+             instanceScoreManager.BackToMenu();*/
             //ScaleController.scaleDone =0;
         }
     }

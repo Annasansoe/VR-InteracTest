@@ -3,14 +3,12 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     private float timeDuration = 3f*60;
-    //private float timeDuration = 10f;
+   // private float timeDuration = 10f;
 
     public static float timer;
     public static int timeIsUp = 0;
 
-    [SerializeField]
-    private TextMeshProUGUI prova;
-
+    
     [SerializeField]
     private TextMeshProUGUI firstMinute;
     [SerializeField]
@@ -38,8 +36,6 @@ public class Timer : MonoBehaviour
     void Start()
     {
         ResetTimer();
-
-        prova.text = timeIsUp.ToString();
     }
 
     // Update is called once per frame
@@ -63,7 +59,7 @@ public class Timer : MonoBehaviour
         {
             // Timer is up
             timeIsUp = 1;
-            prova.text = timeIsUp.ToString();
+            
            // PlaySoundEnd(); // Play the end sound when the timer is up
         }
     }
@@ -72,6 +68,15 @@ public class Timer : MonoBehaviour
     private void ResetTimer()
     {
         timer = timeDuration;
+        timeIsUp = 0;
+    }
+
+   public void stopTimer()
+    {
+        firstMinute.gameObject.SetActive(false);
+        secondMinute.gameObject.SetActive(false);
+        firstSecond.gameObject.SetActive(false);
+        secondSecond.gameObject.SetActive(false);
     }
 
     private void UpdateTimerDisplay(float time)
@@ -132,12 +137,6 @@ public class Timer : MonoBehaviour
         }
     }
 
-    void PlaySoundEnd()
-    {
-        if (audioSourceEnd != null && soundClipEnd != null)
-        {
-            audioSourceEnd.PlayOneShot(soundClipEnd);
-        }
-    }
+    
 
 }

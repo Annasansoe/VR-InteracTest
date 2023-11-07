@@ -110,9 +110,11 @@ public class ScaleControllerForDrawersHDG : MonoBehaviour
         if (ScaleControllerHDG.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-            //ScaleController.scaleDone = 0;
+            //ScaleControllerHDG.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
+            ScaleControllerHDG.dateTimeEnd = DateTime.UtcNow.ToString();
+            //ScaleController.scaleDone = 0;
         }
 
     }

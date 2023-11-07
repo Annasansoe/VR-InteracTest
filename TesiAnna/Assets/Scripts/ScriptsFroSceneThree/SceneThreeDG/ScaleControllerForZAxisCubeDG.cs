@@ -86,7 +86,6 @@ public class ScaleControllerForZAxisCubeDG : MonoBehaviour
 
             missionCompletedTextZ.gameObject.SetActive(true);
             Debug.Log("Both cubes have the same size.");
-
         }
         else if (sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
@@ -97,14 +96,16 @@ public class ScaleControllerForZAxisCubeDG : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-        
 
         if (ScaleControllerDG.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-            //ScaleControllerDG.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
+            ScaleControllerDG.dateTimeEnd = DateTime.Now.ToString();
+            /* ScaleController instanceScoreManager = new ScaleController();
+             instanceScoreManager.BackToMenu();*/
+            //ScaleController.scaleDone =0;
         }
     }
 

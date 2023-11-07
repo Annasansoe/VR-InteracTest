@@ -16,6 +16,7 @@ public class ScoreAreaHands : MonoBehaviour
     int paperScore = 0;
     int organicScore = 0;
     int plasticScore = 0;
+    private bool timeIsFinished = false;
 
     [Header("CollectedObjects")]
     public TMP_Text collectedTotObjectsTextH;
@@ -60,6 +61,7 @@ public class ScoreAreaHands : MonoBehaviour
 
     private void Start()
     {
+        timeIsFinished = false;
         menuAtTheEnd.gameObject.SetActive(false);
         XRGrabInteractable = GetComponentsInChildren<XRGrabInteractable>();
         dateTimeStart = DateTime.Now;
@@ -79,16 +81,29 @@ public class ScoreAreaHands : MonoBehaviour
 
         if (totScore == 25 || Timer.timeIsUp == 1)
         {
-            PlaySoundEnd();
-            foreach (TMP_Text textElement in textElements)
+            if (!timeIsFinished)
             {
-                textElement.gameObject.SetActive(false);
+                PlaySoundEnd();
+                foreach (TMP_Text textElement in textElements)
+                {
+                    textElement.gameObject.SetActive(false);
+                }
+                menuAtTheEnd.SetActive(true);
+                totScoreEnd = totScore;
+                dateTimeEnd = DateTime.Now;
+                timeIsFinished = true;
             }
-            menuAtTheEnd.SetActive(true);
-            ScoreManagerHands instanceScoreManager = new ScoreManagerHands();
-            instanceScoreManager.BackToMenuHands();
         }
     }
+
+    /*
+    public void IsTimerFinished()
+    {
+        if (Timer.timeIsUp == 1)
+        {
+            timeIsFinished = true;
+        }
+    }*/
     public void SelecetedXRGrab(XRGrabInteractable XRGrabInteractable)
     {
         // The object was just grabbed.
@@ -159,17 +174,7 @@ public class ScoreAreaHands : MonoBehaviour
         interactionDataList.Add(trashDisposalData);
         Destroy(otherCollider.gameObject);
 
-        if (totScore == 25)
-        {
-            menuAtTheEnd.SetActive(true);
-            PlaySoundEnd();
-            foreach (TMP_Text textElement in textElements)
-            {
-                textElement.gameObject.SetActive(false);
-            }
-            ScoreManagerHands instanceScoreManager = new ScoreManagerHands();
-            instanceScoreManager.BackToMenuHands();
-        }
+       
    }
     void PlaySound()
     {

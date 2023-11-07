@@ -58,9 +58,8 @@ public class ScaleControllerKeyDG : MonoBehaviour
     {
         Vector3 sizeCube1 = cubeTarget.transform.localScale;
         Vector3 sizeCube2 = cubeManipulable.transform.localScale;
-        Vector3 positionToMatch = cubeManipulable.transform.position;
-
         XRGeneralGrabTransformer grabTransformer = cubeManipulable.GetComponent<XRGeneralGrabTransformer>();
+
         // Change the color of the cube based on certain conditions
         if (sizeCube1.x * sizeCube1.y * sizeCube1.z >= sizeCube2.x * sizeCube2.y * sizeCube2.z && !sizesEqualized)
         {
@@ -87,6 +86,7 @@ public class ScaleControllerKeyDG : MonoBehaviour
 
             missionCompletedTextK.gameObject.SetActive(true);
             Debug.Log("Both cubes have the same size.");
+
         }
         else if (sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
@@ -98,12 +98,14 @@ public class ScaleControllerKeyDG : MonoBehaviour
             }
         }
 
+      
         if (ScaleControllerDG.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-            //ScaleControllerDG.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
+            ScaleControllerDG.dateTimeEnd = DateTime.Now.ToString();
+            //ScaleController.scaleDone = 0;
         }
 
     }

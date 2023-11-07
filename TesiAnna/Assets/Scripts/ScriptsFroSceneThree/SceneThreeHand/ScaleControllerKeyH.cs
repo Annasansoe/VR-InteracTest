@@ -40,6 +40,7 @@ public class ScaleControllerKeyH : MonoBehaviour
     private bool sizesEqualized = false;
     private bool hasBeenPlayed = false;
     public static string finishScaleKey;
+    public static DateTime dateTimeEnd;
 
     private void Start()
     {
@@ -97,14 +98,13 @@ public class ScaleControllerKeyH : MonoBehaviour
             }
         }
 
-
         if (ScaleControllerH.scaleDone == 4)
         {
             Invoke("PlaySound", 2f);
-            ScaleController.dateTimeEnd = DateTime.Now.ToString();
-            //ScaleControllerH.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
+            ScaleControllerH.dateTimeEnd = DateTime.Now.ToString();
+            //ScaleController.scaleDone = 0;
         }
     }
 

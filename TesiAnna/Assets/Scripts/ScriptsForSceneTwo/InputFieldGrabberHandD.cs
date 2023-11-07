@@ -39,15 +39,17 @@ public class InputFieldGrabberHandD : MonoBehaviour
 
     [Header("Return button")]
     public Button backToMenu;
-    DateTime dateTimeStart;
-    DateTime dateTimeEnd;
+    
     private static int indexTextTwoHand;
-    int wrongAnswers = 0;
-    int rightAnswers = 0;
+    public static int wrongAnswers = 0;
+    public static int rightAnswers = 0;
     private static int num = 0;
     private static int generalClick = 0;
-    DateTime onStartQuestion;
-    DateTime onEndQuestion;
+    private bool timeIsFinished = false;
+    public static DateTime onStartQuestion;
+    public static DateTime onEndQuestion;
+    public static DateTime dateTimeStart;
+    public static DateTime dateTimeEnd;
 
     [SerializeField] private float _time = 1f;
 
@@ -77,17 +79,22 @@ public class InputFieldGrabberHandD : MonoBehaviour
     {
         if (Timer.timeIsUp == 1)
         {
-            endMenu.SetActive(true);
-            questionText.gameObject.SetActive(false); ;
-            inputField.gameObject.SetActive(false);
-            keyBoard.SetActive(false);
-            validText.gameObject.SetActive(false);
-            invalidText.gameObject.SetActive(false);
-            PlayEndSound();
-            Debug.Log("Questionnaire completed!");
+            if (!timeIsFinished)
+            {
+                dateTimeEnd = DateTime.Now;
+                endMenu.SetActive(true);
+                questionText.gameObject.SetActive(false); ;
+                inputField.gameObject.SetActive(false);
+                keyBoard.SetActive(false);
+                validText.gameObject.SetActive(false);
+                invalidText.gameObject.SetActive(false);
+                PlayEndSound();
+                Debug.Log("Questionnaire completed!");
+                timeIsFinished = true;
+            }
         }
     }
-
+   
     private void HideValidText()
     {
         validText.gameObject.SetActive(false);
@@ -113,7 +120,19 @@ public class InputFieldGrabberHandD : MonoBehaviour
     {
         generalClick++;
     }
-
+    public void OnCorrectAnswer()
+    {
+        string userAnswerC = inputField.text.ToString();
+        if (userAnswerC.ToLower() == questions[currentQuestionIndex].expectedAnswer.ToLower())
+        {
+            onEndQuestion = DateTime.Now;
+            rightAnswers+=1;
+        }
+        else
+        {
+            wrongAnswers += 1;
+        }
+    }
     public void OnSubmitAnswer()
     {
         string userAnswer = inputField.text.ToString();
@@ -128,24 +147,19 @@ public class InputFieldGrabberHandD : MonoBehaviour
             {
                 invalidSource.PlayOneShot(invalidClip);
             }
-           
-            wrongAnswers++;
-
-
         }
         else
         {
             Debug.Log("Answer is correct.");
             validText.text = "Valid text";
             validText.gameObject.SetActive(true);
-            onEndQuestion = DateTime.Now;
+           
             Invoke("HideValidText", _time);
             if (validSource != null && validClip != null)
             {
                 validSource.PlayOneShot(validClip);
-            }
+            }            
             
-            rightAnswers++;
             // Move to the next question and display it
             currentQuestionIndex++;
         }
@@ -168,8 +182,10 @@ public class InputFieldGrabberHandD : MonoBehaviour
             validText.gameObject.SetActive(false);
             invalidText.gameObject.SetActive(false);
             PlayEndSound();
+            dateTimeEnd = DateTime.Now;
+            dateTimeEnd = DateTime.Now;
             Debug.Log("Questionnaire completed!");
-            BackToMenu();
+            
         }
     }
 
@@ -183,7 +199,7 @@ public class InputFieldGrabberHandD : MonoBehaviour
 
     public void BackToMenu()
     {
-        dateTimeEnd = DateTime.Now;
+       
         CSVManager.AppendToReport(GetReportLine());
         indexTextTwoHand++;
         wrongAnswers = 0;
@@ -195,7 +211,7 @@ public class InputFieldGrabberHandD : MonoBehaviour
 
     string[] GetReportLine()
     {
-        string[] returnable = new string[11];
+        string[] returnable = new string[20];
         returnable[0] = "SceneTwo.csv";
         returnable[1] = "Hand";
         returnable[2] = "Direct";

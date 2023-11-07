@@ -42,6 +42,7 @@ public class ScaleControllerForDrawersH : MonoBehaviour
     private bool hasBeenPlayed = false;
     static int cubeDrawersResized;
     public static string finishScaleBook1;
+    public static DateTime dateTimeEnd;
 
     private void Start()
     {
@@ -60,8 +61,8 @@ public class ScaleControllerForDrawersH : MonoBehaviour
     {
         Vector3 sizeCube1 = cubeTargetD.transform.localScale;
         Vector3 sizeCube2 = cubeManipulableD.transform.localScale;
-        XRGeneralGrabTransformer grabTransformer = cubeManipulableD.GetComponent<XRGeneralGrabTransformer>();
 
+        XRGeneralGrabTransformer grabTransformer = cubeManipulableD.GetComponent<XRGeneralGrabTransformer>();
         // Change the color of the cube based on certain conditions
         if (sizeCube1.x * sizeCube1.y * sizeCube1.z >= sizeCube2.x * sizeCube2.y * sizeCube2.z && !sizesEqualized)
         {
@@ -91,20 +92,21 @@ public class ScaleControllerForDrawersH : MonoBehaviour
                 cubeRenderer.material.color = isBigger;
             }
         }
-  
+
 
         if (cubeDrawersResized == 4)
         {
-            missionCompletedTextD.gameObject.SetActive(true);
-            requestTextD.gameObject.SetActive(false);
             ScaleControllerH.scaleDone += 1;
             cubeDrawersResized = 5;
+            missionCompletedTextD.gameObject.SetActive(true);
+            requestTextD.gameObject.SetActive(false);
             if (!hasBeenPlayed)
             {
                 audioSource.clip = soundClip;
                 audioSource.Play();
                 finishScaleBook1 = DateTime.Now.ToString();
                 hasBeenPlayed = true;
+
             }
         }
 
@@ -114,6 +116,8 @@ public class ScaleControllerForDrawersH : MonoBehaviour
             //ScaleControllerH.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
+            ScaleControllerH.dateTimeEnd = DateTime.UtcNow.ToString();
+            //ScaleController.scaleDone = 0;
         }
     }
     public void activateEndMenu()

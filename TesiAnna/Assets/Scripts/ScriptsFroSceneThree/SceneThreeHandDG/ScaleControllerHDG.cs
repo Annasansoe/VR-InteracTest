@@ -56,7 +56,7 @@ public class ScaleControllerHDG : MonoBehaviour
 
     public static DateTime dateTimeGrab;
     public static DateTime dateTimeEndG;
-
+    private bool timeIsFinished = false;
     public static List<InteractionData> interactionDataListStart = new List<InteractionData>();
     public class InteractionData
     {
@@ -92,7 +92,6 @@ public class ScaleControllerHDG : MonoBehaviour
             if (grabTransformer != null)
             {
                 grabTransformer.allowTwoHandedScaling = false;
-
             }
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
             if (cubeRenderer != null)
@@ -113,7 +112,7 @@ public class ScaleControllerHDG : MonoBehaviour
             Debug.Log("Both cubes have the same size.");
 
         }
-        else if(sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
+        else if (sizeCube1.x * sizeCube1.y * sizeCube1.z > sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
             Debug.Log("Cube 1 is larger than Cube 2.");
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
@@ -122,16 +121,26 @@ public class ScaleControllerHDG : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-       
+
+
+
+
         if (scaleDone == 4 || Timer.timeIsUp == 1)
         {
-            dateTimeEnd = DateTime.Now.ToString();
-            Invoke("PlaySound", 2f);
-           //scaleDone = 0;
-            DeactivateObjectsInList();
-            activateEndMenu();
+            
+            if (!timeIsFinished)
+            {
+                dateTimeEnd = DateTime.Now.ToString();
+                Invoke("PlaySound", 2f);
+                DeactivateObjectsInList();
+                activateEndMenu();
+                timeIsFinished = true;
+            }
+            Timer myTimer = new Timer();
+            myTimer.stopTimer();
         }
     }
+  
     public void activateEndMenu()
     {
         endMenu.SetActive(true);
@@ -151,14 +160,33 @@ public class ScaleControllerHDG : MonoBehaviour
             audioSourceEnd.PlayOneShot(soundClipEnd);
         }
     }
+    public void SelecetedXRGrab(XRGeneralGrabTransformer XRGrabInteractable)
+    {
+        // The object was just grabbed.
+        var interactionData = new InteractionData
+        {
+            Timestamp = DateTime.Now,
+            ObjectName = XRGrabInteractable.name,
+            InteractionType = "Start Grabbing"
+        };
+        interactionDataListStart.Add(interactionData);
 
+    }
+    
+    public void IsTimerFinished()
+    {
+        if(Timer.timeIsUp == 1)
+        {
+            timeIsFinished = true;
+        }
+    }
     public void BackToMenu()
     {
         
-        totalFellObjects = ObjectResetPlaneAll.objectFellSceneThree + ObjectResetPlaneCap.objectFellCap + ObjectResetPlaneKey.objectFellKey + ObjectResetPlaneDrawers.objectFellDrawers;
+        totalFellObjects = ObjectResetPlaneAll.objectFellCube + ObjectResetPlaneCap.objectFellCap + ObjectResetPlaneKey.objectFellKey + ObjectResetPlaneDrawers.objectFellDrawers;
         CSVManager.AppendToReport(GetReportLine());
         indexTextSThree++;
-        ObjectResetPlaneAll.objectFellSceneThree = 0;
+        ObjectResetPlaneAll.objectFellCube = 0;
         ObjectResetPlaneCap.objectFellCap = 0;
         ObjectResetPlaneKey.objectFellKey = 0;
         ObjectResetPlaneDrawers.objectFellDrawers = 0;
@@ -183,7 +211,7 @@ public class ScaleControllerHDG : MonoBehaviour
         returnable[9] = finishScaleCube;
         returnable[10] = ScaleControllerKeyHDG.finishScaleKey;
         returnable[11] = ScaleControllerForDrawersHDG.finishScaleBook1;
-        returnable[12] = ObjectResetPlaneAll.objectFellSceneThree.ToString();
+        returnable[12] = ObjectResetPlaneAll.objectFellCube.ToString();
         returnable[13] = ObjectResetPlaneCap.objectFellCap.ToString();
         returnable[14] = ObjectResetPlaneKey.objectFellKey.ToString();
         returnable[15] = ObjectResetPlaneDrawers.objectFellDrawers.ToString();

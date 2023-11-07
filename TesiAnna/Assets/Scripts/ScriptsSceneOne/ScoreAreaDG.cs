@@ -15,6 +15,7 @@ public class ScoreAreaDG : MonoBehaviour
     int paperScore = 0;
     int organicScore = 0;
     int plasticScore = 0;
+    private bool timeIsFinished = false;
 
     [Header("CollectedObjects")]
     public TMP_Text collectedTotObjectsText;
@@ -61,9 +62,9 @@ public class ScoreAreaDG : MonoBehaviour
 
     private void Start()
     {
+        timeIsFinished = false;
         menuAtTheEnd.SetActive(false);
-        XRGrabInteractable = GetComponentsInChildren<XRGrabInteractable>();
-        
+        XRGrabInteractable = GetComponentsInChildren<XRGrabInteractable>();        
         dateTimeStart = DateTime.Now;
         collectedTotObjectsText.text = "Total collected objects: " + totScore.ToString() + " of 25";
         collectedUnsortedObjectsText.text = "Unsorted waste:  " + unsortedScore.ToString() + " of 5";
@@ -81,18 +82,29 @@ public class ScoreAreaDG : MonoBehaviour
 
         if (totScore == 25 || Timer.timeIsUp == 1)
         {
-            PlaySoundEnd();
-            foreach (TMP_Text textElement in textElements)
+            if (!timeIsFinished)
             {
-                textElement.gameObject.SetActive(false);
+                PlaySoundEnd();
+                foreach (TMP_Text textElement in textElements)
+                {
+                    textElement.gameObject.SetActive(false);
+                }
+                menuAtTheEnd.SetActive(true);
+                totScoreEnd = totScore;
+                dateTimeEnd = DateTime.Now;
+                timeIsFinished = true;
             }
-            menuAtTheEnd.SetActive(true);
-            ScoreManagerDG instanceScoreManager = new ScoreManagerDG();
-            instanceScoreManager.BackToMenuDG();
         }
     }
 
 
+    /*public void IsTimerFinished()
+    {
+        if (Timer.timeIsUp == 1)
+        {
+            timeIsFinished = true;
+        }
+    }*/
     public void SelecetedXRGrab(XRGrabInteractable XRGrabInteractable)
     {
         
@@ -171,19 +183,7 @@ public class ScoreAreaDG : MonoBehaviour
         interactionDataList.Add(trashDisposalData);
         Destroy(otherCollider.gameObject);
 
-        if(totScore == 25)
-        {
-           
-            PlaySoundEnd();
-            foreach (TMP_Text textElement in textElements)
-            {
-                textElement.gameObject.SetActive(false);
-            }
-            menuAtTheEnd.SetActive(true);
-            ScoreManagerDG instanceScoreManagerDG = new ScoreManagerDG();
-            instanceScoreManagerDG.BackToMenuDG();
-      
-        }
+       
     }
     
 

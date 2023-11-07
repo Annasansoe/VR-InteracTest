@@ -12,6 +12,7 @@ public class ShowKeyBoard : MonoBehaviour
     [SerializeField] public GameObject keyBoard;
     [SerializeField] TMP_Text validText;
     [SerializeField] TMP_Text invalidText;
+    private bool timeIsFinished = false;
 
     [Header("Audio sounds")]
     public AudioSource endSound;
@@ -27,14 +28,18 @@ public class ShowKeyBoard : MonoBehaviour
     {
         if (Timer.timeIsUp == 1)
         {
-            endMenu.SetActive(true);
-            questionText.gameObject.SetActive(false); ;
-            inputField.gameObject.SetActive(false);
-            keyBoard.SetActive(false);
-            validText.gameObject.SetActive(false);
-            invalidText.gameObject.SetActive(false);
-            PlayEndSound();
-            Debug.Log("Questionnaire completed!");
+            if (!timeIsFinished)
+            {
+                endMenu.SetActive(true);
+                questionText.gameObject.SetActive(false); ;
+                inputField.gameObject.SetActive(false);
+                keyBoard.SetActive(false);
+                validText.gameObject.SetActive(false);
+                invalidText.gameObject.SetActive(false);
+                PlayEndSound();
+                Debug.Log("Questionnaire completed!");
+                timeIsFinished = true;
+            }
         }
     }
     void PlayEndSound()

@@ -38,7 +38,9 @@ public static class CSVManager
         "TotalCanc",
         "TotalClick",
         "StartTime",
-        "EndTime"
+        "EndTime",
+        "onStartQuestion",
+        "onEndQuestion"
     };
 
     private static string[] reportHeadersSceneThree = new string[] 

@@ -47,6 +47,7 @@ public class ScoreAreaHandsDG : MonoBehaviour
     public static int totScoreEnd = 0;
     public static DateTime dateTimeStart;
     public static DateTime dateTimeEnd;
+    private bool timeIsFinished = false;
 
 
     public static List<InteractionData> interactionDataList = new List<InteractionData>();
@@ -63,6 +64,7 @@ public class ScoreAreaHandsDG : MonoBehaviour
 
     private void Start()
     {
+        timeIsFinished = false;
         menuAtTheEnd.gameObject.SetActive(false);
         XRGrabInteractable = GetComponentsInChildren<XRGrabInteractable>();
         dateTimeStart = DateTime.Now;
@@ -82,14 +84,18 @@ public class ScoreAreaHandsDG : MonoBehaviour
 
         if (totScore == 25 || Timer.timeIsUp == 1)
         {
-            PlaySoundEnd();
-            foreach (TMP_Text textElement in textElements)
+            if (!timeIsFinished)
             {
-                textElement.gameObject.SetActive(false);
+                PlaySoundEnd();
+                foreach (TMP_Text textElement in textElements)
+                {
+                    textElement.gameObject.SetActive(false);
+                }
+                menuAtTheEnd.SetActive(true);
+                totScoreEnd = totScore;
+                dateTimeEnd = DateTime.Now;
+                timeIsFinished = true;
             }
-            menuAtTheEnd.SetActive(true);
-            ScoreManagerHandsDG instanceScoreManager = new ScoreManagerHandsDG();
-            instanceScoreManager.BackToMenuHDG();
         }
     }
     public void SelecetedXRGrab(XRGrabInteractable XRGrabInteractable)
@@ -103,6 +109,14 @@ public class ScoreAreaHandsDG : MonoBehaviour
         };
         interactionDataListStart.Add(interactionData);
 
+    }
+
+    public void IsTimerFinished()
+    {
+        if (Timer.timeIsUp == 1)
+        {
+            timeIsFinished = true;
+        }
     }
 
     void OnTriggerEnter(Collider otherCollider)
@@ -161,19 +175,6 @@ public class ScoreAreaHandsDG : MonoBehaviour
 
         interactionDataList.Add(trashDisposalData);
         Destroy(otherCollider.gameObject);
-
-        if (totScore == 25)
-        {
-            menuAtTheEnd.SetActive(true);
-            PlaySoundEnd();
-            foreach (TMP_Text textElement in textElements)
-            {
-                textElement.gameObject.SetActive(false);
-            }
-
-            ScoreManagerHandsDG instanceScoreManager = new ScoreManagerHandsDG();
-            instanceScoreManager.BackToMenuHDG();
-        }
    }
     void PlaySound()
     {

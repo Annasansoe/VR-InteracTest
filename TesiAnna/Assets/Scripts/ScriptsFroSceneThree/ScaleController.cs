@@ -54,6 +54,7 @@ public class ScaleController : MonoBehaviour
 
     //FOR CSV
 
+    private bool timeIsFinished = false;
     public static DateTime dateTimeGrab;
     public static DateTime dateTimeEndG;
 
@@ -121,16 +122,20 @@ public class ScaleController : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-        
-
-        
 
         if (scaleDone == 4 || Timer.timeIsUp == 1)
         {
-            dateTimeEnd = DateTime.Now.ToString();
-            Invoke("PlaySound", 2f);
-            DeactivateObjectsInList();
-            activateEndMenu();
+            if (!timeIsFinished)
+            {
+                dateTimeEnd = DateTime.Now.ToString();
+                Invoke("PlaySound", 2f);
+                DeactivateObjectsInList();
+                activateEndMenu();
+                timeIsFinished = true;
+            }
+
+            Timer myTimer = new Timer();
+            myTimer.stopTimer();
         }
 
     }
@@ -146,6 +151,13 @@ public class ScaleController : MonoBehaviour
         endMenu.SetActive(true);
     }
 
+    public void IsTimerFinished()
+    {
+        if(Timer.timeIsUp == 1)
+        {
+            timeIsFinished = true;
+        }
+    }
     private void PlaySound()
     {
         if (audioSourceEnd != null && soundClipEnd != null)
@@ -173,10 +185,10 @@ public class ScaleController : MonoBehaviour
     public void BackToMenu()
     {
         //totScaleEnd = scaleDone;
-        totalFellObjects = ObjectResetPlaneAll.objectFellSceneThree + ObjectResetPlaneCap.objectFellCap + ObjectResetPlaneKey.objectFellKey + ObjectResetPlaneDrawers.objectFellDrawers;
+        totalFellObjects = ObjectResetPlaneAll.objectFellCube + ObjectResetPlaneCap.objectFellCap + ObjectResetPlaneKey.objectFellKey + ObjectResetPlaneDrawers.objectFellDrawers;
         CSVManager.AppendToReport(GetReportLine());
         indexTextSThree++;
-        ObjectResetPlaneAll.objectFellSceneThree = 0;
+        ObjectResetPlaneAll.objectFellCube = 0;
         ObjectResetPlaneCap.objectFellCap = 0;
         ObjectResetPlaneKey.objectFellKey = 0;
         ObjectResetPlaneDrawers.objectFellDrawers = 0;
@@ -201,7 +213,7 @@ public class ScaleController : MonoBehaviour
         returnable[9] = finishScaleCube;
         returnable[10] = ScaleControllerKey.finishScaleKey;
         returnable[11] = ScaleControllerForDrawers.finishScaleBook1;
-        returnable[12] = ObjectResetPlaneAll.objectFellSceneThree.ToString();
+        returnable[12] = ObjectResetPlaneAll.objectFellCube.ToString();
         returnable[13] = ObjectResetPlaneCap.objectFellCap.ToString();
         returnable[14] = ObjectResetPlaneKey.objectFellKey.ToString();
         returnable[15] = ObjectResetPlaneDrawers.objectFellDrawers.ToString();

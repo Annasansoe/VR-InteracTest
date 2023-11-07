@@ -50,6 +50,8 @@ public class ScaleControllerDG : MonoBehaviour
     public static string dateTimeEnd;
     static int totalFellObjects = 0;
     public static int scaleDone = 0;
+
+    private bool timeIsFinished = false;
     //FOR CSV
 
     public static DateTime dateTimeGrab;
@@ -66,7 +68,7 @@ public class ScaleControllerDG : MonoBehaviour
     private void Start()
     {
         endMenu.SetActive(false);
-        dateTimeStart = System.DateTime.UtcNow.ToString();
+        dateTimeStart = DateTime.Now.ToString();
         // Ensure that cube1 and cube2 are assigned in the Inspector
         if (cubeTarget == null || cubeManipulable == null)
         {
@@ -90,7 +92,6 @@ public class ScaleControllerDG : MonoBehaviour
             if (grabTransformer != null)
             {
                 grabTransformer.allowTwoHandedScaling = false;
-
             }
             Renderer cubeRenderer = cubeManipulable.GetComponent<Renderer>();
             if (cubeRenderer != null)
@@ -121,14 +122,33 @@ public class ScaleControllerDG : MonoBehaviour
             }
         }
 
+
+
+
         if (scaleDone == 4 || Timer.timeIsUp == 1)
         {
-            dateTimeEnd = DateTime.Now.ToString();
-            Invoke("PlaySound", 2f);
-            DeactivateObjectsInList();
-            activateEndMenu();
+            if (!timeIsFinished)
+            {
+                dateTimeEnd = DateTime.Now.ToString();
+                Invoke("PlaySound", 2f);
+                DeactivateObjectsInList();
+                activateEndMenu();
+                timeIsFinished = true;
+            }
+            Timer myTimer = new Timer();
+            myTimer.stopTimer();
         }
 
+    }
+
+    
+
+    public void PlaySound()
+    {
+        if (audioSourceEnd != null && soundClipEnd != null)
+        {
+            audioSourceEnd.PlayOneShot(soundClipEnd);
+        }
     }
     public void SelecetedXRGrab(XRGeneralGrabTransformer XRGrabInteractable)
     {
@@ -154,13 +174,20 @@ public class ScaleControllerDG : MonoBehaviour
         endMenu.SetActive(true);
     }
 
+    public void IsTimerFinished()
+    {
+        if (Timer.timeIsUp == 1)
+        {
+            timeIsFinished = true;
+        }
+    }
     public void BackToMenu()
     {
         //totScaleEnd = scaleDone;
-        totalFellObjects = ObjectResetPlaneAll.objectFellSceneThree + ObjectResetPlaneCap.objectFellCap + ObjectResetPlaneKey.objectFellKey + ObjectResetPlaneDrawers.objectFellDrawers;
+        totalFellObjects = ObjectResetPlaneAll.objectFellCube + ObjectResetPlaneCap.objectFellCap + ObjectResetPlaneKey.objectFellKey + ObjectResetPlaneDrawers.objectFellDrawers;
         CSVManager.AppendToReport(GetReportLine());
         indexTextSThree++;
-        ObjectResetPlaneAll.objectFellSceneThree = 0;
+        ObjectResetPlaneAll.objectFellCube = 0;
         ObjectResetPlaneCap.objectFellCap = 0;
         ObjectResetPlaneKey.objectFellKey = 0;
         ObjectResetPlaneDrawers.objectFellDrawers = 0;
@@ -186,7 +213,7 @@ public class ScaleControllerDG : MonoBehaviour
         returnable[9] = finishScaleCube;
         returnable[10] = ScaleControllerKeyDG.finishScaleKey;
         returnable[11] = ScaleControllerForDrawersDG.finishScaleBook1;
-        returnable[12] = ObjectResetPlaneAll.objectFellSceneThree.ToString();
+        returnable[12] = ObjectResetPlaneAll.objectFellCube.ToString();
         returnable[13] = ObjectResetPlaneCap.objectFellCap.ToString();
         returnable[14] = ObjectResetPlaneKey.objectFellKey.ToString();
         returnable[15] = ObjectResetPlaneDrawers.objectFellDrawers.ToString();

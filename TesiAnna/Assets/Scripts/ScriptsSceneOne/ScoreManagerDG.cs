@@ -5,12 +5,12 @@ public class ScoreManagerDG : MonoBehaviour
 {
     public void BackToMenuDG()
     {
-        ScoreAreaDG.totScoreEnd = ScoreAreaDG.totScore;
-        ScoreAreaDG.dateTimeEnd = DateTime.Now;
         CSVManager.AppendToReport(GetReportLine());
         ScoreAreaDG.indexText++;
         ScoreAreaDG.totScore = 0;
         ObjectResetPlaneForSceneOne.objectFell = 0;
+        ScoreAreaDG.interactionDataListStart.Clear();
+        ScoreAreaDG.interactionDataList.Clear();
     }
 
     public static string[] GetReportLine()
@@ -32,13 +32,13 @@ public class ScoreManagerDG : MonoBehaviour
         {
             i++;
             string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-            returnable[6 + i] = interactionLine;
+            returnable[7 + i] = interactionLine;
         }
         foreach (ScoreAreaDG.InteractionData interaction in ScoreAreaDG.interactionDataList)
         {
             j++;
             string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-            returnable[6 + i + j] = interactionLine;
+            returnable[7 + i + j] = interactionLine;
         }
 
         return returnable;

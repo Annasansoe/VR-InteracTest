@@ -5,12 +5,12 @@ public class ScoreManagerHands : MonoBehaviour
 {
     public void BackToMenuHands()
     {
-        ScoreAreaHands.totScoreEnd = ScoreAreaHands.totScore;
-        ScoreAreaHands.dateTimeEnd = DateTime.Now;
         CSVManager.AppendToReport(GetReportLine());
         ScoreAreaHands.indexTextOneHand++;
         ScoreAreaHands.totScore = 0;
         ObjectResetPlaneForSceneOne.objectFell = 0;
+        ScoreAreaHands.interactionDataListStart.Clear();
+        ScoreAreaHands.interactionDataList.Clear();
     }
 
     public static string[] GetReportLine()
@@ -32,13 +32,13 @@ public class ScoreManagerHands : MonoBehaviour
         {
             i++;
             string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-            returnable[6 + i] = interactionLine;
+            returnable[7 + i] = interactionLine;
         }
         foreach (ScoreAreaHands.InteractionData interaction in ScoreAreaHands.interactionDataList)
         {
             j++;
             string interactionLine = $"{interaction.Timestamp},{interaction.ObjectName},{interaction.InteractionType}";
-            returnable[6 + i + j] = interactionLine;
+            returnable[7 + i + j] = interactionLine;
         }
 
         return returnable;
