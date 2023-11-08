@@ -16,6 +16,7 @@ public class ScoreManagerHandsDG : MonoBehaviour
         CSVManager.AppendToReport(GetReportLine());
         ScoreAreaHandsDG.indexTextOneHand++;
         ScoreAreaHandsDG.totScore = 0;
+        ScoreAreaHandsDG.totScoreEnd = 0;
         ObjectResetPlaneForSceneOne.objectFell = 0;
         ScoreAreaHandsDG.interactionDataListStart.Clear();
         ScoreAreaHandsDG.interactionDataList.Clear();

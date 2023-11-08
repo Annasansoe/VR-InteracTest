@@ -22968,7 +22968,7 @@ MonoBehaviour:
   - {fileID: 3241471165149751449}
   - {fileID: 1277408880}
   m_CheckDuration: 2
-  wrongBin: {fileID: 1851472479}
+  wrongBin: {fileID: 1609773555}
   _time: 3
   audioSource: {fileID: 1553705838}
   soundClip: {fileID: 8300000, guid: fb0fe9b0030d94844862aae939fbf8e4, type: 3}

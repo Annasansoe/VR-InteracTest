@@ -55,8 +55,6 @@ public class ScaleController : MonoBehaviour
     //FOR CSV
 
     private bool timeIsFinished = false;
-    public static DateTime dateTimeGrab;
-    public static DateTime dateTimeEndG;
 
     public static List<InteractionData> interactionDataListStart = new List<InteractionData>();
     public class InteractionData

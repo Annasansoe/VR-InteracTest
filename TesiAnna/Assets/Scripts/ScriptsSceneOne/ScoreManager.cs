@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
         CSVManager.AppendToReport(GetReportLine());
         ScoreArea.indexText++;
         ScoreArea.totScore = 0;
+        ScoreArea.totScoreEnd = 0;
         ObjectResetPlaneForSceneOne.objectFell = 0;
         ScoreArea.interactionDataListStart.Clear();
         ScoreArea.interactionDataList.Clear();

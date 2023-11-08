@@ -110,14 +110,14 @@ public class ScoreAreaHandsDG : MonoBehaviour
         interactionDataListStart.Add(interactionData);
 
     }
-
+    /*
     public void IsTimerFinished()
     {
         if (Timer.timeIsUp == 1)
         {
             timeIsFinished = true;
         }
-    }
+    }*/
 
     void OnTriggerEnter(Collider otherCollider)
     {

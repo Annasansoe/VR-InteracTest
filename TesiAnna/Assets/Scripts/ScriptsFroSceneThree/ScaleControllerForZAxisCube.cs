@@ -102,10 +102,7 @@ public class ScaleControllerForZAxisCube : MonoBehaviour
             DeactivateObjectsInList();
             activateEndMenu();
             ScaleController.dateTimeEnd = DateTime.Now.ToString();
-            /* ScaleController instanceScoreManager = new ScaleController();
-             instanceScoreManager.BackToMenu();*/
-            //ScaleController.scaleDone =0;
-        }
+         }
     }
 
     public void activateEndMenu()

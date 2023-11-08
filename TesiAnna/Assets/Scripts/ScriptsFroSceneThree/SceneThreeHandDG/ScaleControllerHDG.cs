@@ -52,10 +52,6 @@ public class ScaleControllerHDG : MonoBehaviour
     static int totalFellObjects = 0;
     public static int scaleDone = 0;
 
-    //FOR CSV
-
-    public static DateTime dateTimeGrab;
-    public static DateTime dateTimeEndG;
     private bool timeIsFinished = false;
     public static List<InteractionData> interactionDataListStart = new List<InteractionData>();
     public class InteractionData
@@ -122,12 +118,8 @@ public class ScaleControllerHDG : MonoBehaviour
             }
         }
 
-
-
-
         if (scaleDone == 4 || Timer.timeIsUp == 1)
         {
-            
             if (!timeIsFinished)
             {
                 dateTimeEnd = DateTime.Now.ToString();

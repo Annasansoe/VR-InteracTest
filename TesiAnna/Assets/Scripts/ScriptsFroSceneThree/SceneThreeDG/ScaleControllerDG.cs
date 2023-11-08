@@ -52,10 +52,6 @@ public class ScaleControllerDG : MonoBehaviour
     public static int scaleDone = 0;
 
     private bool timeIsFinished = false;
-    //FOR CSV
-
-    public static DateTime dateTimeGrab;
-    public static DateTime dateTimeEndG;
 
     public static List<InteractionData> interactionDataListStart = new List<InteractionData>();
     public class InteractionData
@@ -121,9 +117,6 @@ public class ScaleControllerDG : MonoBehaviour
                 cubeRenderer.material.color = isSmaller;
             }
         }
-
-
-
 
         if (scaleDone == 4 || Timer.timeIsUp == 1)
         {
