@@ -41,6 +41,8 @@ public class ScaleControllerForDrawersHDG : MonoBehaviour
     static int cubeDrawersResized;
     public static string finishScaleBook1;
 
+    private bool timeIsFinished = false;
+
     private void Start()
     {
         endMenu.SetActive(false);
@@ -107,14 +109,21 @@ public class ScaleControllerForDrawersHDG : MonoBehaviour
             }
         }
 
-        if (ScaleControllerHDG.scaleDone == 4)
+        if (!timeIsFinished && (ScaleControllerHDG.scaleDone == 4 || Timer.timeIsUp == 1))
         {
+
+            ScaleControllerHDG.dateTimeEnd = DateTime.Now.ToString();
             Invoke("PlaySound", 2f);
-            //ScaleControllerHDG.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
-            ScaleControllerHDG.dateTimeEnd = DateTime.UtcNow.ToString();
-            //ScaleController.scaleDone = 0;
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;
+
         }
 
     }

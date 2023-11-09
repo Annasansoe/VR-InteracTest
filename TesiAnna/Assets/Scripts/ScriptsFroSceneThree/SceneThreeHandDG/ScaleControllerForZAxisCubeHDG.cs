@@ -39,6 +39,8 @@ public class ScaleControllerForZAxisCubeHDG : MonoBehaviour
     private bool sizesEqualized = false;
     public static string finishScaleCap;
 
+    private bool timeIsFinished = false;
+
     private void Start()
     {
         endMenu.SetActive(false);
@@ -95,15 +97,21 @@ public class ScaleControllerForZAxisCubeHDG : MonoBehaviour
             }
         }
 
-        if (ScaleControllerHDG.scaleDone == 4)
+        if (!timeIsFinished && (ScaleControllerHDG.scaleDone == 4 || Timer.timeIsUp == 1))
         {
+
+            ScaleControllerHDG.dateTimeEnd = DateTime.Now.ToString();
             Invoke("PlaySound", 2f);
             DeactivateObjectsInList();
             activateEndMenu();
-            ScaleControllerHDG.dateTimeEnd = DateTime.Now.ToString();
-            /* ScaleController instanceScoreManager = new ScaleController();
-             instanceScoreManager.BackToMenu();*/
-            //ScaleController.scaleDone =0;
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;
+
         }
     }
     public void activateEndMenu()

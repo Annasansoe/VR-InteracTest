@@ -92,6 +92,13 @@ public class ScoreAreaDG : MonoBehaviour
                 menuAtTheEnd.SetActive(true);
                 totScoreEnd = totScore;
                 dateTimeEnd = DateTime.Now;
+
+                Timer scriptAInstance = FindObjectOfType<Timer>();
+
+                if (scriptAInstance != null)
+                {
+                    scriptAInstance.stopTimer();
+                }
                 timeIsFinished = true;
             }
         }

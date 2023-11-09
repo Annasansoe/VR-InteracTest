@@ -121,19 +121,21 @@ public class ScaleController : MonoBehaviour
             }
         }
 
-        if (scaleDone == 4 || Timer.timeIsUp == 1)
+        if (!timeIsFinished && (scaleDone == 4 || Timer.timeIsUp == 1))
         {
-            if (!timeIsFinished)
-            {
-                dateTimeEnd = DateTime.Now.ToString();
-                Invoke("PlaySound", 2f);
-                DeactivateObjectsInList();
-                activateEndMenu();
-                timeIsFinished = true;
-            }
 
-            Timer myTimer = new Timer();
-            myTimer.stopTimer();
+            dateTimeEnd = DateTime.Now.ToString();
+            Invoke("PlaySound", 2f);
+            DeactivateObjectsInList();
+            activateEndMenu();
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;
+
         }
 
     }

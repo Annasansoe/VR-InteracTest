@@ -118,18 +118,21 @@ public class ScaleControllerHDG : MonoBehaviour
             }
         }
 
-        if (scaleDone == 4 || Timer.timeIsUp == 1)
+        if (!timeIsFinished && (scaleDone == 4 || Timer.timeIsUp == 1))
         {
-            if (!timeIsFinished)
+            
+            dateTimeEnd = DateTime.Now.ToString();
+            Invoke("PlaySound", 2f);
+            DeactivateObjectsInList();
+            activateEndMenu();
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
             {
-                dateTimeEnd = DateTime.Now.ToString();
-                Invoke("PlaySound", 2f);
-                DeactivateObjectsInList();
-                activateEndMenu();
-                timeIsFinished = true;
+                scriptAInstance.stopTimer();
             }
-            Timer myTimer = new Timer();
-            myTimer.stopTimer();
+            timeIsFinished = true;
+            
         }
     }
   

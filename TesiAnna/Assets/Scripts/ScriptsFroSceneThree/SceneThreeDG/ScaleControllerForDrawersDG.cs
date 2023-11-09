@@ -38,8 +38,10 @@ public class ScaleControllerForDrawersDG : MonoBehaviour
 
     private bool sizesEqualized = false;
     private bool hasBeenPlayed = false;
-   public static int cubeDrawersResized;
+    public static int cubeDrawersResized;
     public static string finishScaleBook1;
+
+    private bool timeIsFinished = false;
 
     private void Start()
     {
@@ -105,17 +107,22 @@ public class ScaleControllerForDrawersDG : MonoBehaviour
 
             }
         }
-
-        if (ScaleControllerDG.scaleDone == 4)
+        if (!timeIsFinished && (ScaleControllerDG.scaleDone == 4 || Timer.timeIsUp == 1))
         {
+
+            ScaleControllerDG.dateTimeEnd = DateTime.Now.ToString();
             Invoke("PlaySound", 2f);
-            // ScaleController.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
-            ScaleControllerDG.dateTimeEnd = DateTime.UtcNow.ToString();
-            //ScaleController.scaleDone = 0;
-        }
+            Timer scriptAInstance = FindObjectOfType<Timer>();
 
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;
+
+        }
     }
 
     public void activateEndMenu()

@@ -94,7 +94,14 @@ public class ScoreAreaHandsDG : MonoBehaviour
                 menuAtTheEnd.SetActive(true);
                 totScoreEnd = totScore;
                 dateTimeEnd = DateTime.Now;
-                timeIsFinished = true;
+
+                Timer scriptAInstance = FindObjectOfType<Timer>();
+
+                if (scriptAInstance != null)
+                {
+                    scriptAInstance.stopTimer();
+                }
+                timeIsFinished = true;                               
             }
         }
     }

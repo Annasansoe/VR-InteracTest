@@ -74,6 +74,11 @@ public class InputFieldGrabberHand : MonoBehaviour
         new QuestionHand("The capital of France is PARIS", "Paris"),
         new QuestionHand("In the solar system there are EIGHT planets", "eight"),
         new QuestionHand("In a week there are SEVEN days", "Seven"),
+        new QuestionHand("The color that you get by mixing blue and yellow is GREEN", "green"),
+        new QuestionHand("The largest planet in our solar system is JUPITER", "jupiter"),
+        new QuestionHand("The Earth's natural satellite is called the MOON", "moon"),
+        new QuestionHand("In a year, there are TWELVE months", "twelve"),
+        new QuestionHand("The opposite of right is LEFT", "left")
         // ... Add more questions here with their respective expected answers
     };
 
@@ -189,6 +194,13 @@ public class InputFieldGrabberHand : MonoBehaviour
             PlayEndSound();
             Debug.Log("Questionnaire completed!");
             dateTimeEnd = DateTime.Now;
+
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
         }
     }
    

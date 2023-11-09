@@ -70,9 +70,15 @@ public class InputFieldGrabber : MonoBehaviour
         {
             new Question("The capital of France is PARIS", "Paris"),
             new Question("In the solar system there are EIGHT planets", "eight"),
-            new Question("In a week there are SEVEN days", "Seven"),
-            // ... Add more questions here with their respective expected answers
-        };
+            new Question("In a week there are SEVEN days", "Seven"), 
+            new Question("The color that you get by mixing blue and yellow is GREEN", "green"),
+            new Question("The largest planet in our solar system is JUPITER", "jupiter"),
+            new Question("The Earth's natural satellite is called the MOON", "moon"),
+            new Question("In a year, there are TWELVE months", "twelve"),
+            new Question("The opposite of right is LEFT", "left")
+            
+        // ... Add more questions here with their respective expected answers
+    };
 
         DisplayQuestion(currentQuestionIndex);
        
@@ -181,6 +187,13 @@ public class InputFieldGrabber : MonoBehaviour
             validText.gameObject.SetActive(false);
             invalidText.gameObject.SetActive(false);
             PlayEndSound();
+
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
 
             dateTimeEnd = DateTime.Now;
             Debug.Log("Questionnaire completed!");

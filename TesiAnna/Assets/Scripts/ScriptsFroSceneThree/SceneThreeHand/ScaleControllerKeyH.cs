@@ -41,6 +41,7 @@ public class ScaleControllerKeyH : MonoBehaviour
     private bool hasBeenPlayed = false;
     public static string finishScaleKey;
     public static DateTime dateTimeEnd;
+    private bool timeIsFinished = false;
 
     private void Start()
     {
@@ -97,15 +98,23 @@ public class ScaleControllerKeyH : MonoBehaviour
                 cubeRenderer.material.color = isBigger;
             }
         }
-
-        if (ScaleControllerH.scaleDone == 4)
+        if (!timeIsFinished && (ScaleControllerH.scaleDone == 4 || Timer.timeIsUp == 1))
         {
+
+            ScaleControllerH.dateTimeEnd = DateTime.Now.ToString();
             Invoke("PlaySound", 2f);
             DeactivateObjectsInList();
             activateEndMenu();
-            ScaleControllerH.dateTimeEnd = DateTime.Now.ToString();
-            //ScaleController.scaleDone = 0;
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;
+
         }
+       
     }
 
     public void activateEndMenu()

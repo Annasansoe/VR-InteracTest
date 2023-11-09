@@ -77,6 +77,11 @@ public class InputFieldGrabberHandD : MonoBehaviour
         new QuestionHandD("The capital of France is PARIS", "Paris"),
         new QuestionHandD("In the solar system there are EIGHT planets", "eight"),
         new QuestionHandD("In a week there are SEVEN days", "Seven"),
+        new QuestionHandD("The color that you get by mixing blue and yellow is GREEN", "green"),
+        new QuestionHandD("The largest planet in our solar system is JUPITER", "jupiter"),
+        new QuestionHandD("The Earth's natural satellite is called the MOON", "moon"),
+        new QuestionHandD("In a year, there are TWELVE months", "twelve"),
+        new QuestionHandD("The opposite of right is LEFT", "left")
         // ... Add more questions here with their respective expected answers
     };
 
@@ -180,6 +185,7 @@ public class InputFieldGrabberHandD : MonoBehaviour
         {
             // No more questions
             //questionPanel.SetActive(false);
+            
             endMenu.SetActive(true);
             questionText.gameObject.SetActive(false); ;
             inputField.gameObject.SetActive(false);
@@ -188,9 +194,14 @@ public class InputFieldGrabberHandD : MonoBehaviour
             invalidText.gameObject.SetActive(false);
             PlayEndSound();
             dateTimeEnd = DateTime.Now;
-            dateTimeEnd = DateTime.Now;
             Debug.Log("Questionnaire completed!");
-            
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+
         }
     }
 

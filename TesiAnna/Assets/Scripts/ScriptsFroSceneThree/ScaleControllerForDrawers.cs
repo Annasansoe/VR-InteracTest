@@ -41,6 +41,7 @@ public class ScaleControllerForDrawers : MonoBehaviour
     private bool hasBeenPlayed = false;
     static int cubeDrawersResized;
     public static string finishScaleBook1;
+    private bool timeIsFinished = false;
 
     private void Start()
     {
@@ -73,12 +74,12 @@ public class ScaleControllerForDrawers : MonoBehaviour
             {
                 cubeRenderer.material.color = isEqual;
             }
-            cubeDrawersResized+=1;
+            cubeDrawersResized += 1;
             sizesEqualized = true;
-           
+
 
             Debug.Log("Both cubes have the same size.");
-            
+
         }
         else if (sizeCube1.x * sizeCube1.y * sizeCube1.z < sizeCube2.x * sizeCube2.y * sizeCube2.z)
         {
@@ -89,7 +90,7 @@ public class ScaleControllerForDrawers : MonoBehaviour
                 cubeRenderer.material.color = isBigger;
             }
         }
-  
+
 
         if (cubeDrawersResized == 4)
         {
@@ -106,17 +107,22 @@ public class ScaleControllerForDrawers : MonoBehaviour
 
             }
         }
-
-        if (ScaleController.scaleDone == 4)
+        if (!timeIsFinished && (ScaleController.scaleDone == 4 || Timer.timeIsUp == 1))
         {
+
+            ScaleController.dateTimeEnd = DateTime.Now.ToString();
             Invoke("PlaySound", 2f);
-           // ScaleController.scaleDone = 0;
             DeactivateObjectsInList();
             activateEndMenu();
-            ScaleController.dateTimeEnd = DateTime.UtcNow.ToString();
-            //ScaleController.scaleDone = 0;
-        }
+            Timer scriptAInstance = FindObjectOfType<Timer>();
 
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;
+
+        }
     }
 
     public void activateEndMenu()

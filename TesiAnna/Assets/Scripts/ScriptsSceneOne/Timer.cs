@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
     private float flashTimer;
     private float flashDuration = 1f;
 
+    private bool shouldUpdateTimerDisplay = true;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0)
+        if (shouldUpdateTimerDisplay && timer>0)
         {
             timer -= Time.deltaTime;
             UpdateTimerDisplay(timer);
@@ -73,10 +74,13 @@ public class Timer : MonoBehaviour
 
    public void stopTimer()
     {
-        firstMinute.gameObject.SetActive(false);
+        /*firstMinute.gameObject.SetActive(false);
         secondMinute.gameObject.SetActive(false);
         firstSecond.gameObject.SetActive(false);
         secondSecond.gameObject.SetActive(false);
+
+        tickingAudioSource.Stop();*/
+        StopUpdatingTimerDisplay();
     }
 
     private void UpdateTimerDisplay(float time)
@@ -136,7 +140,16 @@ public class Timer : MonoBehaviour
             tickingAudioSource.Play();
         }
     }
+    public void StartUpdatingTimerDisplay()
+    {
+        shouldUpdateTimerDisplay = true;
+    }
 
-    
+    // Call this method to stop updating the timer display
+    public void StopUpdatingTimerDisplay()
+    {
+        shouldUpdateTimerDisplay = false;
+    }
+
 
 }

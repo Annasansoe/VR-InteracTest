@@ -42,6 +42,7 @@ public class ScaleControllerKeyDG : MonoBehaviour
     private bool sizesEqualized = false;
     public static string finishScaleKey;
 
+    private bool timeIsFinished = false;
     private void Start()
     {
         // Ensure that cube1 and cube2 are assigned in the Inspector
@@ -98,14 +99,22 @@ public class ScaleControllerKeyDG : MonoBehaviour
             }
         }
 
-      
-        if (ScaleControllerDG.scaleDone == 4)
+
+        if (!timeIsFinished && (ScaleControllerDG.scaleDone == 4 || Timer.timeIsUp == 1))
         {
+
+            ScaleControllerDG.dateTimeEnd = DateTime.Now.ToString();
             Invoke("PlaySound", 2f);
             DeactivateObjectsInList();
             activateEndMenu();
-            ScaleControllerDG.dateTimeEnd = DateTime.Now.ToString();
-            //ScaleController.scaleDone = 0;
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;
+
         }
 
     }
