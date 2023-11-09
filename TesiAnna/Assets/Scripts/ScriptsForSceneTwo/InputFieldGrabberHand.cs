@@ -53,7 +53,12 @@ public class InputFieldGrabberHand : MonoBehaviour
     [SerializeField] private float _time = 1f;
 
 
-    //public Button submitButton;
+    public static List<InteractionData> interactionDataList = new List<InteractionData>();
+    public class InteractionData
+    {
+        public int QuestionIndex { get; set; }
+        public DateTime TimeEndQ { get; set; }
+    }
 
     public List<QuestionHand> questions;
     public int currentQuestionIndex = 0;
@@ -126,9 +131,13 @@ public class InputFieldGrabberHand : MonoBehaviour
         if (userAnswer.ToLower() != questions[currentQuestionIndex].expectedAnswer.ToLower())
         {
             Debug.Log("Answer is incorrect!");
-            invalidText.text = "Invalid text";
+            wrongAnswers += 1;
+
+            invalidText.text = "Invalid text";            
             invalidText.gameObject.SetActive(true);
+
             Invoke("HideInvalidText", _time);
+
             if (invalidSource != null && invalidClip != null)
             {
                 invalidSource.PlayOneShot(invalidClip);
@@ -137,14 +146,26 @@ public class InputFieldGrabberHand : MonoBehaviour
         else
         {
             Debug.Log("Answer is correct.");
+            rightAnswers += 1;
+
             validText.text = "Valid text";
             validText.gameObject.SetActive(true);
+
+            onEndQuestion = DateTime.Now;
+
             Invoke("HideValidText", _time);
             if (validSource != null && validClip != null)
             {
                 validSource.PlayOneShot(validClip);
             }
-            // Move to the next question and display it
+
+            InteractionData dataOfAnswer = new InteractionData
+            {
+                QuestionIndex = currentQuestionIndex,
+                TimeEndQ = onEndQuestion
+            };
+            interactionDataList.Add(dataOfAnswer);
+
             currentQuestionIndex++;
         }
         reactionTextBox.text = "Welcome to the team, " + userAnswer + "!";
@@ -170,19 +191,7 @@ public class InputFieldGrabberHand : MonoBehaviour
             dateTimeEnd = DateTime.Now;
         }
     }
-    public void OnCorrectAnswer()
-    {
-        string userAnswerC = inputField.text.ToString();
-        if (userAnswerC.ToLower() == questions[currentQuestionIndex].expectedAnswer.ToLower())
-        {
-            onEndQuestion = DateTime.Now;
-            rightAnswers += 1;
-        }
-        else
-        {
-            wrongAnswers += 1;
-        }
-    }
+   
     void PlayEndSound()
     {
         if (endSound != null && soundClipEnd != null)
@@ -200,11 +209,12 @@ public class InputFieldGrabberHand : MonoBehaviour
         rightAnswers = 0;
         num = 0;
         generalClick = 0;
-
+        interactionDataList.Clear();
     }
 
     string[] GetReportLine()
     {
+        int i = 0;
         string[] returnable = new string[20];
         returnable[0] = "SceneTwo.csv";
         returnable[1] = "Hand";
@@ -216,8 +226,12 @@ public class InputFieldGrabberHand : MonoBehaviour
         returnable[7] = generalClick.ToString();
         returnable[8] = dateTimeStart.ToString();
         returnable[9] = dateTimeEnd.ToString();
-        returnable[10] = onStartQuestion.ToString();
-        returnable[11] = onEndQuestion.ToString();
+        foreach (InteractionData interaction in interactionDataList)
+        {
+            i++;
+            string interactionLine = $"{interaction.QuestionIndex},{interaction.TimeEndQ}";
+            returnable[9 + i] = interactionLine;
+        }
         return returnable;
     }
 }

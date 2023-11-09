@@ -45,9 +45,15 @@ public class InputFieldGrabber : MonoBehaviour
     public static int rightAnswers = 0;
     private static int numCanc = 0;
     private static int generalClick = 0;
-    public static DateTime onStartQuestion;
     public static DateTime onEndQuestion;
     private bool timeIsFinished = false;
+
+    public static List<InteractionData> interactionDataList = new List<InteractionData>();
+    public class InteractionData
+    {
+        public int QuestionIndex { get; set; }
+        public DateTime TimeEndQ { get; set; }
+    }
 
     public List<Question> questions;
     public int currentQuestionIndex = 0;
@@ -73,7 +79,8 @@ public class InputFieldGrabber : MonoBehaviour
     }
     void Update()
     {
-        if(Timer.timeIsUp == 1)
+        
+        if (Timer.timeIsUp == 1)
         {
             if (!timeIsFinished)
             {
@@ -104,7 +111,6 @@ public class InputFieldGrabber : MonoBehaviour
     {
         questionText.text = questions[index].questionText;
         inputField.text = "";
-        onStartQuestion = DateTime.Now;
     }
 
     public void OnClickBackspace()
@@ -122,7 +128,7 @@ public class InputFieldGrabber : MonoBehaviour
         if (userAnswer.ToLower() != questions[currentQuestionIndex].expectedAnswer.ToLower())
         {
             Debug.Log("Answer is incorrect!");
-
+            wrongAnswers += 1;
             invalidText.text = "Invalid text";
             invalidText.gameObject.SetActive(true);
             Invoke("HideInvalidText", _time);
@@ -139,12 +145,22 @@ public class InputFieldGrabber : MonoBehaviour
           
             validText.text = "Valid text";
             validText.gameObject.SetActive(true);
-
+           
             Invoke("HideValidText", _time);
+            onEndQuestion = DateTime.Now;
+            rightAnswers += 1;
+            InteractionData dataOfAnswer = new InteractionData
+            {
+                QuestionIndex = currentQuestionIndex,
+                TimeEndQ = onEndQuestion
+            };
+            interactionDataList.Add(dataOfAnswer);
+
             if (validSource != null && validClip != null)
             {
                 validSource.PlayOneShot(validClip);
             }
+
             currentQuestionIndex++;
            
         }
@@ -158,7 +174,6 @@ public class InputFieldGrabber : MonoBehaviour
         else
         {
             // No more questions
-            //questionPanel.SetActive(false);
             endMenu.SetActive(true);
             questionText.gameObject.SetActive(false); ;
             inputField.gameObject.SetActive(false);
@@ -166,23 +181,12 @@ public class InputFieldGrabber : MonoBehaviour
             validText.gameObject.SetActive(false);
             invalidText.gameObject.SetActive(false);
             PlayEndSound();
+
             dateTimeEnd = DateTime.Now;
             Debug.Log("Questionnaire completed!");
         }
     }
-    public void OnCorrectAnswer()
-    {
-        string userAnswerC = inputField.text.ToString();
-        if (userAnswerC.ToLower() == questions[currentQuestionIndex].expectedAnswer.ToLower())
-        {
-            onEndQuestion = DateTime.Now;
-            rightAnswers += 1;
-        }
-        else
-        {
-            wrongAnswers += 1;
-        }
-    }
+
     void PlayEndSound()
     {
         if (endSound != null && soundClipEnd != null)
@@ -200,11 +204,13 @@ public class InputFieldGrabber : MonoBehaviour
         rightAnswers = 0;
         numCanc = 0;
         generalClick = 0;
+        interactionDataList.Clear();
     }
 
     string[] GetReportLine()
     {
-        string[] returnable = new string[20];
+        int i = 0;
+        string[] returnable = new string[40];
         returnable[0] = "SceneTwo.csv";
         returnable[1] = "Controllers";
         returnable[2] = "RayCasting";
@@ -215,8 +221,14 @@ public class InputFieldGrabber : MonoBehaviour
         returnable[7] = generalClick.ToString();
         returnable[8] = dateTimeStart.ToString();
         returnable[9] = dateTimeEnd.ToString();
-        returnable[10] = onStartQuestion.ToString();
-        returnable[11] = onEndQuestion.ToString();
+
+        foreach (InteractionData interaction in interactionDataList)
+        {
+            i++;
+            string interactionLine = $"{interaction.QuestionIndex},{interaction.TimeEndQ}";
+            returnable[9 + i] = interactionLine;
+        }
+
         return returnable;
     }
 }
