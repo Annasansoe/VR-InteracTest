@@ -31,7 +31,6 @@ public class ScoreAreaHands : MonoBehaviour
 
 
     [Header("Return button")]
-    public Button backToMenu;
     public static int indexTextOneHand = 0;
     public static int totScoreEnd = 0;
     public static DateTime dateTimeStart;
@@ -46,7 +45,6 @@ public class ScoreAreaHands : MonoBehaviour
     [Header("Text to disable at the end")]
     public TMP_Text[] textElements;
 
-    private bool hasBeenPlayed = false;
     public static List<InteractionData> interactionDataList = new List<InteractionData>();
     public static List<InteractionData> interactionDataListStart = new List<InteractionData>();
 
@@ -79,28 +77,24 @@ public class ScoreAreaHands : MonoBehaviour
     private void Update()
     {
 
-        if (totScore == 25 || Timer.timeIsUp == 1)
+        if (!timeIsFinished && (totScore == 25 || Timer.timeIsUp == 1))
         {
-            if (!timeIsFinished)
+            PlaySoundEnd();
+            foreach (TMP_Text textElement in textElements)
             {
-                PlaySoundEnd();
-                foreach (TMP_Text textElement in textElements)
-                {
-                    textElement.gameObject.SetActive(false);
-                }
-                menuAtTheEnd.SetActive(true);
-                totScoreEnd = totScore;
-                dateTimeEnd = DateTime.Now;
-
-                Timer scriptAInstance = FindObjectOfType<Timer>();
-
-                if (scriptAInstance != null)
-                {
-                    scriptAInstance.stopTimer();
-                }
-                timeIsFinished = true;
-
+                textElement.gameObject.SetActive(false);
             }
+            menuAtTheEnd.SetActive(true);
+            totScoreEnd = totScore;
+            dateTimeEnd = DateTime.Now;
+
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;            
         }
     }
 

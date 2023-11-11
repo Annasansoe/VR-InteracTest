@@ -18303,7 +18303,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Load Scene
+  m_text: 'Load Results
 
 '
   m_isRightToLeft: 0
@@ -21412,7 +21412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectsToReset:
-  - {fileID: 1586223543}
+  - {fileID: 1329622408}
   - {fileID: 1681047015}
   m_CheckDuration: 2
   wrongBin: {fileID: 1006655756}

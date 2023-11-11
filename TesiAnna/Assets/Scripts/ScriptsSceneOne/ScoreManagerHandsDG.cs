@@ -1,19 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
-using TMPro;
-using UnityEngine.UI;
-using System.IO;
 using System;
-using System.Linq;
 
 public class ScoreManagerHandsDG : MonoBehaviour
 {
     public void BackToMenuHDG()
     {
         
-        CSVManager.AppendToReport(GetReportLine());
+        CSVManager.AppendToReport(GetReportLineDG());
         ScoreAreaHandsDG.indexTextOneHand++;
         ScoreAreaHandsDG.totScore = 0;
         ScoreAreaHandsDG.totScoreEnd = 0;
@@ -22,7 +15,7 @@ public class ScoreManagerHandsDG : MonoBehaviour
         ScoreAreaHandsDG.interactionDataList.Clear();
      }
 
-    public static string[] GetReportLine()
+    public static string[] GetReportLineDG()
     {
 
         int i = 0;

@@ -7217,7 +7217,6 @@ GameObject:
   - component: {fileID: 727484927}
   - component: {fileID: 727484926}
   - component: {fileID: 727484922}
-  - component: {fileID: 727484928}
   m_Layer: 0
   m_Name: -- SceneMenu UI --
   m_TagString: Untagged
@@ -7337,25 +7336,6 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
---- !u!114 &727484928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727484921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e320ec4fd54024c9746fb1949902a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftController: {fileID: 0}
-  rightController: {fileID: 0}
-  directInteractorLeft: {fileID: 0}
-  rayInteractorLeft: {fileID: 0}
-  directInteractorRight: {fileID: 0}
-  rayInteractorRight: {fileID: 0}
-  prova: {fileID: 0}
 --- !u!1 &728355588
 GameObject:
   m_ObjectHideFlags: 0

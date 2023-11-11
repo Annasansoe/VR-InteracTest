@@ -16,7 +16,7 @@ public class ScoreAreaForTutorial : MonoBehaviour
 
 
     private bool hasBeenPlayed = false;
-    private float _time = 3f;
+   
     public TMP_Text VerifyIsGrabbedT;
 
     void OnTriggerEnter(Collider otherCollider)

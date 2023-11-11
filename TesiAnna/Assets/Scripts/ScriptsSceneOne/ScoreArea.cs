@@ -81,27 +81,25 @@ public class ScoreArea : MonoBehaviour
     private void Update()
     {
         
-        if (totScore == 25 || Timer.timeIsUp == 1)
+        if (!timeIsFinished && (totScore == 25 || Timer.timeIsUp == 1))
         {
-            if (!timeIsFinished)
+            PlaySoundEnd();
+            foreach (TMP_Text textElement in textElements)
             {
-                PlaySoundEnd();
-                foreach (TMP_Text textElement in textElements)
-                {
-                    textElement.gameObject.SetActive(false);
-                }
-                menuAtTheEnd.SetActive(true);
-                totScoreEnd = totScore;
-                dateTimeEnd = DateTime.Now;
-
-                Timer scriptAInstance = FindObjectOfType<Timer>();
-
-                if (scriptAInstance != null)
-                {
-                    scriptAInstance.stopTimer();
-                }
-                timeIsFinished = true;
+                textElement.gameObject.SetActive(false);
             }
+            menuAtTheEnd.SetActive(true);
+            totScoreEnd = totScore;
+            dateTimeEnd = DateTime.Now;
+
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;
+            
         }
     }
 

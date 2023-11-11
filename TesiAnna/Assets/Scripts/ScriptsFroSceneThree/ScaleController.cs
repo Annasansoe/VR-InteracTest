@@ -48,7 +48,6 @@ public class ScaleController : MonoBehaviour
     static string dateTimeStart;
     static string finishScaleCube;
     public static string dateTimeEnd;
-    static int totScaleEnd = 0;
     static int totalFellObjects = 0;
     public static int scaleDone = 0;
 

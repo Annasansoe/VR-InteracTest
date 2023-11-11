@@ -41,8 +41,6 @@ public class ScoreAreaHandsDG : MonoBehaviour
     [Header("Text to disable at the end")]
     public TMP_Text[] textElements;
 
-    private bool hasBeenPlayed = false;
-
     public static int indexTextOneHand = 0;
     public static int totScoreEnd = 0;
     public static DateTime dateTimeStart;
@@ -82,27 +80,25 @@ public class ScoreAreaHandsDG : MonoBehaviour
     private void Update()
     {
 
-        if (totScore == 25 || Timer.timeIsUp == 1)
+        
+        if (!timeIsFinished && (totScore == 25 || Timer.timeIsUp == 1))
         {
-            if (!timeIsFinished)
+            PlaySoundEnd();
+            foreach (TMP_Text textElement in textElements)
             {
-                PlaySoundEnd();
-                foreach (TMP_Text textElement in textElements)
-                {
-                    textElement.gameObject.SetActive(false);
-                }
-                menuAtTheEnd.SetActive(true);
-                totScoreEnd = totScore;
-                dateTimeEnd = DateTime.Now;
-
-                Timer scriptAInstance = FindObjectOfType<Timer>();
-
-                if (scriptAInstance != null)
-                {
-                    scriptAInstance.stopTimer();
-                }
-                timeIsFinished = true;                               
+                textElement.gameObject.SetActive(false);
             }
+            menuAtTheEnd.SetActive(true);
+            totScoreEnd = totScore;
+            dateTimeEnd = DateTime.Now;
+
+            Timer scriptAInstance = FindObjectOfType<Timer>();
+
+            if (scriptAInstance != null)
+            {
+                scriptAInstance.stopTimer();
+            }
+            timeIsFinished = true;    
         }
     }
     public void SelecetedXRGrab(XRGrabInteractable XRGrabInteractable)
@@ -117,15 +113,6 @@ public class ScoreAreaHandsDG : MonoBehaviour
         interactionDataListStart.Add(interactionData);
 
     }
-    /*
-    public void IsTimerFinished()
-    {
-        if (Timer.timeIsUp == 1)
-        {
-            timeIsFinished = true;
-        }
-    }*/
-
     void OnTriggerEnter(Collider otherCollider)
     {
         string objectName = otherCollider.gameObject.name;

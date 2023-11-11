@@ -17165,7 +17165,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Load Scene
+  m_text: 'Load Results
 
 '
   m_isRightToLeft: 0
