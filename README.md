@@ -1,2 +1,4 @@
 # TesiAnna
- 
+
+VR InteracTest is an experimental platform for testing different interaction methods and metaphors. The application consist of three meticulously designed scenes, which simulate real-world tasks, and offer users an opportunity to interact with each scene. The available methods of interaction are controllers and hand tracking, which can be combined with ray-casting or direct interaction as metaphor. Overall, VR InteracTest enables a comprehensive analysis of user behaviour across the two input modalities.
+Furthermore, the application includes data collection mechanisms to record user interactions, capturing metrics such as task completion time, accuracy, and user preferences. A focus group, comprising both university students and non-expert of VR, took part in the study, providing the broader insights.
